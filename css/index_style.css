@@ -19,6 +19,9 @@ form fieldset {
 	margin-bottom: 10px;
 }
 
+form optgroup {
+	background-color: #555;
+}
 
 legend {
 	font-weight: bold;
