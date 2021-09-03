@@ -6,7 +6,7 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
 		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
 		<meta name="robots" content="index, follow"/>
-		<meta name="description" content="O 'Tarv-Pediátrico' do prjecto Abordagem Pediátrica permite determinar doses pediátricas dos Antiretrovirais e dos tratramentos profiláticos contra Infecções oportunistas"/>
+		<meta name="description" content="O 'Tarv-Pediátrico' do projecto Abordagem Pediátrica permite determinar doses pediátricas dos Antiretrovirais e dos tratramentos profiláticos contra Infecções oportunistas"/>
 		<meta http-equiv="X-Compatible" content="IE=Edge"/>
 
 		<link rel="stylesheet" type="text/css" href="../css/reset.css">
@@ -23,7 +23,7 @@
 		<link href="https://fonts.googleapis.com/css2?family=Lobster&display=swap" rel="stylesheet">
 
 		<script type="text/javascript" src="../js/menuhamburger.js"></script>
-		<script type="text/javascript" src="js/calculadora.js"></script>
+		<script type="text/javascript" src="../js/tarv.js"></script>
 		<noscript>
 			O seu navegador está sem permissão de execução de scripts. Isso certamente interfere completa e negativamente no funcionamento desta ferramenta.
 		</noscript>
@@ -74,29 +74,29 @@
 
 									<label for="peso">Peso&nbsp;</label>
 
-									<input type="number" name="peso" min="2" id="peso" max="36" placeholder="Peso mín e máx: 2 e 35" /> 
+									<input type="number" name="peso" min="3" id="peso" max="36" placeholder="Peso mín e máx: 3 kg e 35" /> 
 									<select class="input-extension weight-ext">
 										<option>Kg</option>
 									</select>
 								</p>
 							</fieldset>
 							<fieldset>
-								<legend>Especificação do ARV</legend>
+								<legend>Especificação do ARV*</legend>
 								<p id="paragrafo-parent-de-farmaco">
 									<label for="farmaco" id="nome-farm">Nome</label>
-									<select id="farmaco">
+									<select id="arvs" class="select-da-pagina-tarv">
                                         <optgroup label="ABACAVIR (ABC) + LAMIVUDINA (3TC)">
                                             <option value="ABC">ABC 60mg</option>
                                             <option value="ABC/3TC-60-30mg">ABC/3TC 60mg/30mg Comp</option>
                                             <option value="ABC/3TC-120-60mg">ABC/3TC 120mg/60mg Comp</option>
-                                            <option value="ABC/3TC-120-60mg">ABC/3TC 600mg/300mg Comp</option>
+                                            <option value="ABC/3TC-600-300mg">ABC/3TC 600mg/300mg Comp</option>
                                         </optgroup>
                                         <optgroup label="LOPINAVIR (LPV) + RITONAVIR (r)">
                                             <option value="LPV/r-40-10mg">LPV/r 40mg/10mg Cáps/saquetas</option>
                                             <option value="LPV/r-xpe">LPV/r 80mg/20mg/mL Xarope</option>
                                             <option value="LPV/r-100-25mg">LPV/r 100mg/25mg Comp</option>
                                             <option value="LPV/r-200-50mg">LPV/r 200mg/50mg Comp</option>
-                                            <option value="ABC/3TC-LPV/r-">ABC/3TC/LPV/r 30/15/40/10mg Comp</option>
+                                            <option value="ABC/3TC-LPV/r">ABC/3TC/LPV/r 30/15/40/10mg Comp</option>
                                         </optgroup>
                                         <optgroup label="DOLUTEGRAVIR (DTG)">
                                             <option value="TDF/3TC/DTG">TDF/3TC/DTG 300/300/50mg Comp</option>
@@ -104,11 +104,11 @@
                                             <option value="DTG-50mg">DTG 50mg Comp</option>
                                         </optgroup>
                                         <optgroup label="AZIDOTIMIDINA (AZT) + 3TC + NEVIRAPINA (NVP)">
-                                            <option value="AZT/3TC-ped">AZT/3TC 60mg/30mg Comp</option>
-                                            <option value="AZT/3TC-adult">AZT/3TC 300mg/150mg Comp</option>
+                                            <option value="Duovir-ped">AZT/3TC 60mg/30mg Comp</option>
+                                            <option value="Duovir-adult">AZT/3TC 300mg/150mg Comp</option>
 
-                                            <option value="AZT/3TC/NVP-ped">AZT/3TC/NVP 60/30/50mg Comp</option>
-                                            <option value="AZT/3TC/NVP-adult">AZT/3TC/NVP 300/150/200mg Comp</option>
+                                            <option value="DuovirN-ped">AZT/3TC/NVP 60/30/50mg Comp</option>
+                                            <option value="DuovirN-adult">AZT/3TC/NVP 300/150/200mg Comp</option>
                                         </optgroup>
                                         <optgroup label="TENOFOVIR (TDF) + 3TC + EFAVIRENZ (EFV)">
                                             <option value="TDG/3TC">TDF/3TC 300mg/300mg Comp</option>
@@ -122,12 +122,17 @@
                                             <option value="RAL-25">RAL 25mg Comp</option>
                                             <option value="RAL-50">RAL 50mg Comp</option>
                                         </optgroup>
-                                        <optgroup label="PROFILAXIAS (INH = ISONIAZIDA)">
-                                            <option value="CTZ">CTZ 480mg Comp</option>
-                                            <option value="CTZ-susp">CTZ 240mg/5mL Susp</option>
-                                            <option value="INH-100mg">INH 100mg Comp</option>
-                                            <option value="INH-300mg">INH 300mg Comp</option>
-                                        </optgroup>
+										    <optgroup label="PROFILAXIAS (INH = ISONIAZIDA)">
+                                            <option value="ctx-cp">CTX 480mg Comp</option>
+											<option value="ctx-susp">CTX 240mg/5mL Susp</option>
+											
+                                            <option value="isoniazidacem">INH 100mg Comp</option>
+											<option value="isoniazida-300">INH 300mg Comp</option>
+
+											<option value="levofloxacina100">Levofloxacina 100mg Comp</option>
+                                            <option value="levofloxacina250">Levofloxacina 250mg Comp</option>
+										</optgroup>
+										-
 									</select>
 								</p>
 							</fieldset>

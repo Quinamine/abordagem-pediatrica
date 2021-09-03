@@ -227,7 +227,7 @@ class Dosespadrao {
 		else if(farmaco.startsWith("Albendazol")){pos = "dose única";}  // Inclui Albendazol de 200 e 400;
 		else if(farmaco=="Salbutamol-neb"){pos="de 4 em 4 horas (SOS)";}
 		else if((farmaco=="retinol") || (farmaco=="retinol-100")){pos = "nos dias 0, 1 e 14";}
-		else if((farmaco=="Vitamina-C")){pos = "de 12 em 12 horas na 1<sup>a</sup> semana e depois 1 cp/dia durante *(várias semanas)";}
+		else if((farmaco=="Vitamina-C")){pos = "de 12 em 12 horas na 1<sup>a</sup> semana e depois 1 cp/dia durante (várias semanas*)";}
 		else{
 			if(this.posologia==3){pos = 'de 8 em 8 horas';}
 			else if(this.posologia==2){pos = 'de 12 em 12 horas';}

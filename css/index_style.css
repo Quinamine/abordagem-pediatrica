@@ -147,3 +147,30 @@ form label {
 	display: none !important;
 }
 
+
+/**     TARV      **/
+.select-da-pagina-tarv {
+	max-width: 452px;
+}
+table {
+	width: 100%;
+	max-width: 300px;
+	table-layout: fixed;
+	margin: 0 auto;
+}
+
+table, th, td {
+	text-align: center;
+	border: 1px solid #888;
+	border-collapse: collapse;
+	font-weight: bold;
+}
+
+tr:nth-child(3){
+	font-weight: lighter;
+}
+
+table th {
+	background-color:rgb(250, 160, 50);
+	color: #fff;
+}
