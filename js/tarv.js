@@ -1,40 +1,10 @@
 class Tarv {
-    constructor(peso, arv){
+    constructor(peso, arvs, arv){
         this.peso = peso;
+        this.arvs = arvs;
         this.arv = arv;
     }
 
-
-    /* MÉTODOS DE RECOMENDAÇÃO DE ABC+3TC 
-    verAbc3tcPediatrico() {
-        output.innerHTML = `<span class="print-alerta">Ver (${arvs[1].textContent}) OU (${arvs[2].textContent}).<span>`;
-        return false;
-    }
-    verAbc3tcDeAdulto() {
-        output.innerHTML = `<span class="print-alerta">Ver (${arvs[3].textContent}).</span>`;
-        return false;
-    }
-
-    MÉTODOS DE RECOMENDAÇÃO DE Lopinavir 
-
-    verLPVde100ou200() {
-        output.innerHTML = `<span class="print-alerta">Ver (${arvs[6].textContent}) OU (${arvs[7].textContent}).</span>`;
-        return false;
-    }
-
-    verLpvXpeouCaps(){
-        output.innerHTML = `<span class="print-alerta">Ver (${arvs[4].textContent}) OU (${arvs[5].textContent}).</span>`;
-        return false;
-    }
-
-    verAbc3tcPediatricoELPVde100ou200(){
-        output.innerHTML = `<span class="print-alerta">Ver (${arvs[1].textContent}) OU (${arvs[2].textContent}) <span class="display-block">E</span>
-        (${arvs[6].textContent}) OU (${arvs[7].textContent})
-        <span>`;
-        return false;
-    }
-
-*/
     
     get getForma(){
         let forma;
@@ -42,7 +12,7 @@ class Tarv {
             forma = "ml";
         }
         else if(this.arv=="LPV/r-40-10mg") {
-            forma = "saquetas";
+            forma = "saquetas ";
         }
 
         else {
@@ -51,7 +21,104 @@ class Tarv {
 
         return forma;
     }
-    /* MÉTODOS DE IMPRESSÃO */
+
+    /* MÉTODO DE RECOMENDAÇÃO */
+    printAlerta(){
+
+        if((this.arv=="ABC") || (this.arv=="ABC/3TC-60-30mg") || (this.arv=="ABC/3TC-120-60mg")){
+            if(this.peso>=25){
+                output.innerHTML += `<span class="print-alerta align-center">Ver "${this.arvs[3].textContent}"</span>`; // Ver ABC/3TC 600mg/300mg;
+            }
+        }
+
+        else if(this.arv=="ABC/3TC-600-300mg"){
+            if(this.peso<25){
+                output.innerHTML += `<span class="print-alerta align-center">Ver "${this.arvs[2].textContent}" ou "${this.arvs[1].textContent}"</span>`; 
+            }
+        }
+
+        else if((this.arv=="LPV/r-40-10mg") ||(this.arv=="LPV/r-xpe") ||(this.arv=="ABC/3TC-LPV/r")){
+            if(this.peso>=20){
+                output.innerHTML += `<span class="print-alerta align-center">Ver "${this.arvs[7].textContent}" ou "${this.arvs[6].textContent}".</span>`; 
+            }
+        }
+
+        else if((this.arv=="LPV/r-100-25mg") ||(this.arv=="LPV/r-200-50mg")){
+            if(this.peso<10){
+                output.innerHTML += `<span class="print-alerta align-center">Ver "${this.arvs[5].textContent}" ou "${this.arvs[4].textContent}".</span>`; 
+            }
+            else if(this.peso>=10){
+                if(this.arv=="LPV/r-100-25mg"){
+                    output.innerHTML += `<span class="print-alerta">Os comprimidos não devem ser partidos, esmagados ou mastigados, pois a eficácia reduz muito se assim forem manipulados.</span>`; 
+                }
+            }
+            else if(this.peso<14){
+                if(this.arv=="LPV/r-200-50mg"){
+                    output.innerHTML += `<span class="print-alerta align-center">Ver "${this.arvs[6].textContent}".</span>.`; 
+                }
+            }
+            
+        }
+
+        else if(this.arv=="TDF/3TC/DTG"){
+            if(this.peso<30){
+                output.innerHTML += `<span class="print-alerta">A Dose Fixa Combinada de "${this.arvs[9].textContent}" está indicada apenas para crianças com peso &ge; 30kg .</span>`; 
+            }
+        }
+
+        else if(this.arv=="DTG-10mg"){
+            if(this.peso>=20){
+                output.innerHTML += `<span class="print-alerta align-center">Ver "${this.arvs[11].textContent}".</span>`; 
+            }
+        }
+
+        else if(this.arv=="DTG-50mg"){
+            if(this.peso<20){
+                output.innerHTML += `<span class="print-alerta align-center">Ver "${this.arvs[10].textContent}".</span>`; 
+            }
+        }
+
+        else if(this.arv=="Duovir-ped"){
+            if(this.peso>=25){
+                output.innerHTML += `<span class="print-alerta align-center">Ver "${this.arvs[13].textContent}".</span>`; 
+            }
+        }
+
+        else if(this.arv=="Duovir-adult"){
+            if(this.peso<14){
+                output.innerHTML += `<span class="print-alerta align-center">Ver "${this.arvs[12].textContent}".</span>`; 
+            }
+        }
+
+        else if(this.arv=="DuovirN-ped"){
+            if(this.peso>=25){
+                output.innerHTML += `<span class="print-alerta align-center">Ver "${this.arvs[15].textContent}".</span>`; 
+            }
+        }
+
+        else if(this.arv=="DuovirN-adult"){
+            if(this.peso<14){
+                output.innerHTML += `<span class="print-alerta align-center">Ver "${this.arvs[14].textContent}".</span>`; 
+            }
+        }
+
+        else if(this.arv=="TDF/3TC/EFV"){
+            if(this.peso<35){
+                output.innerHTML += `<span class="print-alerta">O "${this.arvs[17].textContent}" só deve ser administrado em crianças com peso &ge; 35kg .</span>`; 
+            }
+        }
+
+        else if(this.arv=="ATV/r"){
+            if(this.peso<25){
+                output.innerHTML += `<span class="print-alerta">O "${this.arvs[19].textContent}" só deve ser administrado em crianças com peso &ge; 25kg.</span>`; 
+            }
+            else {
+                output.innerHTML += `<span class="print-alerta">Nota: Pacientes que estiverem a usar a Rifampicina devem substituir o ATV/r por DTG e ajustar a dose de DTG durante o tempo que recebem RIF e por mais 2 semanas (DTG 12/12 horas). Depois mantêm o DTG e passam a tomar apenas 1 vez/dia.</span>`; 
+            }
+        }
+    }
+
+    /* MÉTODO DE IMPRESSÃO */
     printDose(dosemanha, dosenoite){
         if((dosemanha=="&minus;") && (dosenoite=="&minus;")){
             output.innerHTML = `<table><tr><th>Dose manhã</th><th>Dose noite</th></tr>
@@ -69,8 +136,12 @@ class Tarv {
             <tr><td>${dosemanha}</td><td>${dosenoite}</td></tr>
             <tr><td>${formamanha}</td><td>${formanoite}</td></tr></table>`;
         }
+
+        this.printAlerta();
         
     }
+
+
 
     /* MÉTODO PRINCIPAL */
     calcularDose(){
@@ -108,7 +179,6 @@ class Tarv {
 
         else if(this.arv=="ABC/3TC-600-300mg"){
             if(peso<25){
-                //this.verAbc3tcPediatrico();
                 dosemanha = "&minus;";
             }
             else if(peso>=25){
@@ -194,11 +264,6 @@ class Tarv {
                 //this.verLpvXpeouCaps();
                 dosemanha = "&minus;";
                 dosenoite = "&minus;";
-            }
-
-            else if(peso<14){
-                dosemanha = 2;
-                dosenoite = 1;
             }
 
             else if(peso<25){
@@ -316,7 +381,7 @@ class Tarv {
         }
 
         /* Tenofovir + Lamivudina + EFV */ 
-        else if((this.arv=="TDG/3TC") || (this.arv=="TDG/3TC/EFV")){
+        else if((this.arv=="TDF/3TC") || (this.arv=="TDF/3TC/EFV")){
             if(peso<35){
                 dosemanha = "&minus;";
             }
@@ -329,7 +394,7 @@ class Tarv {
             if(peso<10){ dosenoite = "&minus;";}
             else if(peso<14){dosenoite = 1;}
             else if(peso<25){dosenoite = 1.5;}
-            else {dosenoite = 1.5;}
+            else {dosenoite = 2;}
 
             dosemanha = "&minus;";
         }
@@ -368,7 +433,7 @@ class Tarv {
             }
         }
 
-        else if(this.arv=="RAL-50"){
+        else if(this.arv=="RAL-400"){
             if(peso<25){
                 dosemanha = "&minus;";
                 dosenoite = "&minus;";
@@ -516,7 +581,7 @@ class Tarv {
         if(
         (this.arv=="ATV/r") 
         || (this.arv.startsWith("ABC")) 
-        || (this.arv.startsWith("TDG"))
+        || (this.arv.startsWith("TDF"))
         || (this.arv.startsWith("levo"))
         || (this.arv.includes("DTG"))
         || (this.arv.includes("ctx"))
@@ -535,8 +600,11 @@ function classObject(){
     if(peso.value!=""){
         let arvSelected = arvs.options[arvs.selectedIndex].value;
 
-        dosearv = new Tarv(peso.value, arvSelected);
+        dosearv = new Tarv(peso.value, arvs, arvSelected);
         dosearv.calcularDose();
+    }
+    else {
+        output.innerHTML = "";
     }
 }
 

@@ -70,9 +70,7 @@ form label {
 }
 
 
-#calculadora input:hover, select:hover {
-	border: 2px groove orange;
-}
+
 
 
 #calculadora label, input, select {
@@ -129,8 +127,8 @@ form label {
 
 /*       CSS REUTILIZAVEL     */
 .text-color-orange {
-	font-size: 1.125rem;
-	color: orange;
+	font-size: 0.9375rem;
+	color: rgb(250, 160, 50);
 }
 
 .color-black {
@@ -150,7 +148,7 @@ form label {
 
 /**     TARV      **/
 .select-da-pagina-tarv {
-	max-width: 452px;
+	max-width: 456px;
 }
 table {
 	width: 100%;
