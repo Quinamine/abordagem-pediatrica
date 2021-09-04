@@ -12,7 +12,7 @@ class Tarv {
             forma = "ml";
         }
         else if(this.arv=="LPV/r-40-10mg") {
-            forma = "saquetas ";
+            forma = "saquetas";
         }
 
         else {
@@ -37,9 +37,18 @@ class Tarv {
             }
         }
 
-        else if((this.arv=="LPV/r-40-10mg") ||(this.arv=="LPV/r-xpe") ||(this.arv=="ABC/3TC-LPV/r")){
+        else if((this.arv=="LPV/r-40-10mg") ||(this.arv=="LPV/r-xpe")){
             if(this.peso>=20){
                 output.innerHTML += `<span class="print-alerta align-center">Ver "${this.arvs[7].textContent}" ou "${this.arvs[6].textContent}".</span>`; 
+            }
+        }
+
+        else if(this.arv=="ABC/3TC-LPV/r"){
+            if((this.peso>=20)&&(this.peso<25)){
+                output.innerHTML += `<span class="print-alerta align-center">Ver "${this.arvs[2].textContent}" e "${this.arvs[6].textContent}" ou "${this.arvs[7].textContent}".</span>`;
+            } 
+            else if(this.peso>=25){
+                output.innerHTML += `<span class="print-alerta align-center">Ver "${this.arvs[3].textContent}" e "${this.arvs[7].textContent}" ou "${this.arvs[6].textContent}".</span>`;
             }
         }
 
@@ -114,6 +123,18 @@ class Tarv {
             }
             else {
                 output.innerHTML += `<span class="print-alerta">Nota: Pacientes que estiverem a usar a Rifampicina devem substituir o ATV/r por DTG e ajustar a dose de DTG durante o tempo que recebem RIF e por mais 2 semanas (DTG 12/12 horas). Depois mantêm o DTG e passam a tomar apenas 1 vez/dia.</span>`; 
+            }
+        }
+
+        else if(this.arv=="RAL-25"){
+            if(this.peso>=25) {
+                output.innerHTML += `<span class="print-alerta align-center">Ver "${this.arvs[21].textContent}".</span>`; 
+            }
+        }
+
+        else if(this.arv=="RAL-400"){
+            if(this.peso<25){
+                output.innerHTML += `<span class="print-alerta align-center">Ver "${this.arvs[20].textContent}".</span>`; 
             }
         }
     }
