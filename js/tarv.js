@@ -25,18 +25,20 @@ class Tarv {
     /* MÉTODO DE RECOMENDAÇÃO */
     printAlerta(){
 
+        /** ABACAVIR + LAMIVUDINA */
         if((this.arv=="ABC") || (this.arv=="ABC/3TC-60-30mg") || (this.arv=="ABC/3TC-120-60mg")){
             if(this.peso>=25){
-                output.innerHTML += `<span class="print-alerta align-center">Ver "${this.arvs[3].textContent}"</span>`; // Ver ABC/3TC 600mg/300mg;
+                output.innerHTML += `<span class="print-alerta align-center">Ver "${this.arvs[3].textContent}".</span>`; // Ver ABC/3TC 600mg/300mg;
             }
         }
 
         else if(this.arv=="ABC/3TC-600-300mg"){
             if(this.peso<25){
-                output.innerHTML += `<span class="print-alerta align-center">Ver "${this.arvs[2].textContent}" ou "${this.arvs[1].textContent}"</span>`; 
+                output.innerHTML += `<span class="print-alerta align-center">Ver "${this.arvs[2].textContent}" ou "${this.arvs[1].textContent}".</span>`; 
             }
         }
 
+        /** LOPINAVIR + RITONAVIR */
         else if((this.arv=="LPV/r-40-10mg") ||(this.arv=="LPV/r-xpe")){
             if(this.peso>=20){
                 output.innerHTML += `<span class="print-alerta align-center">Ver "${this.arvs[7].textContent}" ou "${this.arvs[6].textContent}".</span>`; 
@@ -69,12 +71,13 @@ class Tarv {
             
         }
 
+        /** DOLUTEGRAVIR */
         else if(this.arv=="TDF/3TC/DTG"){
             if(this.peso<30){
-                output.innerHTML += `<span class="print-alerta">A Dose Fixa Combinada de "${this.arvs[9].textContent}" está indicada apenas para crianças com peso &ge; 30kg .</span>`; 
+                output.innerHTML += `<span class="print-alerta">A Dose Fixa Combinada de "${this.arvs[9].textContent}" está indicada apenas para crianças com peso &ge; 30kg.</span>`; 
             }
         }
-
+   
         else if(this.arv=="DTG-10mg"){
             if(this.peso>=20){
                 output.innerHTML += `<span class="print-alerta align-center">Ver "${this.arvs[11].textContent}".</span>`; 
@@ -87,6 +90,7 @@ class Tarv {
             }
         }
 
+        /** AZIDOTIMIDINA + LAMIVUDINA + NEVIRAPINA */
         else if(this.arv=="Duovir-ped"){
             if(this.peso>=25){
                 output.innerHTML += `<span class="print-alerta align-center">Ver "${this.arvs[13].textContent}".</span>`; 
@@ -111,12 +115,22 @@ class Tarv {
             }
         }
 
+        /** TENOFOVIR + LAMIVUDINA */
+        else if(this.arv=="TDF/3TC"){
+            if(this.peso<35){
+                output.innerHTML += `<span class="print-alerta">O "${this.arvs[16].textContent}" só deve ser administrado em crianças com peso &ge; 35kg ou &ge; 30kg na DFC com DTG (ver "${this.arvs[9].textContent}").</span>`; 
+            } 
+        }
+
+        /** TENOFOVIR + LAMIVUDINA + EFAVIRENZ */ 
+
         else if(this.arv=="TDF/3TC/EFV"){
             if(this.peso<35){
-                output.innerHTML += `<span class="print-alerta">O "${this.arvs[17].textContent}" só deve ser administrado em crianças com peso &ge; 35kg .</span>`; 
+                output.innerHTML += `<span class="print-alerta">O "${this.arvs[17].textContent}" só deve ser administrado em crianças com peso &ge; 35kg.</span>`; 
             }
         }
 
+        /** ATAZANAVIR */ 
         else if(this.arv=="ATV/r"){
             if(this.peso<25){
                 output.innerHTML += `<span class="print-alerta">O "${this.arvs[19].textContent}" só deve ser administrado em crianças com peso &ge; 25kg.</span>`; 
@@ -125,7 +139,9 @@ class Tarv {
                 output.innerHTML += `<span class="print-alerta">Nota: Pacientes que estiverem a usar a Rifampicina devem substituir o ATV/r por DTG e ajustar a dose de DTG durante o tempo que recebem RIF e por mais 2 semanas (DTG 12/12 horas). Depois mantêm o DTG e passam a tomar apenas 1 vez/dia.</span>`; 
             }
         }
+ 
 
+        /** RALTEGRAVIR */ 
         else if(this.arv=="RAL-25"){
             if(this.peso>=25) {
                 output.innerHTML += `<span class="print-alerta align-center">Ver "${this.arvs[21].textContent}".</span>`; 
@@ -137,11 +153,94 @@ class Tarv {
                 output.innerHTML += `<span class="print-alerta align-center">Ver "${this.arvs[20].textContent}".</span>`; 
             }
         }
+
+        /** RITONAVIR */ 
+        else if((this.arv=="RTV-25") || (this.arv=="RTV-100")){
+            if(this.peso<10){
+                output.innerHTML += `<span class="print-alerta">Recomendado para crianças co-infectadas (TB/HIV) com peso &ge; 10kg em uso de "LPV/r" para potenciação durante o tratamento da TB.</span>`; 
+            }
+            else {
+                if(this.arv=="RTV-25"){
+                    if(this.peso>=25){
+                        output.innerHTML += `<span class="print-alerta align-center">Ver "${this.arvs[23].textContent}".</span>`; 
+                    }
+                    else {
+                        output.innerHTML += `<span class="print-alerta">O "RTV iso&shy;lado" deve ser usa&shy;do para fa&shy;zer a po&shy;tenci&shy;ação em crianças em uso de "LPV/r" com TB/HIV sensi&shy;vel. Re&shy;co&shy;menda&shy;do para crianças com peso &ge; 10kg, que se&shy;jam ca&shy;pa&shy;zes de de&shy;glu&shy;tir intei&shy;ro. Não pode ser que&shy;bra&shy;do, es&shy;ma&shy;ga&shy;do nem dissol&shy;vi&shy;do em li&shy;qui&shy;dos ou ali&shy;mentos.</span>`;
+                    }
+                }
+
+                else if(this.arv=="RTV-100"){
+                    output.innerHTML += `<span class="print-alerta">O "RTV iso&shy;lado" deve ser usa&shy;do para fa&shy;zer a po&shy;tenci&shy;ação em crianças em uso de "LPV/r" com TB/HIV sensi&shy;vel. Re&shy;co&shy;menda&shy;do para crianças com peso &ge; 10kg, que se&shy;jam ca&shy;pa&shy;zes de de&shy;glu&shy;tir intei&shy;ro. Não pode ser que&shy;bra&shy;do, es&shy;ma&shy;ga&shy;do nem dissol&shy;vi&shy;do em li&shy;qui&shy;dos ou ali&shy;mentos.</span>`;
+                }
+                
+            }
+        }
+
+        /** COTRIMXAZOL */
+        /** COTRIMXAZOL */
+        else if(this.arv=="ctx-cp"){
+            output.innerHTML += `<span class="print-alerta">Para ver critérios de TPC, <a href='../pages/diversos.html#profilaxia_contra_ios' id='link-de-redirecionamento'>clique aqui</a>.</span>`; 
+        }
+
+        else if(this.arv=="ctx-susp"){
+            if(this.peso>=20){
+                output.innerHTML += `<span class="print-alerta align-center">Ver "${this.arvs[24].textContent}".</span>`; 
+            }
+            else {
+                output.innerHTML += `<span class="print-alerta">Para ver critérios de TPC, <a href='../pages/diversos.html#profilaxia_contra_ios' id='link-de-redirecionamento'>clique aqui</a>.</span>`;
+            }
+        }
+
+        /** ISONIAZIDA */
+        else if(this.arv=="isoniazida-300"){
+            if(this.peso<25){
+                output.innerHTML += `<span class="print-alerta align-center">Ver "${this.arvs[26].textContent}".</span>`; 
+            }
+            else {
+                output.innerHTML += `<span class="print-alerta">Para ver critérios de TPI, <a href='../pages/diversos.html#profilaxia_contra_tb' id='link-de-redirecionamento'>clique aqui</a>.</span>`;
+            }
+        }
+
+        else if(this.arv=="isoniazidacem"){
+            output.innerHTML += `<span class="print-alerta">Para ver critérios de TPI, <a href='../pages/diversos.html#profilaxia_contra_tb' id='link-de-redirecionamento'>clique aqui</a>.</span>`;
+        }
+
+        /** LEVOFLOXACINA */
+        else if(this.arv=="levofloxacina100"){
+            if(this.peso>=26){
+                output.innerHTML += `<span class="print-alerta align-center">Ver "${this.arvs[29].textContent}".</span>`; 
+            }
+            else{
+                output.innerHTML += `<span class="print-alerta">Nota: Se o caso fonte de TB-MR ti&shy;ver re&shy;sis&shy;tência compro&shy;va&shy;da a Flu&shy;ro&shy;qui&shy;no&shy;lo&shy;nas, o TPT com Le&shy;vo&shy;flo&shy;xa&shy;ci&shy;na não de&shy;ve ser ofe&shy;re&shy;ci&shy;do.</span>`;
+            }
+        }
+
+        else if(this.arv=="levofloxacina250"){
+            if(this.peso<4){
+                output.innerHTML += `<span class="print-alerta">Ver "${this.arvs[28].textContent}".</span>`;
+            }
+            else{
+                output.innerHTML += `<span class="print-alerta">Nota: Se o caso fonte de TB-MR ti&shy;ver re&shy;sis&shy;tência compro&shy;va&shy;da a Flu&shy;ro&shy;qui&shy;no&shy;lo&shy;nas, o TPT com Le&shy;vo&shy;flo&shy;xa&shy;ci&shy;na não de&shy;ve ser ofe&shy;re&shy;ci&shy;do.</span>`;
+            }
+        }
+
+        /** PIRIDOXINA*/
+        else if(this.arv=="piridoxina-50"){
+            if(this.peso<5){
+                output.innerHTML = `<span class="print-alerta">Não aplicável (N/A). Ver "${this.arvs[30].textContent}".</span>`; 
+            }
+        }
+
     }
 
     /* MÉTODO DE IMPRESSÃO */
     printDose(dosemanha, dosenoite){
-        if((dosemanha=="&minus;") && (dosenoite=="&minus;")){
+        if(this.arv.includes("piridoxina")){
+            output.innerHTML = `<span class="print-dose">Tomar: ${dosemanha}.</span>`;
+        }
+
+
+        else if((dosemanha=="&minus;") && (dosenoite=="&minus;") || (dosemanha=="N/A")){
             output.innerHTML = `<table><tr><th>Dose manhã</th><th>Dose noite</th></tr>
             <tr><td>${dosemanha}</td><td>${dosenoite}</td></tr>
             </table>`;
@@ -465,7 +564,59 @@ class Tarv {
             }
         }
 
+        /* RALTEGRAVIR */
+        else if(this.arv=="RTV-25"){
+            if(peso<10){
+                dosemanha = "&minus;";
+                dosenoite = "&minus;";
+            }
+
+            else if(peso<14){
+                dosemanha = 4;
+                dosenoite = 4;
+            }
+
+            else if(peso<25){
+                dosemanha = 6;
+                dosenoite = 6;
+            }
+ 
+            else{
+                dosemanha = "&minus;";
+                dosenoite = "&minus;";
+            }
+        }
+
+        else if(this.arv=="RTV-100"){
+            if(peso<10){
+                dosemanha = "&minus;";
+                dosenoite = "&minus;";
+            }
+
+            else if(peso<14){
+                dosemanha = 1;
+                dosenoite = 1;
+            }
+
+            else if(peso<25){
+                dosemanha = 1;
+                dosenoite = 2;
+            }
+ 
+            else if(peso<30){
+                dosemanha = 2;
+                dosenoite = 2;
+            }
+
+            else{
+                dosemanha = 3;
+                dosenoite = 3;
+            }  
+        }
+
         /* PROFILAXIAS */
+
+        /* Cotrimoxazol */
         else if(this.arv=="ctx-cp"){
             if(peso<7){
                dosemanha = "1/4";
@@ -495,11 +646,11 @@ class Tarv {
                 dosemanha = 10;
             }
             else {
-                output.innerHTML = `<span class="print-alerta">Ver Cotrimoxazol em comprimido (CTX 480mg Comp).</span>`;
-                return false
+                dosemanha = "N/A";
             }
         }
 
+        /* Isoniazida */
         else if(this.arv=="isoniazidacem"){
             if(peso<5){
                dosemanha = "1/2";
@@ -523,14 +674,14 @@ class Tarv {
 
         else if(this.arv=="isoniazida-300"){
             if(peso<25){
-                output.innerHTML = `<span class="print-alerta">Ver Isoniazida comprimidos de 100mg (INH 100mg Comp).</span>`;
-                return false;
+                dosemanha = "&minus;";
             }
             else {
                 dosemanha = 1;
             }
         }
 
+        /* Levofloxacina         */
         else if(this.arv=="levofloxacina100"){
             if(peso<4){
                dosemanha = 0.5;
@@ -560,15 +711,13 @@ class Tarv {
                 dosemanha = 5;
             }
             else {
-                output.innerHTML = `<span class="print-error">Ver "Levofloxacina 250mg Comp"</span>`;
-                return false;
+                dosemanha = "&minus;";
             }
         }
 
         else if(this.arv=="levofloxacina250"){
             if(peso<4){
-                output.innerHTML = `<span class="print-error">Ver "Levofloxacina 100mg Comp"</span>`;
-                return false;
+                dosemanha = "&minus;";
             }
            
             else if(peso<10){
@@ -596,6 +745,38 @@ class Tarv {
             }
         }
 
+        /* Piridoxina       */
+        else if(this.arv=="piridoxina-25"){
+            if(peso<5){
+                dosemanha = "1/2 cp 3&times;/semana";
+            }
+            else if(peso<8){
+                dosemanha = "1/2 cp/dia";
+            }
+
+            else if(peso<15){
+                dosemanha = "1 cp/dia";
+            }
+
+            else {
+                dosemanha = "2 cps/dia";
+            }
+        }
+
+        else if(this.arv=="piridoxina-50"){
+            if(peso<5){
+                this.printAlerta();
+                return false;
+            }
+
+            else if(peso<15){
+                dosemanha = "1/2 cp 3&times;/semana";
+            }
+
+            else {
+                dosemanha = "1 cp/dia";
+            }
+        }
 
         /** CALL FUNCTION to PRINT DOSE */
 
@@ -607,6 +788,7 @@ class Tarv {
         || (this.arv.includes("DTG"))
         || (this.arv.includes("ctx"))
         || (this.arv.includes("isoniazida"))
+        || (this.arv.includes("piridoxina"))
         ) {
             dosenoite = "&minus;";
         }

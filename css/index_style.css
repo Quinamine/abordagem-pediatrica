@@ -123,7 +123,11 @@ form label {
 	color: red;
 }
 
-#link-de-redirecionamento {text-decoration: underline;}
+#link-de-redirecionamento {
+	text-decoration: underline;
+	color: inherit;
+	font-size: inherit !important;
+}
 
 /*       CSS REUTILIZAVEL     */
 .text-color-orange {

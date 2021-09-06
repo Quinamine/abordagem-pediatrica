@@ -85,39 +85,57 @@
 								<p id="paragrafo-parent-de-farmaco">
 									<label for="farmaco" id="nome-farm">Nome</label>
 									<select id="arvs" class="select-da-pagina-tarv">
-                                        <optgroup label="ABACAVIR (ABC) + LAMIVUDINA (3TC)">
+
+                                        <optgroup label="ABACAVIR + LAMIVUDINA">
+
                                             <option value="ABC">ABC 60mg</option>
-                                            <option value="ABC/3TC-60-30mg">ABC/3TC 60mg/30mg Comp</option>
+                                            <option value="ABC/3TC-60-30mg" selected>ABC/3TC 60mg/30mg Comp</option>
                                             <option value="ABC/3TC-120-60mg">ABC/3TC 120mg/60mg Comp</option>
                                             <option value="ABC/3TC-600-300mg">ABC/3TC 600mg/300mg Comp</option>
-                                        </optgroup>
-                                        <optgroup label="LOPINAVIR (LPV) + RITONAVIR (RTV)">
+										</optgroup>
+										
+                                        <optgroup label="LOPINAVIR + RITONAVIR">
+
                                             <option value="LPV/r-40-10mg">LPV/r 40mg/10mg Cáps/Saquetas</option>
                                             <option value="LPV/r-xpe">LPV/r 80mg/20mg/mL Xarope</option>
                                             <option value="LPV/r-100-25mg">LPV/r 100mg/25mg Comp</option>
                                             <option value="LPV/r-200-50mg">LPV/r 200mg/50mg Comp</option>
                                             <option value="ABC/3TC-LPV/r">ABC/3TC/LPV/r 30/15/40/10mg Comp</option>
-                                        </optgroup>
-                                        <optgroup label="DOLUTEGRAVIR (DTG)">
+										</optgroup>
+										
+                                        <optgroup label="DOLUTEGRAVIR">
+
                                             <option value="TDF/3TC/DTG">TDF/3TC/DTG 300/300/50mg Comp</option>
                                             <option value="DTG-10mg">DTG 10mg Comp</option>
                                             <option value="DTG-50mg">DTG 50mg Comp</option>
-                                        </optgroup>
-                                        <optgroup label="AZIDOTIMIDINA (AZT) + 3TC + NEVIRAPINA (NVP)">
+										</optgroup>
+										
+                                        <optgroup label="AZIDOTIMIDINA + LAMIVUDINA">
                                             <option value="Duovir-ped">AZT/3TC 60mg/30mg Comp</option>
                                             <option value="Duovir-adult">AZT/3TC 300mg/150mg Comp</option>
+										</optgroup>
 
+										<optgroup label="AZIDOTIMIDINA + LAMIVUDINA + NEVIRAPINA">
                                             <option value="DuovirN-ped">AZT/3TC/NVP 60/30/50mg Comp</option>
                                             <option value="DuovirN-adult">AZT/3TC/NVP 300/150/200mg Comp</option>
-                                        </optgroup>
-                                        <optgroup label="TENOFOVIR (TDF) + 3TC + EFAVIRENZ (EFV)">
-                                            <option value="TDF/3TC">TDF/3TC 300mg/300mg Comp</option>
-                                            <option value="TDF/3TC/EFV">TDF/3TC/EFV 300/300/600mg Comp</option>
+										</optgroup>
+										
+                                        <optgroup label="TENOFOVIR + LAMIVUDINA">
+											<option value="TDF/3TC">TDF/3TC 300mg/300mg Comp</option>
+										</optgroup>
+										
+										<optgroup label="TENOFOVIR + LAMIVUDINA + EFAVIRENZ">
+											<option value="TDF/3TC/EFV">TDF/3TC/EFV 300/300/600mg Comp</option>
+										</optgroup>
+
+										<optgroup label="EFAVIRENZ">
                                             <option value="EFV">EFV 200mg Comp</option>
-                                        </optgroup>
-                                        <optgroup label="ATAZANAVIR (ATV) + RITONAVIR (RTV)">
+										</optgroup>
+										
+                                        <optgroup label="ATAZANAVIR + RITONAVIR">
                                             <option value="ATV/r">ATV/r 300mg/100mg Comp</option>
-                                        </optgroup>
+										</optgroup>
+										
                                         <optgroup label="RALTEGRAVIR">
                                             <option value="RAL-25">RAL 25mg Comp</option>
                                             <option value="RAL-400">RAL 400mg Comp</option>
@@ -128,7 +146,7 @@
                                             <option value="RTV-100">RTV 100mg Comp</option>
 										</optgroup>
 										
-										<optgroup label="PROFILAXIAS (INH = ISONIAZIDA)">
+										<optgroup label="PROFILAXIA DE IO's (INH = ISONIAZIDA)">
                                             <option value="ctx-cp">CTX 480mg Comp</option>
 											<option value="ctx-susp">CTX 240mg/5mL Susp</option>
 											
@@ -138,7 +156,10 @@
 											<option value="levofloxacina100">Levofloxacina 100mg Comp</option>
                                             <option value="levofloxacina250">Levofloxacina 250mg Comp</option>
 										</optgroup>
-										-
+										<optgroup label="PROFILAXIA DE NEUROPATIA">
+											<option value="piridoxina-25">Piridoxina 25mg Comp</option>
+											<option value="piridoxina-50">Piridoxina 50mg Comp</option>
+										</optgroup>
 									</select>
 								</p>
 							</fieldset>

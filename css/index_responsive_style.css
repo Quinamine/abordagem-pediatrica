@@ -280,14 +280,24 @@
 
 	}
 
-
-	#link-de-redirecionamento {
-		text-decoration: none;
-		font-size: 1rem !important;
+	/**     TARV      **/
+	table th{
+		background-color: rgb(250, 160, 50) !important;
 	}
 
-	
-	
+	table td, th{
+		color: rgb(250, 160, 50);
+		font-size: 16px !important;
+		
+	}	
+
+}
+
+@media screen and (max-width: 320px){
+	/**     TARV      **/
+	table {
+		margin-left: 5px;
+	}
 }
 
 
