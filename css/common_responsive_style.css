@@ -366,10 +366,14 @@
 
 	div.menu-on nav ul li a{
 		display: block;
-		margin: 10px;
+		margin: 20px;
 
 		padding: 22px;
 		font-size: 1.375rem;
+	}
+
+	div.menu-on nav ul li a:nth-child(1){
+		margin-top: 0;
 	}
 
 	/************ CORPO DA PAGINA************/
