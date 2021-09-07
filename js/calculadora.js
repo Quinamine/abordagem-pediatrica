@@ -1196,7 +1196,7 @@ class Doseparenteral extends Dosespadrao{
 function preencherPeso(){result.innerHTML = `<span class='print-error'>O campo de peso precisa ser preenchido.</span>`;}
 
 function errodePeso(){
-	result.innerHTML = `<span class='print-error'>Observação: o peso deve estar entre &ge; 2 e &le; 35. 
+	result.innerHTML = `<span class='print-error'>Observação: o peso deve ser &ge; 2 e &le; 35. 
 	<a href='pages/diversos.html#crianca' id='link-de-redirecionamento'>Veja mais detalhes&raquo;</a></span>`;
 }
 

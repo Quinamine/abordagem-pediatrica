@@ -801,10 +801,16 @@ class Tarv {
 
 function classObject(){
     if(peso.value!=""){
-        let arvSelected = arvs.options[arvs.selectedIndex].value;
-
-        dosearv = new Tarv(peso.value, arvs, arvSelected);
-        dosearv.calcularDose();
+        if((peso.value<3) || (peso.value>35)){
+            output.innerHTML = `<span class='print-error'>Observação: o peso deve ser &ge; 2 e &le; 35.</span>`;
+            return false;
+        }
+        else {
+            let arvSelected = arvs.options[arvs.selectedIndex].value;
+            dosearv = new Tarv(peso.value, arvs, arvSelected);
+            dosearv.calcularDose();
+        }
+        
     }
     else {
         output.innerHTML = "";
