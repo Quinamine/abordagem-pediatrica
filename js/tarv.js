@@ -28,35 +28,35 @@ class Tarv {
         /** ABACAVIR + LAMIVUDINA */
         if((this.arv=="ABC") || (this.arv=="ABC/3TC-60-30mg") || (this.arv=="ABC/3TC-120-60mg")){
             if(this.peso>=25){
-                output.innerHTML += `<span class="print-alerta align-center">Ver "${this.arvs[3].textContent}".</span>`; // Ver ABC/3TC 600mg/300mg;
+                output.innerHTML += `<span class="print-alerta ">Ver "${this.arvs[3].textContent}".</span>`; // Ver ABC/3TC 600mg/300mg;
             }
         }
 
         else if(this.arv=="ABC/3TC-600-300mg"){
             if(this.peso<25){
-                output.innerHTML += `<span class="print-alerta align-center">Ver "${this.arvs[2].textContent}" ou "${this.arvs[1].textContent}".</span>`; 
+                output.innerHTML += `<span class="print-alerta ">Ver "${this.arvs[2].textContent}" ou "${this.arvs[1].textContent}".</span>`; 
             }
         }
 
         /** LOPINAVIR + RITONAVIR */
         else if((this.arv=="LPV/r-40-10mg") ||(this.arv=="LPV/r-xpe")){
             if(this.peso>=20){
-                output.innerHTML += `<span class="print-alerta align-center">Ver "${this.arvs[7].textContent}" ou "${this.arvs[6].textContent}".</span>`; 
+                output.innerHTML += `<span class="print-alerta ">Ver "${this.arvs[7].textContent}" ou "${this.arvs[6].textContent}".</span>`; 
             }
         }
 
         else if(this.arv=="ABC/3TC-LPV/r"){
             if((this.peso>=20)&&(this.peso<25)){
-                output.innerHTML += `<span class="print-alerta align-center">Ver "${this.arvs[2].textContent}" e "${this.arvs[6].textContent}" ou "${this.arvs[7].textContent}".</span>`;
+                output.innerHTML += `<span class="print-alerta ">Ver "${this.arvs[2].textContent}" e "${this.arvs[6].textContent}" ou "${this.arvs[7].textContent}".</span>`;
             } 
             else if(this.peso>=25){
-                output.innerHTML += `<span class="print-alerta align-center">Ver "${this.arvs[3].textContent}" e "${this.arvs[7].textContent}" ou "${this.arvs[6].textContent}".</span>`;
+                output.innerHTML += `<span class="print-alerta ">Ver "${this.arvs[3].textContent}" e "${this.arvs[7].textContent}" ou "${this.arvs[6].textContent}".</span>`;
             }
         }
 
         else if((this.arv=="LPV/r-100-25mg") ||(this.arv=="LPV/r-200-50mg")){
             if(this.peso<10){
-                output.innerHTML += `<span class="print-alerta align-center">Ver "${this.arvs[5].textContent}" ou "${this.arvs[4].textContent}".</span>`; 
+                output.innerHTML += `<span class="print-alerta ">Ver "${this.arvs[5].textContent}" ou "${this.arvs[4].textContent}".</span>`; 
             }
             else if(this.peso>=10){
                 if(this.arv=="LPV/r-100-25mg"){
@@ -65,7 +65,7 @@ class Tarv {
             }
             else if(this.peso<14){
                 if(this.arv=="LPV/r-200-50mg"){
-                    output.innerHTML += `<span class="print-alerta align-center">Ver "${this.arvs[6].textContent}".</span>.`; 
+                    output.innerHTML += `<span class="print-alerta ">Ver "${this.arvs[6].textContent}".</span>.`; 
                 }
             }
             
@@ -80,38 +80,38 @@ class Tarv {
    
         else if(this.arv=="DTG-10mg"){
             if(this.peso>=20){
-                output.innerHTML += `<span class="print-alerta align-center">Ver "${this.arvs[11].textContent}".</span>`; 
+                output.innerHTML += `<span class="print-alerta ">Ver "${this.arvs[11].textContent}".</span>`; 
             }
         }
 
         else if(this.arv=="DTG-50mg"){
             if(this.peso<20){
-                output.innerHTML += `<span class="print-alerta align-center">Ver "${this.arvs[10].textContent}".</span>`; 
+                output.innerHTML += `<span class="print-alerta ">Ver "${this.arvs[10].textContent}".</span>`; 
             }
         }
 
         /** AZIDOTIMIDINA + LAMIVUDINA + NEVIRAPINA */
         else if(this.arv=="Duovir-ped"){
             if(this.peso>=25){
-                output.innerHTML += `<span class="print-alerta align-center">Ver "${this.arvs[13].textContent}".</span>`; 
+                output.innerHTML += `<span class="print-alerta ">Ver "${this.arvs[13].textContent}".</span>`; 
             }
         }
 
         else if(this.arv=="Duovir-adult"){
             if(this.peso<14){
-                output.innerHTML += `<span class="print-alerta align-center">Ver "${this.arvs[12].textContent}".</span>`; 
+                output.innerHTML += `<span class="print-alerta ">Ver "${this.arvs[12].textContent}".</span>`; 
             }
         }
 
         else if(this.arv=="DuovirN-ped"){
             if(this.peso>=25){
-                output.innerHTML += `<span class="print-alerta align-center">Ver "${this.arvs[15].textContent}".</span>`; 
+                output.innerHTML += `<span class="print-alerta ">Ver "${this.arvs[15].textContent}".</span>`; 
             }
         }
 
         else if(this.arv=="DuovirN-adult"){
             if(this.peso<14){
-                output.innerHTML += `<span class="print-alerta align-center">Ver "${this.arvs[14].textContent}".</span>`; 
+                output.innerHTML += `<span class="print-alerta ">Ver "${this.arvs[14].textContent}".</span>`; 
             }
         }
 
@@ -144,13 +144,13 @@ class Tarv {
         /** RALTEGRAVIR */ 
         else if(this.arv=="RAL-25"){
             if(this.peso>=25) {
-                output.innerHTML += `<span class="print-alerta align-center">Ver "${this.arvs[21].textContent}".</span>`; 
+                output.innerHTML += `<span class="print-alerta ">Ver "${this.arvs[21].textContent}".</span>`; 
             }
         }
 
         else if(this.arv=="RAL-400"){
             if(this.peso<25){
-                output.innerHTML += `<span class="print-alerta align-center">Ver "${this.arvs[20].textContent}".</span>`; 
+                output.innerHTML += `<span class="print-alerta ">Ver "${this.arvs[20].textContent}".</span>`; 
             }
         }
 
@@ -162,15 +162,15 @@ class Tarv {
             else {
                 if(this.arv=="RTV-25"){
                     if(this.peso>=25){
-                        output.innerHTML += `<span class="print-alerta align-center">Ver "${this.arvs[23].textContent}".</span>`; 
+                        output.innerHTML += `<span class="print-alerta ">Ver "${this.arvs[23].textContent}".</span>`; 
                     }
                     else {
-                        output.innerHTML += `<span class="print-alerta">O "RTV iso&shy;lado" deve ser usa&shy;do para fa&shy;zer a po&shy;tenci&shy;ação em crianças em uso de "LPV/r" com TB/HIV sensi&shy;vel. Re&shy;co&shy;menda&shy;do para crianças com peso &ge; 10kg, que se&shy;jam ca&shy;pa&shy;zes de de&shy;glu&shy;tir intei&shy;ro. Não pode ser que&shy;bra&shy;do, es&shy;ma&shy;ga&shy;do nem dissol&shy;vi&shy;do em li&shy;qui&shy;dos ou ali&shy;mentos.</span>`;
+                        output.innerHTML += `<span class="print-alerta">O "RTV isolado" deve ser usado para fazer a potenciação em crianças em uso de "LPV/r" com TB/HIV sensivel. Recomendado para crianças com peso &ge; 10kg, que sejam capazes de deglutir inteiro. Não pode ser quebrado, esmagado nem dissolvido em liquidos ou alimentos.</span>`;
                     }
                 }
 
                 else if(this.arv=="RTV-100"){
-                    output.innerHTML += `<span class="print-alerta">O "RTV iso&shy;lado" deve ser usa&shy;do para fa&shy;zer a po&shy;tenci&shy;ação em crianças em uso de "LPV/r" com TB/HIV sensi&shy;vel. Re&shy;co&shy;menda&shy;do para crianças com peso &ge; 10kg, que se&shy;jam ca&shy;pa&shy;zes de de&shy;glu&shy;tir intei&shy;ro. Não pode ser que&shy;bra&shy;do, es&shy;ma&shy;ga&shy;do nem dissol&shy;vi&shy;do em li&shy;qui&shy;dos ou ali&shy;mentos.</span>`;
+                    output.innerHTML += `<span class="print-alerta">O "RTV isolado" deve ser usado para fazer a potenciação em crianças em uso de "LPV/r" com TB/HIV sensivel. Recomendado para crianças com peso &ge; 10kg, que sejam capazes de deglutir inteiro. Não pode ser quebrado, esmagado nem dissolvido em liquidos ou alimentos.</span>`;
                 }
                 
             }
@@ -184,7 +184,7 @@ class Tarv {
 
         else if(this.arv=="ctx-susp"){
             if(this.peso>=20){
-                output.innerHTML += `<span class="print-alerta align-center">Ver "${this.arvs[24].textContent}".</span>`; 
+                output.innerHTML += `<span class="print-alerta ">Ver "${this.arvs[24].textContent}".</span>`; 
             }
             else {
                 output.innerHTML += `<span class="print-alerta">Para ver critérios de TPC, <a href='../pages/diversos.html#profilaxia_contra_ios' id='link-de-redirecionamento'>clique aqui</a>.</span>`;
@@ -194,7 +194,7 @@ class Tarv {
         /** ISONIAZIDA */
         else if(this.arv=="isoniazida-300"){
             if(this.peso<25){
-                output.innerHTML += `<span class="print-alerta align-center">Ver "${this.arvs[26].textContent}".</span>`; 
+                output.innerHTML += `<span class="print-alerta ">Ver "${this.arvs[26].textContent}".</span>`; 
             }
             else {
                 output.innerHTML += `<span class="print-alerta">Para ver critérios de TPI, <a href='../pages/diversos.html#profilaxia_contra_tb' id='link-de-redirecionamento'>clique aqui</a>.</span>`;
@@ -208,10 +208,10 @@ class Tarv {
         /** LEVOFLOXACINA */
         else if(this.arv=="levofloxacina100"){
             if(this.peso>=26){
-                output.innerHTML += `<span class="print-alerta align-center">Ver "${this.arvs[29].textContent}".</span>`; 
+                output.innerHTML += `<span class="print-alerta ">Ver "${this.arvs[29].textContent}".</span>`; 
             }
             else{
-                output.innerHTML += `<span class="print-alerta">Nota: Se o caso fonte de TB-MR ti&shy;ver re&shy;sis&shy;tência compro&shy;va&shy;da a Flu&shy;ro&shy;qui&shy;no&shy;lo&shy;nas, o TPT com Le&shy;vo&shy;flo&shy;xa&shy;ci&shy;na não de&shy;ve ser ofe&shy;re&shy;ci&shy;do.</span>`;
+                output.innerHTML += `<span class="print-alerta">Nota: Se o caso fonte de TB-MR tiver resistência comprovada a Fluroquinolonas, o TPT com Levofloxacina não deve ser oferecido.</span>`;
             }
         }
 
@@ -220,7 +220,7 @@ class Tarv {
                 output.innerHTML += `<span class="print-alerta">Ver "${this.arvs[28].textContent}".</span>`;
             }
             else{
-                output.innerHTML += `<span class="print-alerta">Nota: Se o caso fonte de TB-MR ti&shy;ver re&shy;sis&shy;tência compro&shy;va&shy;da a Flu&shy;ro&shy;qui&shy;no&shy;lo&shy;nas, o TPT com Le&shy;vo&shy;flo&shy;xa&shy;ci&shy;na não de&shy;ve ser ofe&shy;re&shy;ci&shy;do.</span>`;
+                output.innerHTML += `<span class="print-alerta">Nota: Se o caso fonte de TB-MR tiver resistência comprovada a Fluroquinolonas, o TPT com Levofloxacina não deve ser oferecido.</span>`;
             }
         }
 
