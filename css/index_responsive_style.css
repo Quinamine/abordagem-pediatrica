@@ -200,7 +200,7 @@
 
 
 	div.main-content form#calculadora  p:hover {
-		border: 1px solid orange;
+		border: 1px solid rgb(250, 160, 50);
 	}
 
 	div.main-content form#calculadora  p.resultado:hover {

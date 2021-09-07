@@ -118,7 +118,7 @@ class Tarv {
         /** TENOFOVIR + LAMIVUDINA */
         else if(this.arv=="TDF/3TC"){
             if(this.peso<35){
-                output.innerHTML += `<span class="print-alerta">O "${this.arvs[16].textContent}" só deve ser administrado em crianças com peso &ge; 35kg ou &ge; 30kg na DFC com DTG (ver "${this.arvs[9].textContent}").</span>`; 
+                output.innerHTML += `<span class="print-alerta">O "${this.arvs[16].textContent}" só deve ser administrado em crianças com peso &ge; 35 kg ou &ge; 30 kg na DFC com DTG (ver "${this.arvs[9].textContent}").</span>`; 
             } 
         }
 
@@ -133,10 +133,10 @@ class Tarv {
         /** ATAZANAVIR */ 
         else if(this.arv=="ATV/r"){
             if(this.peso<25){
-                output.innerHTML += `<span class="print-alerta">O "${this.arvs[19].textContent}" só deve ser administrado em crianças com peso &ge; 25kg.</span>`; 
+                output.innerHTML += `<span class="print-alerta">O "${this.arvs[19].textContent}" só deve ser administrado em crianças com peso &ge; 25 kg.</span>`; 
             }
             else {
-                output.innerHTML += `<span class="print-alerta">Nota: Pacientes que estiverem a usar a Rifampicina devem substituir o ATV/r por DTG e ajustar a dose de DTG durante o tempo que recebem RIF e por mais 2 semanas (DTG 12/12 horas). Depois mantêm o DTG e passam a tomar apenas 1 vez/dia.</span>`; 
+                output.innerHTML += `<span class="print-alerta">Nota: Pacientes que estiverem a usar a Rifampicina devem substituir o "ATV/r" por "DTG" e ajustar a dose de "DTG (DTG 12/12 horas)" durante o tempo que recebem RIF e por mais 2 semanas. Depois mantêm o "DTG" e passam a tomar apenas 1 vez/dia.</span>`; 
             }
         }
  
@@ -157,7 +157,7 @@ class Tarv {
         /** RITONAVIR */ 
         else if((this.arv=="RTV-25") || (this.arv=="RTV-100")){
             if(this.peso<10){
-                output.innerHTML += `<span class="print-alerta">Recomendado para crianças co-infectadas (TB/HIV) com peso &ge; 10kg em uso de "LPV/r" para potenciação durante o tratamento da TB.</span>`; 
+                output.innerHTML += `<span class="print-alerta">Recomendado para crianças co-infectadas (TB/HIV) com peso &ge; 10 kg em uso de "LPV/r" para potenciação durante o tratamento da TB.</span>`; 
             }
             else {
                 if(this.arv=="RTV-25"){
@@ -788,7 +788,6 @@ class Tarv {
         || (this.arv.includes("DTG"))
         || (this.arv.includes("ctx"))
         || (this.arv.includes("isoniazida"))
-        || (this.arv.includes("piridoxina"))
         ) {
             dosenoite = "&minus;";
         }
@@ -801,8 +800,8 @@ class Tarv {
 
 function classObject(){
     if(peso.value!=""){
-        if((peso.value<3) || (peso.value>35)){
-            output.innerHTML = `<span class='print-error'>Observação: o peso deve ser &ge; 2 e &le; 35.</span>`;
+        if((peso.value<3) || (peso.value>45)){
+            output.innerHTML = `<span class='print-error'>Observação: o peso deve ser &ge; 3 e &le; 45.</span>`;
             return false;
         }
         else {
