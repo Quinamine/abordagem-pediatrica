@@ -67,10 +67,12 @@ header {
 
 
 .logo-box a {
-	letter-spacing: -2px;
+	font-family: "Lobster", cursive, Arial, Helvetica, sans-serif;
+	
 	font-weight: bolder;
-	color: rgb(250, 160, 50);
+
 	font-size: 2rem;
+	color: rgb(250, 160, 50);
 }
 
 
@@ -163,7 +165,7 @@ header {
 	width: 100%;
 	max-width: 697px;
 
-	text-align: justify;
+	
 
 	margin: 0;
 	padding: 20px;

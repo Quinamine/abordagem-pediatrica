@@ -20,7 +20,7 @@ class Dosecomp {
 
 	/********** MÉTODOS DE RECOMENDACAO E ADVERTENCIA **********/
 	considerarOutraFormulacao(){
-		result.innerHTML = `<span class='print-error'>Consi&shy;de&shy;re a for&shy;ma em sus&shy;pensão para do&shy;se mais exa&shy;ta e se&shy;gu&shy;ra.</span>`;
+		result.innerHTML = `<span class='print-error'>Considere a forma em suspensão para dose mais exata e segura.</span>`;
 	}
 
 	/********** MÉTODO(S) DE IMPRESSÃO **********/
@@ -227,7 +227,7 @@ class Dosespadrao {
 		else if(farmaco.startsWith("Albendazol")){pos = "dose única";}  // Inclui Albendazol de 200 e 400;
 		else if(farmaco=="Salbutamol-neb"){pos="de 4 em 4 horas (SOS)";}
 		else if((farmaco=="retinol") || (farmaco=="retinol-100")){pos = "nos dias 0, 1 e 14";}
-		else if((farmaco=="Vitamina-C")){pos = "de 12 em 12 horas na 1<sup>a</sup> semana e depois 1 cp/dia durante *(várias semanas)";}
+		else if((farmaco=="Vitamina-C")){pos = "de 12 em 12 horas na 1<sup>a</sup> semana e depois 1 cp/dia durante (várias semanas*)";}
 		else{
 			if(this.posologia==3){pos = 'de 8 em 8 horas';}
 			else if(this.posologia==2){pos = 'de 12 em 12 horas';}
@@ -256,9 +256,9 @@ class Dosespadrao {
 	/*********** METODOS DE SUGESTAO **************/
 	considerCtzTablets(){result.innerHTML= `<span class='print-error'>Considere a forma em comprimido(s).</span>`;}
 
-	considerMetoclopramidaSusp(){result.innerHTML = `<span class='print-error'>Consi&shy;de&shy;re a for&shy;ma em sus&shy;pensão para dose mais exa&shy;ta e se&shy;gu&shy;ra.</span>`;}
+	considerMetoclopramidaSusp(){result.innerHTML = `<span class='print-error'>Considere a forma em suspensão para dose mais exata e segura.</span>`;}
 
-	verLactulose(){result.innerHTML = `<span class='print-error'>Consi&shy;de&shy;re outro la&shy;xante (exemplo: Lactu&shy;lose).</span>`;}
+	verLactulose(){result.innerHTML = `<span class='print-error'>Considere outro laxante (exemplo: Lactulose).</span>`;}
 
 	especificarMeses(){result.innerHTML = `<span class='print-error'>Especifique os meses.</span>`;}
 
@@ -275,19 +275,19 @@ class Dosespadrao {
 	printAlerta(){
 		if(this.farmaco.startsWith("Albendazol")){
 			result.innerHTML += `<span class='print-alerta'>
-				<span class=''>Dose única</span> ge&shy;ral&shy;mente é su&shy;fi&shy;ciente pa&shy;ra o tra&shy;ta&shy;mento da ma&shy;ior par&shy;te das pa&shy;ra&shy;si&shy;to&shy;ses 
-			(As&shy;ca&shy;ri&shy;día&shy;se,  Ente&shy;ro&shy;bía&shy;se, anci&shy;los&shy;to&shy;mía&shy;se, as&shy;trongi&shy;loi&shy;día&shy;se, der&shy;ma&shy;ti&shy;te ser&shy;pi&shy;gi&shy;no&shy;sa por lar&shy;va mi&shy;grans). </br>
-			<span class='text-color-orange'> Na Es&shy;trongi&shy;loi&shy;día&shy;se: to&shy;mar a do&shy;se de 12 em 12 ho&shy;ras du&shy;rante 3 dias conse&shy;cu&shy;ti&shy;vos.</span>
+				<span class=''>Dose única</span> geralmente é suficiente para o tratamento da maior parte das parasitoses 
+			(Ascaridíase,  Enterobíase, ancilostomíase, astrongiloidíase, dermatite serpiginosa por larva migrans). </br>
+			<span class='text-color-orange'> Na Estrongiloidíase: tomar a dose de 12 em 12 horas durante 3 dias consecutivos.</span>
 			</span>`;
 
 			if(this.tipoidade=="m"){
 				if(this.idade<6){
-					result.innerHTML = `<span class='print-error'>NB: Nas crianças &lt; 1 ano de idade a sua se&shy;gu&shy;rança
-					não es&shy;tá es&shy;ta&shy;be&shy;le&shy;ci&shy;da.</span>`;
+					result.innerHTML = `<span class='print-error'>NB: Nas crianças &lt; 1 ano de idade a sua segurança
+					não está estabelecida.</span>`;
 				}
 				else if(this.idade<12){
-					result.innerHTML += `<span class='print-alerta print-error'>NB: Nas crianças &lt; 1 ano de ida&shy;de a sua se&shy;gu&shy;rança
-					não es&shy;tá esta&shy;be&shy;le&shy;ci&shy;da.</span>`;
+					result.innerHTML += `<span class='print-alerta print-error'>NB: Nas crianças &lt; 1 ano de idade a sua segurança
+					não está estabelecida.</span>`;
 				}
 			}
 		} // Inclui Albendazol de 200 e 400;
@@ -298,20 +298,20 @@ class Dosespadrao {
 		}
 		else if((this.farmaco=="retinol") || (this.farmaco=="retinol-200")){
 			result.innerHTML += `<span class='print-alerta'>
-			Dia 0: na altura do diagnós&shy;ti&shy;co;</br>
-			Dia 1: no dia se&shy;guinte ao do diagnós&shy;ti&shy;co;</br>
-			Dia 14: duas se&shy;ma&shy;nas mais tar&shy;de.
+			Dia 0: na altura do diagnóstico;</br>
+			Dia 1: no dia seguinte ao do diagnóstico;</br>
+			Dia 14: duas semanas mais tarde.
 			<br/>
-			NB: A dose acima é para o tra&shy;ta&shy;mento da Hi&shy;po&shy;vi&shy;ta&shy;mi&shy;no&shy;se A (todos graus de Xeroftalmia, casos de Sarampo e pós-Sarampo,
-			Kwa&shy;shior&shy;kor Gra&shy;ve, etc). Para doses pro&shy;fi&shy;lá&shy;ti&shy;cas <a href='pages/diversos.html#axeroftol'>cli&shy;que aqui.</a></span>`;
+			NB: A dose acima é para o tratamento da Hipovitaminose A (todos graus de Xeroftalmia, casos de Sarampo e pós-Sarampo,
+			Kwashiorkor Grave, etc). Para doses profiláticas <a href='pages/diversos.html#axeroftol'>clique aqui.</a></span>`;
 		}
 		else if((this.farmaco=="Acido-folico")){
-			result.innerHTML += `<span class='print-alerta'>Continuar a admi&shy;nis&shy;trar por mais 4 meses após
-			a cor&shy;re&shy;ção da ane&shy;mia para re&shy;por re&shy;ser&shy;vas.</span>`;
+			result.innerHTML += `<span class='print-alerta'>Continuar a administrar por mais 4 meses após
+			a correção da anemia para repor reservas.</span>`;
 		}
 		else if((this.farmaco=="Vitamina-C")){
-			result.innerHTML += `<span class='print-alerta'>(*) &rarr; pelo me&shy;nos até a re&shy;mis&shy;são do Qua&shy;dro Clí&shy;ni&shy;co do Es&shy;cor&shy;bu&shy;to.
-				</br> NB: A inges&shy;tão de 90 à 120mL/&shy;dia de su&shy;mos de fru&shy;ta po&shy;de cu&shy;rar o Es&shy;cor&shy;bu&shy;to.</span>`;;
+			result.innerHTML += `<span class='print-alerta'>(*) &rarr; pelo menos até a remissão do Quadro Clínico do Escorbuto.
+				</br> NB: A ingestão de 90 à 120mL/dia de sumos de fruta pode curar o Escorbuto.</span>`;;
 		}
 	}
 
@@ -899,14 +899,14 @@ class Doseparenteral extends Dosespadrao{
 	get getPosologia(){
 		let pos;
 		if(this.farmaco=="Benzatina") {
-			pos = ` &rarr;&nbsp;"dose única" na Sí&shy;fi&shy;lis re&shy;cente (pri&shy;má&shy;ria, se&shy;cundá&shy;ria e la&shy;tente pre&shy;co&shy;ce)
+			pos = ` &rarr;&nbsp;"dose única" na Sífilis recente (primária, secundária e latente precoce)
 						 <span class='display-block align-center'> OU </span>
-				&rarr;&nbsp;"uma dose por se&shy;ma&shy;na du&shy;rante 3 se&shy;ma&shy;nas" na Sí&shy;fi&shy;lis tar&shy;dia (la&shy;tente tar&shy;dia e ter&shy;ciá&shy;ria).`;
+				&rarr;&nbsp;"uma dose por semana durante 3 semanas" na Sífilis tardia (latente tardia e terciária).`;
 		}
 
 		else if(this.posologia == 1){
 			pos = " dose única diária.";
-			if(this.farmaco=="Vitamina-B12"){pos = " 3 ve&shy;zes por se&shy;ma&shy;na (em dias al&shy;ter&shy;na&shy;dos) du&shy;rante 2 se&shy;ma&shy;nas.";}
+			if(this.farmaco=="Vitamina-B12"){pos = " 3 vezes por semana (em dias alternados) durante 2 semanas.";}
 			if(this.farmaco=="VAR"){pos = " nos dias 0, 3, 7, 14, 30 e 90*.";}
 		}
 		else if(this.posologia == 2){pos = " de 12 em 12 horas.";}
@@ -953,7 +953,7 @@ class Doseparenteral extends Dosespadrao{
 	/****************** Metodo de precaucao ****************/
 	printAlerta(){
 		if((this.farmaco=="Benzatina")||(this.farmaco=="Procaina")){
-			result.innerHTML += `<span class='print-alerta'>NB: Nunca admi&shy;nis&shy;trar por via E.V (na veia) ou S.C (com a agulha 
+			result.innerHTML += `<span class='print-alerta'>NB: Nunca administrar por via E.V (na veia) ou S.C (com a agulha 
 			inclinada a 45 <sup>graus</sup> ou a menos que 90 <sup>graus</sup>).</span>`;
 		}
 		else if(this.farmaco=="Ceftriaxona"){
@@ -975,38 +975,38 @@ class Doseparenteral extends Dosespadrao{
 			result.innerHTML += `<span class='print-alerta nota-bem'>Pode ser administrado excepcionalmente por via I.M.</span>`;
 		}
 		else if(this.farmaco=="Prednisolona-inj"){
-			result.innerHTML += `<span class='print-alerta nota-bem'>Repetir a dose confor&shy;me a evo&shy;lu&shy;ção clínica. Nas si&shy;tua&shy;ções 
-			mais ur&shy;gentes como Asma ou reac&shy;ções ana&shy;fi&shy;lácti&shy;cas pode ser ne&shy;ces&shy;sá&shy;rio re&shy;pe&shy;tir a do&shy;se de 2/2h.
-			<span class="text-color-orange"><em>Dose máxima: 50mg/dia.</em></span> Também po&shy;de ser admi&shy;nis&shy;tra&shy;do por via I.M.</span>`;
+			result.innerHTML += `<span class='print-alerta nota-bem'>Repetir a dose conforme a evolução clínica. Nas situações 
+			mais urgentes como Asma ou reacções anafilácticas pode ser necessário repetir a dose de 2/2h.
+			<span class="text-color-orange"><em>Dose máxima: 50mg/dia.</em></span> Também pode ser administrado por via I.M.</span>`;
 		}
 		else if(this.farmaco=="Vitamina-B12"){
-			result.innerHTML += `<span class='print-alerta nota-bem'>Antes de de&shy;ci&shy;dir admi&shy;nis&shy;trar a Vit. B12 ou B9, pro&shy;cu&shy;rar
-			sempre es&shy;cla&shy;re&shy;cer a causa da Ane&shy;mia me&shy;ga&shy;lo&shy;blás&shy;tica e cor&shy;ri&shy;gí-la se pos&shy;si&shy;vel. Se a causa não for cor&shy;ri&shy;gí&shy;vel, 
-			admi&shy;nis&shy;trar uma <span class="text-color-orange">dose de ma&shy;nu&shy;tenção de 1 mg a cada 3 meses</span> (ou de 2 em 2 meses
-			em casos de Anemia per&shy;ni&shy;cio&shy;sa ou ou&shy;tra Ane&shy;mia ma&shy;cro&shy;cí&shy;ti&shy;ca com envol&shy;vi&shy;mento neu&shy;ro&shy;ló&shy;gi&shy;co).</span>`;
+			result.innerHTML += `<span class='print-alerta nota-bem'>Antes de decidir administrar a Vit. B12 ou B9, procurar
+			sempre esclarecer a causa da Anemia megaloblástica e corrigí-la se possivel. Se a causa não for corrigível, 
+			administrar uma <span class="text-color-orange">dose de manutenção de 1 mg a cada 3 meses</span> (ou de 2 em 2 meses
+			em casos de Anemia perniciosa ou outra Anemia macrocítica com envolvimento neurológico).</span>`;
 		}
 		else if(this.farmaco=="Aminofilina-inj"){
-			result.innerHTML += `<span class='print-alerta nota-bem'>Observação: A administração rá&shy;pi&shy;da pode pro&shy;vo&shy;car convul&shy;sões, arritmias
-			cardíacas, hipo&shy;tensão ar&shy;te&shy;rial e he&shy;morra&shy;gia di&shy;ges&shy;ti&shy;va.</span>`;
+			result.innerHTML += `<span class='print-alerta nota-bem'>Observação: A administração rápida pode provocar convulsões, arritmias
+			cardíacas, hipotensão arterial e hemorragia digestiva.</span>`;
 		}
 		else if(this.farmaco=="VAR"){
 			result.innerHTML += `<span class='print-alerta'>
-			Dia 0: no pri&shy;mei&shy;ro contacto pós&shy;-ex&shy;po&shy;si&shy;ção;</br>
-			Dias 3, 7, 14, 30: após a pri&shy;mei&shy;ra do&shy;se;</br>
-			Dia 90*: no&shy;venta dias após o contacto sus&shy;pei&shy;to (a par&shy;tir do dia que ocorreu a mor&shy;de&shy;du&shy;ra ou arranha&shy;du&shy;ra). Esta úl&shy;ti&shy;ma é
-			fa&shy;cul&shy;ta&shy;ti&shy;va (pode ou não ser admi&shy;nis&shy;tra&shy;da). </br> 
-			Num indi&shy;ví&shy;duo ante&shy;rior&shy;mente va&shy;ci&shy;na&shy;do ade&shy;qua&shy;da&shy;mente, dar ape&shy;nas 2
-			do&shy;ses de re&shy;for&shy;ço nos dias 0 e 3.
+			Dia 0: no primeiro contacto pós-exposição;</br>
+			Dias 3, 7, 14, 30: após a primeira dose;</br>
+			Dia 90*: noventa dias após o contacto suspeito (a partir do dia que ocorreu a mordedura ou arranhadura). Esta última é
+			facultativa (pode ou não ser administrada). </br> 
+			Num indivíduo anteriormente vacinado adequadamente, dar apenas 2
+			doses de reforço nos dias 0 e 3.
 			<br/>
-			<span class='blue'>De&shy;vi&shy;do à de&shy;fi&shy;ciente res&shy;pos&shy;ta imu&shy;ni&shy;tá&shy;ria, evi&shy;tar a inje&shy;cção na regi&shy;ão na&shy;de&shy;guei&shy;ra. Admi&shy;nis&shy;trar
-			sempre na re&shy;gião del&shy;tói&shy;deia ou nas crianças mais pe&shy;que&shy;nas na fa&shy;ce antero&shy;-la&shy;te&shy;ral da co&shy;xa.</span>
+			<span class='blue'>Devido à deficiente resposta imunitária, evitar a injecção na região nadegueira. Administrar
+			sempre na região deltóideia ou nas crianças mais pequenas na face antero-lateral da coxa.</span>
 			</span>`;
 		}
 
 		else if(this.farmaco=="Diazepam-inj"){
 			let doserectal = ((0.5 * this.peso)* this.diluicao / this.dosagem).toFixed(1);
-			result.innerHTML += `<span class='print-alerta'>Se não ti&shy;ver acesso ve&shy;no&shy;so, <span class='text-color-orange'>administrar 
-				${doserectal} mL por via rectal.</span> De re&shy;fe&shy;rir que esta do&shy;se é de Dia&shy;ze&shy;pam como anti&shy;-convul&shy;si&shy;vante.</span>`;
+			result.innerHTML += `<span class='print-alerta'>Se não tiver acesso venoso, <span class='text-color-orange'>administrar 
+				${doserectal} mL por via rectal.</span> De referir que esta dose é de Diazepam como anti-convulsivante.</span>`;
 		}
 	}
 
@@ -1019,7 +1019,7 @@ class Doseparenteral extends Dosespadrao{
 
 		if(this.farmaco=="IGAR"){
 			result.innerHTML = `<span class='print-dose'> Injectar &rarr; ${dose} ${forma} ${doseml}
-			por via ${via}  <span class='display-block align-center'> E </span>  Infiltrar &rarr; ${dose} ${forma} ${doseml} à vol&shy;ta da zo&shy;na da mor&shyde&shy;du&shy;ra.</span>`;
+			por via ${via}  <span class='display-block align-center'> E </span>  Infiltrar &rarr; ${dose} ${forma} ${doseml} à volta da zona da mor&shydedura.</span>`;
 		}
 		else {
 			result.innerHTML = `<span class='print-dose'> Administrar: ${dose} ${forma} ${doseml} por via ${via}${pos}</span>`; // Aproximar ${via}${pos} aqui e deixar um espaço vazio no get posologia
@@ -1196,7 +1196,7 @@ class Doseparenteral extends Dosespadrao{
 function preencherPeso(){result.innerHTML = `<span class='print-error'>O campo de peso precisa ser preenchido.</span>`;}
 
 function errodePeso(){
-	result.innerHTML = `<span class='print-error'>Observação: o peso deve estar entre &ge; 2 e &le; 35. 
+	result.innerHTML = `<span class='print-error'>Observação: o peso deve ser &ge; 2 e &le; 35. 
 	<a href='pages/diversos.html#crianca' id='link-de-redirecionamento'>Veja mais detalhes&raquo;</a></span>`;
 }
 

@@ -220,11 +220,9 @@
 
 
 	header div.logo-box a {
-		letter-spacing: initial; /*-- Reset --*/
+		
 
 		/*-- Nova formatação --*/
-		font-family: "Lobster", cursive, Arial, Helvetica, sans-serif;
-
 		font-size: 25px;
 	}
 
@@ -370,7 +368,7 @@
 		display: block;
 		margin: 10px;
 
-		padding: 30px 20px;
+		padding: 22px;
 		font-size: 1.375rem;
 	}
 
