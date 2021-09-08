@@ -118,7 +118,7 @@ class Tarv {
         /** TENOFOVIR + LAMIVUDINA */
         else if(this.arv=="TDF/3TC"){
             if(this.peso<35){
-                output.innerHTML += `<span class="print-alerta">O "${this.arvs[16].textContent}" só deve ser administrado em crianças com peso &ge; 35 kg ou &ge; 30 kg na DFC com DTG (ver "${this.arvs[9].textContent}").</span>`; 
+                output.innerHTML += `<span class="print-alerta">A Dose Fixa Combinada (DFC) de "${this.arvs[16].textContent}" só deve ser administrada em crianças com peso &ge; 35 kg. Constitui o fármaco de eleição para Profilaxia Pré-Exposição (PreP).</span>`; 
             } 
         }
 
