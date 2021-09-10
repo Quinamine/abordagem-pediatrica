@@ -70,8 +70,9 @@ form label {
 }
 
 
-
-
+#calculadora select optgroup {
+	background-color: #fff;
+}
 
 #calculadora label, input, select {
 	display: inline-block;
