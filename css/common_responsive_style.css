@@ -2,7 +2,7 @@
 
 @media screen and (max-width: 768px){
 
-	/***** 
+	
 
 	/************** SECCAO DE JS ***************/
 
@@ -456,5 +456,6 @@
 
 	/****** Tabelas da Pagina de Diversos  ******/
 	table td, th {
-	border: 1px solid #888 !important;
+		border: 1px solid #888 !important;
+	}
 }

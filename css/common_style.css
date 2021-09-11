@@ -127,7 +127,7 @@ header {
 
 /******************* Links *************************/
 .main-content a:link {
--	color: blue; /* Coerção */
+	color: blue; /* Coerção */
 }
 	
 .main-content a:visited {

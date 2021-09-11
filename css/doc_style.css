@@ -5,7 +5,7 @@
 
 /*************** MOLDURAS E IMGS **************/
 .main-content picture {
-	width 100%;
+	width: 100%;
 	max-width: 641px;
 }
 
@@ -58,7 +58,7 @@ del {text-decoration: line-through solid 3px red;}
 
 p.regra-de-tres-simples, p.prescricao-correcta {
 	max-width: 402px;
-	width: 94%%;
+	width: 94%;
 
 	border: solid #ddd 1px;
 	border-radius: 10px;
@@ -70,7 +70,7 @@ p.regra-de-tres-simples, p.prescricao-correcta {
 }
 
 p.nota {
-	background: #EEF;
+	background-color: #EEF;
 	color: #000;
 	border-radius: 10px;
 

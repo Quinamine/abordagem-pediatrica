@@ -13,7 +13,7 @@
 
 /************ TABLET ************/
 
-@media screen and(min-width: 768px) and (max-width: 1023px){
+@media screen and (min-width: 768px) and (max-width: 1023px){
 
 	/************ Sessao JS      ************/
 	#link-de-redirecionamento {
@@ -166,7 +166,7 @@
 
 	div.body-row div.main-content {
 		width: 100%;
-		border: 1px solid #ddd;*
+		border: 1px solid #ddd;
 	}
 	
 	/**** Calculator's title ****/
@@ -288,7 +288,6 @@
 	table td, th{
 		color: rgb(250, 160, 50);
 		font-size: 16px !important;
-		
 	}	
 
 }

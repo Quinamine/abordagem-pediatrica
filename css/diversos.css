@@ -16,7 +16,7 @@
 
 /************* FORMATACAO DAS TABELAS *************/
 table {
-	border-spacing: collapse;
+	border-collapse: collapse;
 	width: 96%;
 	max-width: 621px;
 	margin: 0 auto;

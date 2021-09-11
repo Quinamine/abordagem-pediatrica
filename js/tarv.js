@@ -521,7 +521,7 @@ class Tarv {
 
         /* ATAZANAVIR */
         else if(this.arv=="ATV/r"){
-            if(peso<25){dosemanha = "&minus;";;}
+            if(peso<25){dosemanha = "&minus;";}
             else {dosemanha = 1;}
         }
 
@@ -780,18 +780,9 @@ class Tarv {
 
         /** CALL FUNCTION to PRINT DOSE */
 
-        if(
-        (this.arv=="ATV/r") 
-        || (this.arv.startsWith("ABC")) 
-        || (this.arv.startsWith("TDF"))
-        || (this.arv.startsWith("levo"))
-        || (this.arv.includes("DTG"))
-        || (this.arv.includes("ctx"))
-        || (this.arv.includes("isoniazida"))
-        ) {
+        if((this.arv=="ATV/r") || (this.arv.startsWith("ABC")) || (this.arv.startsWith("TDF")) || (this.arv.startsWith("levo")) || (this.arv.includes("DTG")) || (this.arv.includes("ctx")) || (this.arv.includes("isoniazida"))) {
             dosenoite = "&minus;";
         }
-
 
         this.printDose(dosemanha, dosenoite);
     }
@@ -806,7 +797,7 @@ function classObject(){
         }
         else {
             let arvSelected = arvs.options[arvs.selectedIndex].value;
-            dosearv = new Tarv(peso.value, arvs, arvSelected);
+            let dosearv = new Tarv(peso.value, arvs, arvSelected);
             dosearv.calcularDose();
         }
         
@@ -831,4 +822,4 @@ function starter(){
 }
 
 
-window.addEventListener("load", starter)
+window.addEventListener("load", starter);

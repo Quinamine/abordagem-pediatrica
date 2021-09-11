@@ -13,7 +13,7 @@ class Dosecomp {
 		else if(this.posologia==2){pos = "de 12 em 12 horas";}
 		else if(this.posologia==1){
 			if(this.farmaco=="Praziquantel"){pos = "dose única";}
-			else{pos = "dose única diária";};
+			else{pos = "dose única diária";}
 		}
 		return pos;
 	}
@@ -27,7 +27,6 @@ class Dosecomp {
 
 	printDose(dose, pos){
 		let dos = this.dosagem;
-		let dosemg = dose;
 
 		if(dos==4){
 			if(dose<=1){dose="1/4";}
@@ -311,7 +310,7 @@ class Dosespadrao {
 		}
 		else if((this.farmaco=="Vitamina-C")){
 			result.innerHTML += `<span class='print-alerta'>(*) &rarr; pelo menos até a remissão do Quadro Clínico do Escorbuto.
-				</br> NB: A ingestão de 90 à 120mL/dia de sumos de fruta pode curar o Escorbuto.</span>`;;
+				</br> NB: A ingestão de 90 à 120mL/dia de sumos de fruta pode curar o Escorbuto.</span>`;
 		}
 	}
 
@@ -347,7 +346,7 @@ class Dosespadrao {
 				else if(peso<=15){dose="1/2";}
 				else if(peso<=25){dose="3/4";}
 				else if(peso<=35){dose=1;}
-				else if(peso>35){dose=2}
+				else if(peso>35){dose=2;}
 			}
 
 			/***** METOCLOPRAMIDA *****/
@@ -480,7 +479,7 @@ class Dosespadrao {
 
 			/***** MEBENDAZOL *****/
 			else if(farmaco=="Mebendazol-100"){
-				if(peso<20){dose="1/2"}
+				if(peso<20){dose="1/2";}
 				else if(peso>=20){dose=1;}
 			} // Para o cálculo da dose só a idade é suficiente.
 
@@ -548,7 +547,7 @@ class Dosespadrao {
 
 				/***** QUININA 300MG (Fonte: Normas de Tratatamento de Malária em Moçambique) *****/
 				else if(farmaco=="Quinina-300"){
-					if(idademeses<12){dose="1/4"}
+					if(idademeses<12){dose="1/4";}
 					else if(idademeses<=60){dose="1/2";}
 					else if(idademeses<=96){dose="3/4";}
 					else if(idademeses<=144){dose=1;}
@@ -602,7 +601,7 @@ class Dosespadrao {
 				// FARMACOS QUE NECESSITAM SÓ DA IDADE //
 				/*****  BUTILESCOPOLAMINA *****/
 				else if(farmaco=="Buscopam"){
-					if(idademeses<=3){dose='1/4'}
+					if(idademeses<=3){dose='1/4';}
 					else if(idademeses<36){dose='1/2';}
 					else if((idademeses<=144) || (idademeses>144)){dose=1;}
 				}  
@@ -659,7 +658,7 @@ class Dosespadrao {
 
 				/***** LACTULOSE *****/
 				else if(farmaco=="Lactulose"){
-					if(idademeses<12){dose = 2.5}
+					if(idademeses<12){dose = 2.5;}
 					else if(idademeses<=60){dose = 5;}
 					else if(idademeses<=144){dose=10;}
 					else if(idademeses<=216){dose = 15;}
@@ -677,14 +676,14 @@ class Dosespadrao {
 
 				/***** SALBUTAMOL *****/
 				else if(farmaco=="Salbutamol-susp"){
-						if(idademeses<=72){dose=2.5}
+						if(idademeses<=72){dose=2.5;}
 						else if(idademeses<=144){dose = 5;}
 						else if(idademeses>144){dose=10;}
 				}
 
 				/***** SALBUTAMOL-CP *****/
 				else if(farmaco=="Salbutamol-cp"){
-					if(idademeses<=72){dose="1/2"}
+					if(idademeses<=72){dose="1/2";}
 					else if(idademeses<=144){dose = 1;}
 					else if(idademeses>144){dose=2;}
 				}
@@ -701,7 +700,7 @@ class Dosespadrao {
 
 				/***** VITAMINA A *****/
 				else if(farmaco=="retinol"){
-					if(idademeses<6){dose = 50000}
+					if(idademeses<6){dose = 50000;}
 					else if(idademeses<=12){dose = 100000;}
 					else{dose = 200000;}
 				}
@@ -731,7 +730,7 @@ class Dosespadrao {
 
 				/***** QUININA 300MG (Fonte: Normas de Tratatamento de Malária em Moçambique) *****/
 				if(farmaco=="Quinina-300"){
-					if(idadeanos<1){dose="1/4"}
+					if(idadeanos<1){dose="1/4";}
 					else if(idadeanos<=5){dose="1/2";}
 					else if(idadeanos<=8){dose="3/4";}
 					else if(idadeanos<=12){dose=1;}
@@ -845,13 +844,13 @@ class Dosespadrao {
 				}
 				/***** SALBUTAMOL *****/
 				else if(farmaco=="Salbutamol-susp"){
-					if(idadeanos<=6){dose=2.5}
+					if(idadeanos<=6){dose=2.5;}
 					else if(idadeanos<=12){dose = 5;}
 					else if(idadeanos>12){dose=10;}
 				}
 				/***** SALBUTAMOL-CP *****/
 				else if(farmaco=="Salbutamol-cp"){
-					if(idadeanos<=6){dose="1/2"}
+					if(idadeanos<=6){dose="1/2";}
 					else if(idadeanos<=12){dose = 1;}
 					else if(idadeanos>12){dose=2;}
 				}
@@ -913,9 +912,7 @@ class Doseparenteral extends Dosespadrao{
 
 		else if(this.posologia == 3){
 			pos = " de 8 em 8 horas.";
-			if((this.farmaco=="Prednisolona-inj") 
-				||(this.farmaco=="Aminofilina-inj")
-				||(this.farmaco=="Diazepam-inj")){pos = ".";}
+			if((this.farmaco=="Prednisolona-inj") || (this.farmaco=="Aminofilina-inj") || (this.farmaco=="Diazepam-inj")){pos = ".";}
 		}
 
 		return pos;
@@ -926,9 +923,7 @@ class Doseparenteral extends Dosespadrao{
 		let forma;
 
 		if(this.farmaco=="VAR"){forma = "mL";}
-		else if((this.farmaco=="Benzatina")
-			||(this.farmaco=="Procaina")
-			||(this.farmaco=="IGAR")){forma = "U.I";}
+		else if((this.farmaco=="Benzatina") ||(this.farmaco=="Procaina") ||(this.farmaco=="IGAR")){forma = "U.I";}
 		else {forma = "mg";}
 		return forma;
 	}
@@ -943,8 +938,8 @@ class Doseparenteral extends Dosespadrao{
 			}
 		}
 		else if(this.forma_farmaceutica=="inj-EV"){
-			if((this.farmaco=="Hidrocortisona") || (this.farmaco=="Diazepam-inj")){via="E.V lento"}
-			else if(this.farmaco=="Aminofilina-inj"){via="E.V lentamente durante 20 à 30 minutos"}
+			if((this.farmaco=="Hidrocortisona") || (this.farmaco=="Diazepam-inj")){via="E.V lento";}
+			else if(this.farmaco=="Aminofilina-inj"){via="E.V lentamente durante 20 à 30 minutos";}
 			else {via = "E.V";}
 		}
 		return via;
