@@ -1,0 +1,1 @@
+function progresso(){let e=document.querySelector("div.main-content"),o=document.getElementsByTagName("meter")[0];o.max=e.scrollHeight,o.value=window.pageYOffset}window.addEventListener("scroll",progresso),window.addEventListener("load",progresso);
