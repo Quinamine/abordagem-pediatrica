@@ -1,1 +1,495 @@
-body{background:#ddd;font-family:Arial,Helvetica,sans-serif,'Source Sans Pro',sans-serif;color:#333}::selection{color:#fff;background-color:#faa032}img{max-width:100%;height:100%}abbr{text-decoration:none;font-style:normal}a{text-decoration:none}a:hover{text-decoration:underline}.main-content h1,h2{font-size:2rem}h3{font-size:1.125rem;margin-top:14px}.row{width:100%;max-width:1024px;margin:0 auto;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap}header{background-color:#555;padding:25px 0}.logo-box a{font-family:Lobster,cursive,Arial,Helvetica,sans-serif;font-weight:bolder;font-size:2rem;color:#faa032}.menu-box{flex-basis:60%;text-align:right}.menu-box ul li{display:inline-block;text-align:right;margin-right:10px}.menu-box ul li:last-child{margin-right:0}.menu-box ul li a{color:#fff;padding:15px 5px}.menu-box div.menu-mobile{display:none}.body-row{align-items:flex-start;margin-top:40px;padding:30px;background-color:#fff;border:none;outline:0;border-top-left-radius:10px;border-top-right-radius:10px}.main-content a:link{color:#00f}.main-content a:visited{color:#faa032}.body-row .main-content h1,h2,h3{font-weight:700;color:#333;padding:5px;margin-top:10px;margin-bottom:10px;background-color:#f8f8f8;text-align:center;border-radius:8px;line-height:1.5;margin-left:10px;margin-right:10px}.body-row h3{background-color:#eee}.body-row .main-content{width:100%;max-width:697px;margin:0;padding:20px;border:groove 8px #ddd;border-radius:30px}.main-content li,.main-content p,dd,dt{padding:10px;line-height:2}.aside-content h3{margin-top:24px;margin-left:0;margin-right:0;font-weight:lighter;text-align:left;padding-left:5px;border-radius:3px}.aside-content{height:435px;background-color:#f8f8f8;padding:25px;border-radius:8px}.aside-content ul li{display:block;text-align:left;line-height:1.5;margin-bottom:20px}.aside-content ul li:first-child{padding-top:10px}.aside-content ul li a{color:brown}footer{color:#fff;background-color:#555;padding:25px 0}.footer-row-only-column{margin:0 auto}footer a{color:#faa032}.row-of-social-sites{padding:10px 40px;margin-bottom:40px;background-color:#fdfdfd;border-bottom-left-radius:10px;border-bottom-right-radius:10px}.social-sites-container{width:100%;max-width:697px;display:flex;justify-content:space-around}.social-sites-container a{max-width:135px;display:flex;align-items:center}.social-sites-container a h6{font-size:.875rem}.social-sites-container a img{width:25px;height:25px;clip-path:circle(45%)}.trecho-com-display-none-no-pc{display:none}.trecho-com-display-none-in-mobile{font-weight:400}.margin-top-vinte{margin-top:20px}.margens-laterais-dez-pixels{margin-right:10px!important;margin-left:10px!important}.fundo_escuro_triplodois{background-color:#222!important;color:#ddd!important}.fundo_cinzaescuro-para-body{background-color:#2c2b2b!important;color:#ddd}.fundo-preto-para-aside,.fundo-preto-para-titulo{background-color:#1f1f1f!important;color:#ccc!important;border:none!important}.fundo-cinza-para-titulo-do-aside{color:#ddd!important;background-color:#222!important}.fundo-azul-escuro{background-color:#21222c!important}.roxo{color:#b941ff!important}.roxo:visited{color:#177080!important}.css-para-formChildren{background-color:#1f1f1f!important;border-color:#777!important;color:#ddd!important}.border-cinza{border-color:#777!important}.border-cinza-discreta{border-color:#444!important}.fundo-cinza-para-header-footer{background-color:#2e2b2b!important;color:#eee!important}.fundo-roxo-para-destaques{background-color:#2a222e!important}.th-cor-escura{color:#333!important}.fonte-serifada{font-family:"Times New Roman",'PT Serif',serif!important}.fonte-cursiva{font-family:Lobster,cursive!important;font-size:1.125rem}.text-align-justify{text-align:justify}.font-size-small{font-size:90%!important}.font-size-big{font-size:118%!important}.max-width-maior-para-rows-header-footer{max-width:1200px!important;padding-left:3px;padding-right:3px}.header-row-dir-column{flex-direction:column}.menu-box-width-cem{width:100%;margin-top:30px}.formatacao-para-ul-do-menu-com-fontegrande{width:inherit;display:flex;justify-content:center;align-items:center;padding:0}.formatacao-para-ul-do-menu-com-fontegrande li:first-child{text-align:left;flex-basis:6%}.formatacao-para-ul-do-menu-com-fontegrande li:last-child{text-align:right}.formatacao-para-li-do-menu-com-fontegrande{flex-grow:1;text-align:center}.display-block{display:block!important;line-height:2;text-align:center}.padding-para-aside-com-bigfont{padding-right:10px!important;padding-left:15px!important}.inputform-max-width-static{max-width:21rem!important}.selectform-max-width-static{max-width:22.25rem!important}meter{width:100%;position:fixed;top:-8px;left:0}
+/*      REUTILIZÁVEL       */
+body {
+	background: #ddd;
+	font-family: Arial, Helvetica, sans-serif, 'Source Sans Pro', sans-serif;
+	color: #333;
+}
+
+*::selection{
+	color: #fff;
+	background-color: rgb(250, 160, 50);
+}
+
+img {
+	max-width: 100%;
+	height: 100%;
+}
+
+abbr {
+	text-decoration: none;
+	font-style: normal;
+}
+
+
+/*       Links gerais    */
+
+a {text-decoration: none;}
+
+a:hover {text-decoration: underline;}
+
+
+/*----------------- TÍTULOS  ----------------------*/
+
+
+.main-content h1, h2 {font-size: 2rem;}
+
+
+/* Por quanto só existe o 'h3' de links recomendados */
+h3 {
+	font-size: 1.125rem; 
+	margin-top: 14px;
+}
+
+
+
+/*-------------- LAYOUT DO SITE -----------------*/
+
+
+/* Linhas comuns  */
+.row {
+	width: 100%;
+	max-width: 1024px;
+	margin: 0 auto;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	flex-wrap: wrap;
+}
+
+
+
+/*             HEADER                */
+
+header {
+	background-color: #555;
+	padding: 25px 0;
+}
+
+
+.logo-box a {
+	font-family: "Lobster", cursive, Arial, Helvetica, sans-serif;
+	
+	font-weight: bolder;
+
+	font-size: 2rem;
+	color: rgb(250, 160, 50);
+}
+
+
+
+/* Nav e Menu do header */
+
+
+.menu-box {
+	flex-basis: 60%;
+	text-align: right;
+}
+
+
+.menu-box ul li{
+	display: inline-block;
+	text-align: right;
+	margin-right: 10px;
+}
+
+
+.menu-box ul li:last-child {margin-right: 0;}
+
+
+.menu-box ul li a {
+	color: #fff;
+	padding: 15px 5px;
+}
+
+
+.menu-box div.menu-mobile {
+	display: none;
+}
+
+
+/*  CORPO DO LAYOUT  */
+
+.body-row {
+	align-items: flex-start;
+
+	margin-top: 40px;
+	
+	padding: 30px;
+
+
+
+	background-color: #fff;
+	
+	border: none;
+	outline: none;
+	
+	
+	border-top-left-radius: 10px;
+	border-top-right-radius: 10px;
+	
+}
+
+/******************* Links *************************/
+.main-content a:link {
+	color: blue; /* Coerção */
+}
+	
+.main-content a:visited {
+	color: rgb(250, 160, 50);
+}
+
+
+/*       Titulos       */
+
+.body-row .main-content h1, h3, h2{
+
+	font-weight: bold;
+	color: #333;
+
+	padding: 5px;
+
+	margin-top: 10px;
+	margin-bottom: 10px;
+
+	background-color: #f8f8f8;
+	text-align: center;
+	
+	
+	border-radius: 8px;
+	
+	line-height: 1.5;
+	/* Para alinhar o titulo ao corpo da pagina */
+	margin-left: 10px;
+	margin-right: 10px;
+}
+
+.body-row  h3 {
+	background-color: #eee;
+}
+
+
+.body-row .main-content {
+
+	width: 100%;
+	max-width: 697px;
+
+	
+
+	margin: 0;
+	padding: 20px;
+
+	border: groove 8px #ddd;
+	border-radius: 30px;
+}
+
+
+.main-content p, dd, dt, .main-content li{
+	padding: 10px;
+	
+	line-height: 2;
+}
+
+
+
+
+/*********** FORMATAÇÃO DO ASIDE **********/
+.aside-content h3 {
+	margin-top: 24px;
+	margin-left: 0px;
+	margin-right: 0px;
+
+	font-weight: lighter;
+	
+	text-align: left;
+
+	padding-left: 5px;
+
+	border-radius: 3px;
+}
+
+.aside-content {
+	height: 435px;
+
+	/*background-color: rgba(230, 230, 230, .5);*/
+	background-color: #f8f8f8;
+
+	padding: 25px;
+
+	border-radius: 8px;
+
+	
+}
+
+.aside-content ul li {
+
+	display: block;
+
+	text-align: left;
+
+	line-height: 1.5;
+
+
+	margin-bottom: 20px;
+}
+
+
+.aside-content ul li:first-child {
+	padding-top: 10px;
+}
+
+.aside-content ul li a {
+	color: brown;
+}
+
+
+/*        RODAPÉ           */
+
+footer {
+	color: #fff;
+
+	background-color: #555;
+
+	padding: 25px 0;
+	
+}
+
+.footer-row-only-column{margin: 0 auto;}
+
+footer a {
+	color: rgb(250, 160, 50);
+}
+
+
+/***** Redes sociais ******/
+
+.row-of-social-sites {
+	padding: 10px  40px;
+	margin-bottom: 40px;
+	background-color: #fdfdfd;
+
+	border-bottom-left-radius: 10px;
+	border-bottom-right-radius: 10px;
+
+}
+
+.social-sites-container {
+	width: 100%;
+	max-width: 697px;
+
+	display: flex;
+	justify-content: space-around;
+	
+}
+
+.social-sites-container a{
+	max-width: 135px;
+
+	display: flex;
+	align-items: center;
+	
+}
+.social-sites-container a h6{
+	font-size: 0.875rem;
+}
+
+.social-sites-container a img{
+	width: 25px;
+	height: 25px;
+	clip-path: circle(45%);
+}
+
+/******* CSS REUTILIZAVEL    *********/
+
+.trecho-com-display-none-no-pc {display: none;}
+
+.trecho-com-display-none-in-mobile {font-weight: normal;}
+
+.margin-top-vinte {margin-top: 20px;}
+
+
+.margens-laterais-dez-pixels {
+	margin-right: 10px !important;
+	margin-left: 10px !important;
+}
+
+
+
+/***** PREFERENCIAS *****/
+
+/**  FUNDO **/
+	
+/*Elemetos que usam:	header, footer, div.body-row, div.main-content, div.row-of-social-sites */
+	 
+.fundo_escuro_triplodois {
+	background-color: #222 !important;
+	color: #ddd !important;
+} 
+
+/* Elemetos que usam:	body e titulos */
+.fundo_cinzaescuro-para-body {
+	background-color: rgb(44, 43, 43) !important;
+	color: #ddd;	
+}
+
+.fundo-preto-para-titulo, .fundo-preto-para-aside{
+	background-color: rgb(31, 31, 31) !important;
+	color: #ccc !important;
+	border: none !important;
+}
+
+.fundo-cinza-para-titulo-do-aside {
+	color: #ddd !important;
+	background-color: rgb(34, 34, 34) !important;
+}
+
+/* Elemetos que usam:	Links de retorno */
+.fundo-azul-escuro {background-color: #21222c !important;}
+
+
+/* Elemetos que usam: Links no geral */
+.roxo {color: rgb(185, 65, 255) !important;}
+
+.roxo:visited {color: rgb(23, 112, 128) !important;}
+/*** Formularios ****/
+
+.css-para-formChildren {
+	background-color: rgb(31, 31, 31) !important;
+	border-color: #777 !important;
+	color: #ddd !important;
+}
+
+/*** Bordas: Elementos que usam: main-content, form fieldset ***/
+.border-cinza {border-color: #777 !important;}
+
+/*** Bordas: Elementos que usam: body-row, main-content, hr, p-parent de links de retorno e elementos de form no mobile  ***/
+.border-cinza-discreta {border-color: #444 !important;}
+
+
+/***    RESPONSIVIDADE *****/
+
+.fundo-cinza-para-header-footer {
+	background-color: rgb(46, 43, 43) !important;
+	color: #eee !important;
+}
+
+
+.fundo-roxo-para-destaques {
+	background-color: rgb(42, 34, 46) !important;
+}
+
+
+/** Tabelas ***/
+
+.th-cor-escura{
+	color: #333 !important;
+}
+
+
+
+/*** Fontes ****/
+
+.fonte-serifada {
+	font-family: "Times New Roman", 'PT Serif', serif !important;
+}
+
+.fonte-cursiva {
+	font-family: "Lobster", cursive !important;
+	font-size: 1.125rem;
+}
+
+/** Alinhamento **/
+
+.text-align-justify {
+	text-align: justify;
+}
+
+
+/** Tamanho da fonte **/
+
+.font-size-small {
+	font-size: 90% !important;
+}
+
+.font-size-big {
+	font-size: 118% !important;
+}
+
+/** LAYOUT BIG FONT
+
+	Cabeçalho
+****/
+
+.max-width-maior-para-rows-header-footer {
+	max-width: 1200px !important;
+	padding-left: 3px;
+	padding-right: 3px;
+}
+
+
+.header-row-dir-column {
+	flex-direction: column;
+}
+
+
+.menu-box-width-cem  {
+	width: 100%;
+	margin-top: 30px;
+}
+
+
+.formatacao-para-ul-do-menu-com-fontegrande {
+	width: inherit;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	padding: 0px;
+}
+
+.formatacao-para-ul-do-menu-com-fontegrande li:first-child{
+	text-align: left;
+	flex-basis: 6%;
+}
+
+.formatacao-para-ul-do-menu-com-fontegrande li:last-child{
+	text-align: right;
+}
+
+   
+.formatacao-para-li-do-menu-com-fontegrande {
+	flex-grow: 1;
+	text-align: center;
+}
+
+/**  Rodape*/
+
+.display-block {
+	display: block !important;
+	line-height: 2;
+	text-align: center;
+}
+
+/***      Css para o aside        ***/
+
+.padding-para-aside-com-bigfont{
+	padding-right: 10px !important;
+	padding-left: 15px !important;
+}
+
+.inputform-max-width-static {
+	max-width: 21rem !important;
+}
+
+.selectform-max-width-static {
+	max-width: 22.25rem !important;
+}
+
+
+/**   Barra de progresso      */
+
+meter{
+	width: 100%;
+	position: fixed;
+	top: -8px;
+	left: 0;
+
+}
