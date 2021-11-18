@@ -47,19 +47,28 @@
 
 
 	/*********** TÍTULOS ************/
-	div.body-row .main-content h4 {
-		margin: 10px auto;
+	div.body-row .main-content h4, .main-content h5 {
+		/** reset ****/
+		color: #333;
+		background-color: #fff;
+		margin: 0px !important;
 
-		padding: 10px;
+		text-align: left;
 
 
 		border-radius: 5px;
 	}
 
 	div.body-row .main-content h4.conclusao {
-		margin-top: 20px; /*** Para se afastar da borda do p com fundo cinza ****/
+		margin-top: 10px !important;
+	}
+	.main-content h4.margin-top-trinta, .main-content h5.margin-top-trinta {
+		margin-top: 10px !important; /*** Para se afastar da borda do p com fundo cinza ****/
 	}
 
+	.main-content h4.nota-conclusiva {
+		text-align: center !important;
+	}
 
 	/*********** Classes Reutilizaveis ************/
 	.trecho-com-display-none-in-mobile {

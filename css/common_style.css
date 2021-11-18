@@ -79,7 +79,9 @@ header {
 
 /* Nav e Menu do header */
 
-
+nav {
+	padding-top: 10px;
+}
 .menu-box {
 	flex-basis: 60%;
 	text-align: right;

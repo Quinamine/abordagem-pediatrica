@@ -59,11 +59,7 @@
 	}
 
 
-	div.main-content h3 {
-		line-height: 1.5 !important;
-		border-radius: 5px;
-		font-size: 20px;
-	}
+	
 	
 	div.main-content h4 {
 		/*     reset    */
@@ -73,6 +69,35 @@
 
 	h4.titulo-da-foto-de-infancia, h4.titulo-do-concurso-da-dps {
 		text-indent: 0px;
+	}
+
+	/*** ADERITO + DESENVOLVIMENTO E PROGRAMACAO WEB */
+	div.body-row div.main-content h3 {
+		font-size: 1.125rem;
+		line-height: 1.5 !important;
+		margin: 0 !important;
+
+		background-color: #eee;
+
+		border-top: 1px solid #ddd;
+		border-bottom: 1px solid #ddd;
+	}
+
+	div.body-row div.main-content h5 {
+		margin: 0px !important;
+		font-size: 1rem;
+	}
+
+	div.seccao-sobre-desenvolvimento-web {
+		background-color: #fafafa;
+		margin-left: 10px;
+		margin-right: 10px;
+	}
+
+	/** Linguagens dominadas  **/
+
+	div.body-row .main-content ul.lista-de-linguagens-dominadas {
+		text-indent: 0px !important;
 	}
 
 	/****** CSS REUTILIZAVEL ********/
