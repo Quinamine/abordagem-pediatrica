@@ -7,7 +7,7 @@ function progresso(){
 
 	let mainContent_lastViewHeight;
 	
-	(window.innerWidth>=1099) ? mainContent_lastViewHeight = 4.2 : mainContent_lastViewHeight = 3.2;
+	(window.innerWidth>=1099) ? mainContent_lastViewHeight = 4.2 : mainContent_lastViewHeight = 3.3;
 
 	
 	barra_de_progresso.max = main.scrollHeight - footer.scrollHeight * mainContent_lastViewHeight; // tamanho maximo da barra é igual a altura do conteudo principal;
