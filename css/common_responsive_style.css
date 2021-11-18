@@ -38,7 +38,7 @@
 	/******* FOOTER *******/
 	footer .footer-row p{
 		text-align: center;
-		line-height: 2;
+		line-height: 1.5;
 
 	}
 
@@ -180,6 +180,10 @@
 		color: #333;
 		border: none !important;
 		line-height: 1.5 !important;
+	}
+
+	.main-content  h3, .main-content h4, .main-content h5 {
+		line-height: 1.5;
 	}
 
 	/* CONTEUDO PRINCIPAL */

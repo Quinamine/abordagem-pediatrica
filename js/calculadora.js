@@ -163,8 +163,8 @@ class Dosesusp extends Dosecomp {
 
 	/********** MÉTODO DE IMPRESSÃO DE DOSE **********/
 	printDose(dose, pos){
-		if(this.farmaco=="Nistatina"){result.innerHTML = `<span class='print-dose'>Espalhar pela boca: 1 mL de 8 em 8 horas.</span>`;}
-		else{result.innerHTML = `<span class='print-dose'>Tomar: ${dose} mL ${pos}.</span>`;}	
+		if(this.farmaco=="Nistatina"){result.innerHTML = `<span class='print-dose'>Espalhar pela boca: 1 ml de 8 em 8 horas.</span>`;}
+		else{result.innerHTML = `<span class='print-dose'>Tomar: ${dose} ml ${pos}.</span>`;}	
 	}
 
 	/********** MÉTODO PRINCIPAL **********/
@@ -241,7 +241,7 @@ class Dosespadrao {
 		if(farmaco=="retinol"){forma = "U.I";}
 		else if(farmaco=="Paracetamol-sup"){forma = "sup";}
 		else{
-			if((this.forma_farmaceutica=="susp")||this.forma_farmaceutica=="aerossol"){forma = 'mL';}
+			if((this.forma_farmaceutica=="susp")||this.forma_farmaceutica=="aerossol"){forma = 'ml';}
 
 			else{forma="cp(s)";}
 		}
@@ -292,7 +292,7 @@ class Dosespadrao {
 		} // Inclui Albendazol de 200 e 400;
 
 		else if(this.farmaco=="Salbutamol-neb"){
-			result.innerHTML += `<span class='print-alerta'>Diluir a dose em 4 mL de Soro
+			result.innerHTML += `<span class='print-alerta'>Diluir a dose em 4 ml de Soro
 			fisiológico. Nebulizar com 6 litros de oxigénio (SOS).</span>`;
 		}
 		else if((this.farmaco=="retinol") || (this.farmaco=="retinol-200")){
@@ -310,7 +310,7 @@ class Dosespadrao {
 		}
 		else if((this.farmaco=="Vitamina-C")){
 			result.innerHTML += `<span class='print-alerta'>(*) &rarr; pelo menos até a remissão do Quadro Clínico do Escorbuto.
-				</br> NB: A ingestão de 90 à 120mL/dia de sumos de fruta pode curar o Escorbuto.</span>`;
+				</br> NB: A ingestão de 90 à 120 ml / dia de sumos de fruta pode curar o Escorbuto.</span>`;
 		}
 	}
 
@@ -651,7 +651,7 @@ class Dosespadrao {
 
 				/***** BiSACODIL *****/
 				else if(farmaco=="Bisacodil"){
-					if(idademeses<59){this.verLactulose(); return false;}
+					if(idademeses<48){this.verLactulose(); return false;}
 						else if(idademeses<=120){dose = 1;}
 						else if(idademeses>120){dose="1 ou 2 (SOS)";}
 				}
@@ -922,7 +922,7 @@ class Doseparenteral extends Dosespadrao{
 	get getFormafarmaceutica(){
 		let forma;
 
-		if(this.farmaco=="VAR"){forma = "mL";}
+		if(this.farmaco=="VAR"){forma = "ml";}
 		else if((this.farmaco=="Benzatina") ||(this.farmaco=="Procaina") ||(this.farmaco=="IGAR")){forma = "U.I";}
 		else {forma = "mg";}
 		return forma;
@@ -961,8 +961,8 @@ class Doseparenteral extends Dosespadrao{
 			let doseml = dose * 10 / 1000;
 
 			result.innerHTML += `<span class='print-alerta'>Para administração E.V, diluir 1g de Ceftriaxona em Pó 
-			em 10 mL de Água esterilizada para injecções e neste caso administrar: 
-			<span class="text-color-orange">${doseml} mL durante 2 à 4 minutos.</span>
+			em 10 ml de Água esterilizada para injecções e neste caso administrar: 
+			<span class="text-color-orange">${doseml} ml durante 2 à 4 minutos.</span>
 			<span class="text-color-orange-red">Para administração E.V, NUNCA usar o diluente que 
 			acompanha as ampolas para uso I.M</span>.</span>`;
 		}
@@ -993,15 +993,18 @@ class Doseparenteral extends Dosespadrao{
 			Num indivíduo anteriormente vacinado adequadamente, dar apenas 2
 			doses de reforço nos dias 0 e 3.
 			<br/>
-			<span class='blue'>Devido à deficiente resposta imunitária, evitar a injecção na região nadegueira. Administrar
+			Devido à deficiente resposta imunitária, evitar a injecção na região nadegueira. Administrar
 			sempre na região deltóideia ou nas crianças mais pequenas na face antero-lateral da coxa.</span>
-			</span>`;
+			`;
 		}
 
 		else if(this.farmaco=="Diazepam-inj"){
 			let doserectal = ((0.5 * this.peso)* this.diluicao / this.dosagem).toFixed(1);
+			if(doserectal>2){
+				doserectal = "2.0";
+			}
 			result.innerHTML += `<span class='print-alerta'>Se não tiver acesso venoso, <span class='text-color-orange'>administrar 
-				${doserectal} mL por via rectal.</span> De referir que esta dose é de Diazepam como anti-convulsivante.</span>`;
+				${doserectal} ml por via rectal.</span> De referir que esta dose é de Diazepam como anti-convulsivante.</span>`;
 		}
 	}
 
@@ -1013,7 +1016,7 @@ class Doseparenteral extends Dosespadrao{
 		}
 
 		if(this.farmaco=="IGAR"){
-			result.innerHTML = `<span class='print-dose'> Injectar &rarr; ${dose} ${forma} ${doseml}
+			result.innerHTML = `<span class='print-dose'> Injetar &rarr; ${dose} ${forma} ${doseml}
 			por via ${via}  <span class='display-block align-center'> E </span>  Infiltrar &rarr; ${dose} ${forma} ${doseml} à volta da zona da mor&shydedura.</span>`;
 		}
 		else {
@@ -1176,7 +1179,7 @@ class Doseparenteral extends Dosespadrao{
 		}
 
 
-		doseml = `(${doseml} mL)`; // Para aparecer a dose e a Unidade 'ml';
+		doseml = `(${doseml} ml)`; // Para aparecer a dose e a Unidade 'ml';
 		if((this.farmaco=="Hidrocortisona")
 			||(this.farmaco=="Benzatina")
 			||(this.farmaco=="Procaina")

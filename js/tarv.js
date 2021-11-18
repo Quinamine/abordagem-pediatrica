@@ -28,11 +28,11 @@ class Tarv {
         let formulacao;
 
         if(this.arv=="LPV/r-xpe"){
-            formulacao = "frascos de 60 mL";
+            formulacao = "frascos de 60 ml";
         }
 
         else if(this.arv=="ctx-susp"){
-            formulacao = "frascos de 100 mL"
+            formulacao = "frascos de 100 ml"
         }
         else if(this.arv=="LPV/r-40-10mg") {
             formulacao = "saquetas para";
@@ -288,8 +288,8 @@ class Tarv {
 
             else if(dosemanha=="1/2"){qtdManha = 0.5;}
 
-            else if(dosemanha=="1 + 1/2"){qtdManha = 1.5;}
-            else if(dosemanha=="2 + 1/2"){qtdManha = 2.5;}
+            /*else if(dosemanha=="1 + 1/2"){qtdManha = 1.5;}
+            else if(dosemanha=="2 + 1/2"){qtdManha = 2.5;}*/
 
             if(dosenoite=="&minus;"){
                 formanoite = "&minus;";
@@ -751,13 +751,15 @@ class Tarv {
                 dosemanha = 1;
             }
             else if(peso<14){
-                dosemanha = "1 + 1/2";
+                //dosemanha = "1 + 1/2";
+                dosemanha = 1.5;
             }
             else if(peso<20){
                 dosemanha = 2;
             }
             else if(peso<25){
-                dosemanha = "2 + 1/2";
+                //dosemanha = "2 + 1/2";
+                dosemanha = 2.5
             }
             else {
                 dosemanha = 3;

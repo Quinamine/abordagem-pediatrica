@@ -173,20 +173,20 @@ header {
 	width: 100%;
 	max-width: 697px;
 
-	
+	border: groove 8px #ddd;
+	border-radius: 20px;
 
 	margin: 0;
 	padding: 20px;
 
-	border: groove 8px #ddd;
-	border-radius: 30px;
+	
 }
 
 
 .main-content p, dd, dt, .main-content li{
 	padding: 10px;
 	
-	line-height: 2;
+	line-height: 1.6;
 }
 
 
@@ -226,7 +226,7 @@ header {
 
 	text-align: left;
 
-	line-height: 1.5;
+	line-height: 1.6;
 
 
 	margin-bottom: 20px;
@@ -464,7 +464,7 @@ footer a {
 
 .display-block {
 	display: block !important;
-	line-height: 2;
+	line-height: 1.6;
 	text-align: center;
 }
 

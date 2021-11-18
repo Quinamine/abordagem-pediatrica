@@ -155,6 +155,7 @@ h5 {
 	font-size: 1.125rem/*18px*/;
 
 	padding: 10px;
+	margin-left: 10px;
 	
 	font-weight: bold;
 	display: inline-block;
@@ -166,14 +167,15 @@ h5 {
 
 ul.lista-de-linguagens-dominadas {
 	padding: 10px;
-	list-style-type: square;
+	list-style-type: disc !important;
 	text-indent: 30px;
 }
 
 ul.lista-de-linguagens-dominadas li {
 	display: block;
 	text-align: left;
-	line-height: 1.5;
+	line-height: 1.6;
+	
 }
 
 ul.lista-de-linguagens-dominadas li a:link, ul.lista-de-linguagens-dominadas li  a:visited {
