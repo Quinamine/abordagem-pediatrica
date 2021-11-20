@@ -17,7 +17,8 @@ function mudarTema() {
         let border_do_mainEfieldset = document.querySelectorAll("div.main-content, fieldset");
 
         // Variaveis disponiveis somente em algumas paginas
-        let destaques = document.querySelectorAll("p.nota, p.nota-de-formulario, p.prescricao-correcta, p.regra-de-tres-simples, .aside-content");
+        let destaques = document.querySelectorAll("p.nota, p.nota-de-formulario, p.prescricao-correcta, p.regra-de-tres-simples, .aside-content,  p.exemplo");
+        let sectionAderitoPlusWebDev = document.querySelector("div.seccao-sobre-desenvolvimento-web");
 
         let tituloAside = document.querySelector("div.aside-content h3");
         let linksReturn = document.querySelectorAll("p.return-top a, p.parent-de-link-de-volta a"); 
@@ -118,7 +119,10 @@ function mudarTema() {
 
                 for(var elem of elementosComborder){elem.classList.add("border-cinza-discreta");}
 
-                try {for(var nota of destaques){nota.classList.add("fundo-roxo-para-destaques");} } 
+                try {for(var nota of destaques){
+                    nota.classList.remove("bg-fquatro");
+                    nota.classList.add("fundo-roxo-para-destaques");
+                } } 
                 catch (error) {printOkExpection();}
             }
 			
@@ -157,6 +161,8 @@ function mudarTema() {
                 catch (error) {printOkExpection();}
 
                 /** No looping */
+                try {sectionAderitoPlusWebDev.classList.remove("bg-fquatro");} 
+                catch (error) {printOkExpection();}
                 try {caixa_de_redes_sociais.classList.add("fundo-dracula");} 
                 catch (error) {printOkExpection();}
 
@@ -182,7 +188,8 @@ function mudarTema() {
                 catch (error) {printOkExpection();}
 
                 /** No looping */
-
+                try {sectionAderitoPlusWebDev.classList.add("bg-fquatro");} 
+                catch (error) {printOkExpection();}
                 try {caixa_de_redes_sociais.classList.remove("fundo-dracula");} 
                 catch (error) {printOkExpection();}
 
@@ -245,7 +252,10 @@ function mudarTema() {
 
                 for(var elem of elementosComborder){elem.classList.remove("border-cinza-discreta");}
                 
-                try {for(var nota of destaques){nota.classList.remove("fundo-azul-escuro");} } 
+                try {for(var nota of destaques){
+                    nota.classList.add("bg-fquatro");
+                    nota.classList.remove("fundo-azul-escuro");} 
+                } 
                 catch (error) {printOkExpection();}
             }
 
@@ -267,7 +277,8 @@ function mudarTema() {
                 catch (error) {printOkExpection();}
 
                 /** No looping */
-
+                try {sectionAderitoPlusWebDev.classList.add("bg-fquatro");} 
+                catch (error) {printOkExpection();}
                 try {caixa_de_redes_sociais.classList.remove("fundo-dracula");} 
                 catch (error) {printOkExpection();}
 

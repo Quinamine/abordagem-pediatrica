@@ -63,9 +63,6 @@
 		width: 100%;
 	}
 
-
-
-	
 	/*** Titulos ****/
 	div.main-content h4 {
 		/*     reset    */
@@ -98,7 +95,7 @@
 		font-size: 1rem;
 	}
 
-	div.seccao-sobre-desenvolvimento-web {
+	.bg-fquatro {
 		background-color: rgba(238, 229, 243, .4);
 		margin-left: 10px;
 		margin-right: 10px;
