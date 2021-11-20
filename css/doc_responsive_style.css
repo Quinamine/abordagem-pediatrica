@@ -1,1 +1,138 @@
-@media screen and (min-width:521px){.main-content h4{text-transform:uppercase;line-height:1.5}}@media screen and (max-width:520px){.main-content picture{width:100%;height:auto;margin:0 auto;padding:0}.main-content picture img{padding:10px}p.exemplo,p.nota,p.nota-de-formulario,p.prescricao-correcta,p.regra-de-tres-simples{outline:0;font-style:normal;margin-left:10px;margin-right:10px;border-radius:5px}.bg-fquatro{background-color:#f4f4f4!important}p.prescricao-correcta,p.regra-de-tres-simples{padding-left:10px;font-size:1rem}p.conclusao{margin-top:0!important}p.slogan-do-misau{margin-top:10px!important}.main-content h5,div.body-row .main-content h4{color:#333;background-color:#fff;margin:0!important}div.body-row .main-content h4.conclusao{margin-top:10px!important}.main-content h4.margin-top-trinta,.main-content h5.margin-top-trinta{margin-top:10px!important}div.body-row .main-content h4.nota-conclusiva{margin:0 10px 0 10px!important;border-radius:0;border-bottom:1px solid #ddd;background-color:#eee;text-align:center!important}div.body-row .main-content .nota-de-pre-prescricao{border-top-left-radius:0;border-top-right-radius:0;box-shadow:none;border:none;outline:0;border:1px solid #eee}.trecho-com-display-none-in-mobile{display:none}.trecho-com-display-none-no-pc{display:inline;font-weight:initial!important;color:#333}}@media screen and (max-width:569px){div.container-of-the-section-sobre-o-autor-and-its-description{flex-direction:column;justify-content:center}div.container-of-description{padding-top:0}}@media screen and (max-width:347px){p.prescricao-correcta,p.regra-de-tres-simples{font-size:16px!important}}@media screen and (max-width:274px){p.prescricao-correcta,p.regra-de-tres-simples{font-size:14px!important}}
+/****   Para transformar os titulos em maiuscula(s) ***/
+@media screen and (min-width: 521px){
+	.main-content h4 {
+		text-transform: uppercase;
+		line-height: 1.5;
+	}
+}
+
+
+
+@media screen and (max-width: 520px){
+
+	/*************** MOLDURAS E IMGS **************/
+	.main-content picture {
+		width: 100%;
+		height: auto;
+		margin: 0px auto;
+		padding: 0px;
+	}
+
+	.main-content picture img{
+		padding: 10px;
+	}
+
+	/*************** PARAGRAFOS **************/
+	
+	p.nota-de-formulario,  p.regra-de-tres-simples, p.prescricao-correcta, p.nota, p.exemplo {
+	
+		outline: none;
+	
+	
+		
+		font-style: normal;
+		
+		
+		margin-left: 10px;
+		margin-right: 10px;
+
+		border-radius: 5px;
+
+	}
+
+	.bg-fquatro {
+		background-color: #f4f4f4 !important;
+	}
+
+
+	p.regra-de-tres-simples, p.prescricao-correcta {
+		padding-left: 10px; /*** Para tirar a margem a esquerda que identa o conteudo no PC ***/
+		font-size: 1rem /*16px*/;
+	}
+
+	p.conclusao {
+		margin-top: 0px !important;
+	}
+
+	p.slogan-do-misau {
+		margin-top: 10px !important;
+	}
+
+	/*********** TÍTULOS ************/
+	div.body-row .main-content h4, .main-content h5 {
+		/** reset ****/
+		color: #333;
+		background-color: #fff;
+		margin: 0px !important;
+	}
+
+	div.body-row .main-content h4.conclusao {
+		margin-top: 10px !important;
+	}
+
+	.main-content h4.margin-top-trinta, .main-content h5.margin-top-trinta {
+		margin-top: 10px !important; /*** Para se afastar da borda do p com fundo cinza ****/
+	}
+
+	div.body-row .main-content h4.nota-conclusiva {
+		/*** reset  ****/
+		margin: 0px 10px 0px 10px !important;
+		border-radius: 0px;
+		border-bottom: 1px solid #ddd;
+		background-color: #eee;
+		/*** reformatacao ****/
+		text-align: center !important;
+	}
+
+	div.body-row .main-content .nota-de-pre-prescricao {
+		border-top-left-radius: 0px;
+		border-top-right-radius: 0px;
+		box-shadow: none;
+		border: none;
+		outline:none;
+		border: 1px solid #eee;
+		
+	}
+
+
+	
+	/*********** Classes Reutilizaveis ************/
+	.trecho-com-display-none-in-mobile {
+		display: none;
+	}
+
+	.trecho-com-display-none-no-pc {
+		display: inline;
+		font-weight: initial !important;
+		color: #333;
+	}
+
+}
+
+/*********** SESSAO SOBRE MIM ************/
+@media screen and (max-width: 569px){
+	div.container-of-the-section-sobre-o-autor-and-its-description {
+		flex-direction: column;
+		justify-content: center;
+	}
+
+	div.container-of-description {
+		padding-top: 0px;
+	}
+}
+
+/*********** To not break p with class 'boa prescricao' and 'regra-de-tres-simples' ************/
+@media screen and (max-width: 347px){
+	p.prescricao-correcta, p.regra-de-tres-simples {
+		font-size: 16px !important; 
+	}
+}
+
+
+
+/*********** To not break p with class 'boa prescricao' and 'regra-de-tres-simples' ************/
+@media screen and (max-width: 274px){
+	p.prescricao-correcta, p.regra-de-tres-simples {
+		font-size: 14px !important; 
+	}
+}

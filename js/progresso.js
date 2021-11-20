@@ -1,1 +1,19 @@
-function progresso(){let e,o=document.querySelector("div.main-content"),t=document.getElementsByTagName("footer")[0],n=document.getElementsByTagName("meter")[0];e=window.innerWidth>=1099?4.2:3.3,n.max=o.scrollHeight-t.scrollHeight*e,n.value=window.pageYOffset}window.addEventListener("scroll",progresso),window.addEventListener("load",progresso);
+
+function progresso(){
+
+	let main = document.querySelector("div.main-content");
+	let footer = document.getElementsByTagName("footer")[0];
+	let barra_de_progresso = document.getElementsByTagName("meter")[0];
+
+	let mainContent_lastViewHeight;
+	
+	(window.innerWidth>=1099) ? mainContent_lastViewHeight = 4.2 : mainContent_lastViewHeight = 3.3;
+
+	
+	barra_de_progresso.max = main.scrollHeight - footer.scrollHeight * mainContent_lastViewHeight; // tamanho maximo da barra é igual a altura do conteudo principal;
+	barra_de_progresso.value = window.pageYOffset;
+
+}
+
+window.addEventListener("scroll", progresso);
+window.addEventListener("load", progresso);
