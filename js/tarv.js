@@ -778,7 +778,8 @@ class Tarv {
         /* Levofloxacina         */
         else if(this.arv=="levofloxacina100"){
             if(peso<4){
-               dosemanha = 0.5;
+               /*dosemanha = 0.5;*/
+               dosemanha = "1/2";
             }
             else if(peso<7){
                 dosemanha = 1;
@@ -815,7 +816,8 @@ class Tarv {
             }
            
             else if(peso<10){
-                dosemanha = 0.5;
+                /*dosemanha = 0.5;*/
+                dosemanha = "1/2";
             }
 
             else if(peso<16){

@@ -14,6 +14,8 @@ function mudarTema() {
 
         let titulos = document.querySelectorAll("div.main-content h1, div.main-content h2, div.main-content h3, div.main-content h4, div.main-content h5");
 
+        let mainContentSubtitles = document.querySelectorAll("div.main-content h3, div.main-content h4, div.main-content h5");
+
         let border_do_mainEfieldset = document.querySelectorAll("div.main-content, fieldset");
 
         // Variaveis disponiveis somente em algumas paginas
@@ -121,10 +123,22 @@ function mudarTema() {
 
                 try {for(var nota of destaques){
                     nota.classList.remove("bg-fquatro");
-                    nota.classList.add("fundo-roxo-para-destaques");
+                    nota.classList.add("fundo-cinza-para-header-footer");
                 } } 
                 catch (error) {printOkExpection();}
+
+                if(window.innerWidth<=520){
+                    for(var subtitle of mainContentSubtitles){
+                        subtitle.classList.remove("fundo-preto-para-titulo");
+                        subtitle.classList.remove("fundo-cinza-para-header-footer");
+                        subtitle.style.border = "none";
+
+                        subtitle.classList.add("fundo_escuro_triplodois");
+                    }
+                }
             }
+
+            
 			
 			/* Esse else é de coercao para remover as formatacoes de innerWidth<1005 quando a janela for redimencionada em dispositivos maiores*/
 			else {
@@ -136,8 +150,14 @@ function mudarTema() {
                 for(var elem of elementosComborder){elem.classList.remove("border-cinza-discreta");}
                 
 				
-                try {for(var nota of destaques){nota.classList.remove("fundo-azul-escuro");} } 
+                try {for(var nota of destaques){nota.classList.remove("fundo-cinza-para-header-footer");} } 
                 catch (error) {printOkExpection();}
+
+                if(window.innerWidth<=520){
+                    for(var subtitle of mainContentSubtitles){
+                        subtitle.classList.remove("fundo_escuro_triplodois");
+                    }
+                }
 			
 			}
 
@@ -387,6 +407,7 @@ function mudarTamanhodafonte(){
         if(localStorage.fontsize=="small"){
             // Reset do fontsize BIg
             html.classList.remove("font-size-big");
+            html.classList.remove("font-size-medium");
             divAside.classList.remove("padding-para-aside-com-bigfont");
 
             for(var hf of rowHeaderAndFooter){hf.classList.remove("max-width-maior-para-rows-header-footer");}
@@ -437,6 +458,7 @@ function mudarTamanhodafonte(){
         else if(localStorage.fontsize=="big"){
             // Reset 
             html.classList.remove("font-size-small");
+            html.classList.remove("font-size-medium");
 
             // Reformatacao
             html.classList.add("font-size-big");
@@ -508,9 +530,19 @@ function mudarTamanhodafonte(){
 
         }
 
+        else if(localStorage.fontsize=="medium") {
+            /** reset */
+            html.classList.remove("font-size-small");
+            html.classList.remove("font-size-big");
+
+            /* reformatacao */
+            html.classList.add("font-size-medium"); // Esta classe so esta formatada no media query (max-width: 520)
+        }
+
         else{
             // Reset do font-size small
             html.classList.remove("font-size-small");
+            html.classList.remove("font-size-medium")
 
             // Reset do font-size big
             html.classList.remove("font-size-big");
@@ -530,7 +562,6 @@ function mudarTamanhodafonte(){
                    } 
 
             for(var hf of rowHeaderAndFooter){hf.classList.remove("max-width-maior-para-rows-header-footer");}
-
         }
 
     }

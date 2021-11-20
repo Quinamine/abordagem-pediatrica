@@ -380,8 +380,8 @@
 
 		/*      REUTILIZÁVEL       */
 
-		html {
-			font-size: 110%;
+		.font-size-medium {
+			font-size: 110% ;
 		}
 	
 		body {

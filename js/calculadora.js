@@ -1016,7 +1016,7 @@ class Doseparenteral extends Dosespadrao{
 		}
 
 		if(this.farmaco=="IGAR"){
-			result.innerHTML = `<span class='print-dose'> Injetar &rarr; ${dose} ${forma} ${doseml}
+			result.innerHTML = `<span class='print-dose'> Injectar &rarr; ${dose} ${forma} ${doseml}
 			por via ${via}  <span class='display-block align-center'> E </span>  Infiltrar &rarr; ${dose} ${forma} ${doseml} à volta da zona da mor&shydedura.</span>`;
 		}
 		else {
@@ -1195,12 +1195,12 @@ function preencherPeso(){result.innerHTML = `<span class='print-error'>O campo d
 
 function errodePeso(){
 	result.innerHTML = `<span class='print-error'>Observação: o peso deve ser &ge; 2 e &le; 35. 
-	<a href='pages/diversos.html#crianca' id='link-de-redirecionamento'>Veja mais detalhes&raquo;</a></span>`;
+	<a href='pages/diversos.html#crianca' id='link-de-redirecionamento'>Vê mais detalhes&raquo;</a></span>`;
 }
 
 function errodeIdade(){
 	result.innerHTML = `<span class='print-error'>Observação: a idade deve estar entre &ge; 1 mês e &le; 168 meses 
-	ou &le;14 anos. <a href='pages/diversos.html#crianca' id='link-de-redirecionamento'>Veja mais detalhes&raquo;</a></span>`;
+	ou &le;14 anos. <a href='pages/diversos.html#crianca' id='link-de-redirecionamento'>Vê mais detalhes&raquo;</a></span>`;
 }
 
 /********** MÉTODOS DE CONTROLE DOS CAMPOS PESO E IDADE **********/
@@ -1377,8 +1377,8 @@ function classCaller(){
 	}
 
 	else if(farmaco == "Diazepam-inj"){
-		result.innerHTML = `<span class='print-error'>NB: Caso não possa pesar o paciente ou não tenha acesso à uma balança, 
-		<a href='pages/diversos.html#dosesdiazepam' id='link-de-redirecionamento'>clique aqui para ver as doses de acordo com a idade.</a></span>`;
+		result.innerHTML = `<span class='print-error'><a href='pages/diversos.html#dosesdiazepam' id='link-de-redirecionamento'>Caso não possa pesar o paciente ou não tenha acesso à uma balança, 
+		clique aqui para ver as doses de acordo com a idade&raquo;</a></span>`;
 	}
 	else {
 		result.innerHTML = "";

@@ -299,6 +299,7 @@
 		background-color: rgba(240, 240, 240, .5); /*  Para uniformizar o fundo do campo de dose e posologia*/
 		font-size: 1rem !important;
 		line-height: 1.6;
+		border-radius: 5px !important;
 	}
 
 	.print-alerta {

@@ -491,7 +491,11 @@ footer a {
 meter{
 	width: 100%;
 	position: fixed;
-	top: -8px;
+	top: -10px;
 	left: 0;
 
+}
+
+.z-index {
+	z-index: -1;
 }
