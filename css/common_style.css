@@ -262,7 +262,7 @@ footer a {
 }
 
 
-/***** Redes sociais ******/
+/***** REDES SOCIAIS ******/
 
 .row-of-social-sites {
 	padding: 10px  40px;
@@ -300,6 +300,20 @@ footer a {
 	clip-path: circle(45%);
 }
 
+/**   BARRA DE  PROGRESSO    **/
+
+meter{
+	width: 100%;
+	position: fixed;
+	top: -10px;
+	left: 0;
+
+}
+
+.z-index {
+	z-index: -1;
+}
+
 /******* CSS REUTILIZAVEL    *********/
 
 .trecho-com-display-none-no-pc {display: none;}
@@ -315,7 +329,6 @@ footer a {
 }
 
 
-
 /***** PREFERENCIAS *****/
 
 /**  FUNDO **/
@@ -327,44 +340,65 @@ footer a {
 	color: #ddd !important;
 } 
 
-/* Elemetos que usam:	body e titulos */
+
+/* Elemetos que usam:	Body Desktop e titulos */
 .fundo_cinzaescuro-para-body {
 	background-color: rgb(44, 43, 43) !important;
 	color: #ddd;	
 }
 
+
 .fundo-preto-para-titulo, .fundo-preto-para-aside{
 	background-color: rgb(31, 31, 31) !important;
 	color: #ccc !important;
 	border: none !important;
-}
+} /* desktop */
+
 
 .fundo-cinza-para-titulo-do-aside {
 	color: #ddd !important;
 	background-color: rgb(34, 34, 34) !important;
-}
+} /* desktop */
 
 /* Elemetos que usam:	Links de retorno */
 .fundo-azul-escuro {background-color: #21222c !important;}
 
 
 /* Elemetos que usam: Links no geral */
-.roxo {color: rgb(185, 65, 255) !important;}
+.cor-roxa {color: rgb(185, 65, 255) !important;}
 
-.roxo:visited {color: rgb(23, 112, 128) !important;}
-/*** Formularios ****/
+.cor-roxa:visited {color: rgb(23, 112, 128) !important;}
+
+
+
+/*** FORMULARIOS ****/
 
 .css-para-formChildren {
 	background-color: rgb(31, 31, 31) !important;
 	border-color: #777 !important;
 	color: #ddd !important;
-}
+} /* mobile */
 
 /*** Bordas: Elementos que usam: main-content, form fieldset ***/
 .border-cinza {border-color: #777 !important;}
 
 /*** Bordas: Elementos que usam: body-row, main-content, hr, p-parent de links de retorno e elementos de form no mobile  ***/
 .border-cinza-discreta {border-color: #444 !important;}
+
+.border-bottom-triple-four {
+	border-bottom: 1px solid #444 !important;
+}
+/*Elementos que usam: destaques*/
+.border-none {
+	border: none !important;
+}
+
+/**** Destaques ******/
+.margens-laterais-e-border-radius-dez {
+	margin-left: 10px;
+	margin-right: 10px;
+	border-radius: 5px;
+}
 
 
 /***    RESPONSIVIDADE *****/
@@ -375,20 +409,20 @@ footer a {
 }
 
 
+/*
 .fundo-roxo-para-destaques {
 	background-color: rgb(42, 34, 46) !important;
 }
+*/
 
 
-/** Tabelas ***/
+/** TABELAS  ***/
 
 .th-cor-escura{
 	color: #333 !important;
 }
 
-
-
-/*** Fontes ****/
+/*** FONTES ****/
 
 .fonte-serifada {
 	font-family: "Times New Roman", 'PT Serif', serif !important;
@@ -399,14 +433,14 @@ footer a {
 	font-size: 1.125rem;
 }
 
-/** Alinhamento **/
+/** ALINHAMENTO **/
 
 .text-align-justify {
 	text-align: justify;
 }
 
 
-/** Tamanho da fonte **/
+/** TAMANHO DA FONTE **/
 
 .font-size-small {
 	font-size: 90% !important;
@@ -485,17 +519,3 @@ footer a {
 	max-width: 22.25rem !important;
 }
 
-
-/**   Barra de progresso      */
-
-meter{
-	width: 100%;
-	position: fixed;
-	top: -10px;
-	left: 0;
-
-}
-
-.z-index {
-	z-index: -1;
-}

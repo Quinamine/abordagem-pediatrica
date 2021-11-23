@@ -14,15 +14,21 @@ function mudarTema() {
 
         let titulos = document.querySelectorAll("div.main-content h1, div.main-content h2, div.main-content h3, div.main-content h4, div.main-content h5");
 
-        let mainContentSubtitles = document.querySelectorAll("div.main-content h3, div.main-content h4, div.main-content h5");
+        let mainContentSubtitles = document.querySelectorAll("div.main-content h3, div.main-content h5");
+
+        let h4NotaConclusiva = document.querySelector(".nota-conclusiva");
+
+        let titulos_das_imagens_da_bio = document.getElementsByTagName("h4");
 
         let border_do_mainEfieldset = document.querySelectorAll("div.main-content, fieldset");
 
         // Variaveis disponiveis somente em algumas paginas
         let destaques = document.querySelectorAll("p.nota, p.nota-de-formulario, p.prescricao-correcta, p.regra-de-tres-simples, .aside-content,  p.exemplo");
+
         let sectionAderitoPlusWebDev = document.querySelector("div.seccao-sobre-desenvolvimento-web");
 
         let tituloAside = document.querySelector("div.aside-content h3");
+
         let linksReturn = document.querySelectorAll("p.return-top a, p.parent-de-link-de-volta a"); 
         
         let parent_de_linksReturn = document.querySelectorAll("p.return-top, p.parent-de-link-de-volta, hr"); 
@@ -30,6 +36,8 @@ function mudarTema() {
         let ths = document.querySelectorAll("table th");
 
         let link_sobre_mim = document.querySelector("div.container-of-all-content-sobre-o-autor a");
+
+        let dominio_de_linguagens = document.querySelectorAll("ul.lista-de-linguagens-dominadas a")
 
         let legends_of_preferences = document.querySelectorAll("form#preferences legend");
 
@@ -62,8 +70,6 @@ function mudarTema() {
 
         let p_de_resultado = document.querySelector("p.resultado");
 
-        
-
 
         if(localStorage.tema=="escuro"){
 			/* reset */
@@ -76,7 +82,10 @@ function mudarTema() {
             
             for(var titulo of titulos){titulo.classList.add("fundo-preto-para-titulo");}
 
-            for(var link of links){link.classList.add("roxo");}
+            try {for(var h4 of titulos_das_imagens_da_bio){h4.classList.add("cor-dos-titulos-das-imagens-da-bio");} } 
+            catch (error) {printOkExpection();}
+
+            for(var link of links){link.classList.add("cor-roxa");}
 
             try {for(var nota of destaques){nota.classList.add("fundo-preto-para-titulo");} } 
             catch (error) {printOkExpection();}
@@ -86,6 +95,9 @@ function mudarTema() {
 
 
             try {for(var link of linksReturn){link.classList.add("fundo-azul-escuro");} } 
+            catch (error) {printOkExpection();}
+
+            try {for(var li of dominio_de_linguagens){li.classList.add("cor-cinza-claro-do-body");} } 
             catch (error) {printOkExpection();}
 
             try {for(var child of formChildreen){child.classList.add("css-para-formChildren");} } 
@@ -106,6 +118,7 @@ function mudarTema() {
             /*** No Loopings */
             try { tituloAside.classList.add("fundo-cinza-para-titulo-do-aside") } catch (error) 
             {printOkExpection();}
+
             try { link_sobre_mim.classList.add("cor-do-link-sobre-o-autor") } catch (error) 
             {printOkExpection();}
 			
@@ -123,23 +136,12 @@ function mudarTema() {
 
                 try {for(var nota of destaques){
                     nota.classList.remove("bg-fquatro");
+
                     nota.classList.add("fundo-cinza-para-header-footer");
+                    nota.classList.add("margens-laterais-e-border-radius-dez");
                 } } 
                 catch (error) {printOkExpection();}
-
-                if(window.innerWidth<=520){
-                    for(var subtitle of mainContentSubtitles){
-                        subtitle.classList.remove("fundo-preto-para-titulo");
-                        subtitle.classList.remove("fundo-cinza-para-header-footer");
-                        subtitle.style.border = "none";
-
-                        subtitle.classList.add("fundo_escuro_triplodois");
-                    }
-                }
             }
-
-            
-			
 			/* Esse else é de coercao para remover as formatacoes de innerWidth<1005 quando a janela for redimencionada em dispositivos maiores*/
 			else {
 				
@@ -149,19 +151,17 @@ function mudarTema() {
 
                 for(var elem of elementosComborder){elem.classList.remove("border-cinza-discreta");}
                 
-				
-                try {for(var nota of destaques){nota.classList.remove("fundo-cinza-para-header-footer");} } 
+                try {for(var h4 of titulos_das_imagens_da_bio){h4.classList.remove("cor-dos-titulos-das-imagens-da-bio");} } 
                 catch (error) {printOkExpection();}
 
-                if(window.innerWidth<=520){
-                    for(var subtitle of mainContentSubtitles){
-                        subtitle.classList.remove("fundo_escuro_triplodois");
-                    }
-                }
-			
+                try {
+                    for(var nota of destaques){
+                        nota.classList.remove("fundo-cinza-para-header-footer");
+                        nota.classList.remove("margens-laterais-e-border-radius-dez");
+                    } 
+                } 
+                catch (error) {printOkExpection();}
 			}
-
-            
            
             if(window.innerWidth<522){
             
@@ -169,7 +169,15 @@ function mudarTema() {
                 
                 /*** Looping */
                 for(var hf of headerEfooter){hf.classList.add("fundo-cinza-para-header-footer");}
+
                 for(var bg of bgBlackElements){bg.classList.add("fundo_escuro_triplodois");}
+
+                for(var subtitle of mainContentSubtitles){
+                    subtitle.classList.remove("fundo-preto-para-titulo");
+                    subtitle.classList.remove("fundo-cinza-para-header-footer");
+                    subtitle.classList.add("border-none");
+                    subtitle.classList.add("fundo_escuro_triplodois");
+                }  
 
                 try {for(var p of p_da_calculadora){p.classList.add("radius-dois");} } 
                 catch (error) {printOkExpection();}
@@ -180,16 +188,22 @@ function mudarTema() {
                 try {for(var l of labels_of_preferences){l.classList.add("cor-cinza-escuro");} } 
                 catch (error) {printOkExpection();}
 
+                try {
+                    h4NotaConclusiva.classList.add("fundo-cinza-para-header-footer");
+                    h4NotaConclusiva.classList.add("border-bottom-triple-four");
+                } 
+                catch (error) {printOkExpection();}
+
                 /** No looping */
                 try {sectionAderitoPlusWebDev.classList.remove("bg-fquatro");} 
                 catch (error) {printOkExpection();}
+                
                 try {caixa_de_redes_sociais.classList.add("fundo-dracula");} 
                 catch (error) {printOkExpection();}
 
-                try {p_de_resultado.classList.add("bg-para-p-resultado");} 
+                try {p_de_resultado.classList.add("dark");} 
                 catch (error) {printOkExpection();}
             } 
-			
 					/* Esse else é de coercao para remover as formatacoes de innerWidth<522 quando a janela for redimencionada em dispositivos maiores*/
 			
 			else {
@@ -197,7 +211,15 @@ function mudarTema() {
 
                 /*** Looping */
                 for(var hf of headerEfooter){hf.classList.remove("fundo-cinza-para-header-footer");}
+
                 for(var bg of bgBlackElements){bg.classList.remove("fundo_escuro_triplodois");}
+
+                for(var subtitle of mainContentSubtitles){
+
+                    subtitle.classList.remove("border-none");
+                    subtitle.classList.remove("fundo_escuro_triplodois");
+                }
+
                 try {for(var l of legends_of_preferences){l.classList.remove("cor-cinza-claro");} } 
                 catch (error) {printOkExpection();}
 
@@ -207,16 +229,20 @@ function mudarTema() {
                 try {for(var l of labels_of_preferences){l.classList.remove("cor-cinza-escuro");} } 
                 catch (error) {printOkExpection();}
 
+                try {
+                    h4NotaConclusiva.classList.remove("fundo-cinza-para-header-footer");
+                    h4NotaConclusiva.classList.remove("border-bottom-triple-four");
+                } 
+                catch (error) {printOkExpection();}
+
                 /** No looping */
                 try {sectionAderitoPlusWebDev.classList.add("bg-fquatro");} 
                 catch (error) {printOkExpection();}
                 try {caixa_de_redes_sociais.classList.remove("fundo-dracula");} 
                 catch (error) {printOkExpection();}
 
-                try {p_de_resultado.classList.remove("bg-para-p-resultado");} 
+                try {p_de_resultado.classList.remove("dark");} 
                 catch (error) {printOkExpection();}
-				
-				
 			}
         }
 
@@ -228,7 +254,10 @@ function mudarTema() {
 
             for(var titulo of titulos){titulo.classList.remove("fundo-preto-para-titulo");}
 
-            for(var link of links){link.classList.remove("roxo");}
+            for(var link of links){link.classList.remove("cor-roxa");}
+
+            try {for(var li of dominio_de_linguagens){li.classList.remove("cor-cinza-claro-do-body");} } 
+            catch (error) {printOkExpection();}
 
             try {for(var nota of destaques){nota.classList.remove("fundo-preto-para-titulo");} } 
             catch (error) {printOkExpection();}
@@ -279,7 +308,6 @@ function mudarTema() {
                 catch (error) {printOkExpection();}
             }
 
-
             if(window.innerWidth<522){
 
                 /** Desapplying */
@@ -302,7 +330,7 @@ function mudarTema() {
                 try {caixa_de_redes_sociais.classList.remove("fundo-dracula");} 
                 catch (error) {printOkExpection();}
 
-                try {p_de_resultado.classList.remove("bg-para-p-resultado");} 
+                try {p_de_resultado.classList.remove("dark");} 
                 catch (error) {printOkExpection();}
                 
             }

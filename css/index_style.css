@@ -197,6 +197,8 @@ table th.gray {
 .row-of-social-sites a:visited{
 	color: rgb(250, 160, 50);
 }
+
+
 /***** PREFERENCES *****/
 .fundo-dracula {background-color: #1c1d27 !important;}
 
@@ -211,12 +213,6 @@ table th.gray {
 	border-color: rgb(250, 160, 50) !important;
 }
 
-
-/** P de resultado **/
-
-.bg-para-p-resultado {
-	background-color: rgba(240, 240, 240, 1) !important;
-}
 
 /* Font-size small */
 

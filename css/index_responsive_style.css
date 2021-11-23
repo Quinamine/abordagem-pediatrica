@@ -242,6 +242,7 @@
 		font-size: 0.875rem; /* 14px */
 	}
 
+
 	div.main-content form#calculadora p label{
 		display: none;
 	}
@@ -338,6 +339,22 @@
 
 	.social-sites-container a h6{
 		font-size: 0.75rem;
+	}
+
+
+	/*
+		*** PREFERENCIAS ****
+			Modo Escuro 
+	 */
+
+	div.main-content form#calculadora p.resultado.dark span.print-alerta {
+		background-color: rgb(46, 43, 43) !important;
+		border-top: 1px solid #444 !important;
+		color: #DDD;
+	}
+
+	div.main-content form#calculadora p.resultado.dark,  div.main-content form#calculadora p.resultado.dark * {
+		background-color: rgb(46, 43, 43) !important;
 	}
 
 }

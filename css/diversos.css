@@ -1,17 +1,22 @@
 /************* INTERVALO ENTRE AS DIV CONTAINER'S DOS DIFERENTES CONTEUDOS *************/
 
-.main-content div {
-	margin-bottom: 20000px;
-}
+.main-content div {margin-bottom: 10px;}
 
 /************* TITULOS *************/
+div.body-row .main-content h1 {font-size: 1.125rem;}
+
+div.body-row .main-content h1, .main-content  h2, .main-content h3, .main-content h4, .main-content h5 {
+	line-height: 1.5;
+	text-align: center;
+}
+
 .main-content h4 {
 	font-size: 1.125rem;
+	font-weight: bold;
 	padding: 10px;
 	margin-top: 20px;
 	margin-bottom: 20px;
 	background: #f8f8f8;
-	
 }
 
 /************* FORMATACAO DAS TABELAS *************/
@@ -23,13 +28,14 @@ table {
 }
 
 table td, th {
-	border: 2px solid #888;
+	border: 1px solid #888;
 	padding: 10px;
 	text-align: center;
 	line-height: 1.5;
 	vertical-align: middle;
 }
 
+/**** TABELA DE DIAZEPAM ****/
 .tabela-de-doses-de-diazepam {
 	table-layout: fixed;
 	margin-top: 40px;
@@ -62,12 +68,41 @@ table td, th {
 .main-content p.nota + h4 {
 	margin-top: 40px;
 }
+
 .main-content ul {
 	list-style: disc !important;
 	list-style-position: inside;
 	padding-left: 50px;
 }
 
+/**** TABELA DE ABREVIACOES ****/
+table.tabela-de-abreviacoes th, td{
+	padding: 5px !important;
+}
+
+table.tabela-de-abreviacoes tr:nth-child(1) th {
+	background-color: rgb(250, 160, 50);
+}
+
+table.tabela-de-abreviaces tbody td.hide-in-screen-s {
+	background-color: #ddd;
+}
+
+table.tabela-de-abreviacoes tr.intr, tr.ini, tr.sulfas{
+	background-color: #f8f8f8;
+}
+
+@media screen and (min-width: 521px){
+	table.tabela-de-abreviacoes  {
+		table-layout: fixed;
+	}
+}
+
+@media screen and (max-width: 350px) {
+	.hide-in-screen-s {
+		display: none;
+	}
+}
 
 
 
@@ -82,6 +117,7 @@ table td, th {
 	text-align: center;
 	border-top: 1px solid #ccc;
 	border-bottom: 1px solid #ccc;
+	margin-top: 10px;
 }
 
 .main-content p.parent-de-link-de-volta a{

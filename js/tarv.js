@@ -65,7 +65,7 @@ class Tarv {
         /** LOPINAVIR + RITONAVIR */
         else if((this.arv=="LPV/r-40-10mg") ||(this.arv=="LPV/r-xpe")){
             if(this.peso>=20){
-                output.innerHTML += `<span class="print-alerta ">Ver "${this.arvs[7].textContent}" ou "${this.arvs[6].textContent}".</span>`; 
+                output.innerHTML += `<span class="print-alerta ">Ver "${this.arvs[6].textContent}" ou "${this.arvs[7].textContent}".</span>`; 
             }
         }
 
