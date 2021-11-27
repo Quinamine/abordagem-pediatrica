@@ -1,4 +1,5 @@
 /************* INTERVALO ENTRE AS DIV CONTAINER'S DOS DIFERENTES CONTEUDOS *************/
+/*** Formatacao da div do conteudo principal ***/
 
 .main-content div {margin-bottom: 10px;}
 
@@ -6,7 +7,7 @@
 div.body-row .main-content h1 {font-size: 1.125rem;}
 
 div.body-row .main-content h1, .main-content  h2, .main-content h3, .main-content h4, .main-content h5 {
-	line-height: 1.5;
+	line-height: 1.4;
 	text-align: center;
 }
 
@@ -92,18 +93,6 @@ table.tabela-de-abreviacoes tr.intr, tr.ini, tr.sulfas{
 	background-color: #f8f8f8;
 }
 
-@media screen and (min-width: 521px){
-	table.tabela-de-abreviacoes  {
-		table-layout: fixed;
-	}
-}
-
-@media screen and (max-width: 350px) {
-	.hide-in-screen-s {
-		display: none;
-	}
-}
-
 
 
 /*********** CSS - REUTILIZAVEL ***********/
@@ -113,24 +102,8 @@ table.tabela-de-abreviacoes tr.intr, tr.ini, tr.sulfas{
 	text-align: center;
 }
 
-.main-content p.parent-de-link-de-volta {
-	text-align: center;
-	border-top: 1px solid #ccc;
-	border-bottom: 1px solid #ccc;
-	margin-top: 10px;
-}
-
-.main-content p.parent-de-link-de-volta a{
-	background-color: rgb(250, 160, 50);
-	padding: 15px 30px;
-	border-radius: 40px;
-}
-
-.main-content p.parent-de-link-de-volta a:visited{
-	color: #fff;
-}
 
 .background-gray {
-	background-color: #ddd;
+	background-color: #eee;
 }
 

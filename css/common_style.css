@@ -34,12 +34,10 @@ a:hover {text-decoration: underline;}
 .main-content h1, h2 {font-size: 2rem;}
 
 
-/* Por quanto só existe o 'h3' de links recomendados */
-h3 {
+.aside-content h3 {
 	font-size: 1.125rem; 
 	margin-top: 14px;
 }
-
 
 
 /*-------------- LAYOUT DO SITE -----------------*/
@@ -57,43 +55,36 @@ h3 {
 }
 
 
-
-/*             HEADER                */
+/*  HEADER */
 
 header {
 	background-color: #555;
 	padding: 25px 0;
 }
 
-
 .logo-box a {
 	font-family: "Lobster", cursive, Arial, Helvetica, sans-serif;
-	
-	font-weight: bolder;
-
+	font-weight: bold;
 	font-size: 2rem;
 	color: rgb(250, 160, 50);
 }
 
-
-
-/* Nav e Menu do header */
+/* NAV DO HEADER */
 
 nav {
 	padding-top: 10px;
 }
+
 .menu-box {
 	flex-basis: 60%;
 	text-align: right;
 }
-
 
 .menu-box ul li{
 	display: inline-block;
 	text-align: right;
 	margin-right: 10px;
 }
-
 
 .menu-box ul li:last-child {margin-right: 0;}
 
@@ -113,25 +104,17 @@ nav {
 
 .body-row {
 	align-items: flex-start;
-
 	margin-top: 40px;
-	
 	padding: 30px;
-
-
-
 	background-color: #fff;
-	
+
 	border: none;
 	outline: none;
-	
-	
 	border-top-left-radius: 10px;
 	border-top-right-radius: 10px;
-	
 }
 
-/******************* Links *************************/
+/* LINKS */
 .main-content a:link {
 	color: blue; /* Coerção */
 }
@@ -143,8 +126,7 @@ nav {
 
 /*       Titulos       */
 
-.body-row .main-content h1, h3, h2{
-
+.body-row  h1, .body-row h3, .body-row h2{
 	font-weight: bold;
 	color: #333;
 
@@ -154,36 +136,35 @@ nav {
 	margin-bottom: 10px;
 
 	background-color: #f8f8f8;
-	text-align: center;
-	
+	text-align: center;	
 	
 	border-radius: 8px;
-	
 	line-height: 1.5;
+
 	/* Para alinhar o titulo ao corpo da pagina */
 	margin-left: 10px;
 	margin-right: 10px;
 }
 
-.body-row  h3 {
-	background-color: #eee;
+/** listas ***/
+
+.body-row ul, .body-row ol, .body-row dl {
+	padding-left: 8% !important;
 }
 
 
 .body-row .main-content {
-
 	width: 100%;
 	max-width: 697px;
 
 	border: groove 8px #ddd;
-	border-radius: 20px;
+	
+	
+	border-radius: 15px;
 
 	margin: 0;
 	padding: 20px;
-
-	
 }
-
 
 .main-content p, dd, dt, .main-content li{
 	padding: 10px;
@@ -192,55 +173,45 @@ nav {
 }
 
 
-
-
 /*********** FORMATAÇÃO DO ASIDE **********/
-.aside-content h3 {
-	margin-top: 24px;
-	margin-left: 0px;
-	margin-right: 0px;
-
-	font-weight: lighter;
-	
-	text-align: left;
-
-	padding-left: 5px;
-
-	border-radius: 3px;
-}
 
 .aside-content {
 	height: 435px;
-
-	/*background-color: rgba(230, 230, 230, .5);*/
-	background-color: #f8f8f8;
-
-	padding: 25px;
-
+	border: 1px solid #ddd;
 	border-radius: 8px;
-
-	
+	padding: 10px;
+	box-shadow: 0 0 5px #888;
 }
 
+.aside-content h3 {
+	margin: 24px 0px 10px 0px;
+	font-weight: initial;
+	text-align: left;
+	background-color: #fff;
+}
+
+
+.aside-content ul{
+	border-left: 1px solid rgb(250, 160, 50);
+	border-radius: 5px;
+	margin-left: 5px;
+
+}
 .aside-content ul li {
-
 	display: block;
-
+	
+	font-size: 0.75rem;
 	text-align: left;
 
 	line-height: 1.6;
-
-
-	margin-bottom: 20px;
+	margin-bottom: 10px;
 }
 
 
-.aside-content ul li:first-child {
-	padding-top: 10px;
-}
+
 
 .aside-content ul li a {
-	color: brown;
+	color: #555;
 }
 
 

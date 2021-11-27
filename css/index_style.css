@@ -199,7 +199,15 @@ table th.gray {
 }
 
 
-/***** PREFERENCES *****/
+/***** PREFERENCES *****
+
+print-alerta */
+
+p.resultado.dark span.print-alerta {
+	background-color: rgb(46, 43, 43);
+	color: #ddd;
+}
+
 .fundo-dracula {background-color: #1c1d27 !important;}
 
 

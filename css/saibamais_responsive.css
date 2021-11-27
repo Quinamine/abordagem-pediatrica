@@ -1,0 +1,161 @@
+
+@media screen and (min-width: 1006px) {
+	div.body-row {
+		margin-bottom: 40px;
+		border-radius: 10px;
+	}
+}
+
+
+@media screen and (min-width: 522px) {
+
+}
+
+
+@media screen and (max-width: 521px) {
+    div.header-row, div.footer-row {
+        display: none;
+    }
+
+    body {
+        margin-top: -8px;
+    }
+
+    header {
+        border: none;
+        background-color: rgb(210, 120, 50);
+        position: fixed;
+        top: 0;
+        width: 100%;
+    }
+
+    /** seta de volta **/
+    div.container-da-seta-de-volta {
+        margin-left: 2%;
+        padding: 5px 1px 5px 9px;
+        clip-path: circle(45%);
+        width: 40px;
+        height: 40px;
+
+    }
+
+    div.container-da-seta-de-volta:hover {
+        background-color: rgb(250, 160, 50);
+    }
+
+
+    div.container-da-seta-de-volta > div {
+        width: 30px;
+        height: 3px;
+        margin: 5px;
+        background-color: #fff;
+    }
+
+    div.container-da-seta-de-volta div.traco2 {
+        width: 15px;
+    }
+
+    div.container-da-seta-de-volta div.traco1 {
+        transform: rotate(-45deg) translateX(-7px);
+        width: 10px;
+    }
+
+    div.container-da-seta-de-volta div.traco3 {
+        transform: rotate(45deg) translateX(-7px);;
+        width: 10px;
+    }
+
+    /*** DIV CONTAINER DO TITULO **/
+
+    div.container-do-titulo-saibamais {
+        flex:1;
+    }
+
+    div.container-do-titulo-saibamais h2 {
+        /** reset **/
+        background-color: initial;
+        border: none;
+        padding-left: 15px;
+
+        /** Reformatacao **/
+        font-size: 1.25rem;
+        color: #fff;
+        font-weight: bold;
+        text-align: left;
+    }
+
+    /*** MAIN ***/
+
+    div.body-row {
+        margin-top: 68px !important;
+    }
+
+
+    /** Titulo(s)  **/
+    div.main-content h1 {
+        color: #333;
+        background-color: rgba(238, 229, 243, .4) !important;
+        border-bottom: thin solid #ddd !important;
+        border-top: thin solid #ddd !important;
+        padding: 10px !important;
+
+        width: 100%;
+        margin-left: auto !important;
+        margin-right: auto !important;
+    }
+
+    div.main-content div {
+        background-color: rgba(238, 229, 243, .4);
+        margin: 20px 5px;
+    
+    }
+
+
+    /*** TABELAS ****/
+    table.tabela-de-abreviacoes  {
+		table-layout: fixed;
+	}
+
+    /*** Footer ****/
+    footer {
+        background-color: #eee;
+        
+        padding-top: 0px;
+        text-align: center !important;
+        margin-bottom: 0px !important;
+    }
+
+    div.saibamais-footer {
+        flex-direction: column;
+    }
+
+
+    div.container-do-p-com-endereco-do-site {
+        background-color: #f8f8f8;
+        border-bottom: 1px solid #ddd;
+        padding: 10px;
+
+    }
+
+    div.container-do-p-com-endereco-do-site p, div.saibamais-footer p{
+        flex: 1;
+    }
+
+    div.saibamais-footer p {
+        padding-top: 10px;
+        color: #888;
+    }
+
+    div.container-do-p-com-endereco-do-site a, div.saibamais-footer a {
+        color: #888;
+    }
+    
+}
+
+
+
+@media screen and (max-width: 350px) {
+	.hide-in-screen-s {
+		display: none;
+	}
+}

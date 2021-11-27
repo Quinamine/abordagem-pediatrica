@@ -302,7 +302,7 @@ class Dosespadrao {
 			Dia 14: duas semanas mais tarde.
 			<br/>
 			NB: A dose acima é para o tratamento da Hipovitaminose A (todos graus de Xeroftalmia, casos de Sarampo e pós-Sarampo,
-			Kwashiorkor Grave, etc). Para doses profiláticas <a href='pages/diversos.html#axeroftol'>clique aqui.</a></span>`;
+			Kwashiorkor Grave, etc). Para doses profiláticas <a href='pages/saibamais/prevencao-da-deficiencia-da-vitamina-a-nas-criancas.html'>clique aqui.</a></span>`;
 		}
 		else if((this.farmaco=="Acido-folico")){
 			result.innerHTML += `<span class='print-alerta'>Continuar a administrar por mais 4 meses após
@@ -1194,13 +1194,12 @@ class Doseparenteral extends Dosespadrao{
 function preencherPeso(){result.innerHTML = `<span class='print-error'>O campo de peso precisa ser preenchido.</span>`;}
 
 function errodePeso(){
-	result.innerHTML = `<span class='print-error'>Observação: o peso deve ser &ge; 2 e &le; 35. 
-	<a href='pages/diversos.html#crianca' id='link-de-redirecionamento'>Vê mais detalhes&raquo;</a></span>`;
+	result.innerHTML = `<a href='pages/saibamais/objectivo-e-publico-alvo-da-calculadora-de-doses.html' id='link-de-redirecionamento'><span class='print-error'>Observação: o peso deve ser &ge; 2 e &le; 35. 
+	Vê mais detalhes&raquo;</span></a>`;
 }
 
 function errodeIdade(){
-	result.innerHTML = `<span class='print-error'>Observação: a idade deve estar entre &ge; 1 mês e &le; 168 meses 
-	ou &le;14 anos. <a href='pages/diversos.html#crianca' id='link-de-redirecionamento'>Vê mais detalhes&raquo;</a></span>`;
+	result.innerHTML = `<a href='pages/saibamais/objectivo-e-publico-alvo-da-calculadora-de-doses.html' id='link-de-redirecionamento'><span class='print-error'>Observação: a idade deve ser &ge; 1 mês e &le; 14 anos ou &le; 168 meses. Vê mais detalhe&raquo;</span></a>`;
 }
 
 /********** MÉTODOS DE CONTROLE DOS CAMPOS PESO E IDADE **********/
@@ -1377,8 +1376,8 @@ function classCaller(){
 	}
 
 	else if(farmaco == "Diazepam-inj"){
-		result.innerHTML = `<span class='print-error'><a href='pages/diversos.html#dosesdiazepam' id='link-de-redirecionamento'>Caso não possa pesar o paciente ou não tenha acesso à uma balança, 
-		clique aqui para ver as doses de acordo com a idade&raquo;</a></span>`;
+		result.innerHTML = `<a href='pages/saibamais/doses-de-diazepam-de-acordo-com-a-idade.html' id='link-de-redirecionamento'><span class='print-error'>Caso não possa pesar o paciente ou não tenha acesso à uma balança, 
+		clique aqui para ver as doses de acordo com a idade&raquo;</span></a>`;
 	}
 	else {
 		result.innerHTML = "";

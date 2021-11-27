@@ -52,6 +52,7 @@
 	
 	form#calculadora p {
 		display: flex;
+		align-items: center;
 	}
 
 	form#calculadora p#paragrafo-parent-de-farmaco label {
@@ -61,7 +62,7 @@
 	
 	form#calculadora p#paragrafo-parent-de-farmaco select {
 		margin-left: 0px;           /*  Para alinhar a esquerda com os inputs*/
-		margin-right: 90px;         /*  Esta margem corresponde aos selects de idade 
+		margin-right: 92px;         /*  Esta margem corresponde aos selects de idade 
 		e peso para que a flexao seja uniforme  */
 	}
 
@@ -124,8 +125,8 @@
 	}
 
 	.body-row .main-content form#calculadora p#paragrafo-parent-de-idade input, p#paragrafo-parent-de-peso input, #calculadora select  {
-		padding-top: 0px;
-		padding-bottom: 0px;
+		padding-top: 8px;
+		padding-bottom: 8px;
 		
 	}
 
@@ -317,6 +318,7 @@
 	}
 
 	/**     TARV      **/
+	
 	table th{
 		background-color: rgb(250, 160, 50) !important;
 	}
@@ -341,20 +343,31 @@
 		font-size: 0.75rem;
 	}
 
-
 	/*
 		*** PREFERENCIAS ****
 			Modo Escuro 
 	 */
 
 	div.main-content form#calculadora p.resultado.dark span.print-alerta {
-		background-color: rgb(46, 43, 43) !important;
 		border-top: 1px solid #444 !important;
-		color: #DDD;
 	}
 
 	div.main-content form#calculadora p.resultado.dark,  div.main-content form#calculadora p.resultado.dark * {
 		background-color: rgb(46, 43, 43) !important;
+	}
+
+	/* TARV */
+	div.main-content form#calculadora p.resultado.dark table, p.resultado.dark table th, p.resultado.dark table td {
+		border: 1px solid #444 !important;
+	}
+
+	div.main-content form#calculadora p.resultado.dark table th {
+		background-color: rgb(250, 160, 50) !important;
+	}
+
+
+	div.main-content form#calculadora p.resultado.dark table th.gray {
+		background-color: rgb(210, 120, 50) !important;
 	}
 
 }
