@@ -1,61 +1,27 @@
-/************* INTERVALO ENTRE AS DIV CONTAINER'S DOS DIFERENTES CONTEUDOS *************/
-/*** Formatacao da div do conteudo principal ***/
 
 .main-content div {margin-bottom: 10px;}
 
-/************* TITULOS *************/
-div.body-row .main-content h1 {font-size: 1.125rem;}
 
-div.body-row .main-content h1, .main-content  h2, .main-content h3, .main-content h4, .main-content h5 {
-	line-height: 1.4;
-	text-align: center;
+/* TITULOS */
+
+div.body-row .main-content h1 {font-size: 1.375rem;}
+
+div.body-row .main-content h4 {
+	/* reset */
+	margin-left: 0px !important;
+	margin-right: 0px !important;
+	text-align: left;
 }
 
-.main-content h4 {
-	font-size: 1.125rem;
-	font-weight: bold;
-	padding: 10px;
-	margin-top: 20px;
-	margin-bottom: 20px;
-	background: #f8f8f8;
+/* LISTAS */
+.main-content ul {
+	list-style: disc !important;
+	list-style-position: inside;
 }
 
-/************* FORMATACAO DAS TABELAS *************/
-table {
-	border-collapse: collapse;
-	width: 96%;
-	max-width: 621px;
-	margin: 0 auto;
-}
-
-table td, th {
-	border: 1px solid #888;
-	padding: 10px;
-	text-align: center;
-	line-height: 1.5;
-	vertical-align: middle;
-}
-
-/**** TABELA DE DIAZEPAM ****/
-.tabela-de-doses-de-diazepam {
-	table-layout: fixed;
-	margin-top: 40px;
-}
-
-.tabela-de-doses-de-diazepam thead tr:nth-child(1) {
-	background-color: rgb(250, 160, 50);
-}
-
-.tabela-de-doses-de-diazepam tfoot tr td {
-	font-size: 0.75rem;
-	font-style: italic;
-	color: #555;
-}
-
-
-/**** SESSAO DE ADMINISTRACAO DE DIAZEPAM ****/
+/* PARAGRAFOS EM DESTAQUE */
 .main-content p.nota {
-	background: #EEF;
+	background-color: #EEF;
 	color: #000;
 
 	font-weight: bold;
@@ -66,34 +32,54 @@ table td, th {
 	margin-bottom: 20px;
 }
 
-.main-content p.nota + h4 {
-	margin-top: 40px;
+.main-content p.conjuncao-ou {
+	text-align: center;
 }
 
-.main-content ul {
-	list-style: disc !important;
-	list-style-position: inside;
-	padding-left: 50px;
+
+/* FORMATACAO DAS TABELAS */
+
+table {
+	border-collapse: collapse;
+	width: 96%;
+	max-width: 621px;
+	margin: 0 auto;
 }
 
-/**** TABELA DE ABREVIACOES ****/
-table.tabela-de-abreviacoes th, td{
-	padding: 5px !important;
+table td, th {
+	border: 1px solid #888;
+	padding: 5px;
+	text-align: center;
+	line-height: 1.5;
+	vertical-align: middle;
 }
 
-table.tabela-de-abreviacoes tr:nth-child(1) th {
+thead tr:nth-child(1) {
 	background-color: rgb(250, 160, 50);
 }
 
-table.tabela-de-abreviaces tbody td.hide-in-screen-s {
-	background-color: #ddd;
+tfoot tr td {
+	font-size: 0.75rem;
+	font-style: italic;
+	color: #555;
 }
 
-table.tabela-de-abreviacoes tr.intr, tr.ini, tr.sulfas{
-	background-color: #f8f8f8;
+/* TABELA DE DOSES DE DIAZEPAM */
+.tabela-de-doses-de-diazepam {
+	table-layout: fixed;
 }
 
 
+/**** TABELA DE ABREVIACOES ****/
+
+table.tabela-de-abreviacoes tbody td.hide-in-screen-s {
+	background-color: #EEE;
+}
+
+
+table.tabela-de-abreviacoes tbody td.inntr, table.tabela-de-abreviacoes tbody td.ip {
+	background-color:#DDD;
+}
 
 /*********** CSS - REUTILIZAVEL ***********/
 
@@ -107,3 +93,7 @@ table.tabela-de-abreviacoes tr.intr, tr.ini, tr.sulfas{
 	background-color: #eee;
 }
 
+ /** tabela de abreviacoes **/
+ table.tabela-de-abreviacoes tbody td.hide-in-screen-s {
+	background-color: initial !important;
+}

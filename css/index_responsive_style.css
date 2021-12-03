@@ -8,9 +8,8 @@
 		border: none;
 		font-size: 1rem;
 	}
+
 }
-
-
 
 
 /************ TABLET ************/
@@ -39,7 +38,6 @@
 		margin: 0;
 		/***** reformatacao ****/
 		padding: 10px;
-		
 	}
 }
 
@@ -156,7 +154,7 @@
 		padding: 0 10px;
 		margin: 0;
 		/***** reformatacao ****/
-		
+		width: 100%;
 	}
 
 	/***  Redes Sociais *****/
@@ -196,9 +194,7 @@
 	div.main-content h2 {
 		margin-bottom: 0px;
 		margin: 20px 3% 0 3%;
-
 		border-radius: 5px;
-		line-height: 1.5;
 	}
 
 
@@ -240,7 +236,7 @@
 		/****** Formatacao ******/
 		background-color: rgba(240, 240, 240, .5);
 		font-weight: bold;
-		font-size: 0.875rem; /* 14px */
+		
 	}
 
 
@@ -278,9 +274,9 @@
 		width: 100%;
 	}
 
-
-	.main-content p, span, dd, dt, .main-content li{
-		line-height: 1.6;
+	div.main-content form#calculadora select#farmaco, select#arvs {
+		max-width: 100% !important;
+		width: 100%;
 	}
 
 
@@ -293,28 +289,20 @@
 		margin: 0;
 		/***** reformatacao ****/
 		padding: 10px;
-		
 	}
 
 	.print-dose, .print-error {
 		/***** reformatacao ****/
 		background-color: rgba(240, 240, 240, .5); /*  Para uniformizar o fundo do campo de dose e posologia*/
-		font-size: 1rem !important;
-		line-height: 1.6;
 		border-radius: 5px !important;
 	}
 
 	.print-alerta {
-		/***** reset ****/
-		border-radius: 10px;
 		/***** reformatacao ****/
 		margin-left: 10px;
-		font-size: 0.875rem !important;
 		margin-top: 0px;
 		background-color: #EEF !important;
 		border-top: 1px solid #ddd !important;
-		line-height: 1.6;
-
 	}
 
 	/**     TARV      **/
@@ -344,29 +332,34 @@
 	}
 
 	/*
-		*** PREFERENCIAS ****
-			Modo Escuro 
+		PREFERENCIAS ****
+		Modo Escuro 
 	 */
 
-	div.main-content form#calculadora p.resultado.dark span.print-alerta {
+	p.resultado.dark span.print-alerta {
 		border-top: 1px solid #444 !important;
 	}
 
-	div.main-content form#calculadora p.resultado.dark,  div.main-content form#calculadora p.resultado.dark * {
+	p.resultado.dark,  p.resultado.dark * {
 		background-color: rgb(46, 43, 43) !important;
 	}
 
+	p.resultado.dark .print-alerta, p.resultado.dark .print-alerta *{
+		background-color: rgba(30, 0, 25, .5) !important;
+	}
+
+
 	/* TARV */
-	div.main-content form#calculadora p.resultado.dark table, p.resultado.dark table th, p.resultado.dark table td {
+	p.resultado.dark table, p.resultado.dark table th, p.resultado.dark table td {
 		border: 1px solid #444 !important;
 	}
 
-	div.main-content form#calculadora p.resultado.dark table th {
+	p.resultado.dark table th {
 		background-color: rgb(250, 160, 50) !important;
+		color: #ddd;
 	}
 
-
-	div.main-content form#calculadora p.resultado.dark table th.gray {
+	p.resultado.dark table th.gray {
 		background-color: rgb(210, 120, 50) !important;
 	}
 

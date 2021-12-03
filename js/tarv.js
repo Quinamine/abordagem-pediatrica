@@ -206,7 +206,7 @@ class Tarv {
         /** COTRIMXAZOL */
         /** COTRIMXAZOL */
         else if(this.arv=="ctx-cp"){
-            output.innerHTML += `<a href='../pages/saibamais/profilaxia-de-infeccoes-oportunistas-com-ctx.html#tarv' id='link-de-redirecionamento'> <span class="print-alerta">Para ver critérios de TPC, clique aqui.</span></a>`; 
+            output.innerHTML += `<span class="print-alerta"><a href='../pages/saibamais/profilaxia-de-infeccoes-oportunistas-com-ctx.html#tarv' id='link-de-redirecionamento'>Para ver critérios de TPC, clique aqui.</a></span>`; 
         }
 
         else if(this.arv=="ctx-susp"){
@@ -214,7 +214,7 @@ class Tarv {
                 output.innerHTML += `<span class="print-alerta ">Ver "${this.arvs[24].textContent}".</span>`; 
             }
             else {
-                output.innerHTML += `<a href='../pages/saibamais/profilaxia-de-infeccoes-oportunistas-com-ctx.html#tarv' id='link-de-redirecionamento'> <span class="print-alerta">Para ver critérios de TPC, clique aqui.</span></a>`;
+                output.innerHTML += `<span class="print-alerta"><a href='../pages/saibamais/profilaxia-de-infeccoes-oportunistas-com-ctx.html#tarv' id='link-de-redirecionamento'>Para ver critérios de TPC, clique aqui.</a></span>`;
             }
         }
 
@@ -224,12 +224,12 @@ class Tarv {
                 output.innerHTML += `<span class="print-alerta ">Ver "${this.arvs[26].textContent}".</span>`; 
             }
             else {
-                output.innerHTML += `<a href='../pages/saibamais/profilaxia-de-tb-com-isoniazida.html#tarv' id='link-de-redirecionamento'> <span class="print-alerta">Para ver critérios de TPI, clique aqui.</span></a>`;
+                output.innerHTML += `<span class="print-alerta"><a href='../pages/saibamais/profilaxia-de-tb-com-isoniazida.html#tarv' id='link-de-redirecionamento'>Para ver critérios de TPI, clique aqui.</a></span>`;
             }
         }
 
         else if(this.arv=="isoniazidacem"){
-            output.innerHTML += `<a href='../pages/saibamais/profilaxia-de-tb-com-isoniazida.html#tarv' id='link-de-redirecionamento'> <span class="print-alerta">Para ver critérios de TPI, clique aqui.</span></a>`;
+            output.innerHTML += `<span class="print-alerta"><a href='../pages/saibamais/profilaxia-de-tb-com-isoniazida.html#tarv' id='link-de-redirecionamento'>Para ver critérios de TPI, clique aqui.</a></span>`;
         }
 
         /** LEVOFLOXACINA */

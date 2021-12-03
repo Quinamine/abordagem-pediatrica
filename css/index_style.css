@@ -1,14 +1,13 @@
-/*** Titulos ****/
+/* TITULOS */
 
 .body-row .main-content h1, h2{
-	
 	border: 2px solid #888  ;
 	border-radius: 8px;
-	
+	background-color: #f8f8f8;
 }
 
 
-/*          BODY           */
+/* BODY */
 
 .body-row {
 	padding-bottom: 0px;
@@ -36,7 +35,6 @@ legend {
 	background-color: rgb(210, 120, 50);
 
 	text-align: center;
-	
 	padding: 10px;
 
 	border-radius: 8px;
@@ -57,15 +55,12 @@ form label {
 	width: 100%;
 	max-width: 26rem;
 
-	font-size: 0.9375rem; /*15px;*/
+	font-size: 0.875rem; 
 	color: #000;
 	
-	font-family: "arial";
-
 	padding: 8px 10px;
 
 	border-radius: 4px;
-
 	border: 2px solid #888;
 }
 
@@ -79,10 +74,6 @@ form label {
 	color:#333;
 }
 
-#calculadora select optgroup {
-	background-color: #fff;
-	color: #333;
-}
 
 #calculadora label, input, select {
 	display: inline-block;
@@ -106,46 +97,45 @@ form label {
 /*      SECCAO DE JAVASCRIPT            */
 
 .print-dose, .print-alerta, .print-error{
-	font-weight: bolder;
-
-	color: rgb(250, 160, 50);
-
+	font-weight: bold;
+	
 	display: block;
 	margin: auto;
 
-	padding-left: 20px;
-	padding-right: 20px;
+	padding-left: 10px;
+	padding-right: 10px;
 }
+
+.print-dose {color: rgb(250, 160, 50);}
+
+.print-error{color: red;}
 
 .print-alerta {
 	color: #555;
-	background-color: #EFD;
+	background-color: rgba(238, 229, 243, .4);
 
 	padding-top: 10px;
 	padding-bottom: 10px;
 
-	font-size: 0.9375rem;
+	font-size: 0.875rem;
+	margin:  20px 10px 0 10px;
 
-	margin-top: 20px;
-	
-
-	border-radius: 10px;
+	border-radius: 8px;
 }
 
-.print-error{
-	color: red;
-}
 
 #link-de-redirecionamento {
-	color: inherit;
+	color: inherit !important;
 	font-size: inherit !important;
 }
 
 /*       CSS REUTILIZAVEL     */
+
 .text-color-orange {
-	font-size: 0.9375rem;
+	font-size: 0.875rem;
 	color: rgb(250, 160, 50);
 }
+
 
 .color-black {
 	color: #555;
@@ -166,6 +156,7 @@ form label {
 .select-da-pagina-tarv {
 	max-width: 456px;
 }
+
 table {
 	width: 100%;
 	max-width: 300px;
@@ -194,34 +185,65 @@ table th.gray {
 }
 
 
-.row-of-social-sites a:visited{
-	color: rgb(250, 160, 50);
+/***** PREFERENCES *****/
+
+body.dark .body-row {
+	margin-bottom: 0px;
+	border-bottom-right-radius: 0px;
+	border-bottom-left-radius: 0px;
 }
 
 
-/***** PREFERENCES *****
+body.dark .print-dose {
+	color: #ddd !important;
+}
 
-print-alerta */
+body.dark .print-error {
+	color:rgb(250, 160, 50);
+}
 
-p.resultado.dark span.print-alerta {
-	background-color: rgb(46, 43, 43);
+body.dark .print-alerta {
 	color: #ddd;
 }
 
-.fundo-dracula {background-color: #1c1d27 !important;}
-
-
-
-/*Classe para p da calculadora no modo escuro*/
-.radius-dois {
-	border-radius: 2px !important;
-}
-
-.radius-dois:hover{
-	border-color: rgb(250, 160, 50) !important;
+body.dark .print-alerta, body.dark .print-alerta *{
+	background-color: rgb(46, 43, 43) !important;
 }
 
 
+@media screen and (max-width:520px) {
+	body.dark p.resultado * {
+		background-color: rgb(46, 43, 43) !important;
+	}
+	
+	body.dark p.resultado .print-alerta,
+	body.dark p.resultado .print-alerta *,
+	body.dark div.row-of-social-sites  {
+		background-color: rgba(34, 31, 34) !important;
+	}
+
+
+	body.dark form#calculadora p {
+		border-radius: 2px !important;
+	}
+
+	body.dark form#calculadora p#paragrafo-parent-de-idade:hover, 
+	body.dark form#calculadora p#paragrafo-parent-de-peso:hover,
+	body.dark form#calculadora p#paragrafo-parent-de-farmaco:hover {
+		border-color: rgb(250, 160, 50) !important;
+	}
+
+}
+
+
+
+
+
+
+
+
+
+/*** FONTES ***/
 /* Font-size small */
 
 .padding-left-maior {

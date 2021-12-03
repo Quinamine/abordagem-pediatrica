@@ -90,3 +90,12 @@
 .font-weight-bold {
 	font-weight: bold;
 }
+
+
+/*** nota de contacto ****/
+
+.nota {
+	margin-left: 10px;
+	margin-right: 10px;
+	border-radius: 5px;
+}

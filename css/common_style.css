@@ -21,24 +21,11 @@ abbr {
 }
 
 
-/*       Links gerais    */
+/* LINKS GERAIS */
 
 a {text-decoration: none;}
 
 a:hover {text-decoration: underline;}
-
-
-/*----------------- TÍTULOS  ----------------------*/
-
-
-.main-content h1, h2 {font-size: 2rem;}
-
-
-.aside-content h3 {
-	font-size: 1.125rem; 
-	margin-top: 14px;
-}
-
 
 /*-------------- LAYOUT DO SITE -----------------*/
 
@@ -65,7 +52,7 @@ header {
 .logo-box a {
 	font-family: "Lobster", cursive, Arial, Helvetica, sans-serif;
 	font-weight: bold;
-	font-size: 2rem;
+	font-size: 1.75rem;
 	color: rgb(250, 160, 50);
 }
 
@@ -119,33 +106,34 @@ nav {
 	color: blue; /* Coerção */
 }
 	
-.main-content a:visited {
+.main-content a:visited, .row-of-social-sites a:visited{
 	color: rgb(250, 160, 50);
 }
 
 
-/*       Titulos       */
-
-.body-row  h1, .body-row h3, .body-row h2{
-	font-weight: bold;
-	color: #333;
-
-	padding: 5px;
-
-	margin-top: 10px;
-	margin-bottom: 10px;
-
-	background-color: #f8f8f8;
-	text-align: center;	
-	
-	border-radius: 8px;
+/* TITULOS */
+.body-row  h1, .body-row h2, .body-row h3, .body-row h4, .body-row h5 {
 	line-height: 1.5;
-
-	/* Para alinhar o titulo ao corpo da pagina */
-	margin-left: 10px;
-	margin-right: 10px;
+	font-weight: bold;
 }
 
+.main-content h1, h2 {
+	font-size: 2rem;
+	padding: 5px;
+	margin: 10px;
+	text-align: center;	
+	border-radius: 8px;
+}
+
+.main-content h3, .main-content h4, .main-content h5 {
+	margin: 20px 10px 10px;
+	padding: 10px;
+}
+
+.main-content h4 {
+	font-size: 1.125rem;
+	text-align: center;
+}
 /** listas ***/
 
 .body-row ul, .body-row ol, .body-row dl {
@@ -166,9 +154,13 @@ nav {
 	padding: 20px;
 }
 
-.main-content p, dd, dt, .main-content li{
+.main-content p, dl, dd, dt, .main-content li{
 	padding: 10px;
 	
+	line-height: 1.6;
+}
+
+.main-content span {
 	line-height: 1.6;
 }
 
@@ -179,7 +171,7 @@ nav {
 	height: 435px;
 	border: 1px solid #ddd;
 	border-radius: 8px;
-	padding: 10px;
+	padding: 5px 20px;
 	box-shadow: 0 0 5px #888;
 }
 
@@ -208,8 +200,6 @@ nav {
 }
 
 
-
-
 .aside-content ul li a {
 	color: #555;
 }
@@ -219,15 +209,17 @@ nav {
 
 footer {
 	color: #fff;
-
 	background-color: #555;
-
 	padding: 25px 0;
-	
+	font-size: 0.875rem;
 }
 
-.footer-row-only-column{margin: 0 auto;}
 
+div.footer-row-only-column{margin: 0 auto;}
+
+footer p {
+	line-height: 1.5;
+}
 footer a {
 	color: rgb(250, 160, 50);
 }
@@ -271,7 +263,9 @@ footer a {
 	clip-path: circle(45%);
 }
 
-/**   BARRA DE  PROGRESSO    **/
+
+
+/**   JS   **/
 
 meter{
 	width: 100%;
@@ -280,7 +274,7 @@ meter{
 	left: 0;
 
 }
-
+ 
 .z-index {
 	z-index: -1;
 }
@@ -302,43 +296,158 @@ meter{
 
 /***** PREFERENCIAS *****/
 
-/**  FUNDO **/
-	
-/*Elemetos que usam:	header, footer, div.body-row, div.main-content, div.row-of-social-sites */
-	 
-.fundo_escuro_triplodois {
-	background-color: #222 !important;
+/** Formatacao Comum **/
+
+body.dark main a {
+	color: rgb(185, 65, 255) !important;
+}
+
+body.dark main a:visited {
+	color: rgb(23, 112, 128) !important;
+}
+
+body.dark .aside-content li a,
+body.dark p.slogan-do-misau,
+body.dark div.container-of-all-content-sobre-o-autor a.sobre-o-autor, 
+body.dark ul.lista-de-linguagens-dominadas a{
 	color: #ddd !important;
-} 
-
-
-/* Elemetos que usam:	Body Desktop e titulos */
-.fundo_cinzaescuro-para-body {
-	background-color: rgb(44, 43, 43) !important;
-	color: #ddd;	
 }
 
 
-.fundo-preto-para-titulo, .fundo-preto-para-aside{
-	background-color: rgb(31, 31, 31) !important;
-	color: #ccc !important;
-	border: none !important;
-} /* desktop */
+
+@media screen and (min-width: 614px) {
+	body.dark {
+		background-color: #666;
+		color: #ddd;
+	}
+
+	body.dark .body-row {
+		margin-bottom: 40px;
+		border-bottom-right-radius: 10px;
+		border-bottom-left-radius: 10px;
+	}
+	
+	/*** Dark elements **/
+	body.dark header, body.dark footer, body.dark div.body-row, body.dark .row-of-social-sites{
+		background-color: #444;
+	}
+
+	/*** Destaques ***/
+	body.dark .column-container-of-calculator h1, 
+	body.dark .column-container-of-calculator h2, 
+	body.dark .aside-content h3, 
+	body.dark p.exemplo,
+	body.dark p.nota, 
+	body.dark p.regra-de-tres-simples,
+	body.dark p.prescricao-correcta,
+	body.dark p.return-top a,
+	body.dark div.seccao-sobre-desenvolvimento-web h3,
+	body.dark form input, body.dark form select {
+
+		background-color: #444 !important;
+		box-shadow: 0 0 5px #888 !important;
+		color: #ddd !important;
+	}
+
+	/*** Links com cores comuns ***/ 
+	body.dark .lista-de-linguagens-dominadas,
+	body.dark form#preferences label {
+		color: #ddd !important;
+	}
+
+	/*** Bordas ***/
+	body.dark p.return-top, 
+	body.dark .aside-content,
+	body.dark hr{
+		border-color: #888;
+	}
+
+	
+}
 
 
-.fundo-cinza-para-titulo-do-aside {
-	color: #ddd !important;
-	background-color: rgb(34, 34, 34) !important;
-} /* desktop */
+@media screen and (max-width: 613px) {
+	body.dark, 
+	body.dark div.body-row, 
+	body.dark div.main-content,
+	body.dark .row-of-social-sites,
+	body.dark fieldset
+	{
+		background-color: #222 !important;
+		color: #ddd;
+	}
+
+	/** HEADER */
+	body.dark header, body.dark footer{
+		background-color: rgb(46, 43, 43) !important;;
+	}
+
+	/** Titulos **/
+	body.dark .main-content h1,
+	body.dark .main-content h2,
+	body.dark .main-content h3,
+	body.dark .main-content h4,
+	body.dark .main-content h5{
+		background-color: initial !important;
+		color: #ddd !important;
+	}
+
+	/** Destaques **/
+
+	body.dark .column-container-of-calculator h1, 
+	body.dark .column-container-of-calculator h2, 
+	body.dark .main-content h4.nota-conclusiva,
+	body.dark .aside-content h3, 
+	body.dark p.exemplo,
+	body.dark p.nota, 
+	body.dark p.regra-de-tres-simples,
+	body.dark p.prescricao-correcta,
+	p.return-top a,
+	body.dark form#calculadora p, 
+	body.dark form input,
+	body.dark form select {
+		background-color: rgb(46, 43, 43) !important;
+		color: #ddd !important;
+	}
+
+	/** BORDAS **/
+	body.dark .body-row,
+	body.dark .main-content,
+	body.dark .banner-row,
+	body.dark h4.nota-conclusiva,
+	body.dark .seccao-sobre-desenvolvimento-web h3,
+	body.dark fieldset,
+	body.dark input,
+	body.dark select,
+	body.dark p,
+	body.dark .print-alerta,
+	body.dark hr,
+	body.dark table,
+	body.dark th,
+	body.dark td {
+		border-color: #444 !important;
+	}
+
+	body.dark p.paragrafo-da-nota-conclusiva {
+		border: none !important;
+	}
+
+
+}
+
+
+
+
+
+
+/* Elemetos que usam:	Body Desktop e titulos */
+
 
 /* Elemetos que usam:	Links de retorno */
 .fundo-azul-escuro {background-color: #21222c !important;}
 
 
-/* Elemetos que usam: Links no geral */
-.cor-roxa {color: rgb(185, 65, 255) !important;}
 
-.cor-roxa:visited {color: rgb(23, 112, 128) !important;}
 
 
 
@@ -374,17 +483,10 @@ meter{
 
 /***    RESPONSIVIDADE *****/
 
-.fundo-cinza-para-header-footer {
-	background-color: rgb(46, 43, 43) !important;
-	color: #eee !important;
-}
 
 
-/*
-.fundo-roxo-para-destaques {
-	background-color: rgb(42, 34, 46) !important;
-}
-*/
+
+
 
 
 /** TABELAS  ***/
@@ -392,6 +494,9 @@ meter{
 .th-cor-escura{
 	color: #333 !important;
 }
+
+
+
 
 /*** FONTES ****/
 

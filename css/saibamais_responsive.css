@@ -7,12 +7,13 @@
 }
 
 
-@media screen and (min-width: 522px) {
-
+@media screen and (min-width: 520px) {
+    .saibamais-row, .saibamais-footer, .container-do-p-com-endereco-do-site {
+        display: none;
+    }
 }
 
-
-@media screen and (max-width: 521px) {
+@media screen and (max-width: 520px) {
     div.header-row, div.footer-row {
         display: none;
     }
@@ -87,19 +88,21 @@
     /*** MAIN ***/
 
     div.body-row {
-        margin-top: 68px !important;
+        margin-top: 60px !important;
+        border-top: none;
     }
 
 
     /** Titulo(s)  **/
     div.main-content h1 {
-        color: #333;
+        font-size: 1.125rem !important;
+        
         background-color: rgba(238, 229, 243, .4) !important;
         border-bottom: thin solid #ddd !important;
         border-top: thin solid #ddd !important;
-        padding: 10px !important;
 
         width: 100%;
+        padding: 10px;
         margin-left: auto !important;
         margin-right: auto !important;
     }
@@ -107,7 +110,6 @@
     div.main-content div {
         background-color: rgba(238, 229, 243, .4);
         margin: 20px 5px;
-    
     }
 
 
@@ -118,10 +120,8 @@
 
     /*** Footer ****/
     footer {
-        background-color: #eee;
-        
-        padding-top: 0px;
-        text-align: center !important;
+        background-color: rgba(238, 229, 243, .4);;
+        padding: 0px;
         margin-bottom: 0px !important;
     }
 
@@ -143,11 +143,26 @@
 
     div.saibamais-footer p {
         padding-top: 10px;
+        padding-bottom: 10px;
         color: #888;
+
     }
 
     div.container-do-p-com-endereco-do-site a, div.saibamais-footer a {
         color: #888;
+    }
+
+
+    /** PREFERENCIAS **/
+    body.dark div#container-do-conteudo-saibamais,
+    body.dark .container-do-p-com-endereco-do-site,
+    body.dark h1 {
+        background-color: rgba(34, 31, 34) !important;
+        border-color: #444 !important;
+    }
+
+    body.dark .container-do-p-com-endereco-do-site a {
+        color: rebeccapurple;
     }
     
 }
@@ -159,3 +174,6 @@
 		display: none;
 	}
 }
+
+
+

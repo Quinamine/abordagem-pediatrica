@@ -25,29 +25,23 @@ nav ul {
 .main-content h4 {
 	font-size: 1.125rem;
 	text-align: center;
-
 	padding: 10px;
 	
 	margin-top: 20px;
-	margin-bottom: 20px;
-
-	background-color: #f8f8f8;;
+	margin-bottom: 10px;
 
 }
 
 .main-content h5 {
 	display: inline-block;
 
-	font-size: 1rem;
-
-	margin: 20px auto;
+	margin: 20px auto 10px auto;
 
 	border-radius: 8px;
-	background-color: #f8f8f8;
 
 	padding: 10px;
 
-	color: #000;
+	
 }
 
 /*********** PARÁGRAFOS E TRECHOS DE TEXTOS ************/
@@ -56,64 +50,46 @@ del {text-decoration: line-through solid 3px red;}
 
 .main-content p {margin-top: 0;}
 
-p.exemplo {
+
+.main-content .nota, .regra-de-tres-simples, .prescricao-correcta, p.exemplo {
 	background-color: rgba(238, 229, 243, .4);
 	border-radius: 5px;
-}	
-
-.main-content .nota, .regra-de-tres-simples, .prescricao-correcta {
-	background-color: rgba(238, 229, 243, .4);
+	margin-top: 10px !important;
+	margin-bottom: 10px;
 }
 
 p.regra-de-tres-simples, p.prescricao-correcta {
 	max-width: 402px;
 	width: 94%;
-
 	padding-left: 5%;
 	padding-right: 5%;
 }
 
-p.nota {
-	border-radius: 0px 0px 5px 5px;
-	background-color: #FDFDFD;
-	border-radius: 5px;
 
-}
 
 p.slogan-do-misau {
-	color: orange;
+	color: rgb(250, 160, 50);
 	text-align: center;
 	font-size: 1.25rem;
 }
 
-p.secao-de-dose-e-posologia {
-	margin-bottom: 10px;
-}
 
-.main-content span {
-	line-height: 1.6;
-	font-weight: bold;
-	text-indent: 30px;
-}
-
-p.parent-of-spans-with-display-block {
+p.assim-sendo-teriamos {
 	padding-bottom: 0;
-}
-
-p.parent-of-spans-with-display-block span {
-	display: block;
-	padding: 10px 0;
 }
 
 .trecho-com-display-none-in-mobile {
 	font-weight: initial !important;
 }
 
+.trecho-com-display-none-in-mobile.tracejado {
+	font-weight: bold !important;
+}
+
 /******* FORMATACAO DE LISTAS **********/
 
 .body-row-first-column ol, ul, dl {
 	list-style-type: disc;
-	padding-left: 10%;
 }
 
 .body-row-first-column ol.secoes-da-calculadora{
@@ -123,19 +99,6 @@ p.parent-of-spans-with-display-block span {
 .aside-content ul{
 	list-style-type: none;
 	padding-left: 0;
-}
-
-
-.main-content ol li {
-	padding: 10px;
-}
-
-.main-content dl {
-	padding: 10px;
-}
-
-.main-content dl dd {
-	margin-left: 50px;
 }
 
 /******* Sobre Mim (Aderito Felix Quinamine) *****/
@@ -164,6 +127,7 @@ div.container-of-image-and-title-sobre-o-autor {
 }
 
 div.container-of-image-and-title-sobre-o-autor h6 {
+	padding-top: 10px;
 	padding-bottom: 10px;
 }
 	
@@ -176,7 +140,7 @@ div.container-of-image-and-title-sobre-o-autor img {
 }
 
 div.container-of-description {
-	padding-top: 30px;
+	padding-top: 40px;
 }
 
 /***** Redes sociais ******/
@@ -196,12 +160,6 @@ div.container-of-description {
 /*************** CSS - REUTILIZAVEL **************/
 .main-content .font-weight-bold, h4, h5, dl dt {font-weight: bold;}
 
-
-
-
-.main-content .margin-top-vinte {margin-top: 20px;}
-
-.main-content .margin-top-trinta{margin-top: 30px;}
 
 
 /**** Preferencias ******/

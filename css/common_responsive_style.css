@@ -1,28 +1,5 @@
 ﻿/************ CSS REUTILIZAVEL ************/
 
-@media screen and (max-width: 768px){
-
-	
-
-	/************** SECCAO DE JS ***************/
-
-	div.main-content form#calculadora p.resultado {
-		display: flex; 
-		flex-direction: column; /*** Para mostrar a printDose e printAlerta um abaixo do outro;*/
-
-		border: none;
-		font-size: 1rem;
-	}
-	
-
-	/************** RODAPE ***************/
-	 footer p {
-	 	font-size: 0.875rem;
-	 	line-height: 1.5;
-	 }
-}
-
-
 @media screen and (min-width: 820px) and (max-width: 1070px){
 	/******** HEADER ***********/
 	/* Para alinhar o cabecalho e o rodape com o conteudo da pagina */
@@ -48,21 +25,6 @@
 }
 
 
-@media screen and (min-width: 769px) and (max-width: 1020px){
-	/* Manejo da Barra lateral   */
-
-	.body-row .aside-content {
-		/* reset */
-		padding-right: 0;
-		margin-right: 0;
-
-		/* reformatacao */
-		background-color: #fff;
-		text-align: right;
-	}
-}
-
-
 /**********     Tablet  nav-menu  ***********/
 @media screen and (min-width: 1006px) and (max-width: 1071px){
 
@@ -77,6 +39,11 @@
 
 @media screen and (min-width: 614px) and (max-width: 1071px){
 		/******** HEADER ***********/
+		header {
+			padding: 15px;
+			box-shadow: 0px 10px 4px #888;
+			border-bottom: 1px solid #666;
+		}
 		div.header-row {
 			flex-direction: column;
 		}
@@ -84,30 +51,28 @@
 	
 		div.header-row .menu-box  {
 			width: 100%;
-	
-			margin-top: 30px;
+			margin-top: 10px;
 		}
 	
 	
 		div.header-row .menu-box nav ul {
 			width: inherit;
-	
 			display: flex;
 			justify-content: center;
 			align-items: center;
-	
 			padding: 0 10px;
 		}
 	
 	
 		div.header-row .menu-box nav li {
 			flex-grow: 1;
-	
 			text-align: center;
 		}
 }
 
-/**********     Tablet  Main content  ***********/
+
+
+/*     Tablet  Main content  */
 
 @media screen and (min-width: 521px) and (max-width: 1005px){	
 
@@ -166,7 +131,7 @@
 }
 
 
-/**********     Dispositivos com telas intermedias entre tablet e mobile    ***********/
+/* Dispositivos com telas intermedias entre tablet e mobile    */
 
 @media screen and (min-width: 521px) and (max-width: 700px) {
 	/** reset  **/
@@ -179,17 +144,12 @@
 		font-size: 26px;
 		color: #333;
 		border: none !important;
-		line-height: 1.5 !important;
 	}
 
-	.main-content  h3, .main-content h4, .main-content h5 {
-		line-height: 1.5;
-	}
 
 	/* CONTEUDO PRINCIPAL */
 	.body-row .main-content {
 		border-radius: 5px;
-
 		border: 1px groove #eee;
 	}
 
@@ -200,12 +160,16 @@
 	}
 }
 
+/* To uppercase title in big screens */
+@media screen and (min-width: 521px) {
+	.main-content h3, .main-content h3 {
+		text-transform: uppercase;
+	}
+}
 
-/********* Small and Medium phone Menu 
+/* Small and Medium phone Menu 
 	Dispositivos com telas intermedias entre tablet e mobile usam o menu-mobile S e L, mas a formatacao do corpo da pagina é particular.
-
-
-****/
+*/
 @media screen and (max-width: 613px){
 
 	/*************  HEADER   *************/
@@ -216,8 +180,6 @@
 	}
 
 	header div.logo-box a {
-		
-
 		/*-- Nova formatação --*/
 		font-size: 24px;
 	}
@@ -252,7 +214,7 @@
 		justify-content: center;
 		align-items: center;
 
-		border: 1px solid orange;
+		border: 1px solid #444;
 		border-radius: 2px;
 		
 		padding: 2px 0;
@@ -321,6 +283,7 @@
 		right: 15px;
 	}
 
+
 	div.menu-on div.menu-mobile h4{
 		opacity: 0; 
 	}
@@ -375,7 +338,7 @@
 }
 
 
-/********* Small and Medium phone Body and Footer ****/
+/* Small and Medium phone Body and Footer */
 @media screen and (max-width: 520px){
 
 		/*      REUTILIZÁVEL       */
@@ -388,9 +351,10 @@
 			background-color: #fff;
 			width: 100%;
 		}
-	/************ CORPO DA PAGINA************/
 
-	/******** TITULOS *************/
+	/* CORPO DA PAGINA */
+
+	/* TITULOS */
 	div.body-row .main-content h1, .main-content h2, .main-content h3 {
 		/****  Reset ********/
 		background-color: #eee;
@@ -401,7 +365,6 @@
 		font-size: 1.5rem;
 		color: #555;
 		margin: 20px 10px 10px 10px;
-		line-height: 1.5;
 	}
 
 
@@ -409,7 +372,6 @@
 	/******** TITULOS *************/
 	div.body-row .main-content h3, .main-content h4, .main-content h5 {
 		color: #555;
-		line-height: 1.5;
 		margin-right: 10px !important;
 		margin-left: 10px !important;
 	}
@@ -437,9 +399,6 @@
 		
 	}
 
-	.main-content p, span, dd, dt, .main-content li{
-		line-height: 1.6;
-	}
 
 	/******** BARRA LATERAL ********/
 	div.body-row div.aside-content {
@@ -449,6 +408,7 @@
 	/************ FOOTER ************/
 	 footer {
 	 	width: 100%;
+		 font-size: 0.875rem;
 	 }
 
 	 footer p {
@@ -467,28 +427,21 @@
 	.trecho-com-display-none-in-mobile {display: none;}
 
 	/****** Tabelas da Pagina de Diversos  ******/
-	table td, th {
+	table td, table th {
 		border: 1px solid #888 !important;
 	}
-
-	
-	
 }
 
 
-/*****          Menu mobile em dispositivos com altura menor           *****/
-
+/* Menu mobile em dispositivos com altura menor */
 @media screen and (min-height: 257px) and (max-height: 384px){
 	div.menu-on nav ul li a{
 		padding: 10px;
 	}
 }
 
-
-
 @media screen and (max-height: 256px){
 	div.menu-on nav ul li a{
-
 		padding: 8px 8px 0px 8px !important;
 	}
 }
