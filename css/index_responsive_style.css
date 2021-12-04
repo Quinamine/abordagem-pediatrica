@@ -335,34 +335,38 @@
 		PREFERENCIAS ****
 		Modo Escuro 
 	 */
-
-	p.resultado.dark span.print-alerta {
-		border-top: 1px solid #444 !important;
-	}
-
-	p.resultado.dark,  p.resultado.dark * {
+	 
+	body.dark p.resultado * {
 		background-color: rgb(46, 43, 43) !important;
 	}
-
-	p.resultado.dark .print-alerta, p.resultado.dark .print-alerta *{
-		background-color: rgba(30, 0, 25, .5) !important;
+	
+	body.dark p.resultado .print-alerta,
+	body.dark p.resultado .print-alerta *,
+	body.dark div.row-of-social-sites  {
+		background-color: rgba(34, 31, 34) !important;
 	}
 
 
-	/* TARV */
-	p.resultado.dark table, p.resultado.dark table th, p.resultado.dark table td {
-		border: 1px solid #444 !important;
+	body.dark form#calculadora p {
+		border-radius: 2px !important;
 	}
 
-	p.resultado.dark table th {
-		background-color: rgb(250, 160, 50) !important;
+	body.dark form#calculadora p#paragrafo-parent-de-idade:hover, 
+	body.dark form#calculadora p#paragrafo-parent-de-peso:hover,
+	body.dark form#calculadora p#paragrafo-parent-de-farmaco:hover {
+		border-color: rgb(250, 160, 50) !important;
+	}
+
+	/** TARV **/
+
+	body.dark p.resultado table th {
+		background-color:rgb(250, 160, 50) !important;
 		color: #ddd;
 	}
-
-	p.resultado.dark table th.gray {
+	
+	body.dark p.resultado table th.gray {
 		background-color: rgb(210, 120, 50) !important;
 	}
-
 }
 
 @media screen and (max-width: 320px){

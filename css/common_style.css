@@ -328,8 +328,12 @@ body.dark ul.lista-de-linguagens-dominadas a{
 	}
 	
 	/*** Dark elements **/
-	body.dark header, body.dark footer, body.dark div.body-row, body.dark .row-of-social-sites{
-		background-color: #444;
+	body.dark header, 
+	body.dark footer, 
+	body.dark div.body-row,
+	body.dark div.main-content, 
+	body.dark .row-of-social-sites{
+		background-color: #444 !important;
 	}
 
 	/*** Destaques ***/
@@ -350,6 +354,7 @@ body.dark ul.lista-de-linguagens-dominadas a{
 	}
 
 	/*** Links com cores comuns ***/ 
+	body.dark .main-content h1,
 	body.dark .lista-de-linguagens-dominadas,
 	body.dark form#preferences label {
 		color: #ddd !important;
@@ -366,176 +371,66 @@ body.dark ul.lista-de-linguagens-dominadas a{
 }
 
 
-@media screen and (max-width: 613px) {
-	body.dark, 
-	body.dark div.body-row, 
-	body.dark div.main-content,
-	body.dark .row-of-social-sites,
-	body.dark fieldset
-	{
-		background-color: #222 !important;
-		color: #ddd;
-	}
-
-	/** HEADER */
-	body.dark header, body.dark footer{
-		background-color: rgb(46, 43, 43) !important;;
-	}
-
-	/** Titulos **/
-	body.dark .main-content h1,
-	body.dark .main-content h2,
-	body.dark .main-content h3,
-	body.dark .main-content h4,
-	body.dark .main-content h5{
-		background-color: initial !important;
-		color: #ddd !important;
-	}
-
-	/** Destaques **/
-
-	body.dark .column-container-of-calculator h1, 
-	body.dark .column-container-of-calculator h2, 
-	body.dark .main-content h4.nota-conclusiva,
-	body.dark .aside-content h3, 
-	body.dark p.exemplo,
-	body.dark p.nota, 
-	body.dark p.regra-de-tres-simples,
-	body.dark p.prescricao-correcta,
-	p.return-top a,
-	body.dark form#calculadora p, 
-	body.dark form input,
-	body.dark form select {
-		background-color: rgb(46, 43, 43) !important;
-		color: #ddd !important;
-	}
-
-	/** BORDAS **/
-	body.dark .body-row,
-	body.dark .main-content,
-	body.dark .banner-row,
-	body.dark h4.nota-conclusiva,
-	body.dark .seccao-sobre-desenvolvimento-web h3,
-	body.dark fieldset,
-	body.dark input,
-	body.dark select,
-	body.dark p,
-	body.dark .print-alerta,
-	body.dark hr,
-	body.dark table,
-	body.dark th,
-	body.dark td {
-		border-color: #444 !important;
-	}
-
-	body.dark p.paragrafo-da-nota-conclusiva {
-		border: none !important;
-	}
-
-
-}
 
 
 
+/*** FONTES ***/
 
-
-
-/* Elemetos que usam:	Body Desktop e titulos */
-
-
-/* Elemetos que usam:	Links de retorno */
-.fundo-azul-escuro {background-color: #21222c !important;}
-
-
-
-
-
-
-/*** FORMULARIOS ****/
-
-.css-para-formChildren {
-	background-color: rgb(31, 31, 31) !important;
-	border-color: #777 !important;
-	color: #ddd !important;
-} /* mobile */
-
-/*** Bordas: Elementos que usam: main-content, form fieldset ***/
-.border-cinza {border-color: #777 !important;}
-
-/*** Bordas: Elementos que usam: body-row, main-content, hr, p-parent de links de retorno e elementos de form no mobile  ***/
-.border-cinza-discreta {border-color: #444 !important;}
-
-.border-bottom-triple-four {
-	border-bottom: 1px solid #444 !important;
-}
-/*Elementos que usam: destaques*/
-.border-none {
-	border: none !important;
-}
-
-/**** Destaques ******/
-.margens-laterais-e-border-radius-dez {
-	margin-left: 10px;
-	margin-right: 10px;
-	border-radius: 5px;
-}
-
-
-/***    RESPONSIVIDADE *****/
-
-
-
-
-
-
-
-/** TABELAS  ***/
-
-.th-cor-escura{
-	color: #333 !important;
-}
-
-
-
-
-/*** FONTES ****/
-
-.fonte-serifada {
+body.serif,
+body.serif form select,
+body.serif .banner-h2 {
 	font-family: "Times New Roman", 'PT Serif', serif !important;
 }
 
-.fonte-cursiva {
+
+body.cursiva,
+body.cursiva form select,
+body.cursiva .banner-h2 {
 	font-family: "Lobster", cursive !important;
-	font-size: 1.125rem;
 }
 
-/** ALINHAMENTO **/
 
-.text-align-justify {
+/** ALINHAMENTO  DO TEXTO **/
+
+body.justified {
 	text-align: justify;
 }
 
 
 /** TAMANHO DA FONTE **/
 
-.font-size-small {
+html.font-small {
 	font-size: 90% !important;
 }
 
-.font-size-big {
-	font-size: 118% !important;
+
+html.font-big {
+	font-size: 115% !important;
 }
 
-/** LAYOUT BIG FONT
 
-	Cabeçalho
-****/
+@media screen and (min-width: 1155px) {
 
-.max-width-maior-para-rows-header-footer {
-	max-width: 1200px !important;
-	padding-left: 3px;
-	padding-right: 3px;
+	/** CABECALHO **/
+	html.font-big header .header-row, 
+	html.font-big footer .footer-row {
+		max-width: 1200px !important;
+		padding-left: 3px;
+		padding-right: 3px;
+	}
+
+	html.font-big form#calculadora select {
+		max-width: 22.25rem !important;
+	}
+
+	/* Aside Content 
+	html.font-big .aside-content {
+		padding-right: 10px !important;
+		padding-left: 15px !important;
+	}*/
 }
+
+
 
 
 .header-row-dir-column {
@@ -582,16 +477,11 @@ body.dark ul.lista-de-linguagens-dominadas a{
 
 /***      Css para o aside        ***/
 
-.padding-para-aside-com-bigfont{
-	padding-right: 10px !important;
-	padding-left: 15px !important;
-}
+
 
 .inputform-max-width-static {
 	max-width: 21rem !important;
 }
 
-.selectform-max-width-static {
-	max-width: 22.25rem !important;
-}
+
 

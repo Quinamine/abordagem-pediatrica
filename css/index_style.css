@@ -185,6 +185,7 @@ table th.gray {
 }
 
 
+
 /***** PREFERENCES *****/
 
 body.dark .body-row {
@@ -211,44 +212,17 @@ body.dark .print-alerta, body.dark .print-alerta *{
 }
 
 
-@media screen and (max-width:520px) {
-	body.dark p.resultado * {
-		background-color: rgb(46, 43, 43) !important;
-	}
-	
-	body.dark p.resultado .print-alerta,
-	body.dark p.resultado .print-alerta *,
-	body.dark div.row-of-social-sites  {
-		background-color: rgba(34, 31, 34) !important;
-	}
-
-
-	body.dark form#calculadora p {
-		border-radius: 2px !important;
-	}
-
-	body.dark form#calculadora p#paragrafo-parent-de-idade:hover, 
-	body.dark form#calculadora p#paragrafo-parent-de-peso:hover,
-	body.dark form#calculadora p#paragrafo-parent-de-farmaco:hover {
-		border-color: rgb(250, 160, 50) !important;
-	}
-
-}
+/*** layout da calculadora com fonte small */
+body.small
 
 
 
-
-
-
-
-
-
-/*** FONTES ***/
 /* Font-size small */
 
-.padding-left-maior {
+body.font-small form#calculadora p{
 	padding-left: 35px !important;
 }
+
 
 /** Calculadora  
 

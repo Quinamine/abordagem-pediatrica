@@ -3,7 +3,9 @@
 
 
 /* TITULOS */
-
+header h2 {
+	line-height: 1.2;
+}
 div.body-row .main-content h1 {font-size: 1.375rem;}
 
 div.body-row .main-content h4 {
