@@ -147,7 +147,6 @@ nav {
 
 	border: groove 8px #ddd;
 	
-	
 	border-radius: 15px;
 
 	margin: 0;
@@ -208,7 +207,7 @@ nav {
 /*        RODAPÉ           */
 
 footer {
-	color: #fff;
+	color: #D6D8DA;
 	background-color: #555;
 	padding: 25px 0;
 	font-size: 0.875rem;
@@ -310,7 +309,7 @@ body.dark .aside-content li a,
 body.dark p.slogan-do-misau,
 body.dark div.container-of-all-content-sobre-o-autor a.sobre-o-autor, 
 body.dark ul.lista-de-linguagens-dominadas a{
-	color: #ddd !important;
+	color: #D6D8DA !important;
 }
 
 
@@ -318,7 +317,7 @@ body.dark ul.lista-de-linguagens-dominadas a{
 @media screen and (min-width: 614px) {
 	body.dark {
 		background-color: #666;
-		color: #ddd;
+		color: #D6D8DA;
 	}
 
 	body.dark .body-row {
@@ -350,14 +349,14 @@ body.dark ul.lista-de-linguagens-dominadas a{
 
 		background-color: #444 !important;
 		box-shadow: 0 0 5px #888 !important;
-		color: #ddd !important;
+		color: #D6D8DA !important;
 	}
 
 	/*** Links com cores comuns ***/ 
 	body.dark .main-content h1,
 	body.dark .lista-de-linguagens-dominadas,
 	body.dark form#preferences label {
-		color: #ddd !important;
+		color: #D6D8DA !important;
 	}
 
 	/*** Bordas ***/
@@ -409,39 +408,25 @@ html.font-big {
 }
 
 
-@media screen and (min-width: 1155px) {
+@media screen and (min-width: 1006px) and (max-width: 1035px) {
 
-	/** CABECALHO **/
-	html.font-big header .header-row, 
-	html.font-big footer .footer-row {
-		max-width: 1200px !important;
-		padding-left: 3px;
-		padding-right: 3px;
-	}
 
-	html.font-big form#calculadora select {
-		max-width: 22.25rem !important;
-	}
 
-	/* Aside Content 
-	html.font-big .aside-content {
-		padding-right: 10px !important;
-		padding-left: 15px !important;
-	}*/
+	
+}
+
+@media screen and (min-width: 1036px){
+		/** CABECALHO **/
+		html.font-big header .header-row, 
+		html.font-big footer .footer-row {
+			max-width: 1200px !important;
+			padding-left: 3px;
+			padding-right: 3px;
+		}
+	
 }
 
 
-
-
-.header-row-dir-column {
-	flex-direction: column;
-}
-
-
-.menu-box-width-cem  {
-	width: 100%;
-	margin-top: 30px;
-}
 
 
 .formatacao-para-ul-do-menu-com-fontegrande {
@@ -452,20 +437,7 @@ html.font-big {
 	padding: 0px;
 }
 
-.formatacao-para-ul-do-menu-com-fontegrande li:first-child{
-	text-align: left;
-	flex-basis: 6%;
-}
 
-.formatacao-para-ul-do-menu-com-fontegrande li:last-child{
-	text-align: right;
-}
-
-   
-.formatacao-para-li-do-menu-com-fontegrande {
-	flex-grow: 1;
-	text-align: center;
-}
 
 /**  Rodape*/
 
@@ -479,9 +451,7 @@ html.font-big {
 
 
 
-.inputform-max-width-static {
-	max-width: 21rem !important;
-}
+
 
 
 

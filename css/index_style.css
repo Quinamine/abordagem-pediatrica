@@ -196,7 +196,7 @@ body.dark .body-row {
 
 
 body.dark .print-dose {
-	color: #ddd !important;
+	color: #D6D8DA !important;
 }
 
 body.dark .print-error {
@@ -204,7 +204,7 @@ body.dark .print-error {
 }
 
 body.dark .print-alerta {
-	color: #ddd;
+	color: #D6D8DA;
 }
 
 body.dark .print-alerta, body.dark .print-alerta *{
@@ -213,15 +213,13 @@ body.dark .print-alerta, body.dark .print-alerta *{
 
 
 /*** layout da calculadora com fonte small */
-body.small
 
-
-
-/* Font-size small */
-
-body.font-small form#calculadora p{
-	padding-left: 35px !important;
+@media screen and (min-width:1006px){
+	html.font-small form#calculadora p{
+		padding-left: 35px !important;
+	}
 }
+
 
 
 /** Calculadora  

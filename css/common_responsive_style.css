@@ -1,54 +1,13 @@
-﻿/************ CSS REUTILIZAVEL ************/
-
-@media screen and (min-width: 820px) and (max-width: 1070px){
-	/******** HEADER ***********/
-	/* Para alinhar o cabecalho e o rodape com o conteudo da pagina */
-	header .header-row{
-		padding-left: 30px;
-		padding-right: 30px;
-	} 
-
-	.body-row {
-		border-radius: 0;
-	}
-
-	/******* FOOTER *******/
-	footer .footer-row p{
-		text-align: center;
-		line-height: 1.5;
-
-	}
-
-	footer .footer-row a{
-		display: block;
-	}
-}
-
-
-/**********     Tablet  nav-menu  ***********/
-@media screen and (min-width: 1006px) and (max-width: 1071px){
-
-	div.header-row .menu-box nav li:nth-child(1) {
-		text-align: left;
-	}
-
-	div.header-row .menu-box nav li:last-child {
-		text-align: right;
-	}
-}
+﻿
 
 @media screen and (min-width: 614px) and (max-width: 1071px){
 		/******** HEADER ***********/
-		header {
-			padding: 15px;
-			box-shadow: 0px 10px 4px #888;
-			border-bottom: 1px solid #666;
-		}
+	
 		div.header-row {
 			flex-direction: column;
 		}
 	
-	
+
 		div.header-row .menu-box  {
 			width: 100%;
 			margin-top: 10px;
@@ -70,40 +29,38 @@
 		}
 }
 
-
-/*     Tablet  Main content  */
+/*     TABLET MAIN CONTENT  */
 
 @media screen and (min-width: 521px) and (max-width: 1005px){	
 
-	/******** RESET DO BODY ***********/
+	/** NAV **/
+	.menu-box nav ul {
+		max-width: 697px;
+		margin: auto;
+	}
+
+	/** RESET DO BODY **/
 	body {
 		width: 100%;
-		background-color: #eee;
+		background-color: #fff;
 	} 
 
-
-	/************ LINKS COMUNS ***********/
-	a:hover {
-		text-decoration: none;
-	}
-
-
-	/***********  CORPO DA PAGINA ********/
-	.body-row .aside-content {
-		display: none;
-	} /* Nao mostrar o aside */
-
-
-	/*______ Conteudo Principal _____*/
 	.body-row {
-		background-color: #eee;
-		margin-top: 0px;
-	}
-	.body-row .main-content {
-		width: 100%;
-		margin: 0 auto;
+		border-radius: 0;
+		padding: 0;
+		
 
-		background-color: #fff;
+		max-width: 700px;
+		margin: 0 auto;
+		background-color: #fff !important;
+		
+	}
+
+	.body-row .main-content {
+		padding: 10px;
+		margin: 0 auto;
+		border: none;
+		
 	}
 
 	.body-row .main-content form#calculadora {
@@ -111,10 +68,10 @@
 	}
 
 
-	.row-of-social-sites {
-		margin-bottom: 0;
-		
-	}
+	/* RESET */
+	a:hover {text-decoration: none;}
+
+	.body-row .aside-content {display: none;} 
 
 
 	/******** RODAPE ***********/
@@ -123,60 +80,26 @@
 		line-height: 1.5;
 	}
 
-
-	footer p a {
-		display: block;
-	}
-}
+	footer p a {display: block;}
 
 
-/* Dispositivos com telas intermedias entre tablet e mobile    */
-
-@media screen and (min-width: 701px) and (max-width: 1068px) {
-	body.dark .body-row {
-		margin-top: 0px;
-		margin-bottom: 0px;
-		border-radius: 0px;
-	}
-}
-
-@media screen and (min-width: 521px) and (max-width: 700px) {
-	/** reset  **/
-	.body-row {
-		padding: 0;
-	}
-
-	/** TITULOS **/
-	.body-row .main-content h2, h1 {
-		font-size: 26px;
-		color: #333;
-		border: none !important;
-	}
-
-
-	/* CONTEUDO PRINCIPAL */
-	.body-row .main-content {
-		border-radius: 5px;
-		border: 1px groove #eee;
-	}
-
-	/*     RODAPE           */
-	footer .footer-row {
-		padding-right: 20px;
-		padding-left: 20px;
-	}
-
-	/*** Preferencias ***/
+	/*** PREFERENCIAS ***/
 
 	body.dark {
-		background-color: #444 !important;
-	}
-	
-	body.dark p.resultado * {
-		padding-top: 5px;
-		padding-bottom: 5px;
+		background-color: #444;
 	}
 
+	body.dark header {
+		border-bottom: 2px solid #555;
+	}
+
+	body.dark footer {
+		border-top: 2px solid #555;
+	}
+
+	body.dark .body-row {
+		margin: 0px auto 0px auto;	
+	}
 
 }
 
@@ -188,7 +111,7 @@
 }
 
 
-/* Small and Medium phone hEADER */
+/* Small and Medium phone HEADER */
 @media screen and (max-width: 613px){
 
 	/*************  HEADER   *************/
@@ -363,7 +286,7 @@
 	body.dark fieldset
 	{
 		background-color: #222 !important;
-		color: #ddd;
+		color: #D6D8DA;
 	}
 
 	/** HEADER */
@@ -378,7 +301,7 @@
 	body.dark .main-content h4,
 	body.dark .main-content h5{
 		background-color: initial !important;
-		color: #ddd !important;
+		color: #D6D8DA !important;
 	}
 
 	/** Destaques **/
@@ -391,12 +314,12 @@
 	body.dark p.nota, 
 	body.dark p.regra-de-tres-simples,
 	body.dark p.prescricao-correcta,
-	p.return-top a,
+	body.dark p.return-top a,
 	body.dark form#calculadora p, 
 	body.dark form input,
 	body.dark form select {
 		background-color: rgb(46, 43, 43) !important;
-		color: #ddd !important;
+		color: #D6D8DA !important;
 	}
 
 	/** BORDAS **/
