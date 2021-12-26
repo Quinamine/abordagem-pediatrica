@@ -2,18 +2,19 @@
 <html dir="ltr" lang="pt-PT">
 	<head>
 		<meta charset="utf-8"/>
-		<title>Preferências | Abordagem Pediátrica</title>
+		<title>Documentação | Abordagem Pediátrica</title>
 		<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
 		<meta http-equiv="X-UA-Compatible" content="ie=edge"/>
 		<meta name="robots" content="index, follow"/>
+		<meta name="description" content="O 'Abordagem Pediátrica' é um projecto digital que possui uma calculadora de doses pediátricas (inclusive dos Antiretrovirais) cujo objectivo é simplificar o cálculo da dose e promover sobretudo a Prescrição Racional e Correcta dos Medicamentos..."/>
 		<meta name="author" content="Adérito Félix Quinamine"/>
 		
 		<!-- CSS -->
-		<link rel="stylesheet" type="text/css" href="../css/reset.css"/>
-		<link rel="stylesheet" type="text/css" href="../css/layout.css"/>
-		<link rel="stylesheet" type="text/css" href="../css/layout_mq.css"/>
-		<link rel="stylesheet" type="text/css" href="../css/preferencias.css"/>
-		<link rel="stylesheet" type="text/css" href="../css/menureticencias.css"/>
+		<link rel="stylesheet" type="text/css" href="../../css/reset.css"/>
+		<link rel="stylesheet" type="text/css" href="../../css/layout.css"/>
+		<link rel="stylesheet" type="text/css" href="../../css/doc_style.css"/>
+		<link rel="stylesheet" type="text/css" href="../../css/layout_mq.css"/>
+		<link rel="stylesheet" type="text/css" href="../../css/doc_responsive_style.css"/>
 		
 		<!-- Fonte da logo da pagina -->
 		<link rel="preconnect" href="https://fonts.googleapis.com">
@@ -26,9 +27,9 @@
 		<link href="https://fonts.googleapis.com/css2?family=PT+Serif:wght@400;700&family=Source+Sans+Pro:wght@400;700&display=swap" rel="stylesheet">
 		
 		<!-- Scripts -->
-		<script type="text/javascript" src="../js/menu.js"></script>
-		<script type="text/javascript" src="../js/preferences.js"></script>
+		<script type="text/javascript" src="../js/menuhamburger.js"></script>
 		<script type="text/javascript" src="../js/applypreferences.js"></script>
+		<script type="text/javascript" src="../js/progresso.js"></script>
 		<noscript>O seu navegador está sem permissão de execução de scripts. Isso certamente interfere completa e negativamente no funcionamento desta ferramenta.</noscript>
 		
 		<!-- Global site tag (gtag.js) - Google Analytics -->
@@ -39,15 +40,17 @@
 			gtag('js', new Date());
 
 			gtag('config', 'G-TE35PF9T58');
-		</script>
+		</script>	
+
 	</head>
 	<body>
-		<div class="all-content-container preferences">
+		<div class="all-content-container">
+			<meter></meter>
 			<header>
 				<div class="row header-row">
 
 					<div class="logo-box">
-						<h1><a href="../index.html">Abordagem Pediátrica</a></h1>
+						<a href="../index.html">Abordagem Pediátrica</a>
 					</div>
 
 					<!-- Menu Mobile-->
@@ -70,16 +73,15 @@
 							</a></li>
 
 							<li class="dropdown-container cdp">
-								<a href="calculadora-de-doses-pediatricas.html" class="target" >Calculadora<span class="trecho-dedoses"> de doses</span></a>
+								<a href="calculadora-de-doses-pediatricas.html" class="active target" >Calculadora<span class="trecho-dedoses"> de doses</span></a>
 								
 								<ul class="dropdown-menu">
 									<li><a href="#">Bases da Calculadora</a></li>
-									<li><a href="#">Público Alvo</a></li>
+									<li><a href="saibamais/objectivo-e-publico-alvo-da-calculadora-de-doses.html">Público Alvo</a></li>
 									<li><a href="#">Ajuda</a></li>
 									<li><a href="#">Baixar FNM</a></li>
 								</ul>
 							</li>
-							
 							<li class="dropdown-container darv">
 								<a href="doseador-de-antirretrovirais.html" class="target">Darv</a>
 
@@ -89,81 +91,34 @@
 									<li><a href="suporte/instrucoes-de-utilizacao-do-doseador-de-antirretrovirais.html#tarv">Ajuda</a></li>
 								</ul>
 							</li>
-
-
-							<li><a href="preferencias.html" class="active">Preferências</a></li>
-
+							<li><a href="preferencias.html">Preferências</a></li>
 							<li><a href="sobre.html">Sobre <span class="trecho-mim">mim</span></a></li>
 							<li><a href="contato.html">Contacto</a></li>
 						</ul>
 					</nav>
-
-					
 				</div>
 			</header>
 			<main>
 				<div class="row body-row">
+					<!--INICIO DO CORPO DA DA PÁGINA
+						Estruturado por "Adérito Félix Quinamine" 
+					-->
 					<div class="main-content body-row-first-column">
-						<h1>PREFERÊNCIAS</h1>
-						<form id="preferences">
-							<fieldset>
-								<legend>Aparência</legend>
-								<p>
-									<label for="tema">Tema</label>
-									<select name="tema" id="tema">
-										<optgroup label="Escolher tema">
-											<option value="padrao">Predefinido</option>
-											<option value="claro">Claro</option>
-											<option value="escuro">Escuro</option>
-										</optgroup>
-									</select>
-								</p>
-							</fieldset>
-							<fieldset>
-								<legend>Texto</legend>
-								<p>
-									<label for="familia">Familia</label>
-									<select name="familia" id="familia">
-										<optgroup label="Família da fonte">
-											<option value="sans-serif">Sem serifa</option>
-											<option value="serif">Serifada</option>
-											<option value="cursiva">Cursiva</option>
-										</optgroup>
-									</select>
-								</p>
-								<p>
-									<label for="size">Tamanho</label>
-									<select name="size" id="fontsize">
-										<optgroup label="Tamanho da fonte">
-											<option value="default">Padrão</option>
-											<option value="small">Pequeno</option>
-											<option value="medium">Médio</option>
-											<option value="big">Grande</option>
-										</optgroup>
-									</select>
-								</p>
-								<p>
-									<label for="align">Alinhamento</label>
-									<select name="align" id="align">
-										<optgroup label="Alinhamento do texto">
-											<option value="toLeft">À esquerda</option>
-											<option value="justified">Justificado</option>
-										</optgroup>
-									</select>
-								</p>
-							</fieldset>
-						</form>
+						<h1>Bases da Calculadora</h1>
+
+						
+
+			
 					</div>
 
-					<!--BARRA LATERAL-->
+					<!--BARRA LATERAL"-->
 					<div class="aside-content body-row-last-column">
 						<aside>
 							<h3>Links recomendados</h3>
 							<nav>
 								<ul>
-									<li><a href="calculadora-de-doses-pediatricas.html">Calculadora de doses</a></li>
-									<li><a href="doseador-de-antirretrovirais.html">Doseador de ARVs</a></li>
-									
+									<li><a href="../index.html">Acessar a Calculadora</a></li>
+									<li><a href="tarv.html" title="Dosagem de Arv's">Doseador de ARV's</a></li>
 									<li><a href="sobre.html">Sobre o Desenvolvedor</a></li>
 								</ul>
 							</nav>
@@ -171,13 +126,12 @@
 					</div>
 				</div>
 			</main>
-
 			<!--INICIO DO FOOTER"-->
 			<footer>
 				<div class="row footer-row">
-					
-					<p>Desenvolvido por <a href="sobre.html">Adérito Félix Quinamine</a> | &copy; Todos Direitos Reservados | Desenvolvimento e Programação Web 2021</p>
-					
+					<div class="footer-div-content footer-row-only-column">
+						<p>Desenvolvido por <a href="sobre.html">Adérito Félix Quinamine</a> | &copy; Todos Direitos Reservados | Desenvolvimento e Programação Web 2021</p>
+					</div>
 				</div>
 			</footer>
 		</div>

@@ -2,7 +2,7 @@
 <html dir="ltr" lang="pt-PT">
 	<head>
 		<meta charset="utf-8"/>
-		<title>Objectivo e Público Alvo da Calculadora de Doses | Abordagem Pediátrica</title>
+		<title>Profilaxia de IO's com CTX | Abordagem Pediátrica</title>
 		<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
 		<meta http-equiv="X-UA-Compatible" content="ie=edge"/>
 		<meta name="robots" content="index, follow"/>
@@ -12,6 +12,7 @@
 		<link rel="stylesheet" type="text/css" href="../../css/reset.css"/>
 		<link rel="stylesheet" type="text/css" href="../../css/common_style.css"/>
 		<link rel="stylesheet" type="text/css" href="../../css/common_responsive_style.css"/>
+		<link rel="stylesheet" type="text/css" href="../../css/orangeheader.css"/>
 		<link rel="stylesheet" type="text/css" href="../../css/saibamais.css"/>
         <link rel="stylesheet" type="text/css" href="../../css/saibamais_responsive.css"/>
 		
@@ -26,7 +27,7 @@
 		<link href="https://fonts.googleapis.com/css2?family=PT+Serif:wght@400;700&family=Source+Sans+Pro:wght@400;700&display=swap" rel="stylesheet">
 		
 		<!-- Scripts -->
-		<script type="text/javascript" src="../../js/menuhamburger.js"></script>
+		<script type="text/javascript" src="../../js/menu.js"></script>
 		<script type="text/javascript" src="../../js/applypreferences.js"></script>
 		<script type="text/javascript" src="../../js/backhistory.js"></script>
 		
@@ -42,40 +43,33 @@
 			gtag('config', 'G-TE35PF9T58');
 		</script>
 	</head>
-	<body class="dark">
+	<body>
 		<div class="all-content-container">
 			<header>
-
 				<!-- DESKTOP HEADER -->
 				<div class="row header-row">
-					<div class="logo-box header-row-first-column ">
-						<a href="../../index.html">Abordagem Pediátrica</a>
+
+					<div class="logo-box">
+						<h1><a href="../../index.html">Abordagem Pediátrica</a></h1>
 					</div>
-					<div class="menu-box header-row-last-column" data-menustatus="off">
-						<div class="menu-mobile">
-							<div class="box-do-titulo-menu">
-								<h4>menu</h4>
-							</div>
-							<div class="hamburger-container">
-								<div class="fatia f1"></div>
-								<div class="fatia f2"></div>
-								<div class="fatia f3"></div>
-							</div>
-						</div>
-						<nav>
-							<ul>
-								<li><a href="../../index.html">Calculadora</a></li>
-								<li><a href="../tarv.html">DARV</a></li>
-								<li><a href="../documentacao.html">Documentação</a></li>
-								<li><a href="../preferencias.html">Preferências</a></li>
-								<li><a href="../sobre.html">Sobre Mim</a></li>
-								<li><a href="../contato.html">Contacto</a></li>
-							</ul>
-						</nav>
-					</div>
+
+					<nav>
+						<ul>
+							<li><a href="../../index.html">
+								<span class="pagina-inicial">Página inicial</span>
+								<span class="inicio">Início</span>
+							</a></li>
+							<li><a href="../calculadora-de-doses-pediatricas.html">Calculadora de doses</a></li>
+							<li><a href="../doseador-de-antirretrovirais.html">Darv</a></li>
+							<li><a href="../preferencias.html">Preferências</a></li>
+							<li><a href="../sobre.html">Sobre <span class="trecho-mim">mim</span></a></li>
+							<li><a href="../contato.html">Contacto</a></li>
+						</ul>
+					</nav>
 				</div>
 
-				<!-- MOBILE HEADER-->
+
+				<!-- MOBILE HEADER -->
                 <div class="row saibamais-row">
 
                     <div class="seta container-da-seta-de-volta">
@@ -85,7 +79,7 @@
                     </div>
 
                     <div class="container-do-titulo-saibamais">
-                        <h2>Saiba mais</h2>
+                        <h2>Prevenção das IOs</h2>
                     </div>
                 </div>
 
@@ -96,9 +90,19 @@
 					<div class="main-content body-row-first-column">
 
 						<div id="container-do-conteudo-saibamais">
-							<h1>OBJECTIVO E PÚBLICO-ALVO DA CDP</h1>
-							<p>A <a href="../../index.html">Calculadora de Doses Pediátricas</a> (como o nome sugere) prevê simplesmente o cálculo de doses para a população pediátrica mórbida (crianças doentes), e estimo que as crianças mais velhas tenham um peso máximo de até 35 kg (pelo menos para fins de abordagens pediátricas) e um limite superior de definição de idade pediátrica de 14 anos (variável).  Aquelas que apresentam um peso e/ou idade acima do previsto (35 kg e 14 anos respectivamente), considerar a possibilidade de tratá-las com base nas doses usadas para os adultos. Saiba mais lendo a <a href="../documentacao.html">Documentação.</a>
-							</p>	
+							<h1 class="margens-laterais-dez-pixels" id="profilaxia_contra_ios">CRITÉRIOS PARA TRATAMENTO PROFILÁCTICO COM COTRIMOXAZOL</h1>
+
+							<p>Iniciar o CTX a:</p>
+
+							<ul>
+								<li>Crianças &lt; 5 anos independentemente do estadio clínico ou CD4.</li> 
+								<li>Crianças &ge; 5 anos se CD4 &le; 500 cel/mm<sup>3</sup> ou estadio II, III ou IV.</li>
+							</ul>
+
+							<p>Suspender o CTX se:</p>
+							<ul>
+								<li>Idade &ge; 5 anos e CD4 &gt; 500 cel/mm<sup>3</sup> em 2 medições consecutivas com intervalo &ge; 6 meses.</li>
+							</ul>
 						</div>
 
 					</div>
@@ -122,14 +126,14 @@
 
 			<!--INICIO DO FOOTER"-->
 			<footer>
-				<!-- Desktop footer-->
+				<!-- Desktop Footer -->
 				<div class="row footer-row">
 					<div class="footer-div-content footer-row-only-column">
 						<p>Desenvolvido por <a href="../sobre.html">Adérito Félix Quinamine</a> | &copy; Todos Direitos Reservados | Desenvolvimento e Programação Web 2021</p>
 					</div>
 				</div>
 				
-				<!-- Mobile footer -->
+				<!-- Mobile Footer -->
 				<div class="row container-do-p-com-endereco-do-site">
 					<p class="endereco-do-site">
 						<a href="../../index.html">quinamine.github.io/abordagem-pediatrica</a>
@@ -138,7 +142,7 @@
 				<div class="row saibamais-footer">
 					
 					<p>
-						<a href="../documentacao.html">Abordagem Pediátrica 2021</a> &copy; Todos Direitos Reservados
+						<a href="../documentacao.html">&copy; 2021 - Abordagem Pediátrica</a> 
 					</p>
 					
 				</div>

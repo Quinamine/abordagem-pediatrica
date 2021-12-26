@@ -96,14 +96,18 @@
 		object-fit: contain !important; /*** Por enquanto é só o boletim de 5 a 6 que tem esta classe ***/
 	}
 
-}
+	/*** PREFERENCIAS - MODO ESCURO ***/
 
+	body.dark .main-content h4 {
+		color: #aaa !important;
+	}
 
-/** PREFERENCIAS **/
-.cor-dos-titulos-das-imagens-da-bio {
-	color: #aaa !important;
-}
+	body.dark .main-content h4:hover {
+		color: rgb(250, 160, 50) !important;
+	}
 
-.cor-cinza-claro-do-body {
-	color: #ddd !important;
+	body.dark .seccao-sobre-desenvolvimento-web,
+	body.dark .seccao-sobre-desenvolvimento-web h3 {
+		background-color: rgba(34, 31, 34) !important;
+	}
 }

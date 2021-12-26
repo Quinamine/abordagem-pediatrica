@@ -83,7 +83,6 @@ function starter(){
         }
     } 
     catch (error) {printOkExpection();}
-
 }
 
 

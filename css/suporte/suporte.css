@@ -71,16 +71,14 @@ tfoot tr td {
 	table-layout: fixed;
 }
 
-
-/**** TABELA DE ABREVIACOES ****/
-
-table.tabela-de-abreviacoes tbody td.hide-in-screen-s {
-	background-color: #EEE;
+/** TABELA DE ABREVIACOES **/
+.tabela-de-abreviacoes th, .tabela-de-abreviacoes td {
+	text-align: left;
 }
 
-
-table.tabela-de-abreviacoes tbody td.inntr, table.tabela-de-abreviacoes tbody td.ip {
-	background-color:#DDD;
+.tabela-de-abreviacoes + p.nota {
+	font-weight: initial;
+	font-size: 0.75rem;
 }
 
 /*********** CSS - REUTILIZAVEL ***********/
@@ -95,7 +93,4 @@ table.tabela-de-abreviacoes tbody td.inntr, table.tabela-de-abreviacoes tbody td
 	background-color: #eee;
 }
 
- /** tabela de abreviacoes **/
- table.tabela-de-abreviacoes tbody td.hide-in-screen-s {
-	background-color: initial !important;
-}
+ 

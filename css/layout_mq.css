@@ -1,71 +1,179 @@
 ﻿
+@media screen and (min-width: 614px) and (max-width: 1071px) {
+	.header-row {flex-direction: column;}
 
-@media screen and (min-width: 614px) and (max-width: 1071px){
-		/******** HEADER ***********/
-	
-		div.header-row {
-			flex-direction: column;
-		}
-	
+	.header-row .logo-box {margin-bottom: 20px;}
 
-		div.header-row .menu-box  {
-			width: 100%;
-			margin-top: 10px;
-		}
-	
-	
-		div.header-row .menu-box nav ul {
-			width: inherit;
-			display: flex;
-			justify-content: center;
-			align-items: center;
-			padding: 0 10px;
-		}
-	
-	
-		div.header-row .menu-box nav li {
-			flex-grow: 1;
-			text-align: center;
-		}
-}
+	.header-row nav {width: 100%;}
 
-/*     TABLET MAIN CONTENT  */
-
-@media screen and (min-width: 521px) and (max-width: 1005px){	
-
-	/** NAV **/
-	.menu-box nav ul {
-		max-width: 697px;
-		margin: auto;
+	.header-row nav ul {
+		max-width: 1071px;
+		justify-content: center;
+		align-items: center;
 	}
 
+	.header-row nav ul li{
+		flex: 1;
+		text-align: center;
+	}
+
+	.header-row nav ul li a{padding: 18px 10px;}
+
+	.header-row nav ul li a span.trecho-dedoses {display: none;}
+
+}
+
+
+@media screen and (min-width: 1006px) and (max-width: 1071px) {
+
+	li.dropdown-container.cdp ul.dropdown-menu{
+		left: 14.5%;
+	}
+}
+
+
+@media screen and (min-width: 614px) and (max-width: 623px) {
+	.trecho-mim {
+		display: none;
+	}
+}
+
+
+/* MENU RETICENCIAS  */
+@media screen and (min-width:614px) and (max-width:1005px){
+    section.menu-reticencias {
+        max-width: 590px;
+    }
+
+    .container-dos-tres-pontos {
+        border-radius: 0 !important;
+    }
+
+    /*** MENU RETICENCIAS ON ****/
+
+    section.menu-reticencias.active div.conteudo-do-menu-reticencias {
+        right: 3%;
+    }
+
+    section.menu-reticencias {
+        position: relative;
+    }
+
+    div.conteudo-do-menu-reticencias {
+        /*position: absolute;*/
+        right: 5%;
+    }
+}
+
+/* Menu reticicencias hide no Desktop e DISPLAY DROPDOWN-MENU */
+@media screen and (min-width:1006px){
+    div.body-row {
+        margin-top: 40px !important;
+    }
+
+    section.menu-reticencias {
+        display: none;
+    }
+
+    /* Dropdown Menu */
+    .header-row nav{
+        position: relative;
+    }
+
+    li.dropdown-container.on a.target {
+        background-color: #f4f4f4;
+        color: #333;
+    }
+
+    li.dropdown-container ul.dropdown-menu {
+        display: none ;
+        transition: all 300ms;
+    }
+
+    li.dropdown-container.on ul.dropdown-menu {
+        display: block;
+        position: absolute;
+        top: 40px;
+        background-color: #fff;
+        border: 1px solid #ddd;
+        border-top: none;
+        box-shadow: 0 2px 0 #aaa;
+        transition: all 300ms;
+		z-index: 10;
+    }
+
+
+    li.dropdown-container.on ul.dropdown-menu li{
+        line-height: 3;
+        border-top: 1px solid #eee;
+        display: flex;
+        transition: all 300ms;
+    }
+
+    li.dropdown-container.on ul.dropdown-menu li a {
+        color: #333;
+        padding: 10px 28px !important;
+        flex: 1;
+        overflow: hidden;
+    }
+
+    li.dropdown-container.on ul.dropdown-menu li a:hover {
+        border-bottom:none;
+    }
+
+   
+}
+
+/* Menu reticicencias display none no mobile e tablet */
+@media screen and (max-width: 1005px){
+    .header-row nav ul.dropdown-menu {
+        display: none;
+    }
+}
+
+
+
+/*     TABLET MAIN CONTENT  */
+@media screen and (min-width: 521px) and (max-width: 1005px){	
+	
 	/** RESET DO BODY **/
 	body {
 		width: 100%;
 		background-color: #fff;
 	} 
 
+	/* CABECALHO */
+	.header-row .logo-box{
+		display: flex;
+		width: 89%;
+	}
+
+	.header-row nav ul li a:hover, a.active{
+		background-color: inherit;
+	}
+	
+	.header-row nav ul li a span.pagina-inicial {display: none;}
+
+	.header-row nav ul li a span.inicio {display: initial;}
+	
+
+
+	/* CORPO */
+
 	.body-row {
 		border-radius: 0;
-		padding: 0;
-		
-
+		padding: 20px;
 		max-width: 700px;
 		margin: 0 auto;
 		background-color: #fff !important;
-		
 	}
 
 	.body-row .main-content {
-		padding: 10px;
-		margin: 0 auto;
+		padding: 0;
 		border: none;
-		
 	}
 
-	.body-row .main-content form#calculadora {
-		margin: 25px auto 0;
-	}
+	.body-row .main-content form#calculadora {margin: 25px auto 0;}
 
 
 	/* RESET */
@@ -103,73 +211,72 @@
 
 }
 
-/* To uppercase title in big screens */
-@media screen and (min-width: 521px) {
-	.main-content h3, .main-content h3 {
-		text-transform: uppercase;
-	}
-}
-
 
 /* Small and Medium phone HEADER */
 @media screen and (max-width: 613px){
 
+	/* RESET */
+	a:hover {text-decoration: none;} 
+
+
 	/*************  HEADER   *************/
 	header {
 		padding: 0; /*-- Reset --*/
-
 		border-bottom: 8px groove orange; /*-- Nova formatação --*/
 	}
 
-	header div.logo-box a {
-		/*-- Nova formatação --*/
-		font-size: 24px;
-	}
+	header div.logo-box a {font-size: 24px;}
 
-	header nav {display: none;}
+	header .header-row nav {display: none;}
 
-	header div.header-row {
-		flex-wrap: nowrap;
+	header .header-row {
+		flex-wrap: wrap;
 		padding: 15px;
 		flex-direction: row;
 	} 
 
-	header div.header-row div.logo-box {flex: 1 0 80%;}
+	.header-row div.logo-box {flex-basis: 80%;}
 
+	.header-row nav ul li a{
+		color: #fff;
+	}
 
-	header div.header-row div.menu-box {
-		/** Para posicionar o menu hamburger a direita **/
-		display: flex;
-		justify-content: flex-end;
-	} 
+	.header-row nav ul li a:hover{
+		background-color: rgba(219, 146, 57, .4);
+		border-bottom: none;
+	}
+	
+	
+	.index a.active,
+	.cdp a.active,
+	.darv a.active,
+	.preferences a.active,
+	.sobre a.active,
+	.contacto a.active {
+		/* Reset */
+		border-bottom: none !important;
+		color: #fff;
+	}
 
 	
-	/************ LINKS COMUNS  ***************/
-	a:hover {text-decoration: none;} /*-- reset */
 
-	/***** SESSAO DE MENU-MOBILE *****/
-	.menu-box div.menu-mobile {
+	/* SESSAO DE MENU-MOBILE */
+	.header-row div.menu-mobile {
 		width: 40px;
-
 		display: flex;
 		flex-direction: column;
 		justify-content: center;
 		align-items: center;
-
 		border: 1px solid #444;
 		border-radius: 2px;
-		
 		padding: 2px 0;
-
 		transition: border 200ms ease-out;
 	}
 
 	div.menu-mobile h4 {
 		font-size: 12px;
 		font-weight: bold;
-
 		color: #aaa;
-		
 		transition-duration: 200ms;
 	}
 
@@ -178,103 +285,88 @@
 	div.hamburger-container div {
 		width: 100%;
 		height: 3px;
-
 		margin: 4px 0;
-
 		background-color: #eee;
-		
 		border-radius: 10px;
-
 		transition-duration: 200ms; /* Transição de menu-hamburger "Off" para "ON"; */
 	}
 
 	/***** Menu On - Posisionamento *****/
 
-	div.menu-on {
+	.header-row.menuOn {
 		position: absolute;
 		top: 0;
 		left: 0;
 
 		width: 100vw;
 		height: 100vh;
-
 		z-index: 1000;
 
 		background-color: #555;
-
 		border-bottom: 8px groove orange;
-
-		/*	1 - div.menu-on has got 2 Element Childreen: "div.menu-mobile and nav ul";
-			2 - Because of position absolute on the div.menu-mobile, now the only child of div.menu is "nav ul"
-			3 - So the block flex above is to center "nav ul";
-		*/
-		
-		display: flex;
-		justify-content: center;
-		align-items: center;
+		align-items: flex-start;
+		transition: height 200ms ease-out;
 	}
 
 
-	/******** Transformacao do menu-hamburger *********/
+	/* Transformacao do menu-hamburger */
 
-	div.menu-on div.menu-mobile {
-		border: none; /* reset */
-
-		position: absolute; 
-		top: 15px;
-		right: 15px;
+	.header-row.menuOn div.menu-mobile {
+		border: none;
+		order: 0;
 	}
 
+	.header-row.menuOn div.menu-mobile h4{opacity: 0;}
 
-	div.menu-on div.menu-mobile h4{
-		opacity: 0; 
-	}
-
-	div.menu-on div.menu-mobile div.f1 {
+	.header-row.menuOn div.menu-mobile div.f1 {
 		transform: rotate(35deg) translate(2px, 3px);
 	}
 
-	div.menu-on div.menu-mobile div.f2 {
+	.header-row.menuOn div.menu-mobile div.f2 {
 		opacity: 0;
 		transition: opacity 300ms ease-out;
 	}
 
-	div.menu-on div.menu-mobile div.f3 {
+	.header-row.menuOn div.menu-mobile div.f3 {
 		transform: rotate(-35deg) translate(7px, -8px);
 	}
 
-	div.menu-on div.menu-mobile div.f1, div.f3 {
-		transition: transform 200ms ease-out; /* Transição inversa de menu-hamburger "ON" para "OFF"; */
+	.header-row.menuOn div.menu-mobile div.f1, div.f3 {
+		transition: transform 200ms ease-out; 
 	} 
 
 	/********* SHOW MENU ***********/
-	div.menu-on nav {
+	.header-row.menuOn nav {
+		flex: 1;
+		display: block;
+	}
+
+	.header-row.menuOn nav ul {
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+		line-height: 3.5;
+		border: 1px solid rgb(77, 77, 77);
+	}
+
+	.header-row.menuOn nav ul li {
 		width: 100%;
-
-		display: block;
+		border-bottom: 1px solid rgb(77, 77, 77);
 	}
 
-	div.menu-on nav ul {
+	.header-row.menuOn nav ul li:last-child {
+		width: 100%;
+		border-bottom: 0px;
+	}
+
+	.header-row.menuOn nav ul li a{
+		display: block;
 		padding: 0px;
-	}
-
-	div.menu-on nav ul li{
-		display: block;
-		margin: 0;
-
 		text-align: center;
 	}
 
-	div.menu-on nav ul li a{
-		display: block;
-		margin: 0px;
-
-		padding: 22px;
-		font-size: 1.375rem;
-	}
-
-	div.menu-on nav ul li a:nth-child(1){
-		margin-top: 0;
+	.header-row.menuOn nav ul li a:hover{
+		border: none;
 	}
 
 	/*** PREFERENCIAS ****/
@@ -345,6 +437,12 @@
 	}
 }
 
+/** Alinhamento do menu Humbeger ao Logo **/
+@media screen and (min-width: 338px) {
+	.header-row.menuOn .logo-box {margin-top: 10px;}
+
+	.header-row.menuOn .menu-mobile {padding-top: 0px;}
+}
 
 /* Small and Medium phone Body and Footer */
 @media screen and (max-width: 520px){
@@ -436,14 +534,15 @@
 
 
 /* Menu mobile em dispositivos com altura menor */
-@media screen and (min-height: 257px) and (max-height: 384px){
-	div.menu-on nav ul li a{
-		padding: 10px;
+@media screen and (max-height: 403px) {
+	.header-row.menuOn nav ul, 
+	.header-row.menuOn nav ul li {
+		border: none !important
 	}
+	.header-row.menuOn nav ul li a{max-height: 40px;}
+
+	.header-row.menuOn nav ul li a:hover{background-color: initial;}
 }
 
-@media screen and (max-height: 256px){
-	div.menu-on nav ul li a{
-		padding: 8px 8px 0px 8px !important;
-	}
-}
+
+

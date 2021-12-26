@@ -2,19 +2,21 @@
 <html dir="ltr" lang="pt-PT" >
 	<head>
 		<meta charset="utf-8"/>
-		<title>Abordagem Pediátrica | Calculadora de Doses Pediátricas</title>
+		<title>Abordagem Pediátrica</title>
 		<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
 		<meta http-equiv="X-UA-Compatible" content="ie=edge"/>
 		<meta name="robots" content="index, follow"/>
-		<meta name="description" content="O 'Abordagem Pediátrica' possui uma Calculadora que determina automaticamente doses pediátricas dos medicamentos mais usuais na prática clínica bastando o usuário inserir o peso e selecionar o nome do medicamento e automaticamente a dose e a posologia são exibidas na secção correspondente"/>
+
+		<meta name="description" content="A plataforma digital com calculadoras que determinam automaticamente doses pediátricas dos medicamentos mais usuais na prática clinica."/>
+
 		<meta name="author" content="Adérito Félix Quinamine"/>
 		
 		<!--     CSS   -->
 		<link rel="stylesheet" type="text/css" href="css/reset.css">
-		<link rel="stylesheet" type="text/css" href="css/common_style.css"/>
-		<link rel="stylesheet" type="text/css" href="css/index_style.css"/>
-		<link rel="stylesheet" type="text/css" href="css/common_responsive_style.css"/>
-		<link rel="stylesheet" type="text/css" href="css/index_responsive_style.css"/>
+		<link rel="stylesheet" type="text/css" href="css/layout.css"/>
+		<link rel="stylesheet" type="text/css" href="css/layout_mq.css"/>
+		<link rel="stylesheet" type="text/css" href="css/index.css"/>
+		
 		<!--     FONTES  -->
 					<!--   para  Logo do Site  -->
 		<link rel="preconnect" href="https://fonts.googleapis.com">
@@ -29,10 +31,11 @@
 		<link href="https://fonts.googleapis.com/css2?family=PT+Serif:wght@400;700&family=Source+Sans+Pro:wght@400;700&display=swap" rel="stylesheet">
 		
 		<!--     SCRIPTS   -->
-		<script type="text/javascript" src="js/menuhamburger.js"></script>
-		<script type="text/javascript" src="js/placeholder.js"></script>
-		<script type="text/javascript" src="js/calculadora.js"></script>
+		<script type="text/javascript" src="js/banner.js"></script>
+		<script type="text/javascript" src="js/menu.js"></script>
+		<script type="text/javascript" src="js/indexnavigation.js"></script>
 		<script type="text/javascript" src="js/applypreferences.js"></script>
+		
 		<noscript>O seu navegador está sem permissão de execução de scripts. Isso certamente interfere completa e negativamente no funcionamento desta ferramenta.</noscript>
 		
 		<!-- Global site tag (gtag.js) - Google Analytics -->
@@ -47,319 +50,261 @@
 	</head>
 	<body>
 		
-		<div class="all-content-container">
+		<div class="all-content-container index">
 			<header>
 				<div class="row header-row">
-					<div class="logo-box header-row-first-column ">
+
+					<div class="logo-box">
 						<h1><a href="index.html">Abordagem Pediátrica</a></h1>
 					</div>
-					<div class="menu-box header-row-last-column" data-menustatus="off">
-						<div class="menu-mobile">
-							<div class="box-do-titulo-menu">
-								<h4>menu</h4>
-							</div>
-							<div class="hamburger-container">
-								<div class="fatia f1"></div>
-								<div class="fatia f2"></div>
-								<div class="fatia f3"></div>
-							</div>
+
+					<!-- Menu Mobile-->
+					<div class="menu-mobile">
+						<div class="box-do-titulo-menu">
+							<h4>menu</h4>
 						</div>
-						<nav>
-							<ul>
-								<li><a href="index.html">Calculadora</a></li>
-								<li><a href="pages/tarv.html">DARV</a></li>
-								<li><a href="pages/documentacao.html">Documentação</a></li>
-								<li><a href="pages/preferencias.html">Preferências</a></li>
-								<li><a href="pages/sobre.html">Sobre <span class="none-in-ipad">Mim</span></a></li>
-								<li><a href="pages/contato.html">Contacto</a></li>
-							</ul>
-						</nav>
+						<div class="hamburger-container">
+							<div class="fatia f1"></div>
+							<div class="fatia f2"></div>
+							<div class="fatia f3"></div>
+						</div>
 					</div>
+
+					<nav>
+						<ul>
+							<li><a href="index.html" class="active">
+								<span class="pagina-inicial">Página inicial</span>
+								<span class="inicio">Início</span>
+							</a></li>
+
+							
+							<li class="dropdown-container cdp">
+								<a href="pages/calculadora-de-doses-pediatricas.html" class="target" >Calculadora<span class="trecho-dedoses"> de doses</span></a>
+								
+								<ul class="dropdown-menu">
+									<li><a href="pages/suporte/bases-da-calculadora.html">Bases da Calculadora</a></li>
+
+									<li><a href="pages/suporte/objectivo-e-publico-alvo-da-calculadora-de-doses.html">Público alvo</a></li>
+
+									<li><a href="pages/suporte/instrucoes-de-utilizacao-da-calculadora-de-doses-pediatricas.html">Ajuda</a></li>
+
+									<li><a href="pages/suporte/docfiles/formulario-nacional-de-medicamentos" download="Formulário Nacional de Medicamentos">Baixar FNM</a></li>
+								</ul>
+							</li>
+							<li class="dropdown-container darv">
+								<a href="pages/doseador-de-antirretrovirais.html" class="target">Darv</a>
+
+								<!-- Dropdown menu -->
+								<ul class="dropdown-menu">
+									<li><a href="saibamais/abreviacoes-farmacologicas-na-abordagem-antiretroviral.html#tarv">Siglas dos ARVs</a></li>
+									<li><a href="suporte/instrucoes-de-utilizacao-do-doseador-de-antirretrovirais.html#tarv">Ajuda</a></li>
+								</ul>
+							</li>
+
+
+							<li><a href="pages/preferencias.html">Preferências</a></li>
+							<li><a href="pages/sobre.html">Sobre <span class="trecho-mim">mim</span></a></li>
+							<li><a href="pages/contato.html">Contacto</a></li>
+						</ul>
+					</nav>
 				</div>
 			</header>
 			<!--Structured by Adérito Félix Quinamine-->
 
 	
 			<main>
-				<div class="row body-row">
-					<!-- Starting of Main Content-->
-					<div class="main-content body-row-first-column column-container-of-calculator">
-						<h2>Calculadora de Doses Pediátricas</h2>
-						<form id="calculadora">
-							<fieldset class="dados-da-crianca">
-								<legend align="center">Dados da Criança</legend>
+				<div class="row main-content">
+					
+					<div class="banner-rotativo">
+						<img src="img/banner/capa.png" alt="Banner-darv conceitual" class="current-img">
+	
+						<img src="img/banner/definicao.png" alt="Banner-darv conceitual">				
+						<img src="img/banner/large.png" alt="Atributos do Darv" id="large">
 
-								<p id="paragrafo-parent-de-idade" class="p-da-calculadora">
+						<img src="img/banner/logico.png" alt="Atributos do Darv" id="large">
+					
+						<img src="img/banner/acessivel.png" alt="Atributos do Darv">
 
-									<label for="idade">Idade</label>
+						<img src="img/banner/rapido.png" alt="Atributos do Darv">
+						<img src="img/banner/gratuito.png" alt="Atributos do Darv">
+						<img src="img/banner/economico.png" alt="Atributos do Darv">
 
-									<input type="number" name="idade" id="idade" required min="0" /> 
+						<!-- Bolinhas de progress -->
+						<section class="progress">
+							<div class="full"></div>
+							<div></div>
+							<div></div>
+							<div></div>
+							<div></div>
+							<div></div>
+							<div></div>
+							<div></div>
+						</section>
+					</div>
 
-									<select class="input-extension year-ext" id="ext">
-										<option value="m">meses</option>
-										<option value="y">ano(s)</option>
-									</select>
-								</p>
-								<p id="paragrafo-parent-de-peso" class="p-da-calculadora">
+					 <!-- NAVEGACAO -->
+					<nav>
+						<ul>
+							<li>
+								<a href="javascript:void(0);"class="current-tab" onclick="navegar(this,  'servicos')">SERVIÇOS</a>
+							</li>
 
-									<label for="peso">Peso&nbsp;</label>
+							<li>
+								<a href="javascript:void(0);"  onclick="navegar(this, 'sobre')">SOBRE</a>
+							</li>
+						</ul>
+					</nav>
 
-									<input type="number" name="peso" min="2" id="peso" max="36"  data-tipopeso="CDP" /> 
-									<select class="input-extension weight-ext">
-										<option>Kg</option>
-									</select>
-								</p>
-							</fieldset>
-							<fieldset>
-								<legend align="center">Especificação do Fármaco</legend>
-								<p id="paragrafo-parent-de-farmaco" class="p-da-calculadora">
-									<label for="farmaco" id="nome-farm">Nome</label>
-									<select id="farmaco">
-										<optgroup label="ANTI-MALÁRICOS">
-											<option value="AL" data-dos="140"  data-pos="2" data-forma="cp" data-tipodose="padrao" data-camporequired="both" selected>(1) 805 Arteméter e Lumefantrina (Coartem) 140mg Comp</option>
 
-											<option value="Quinina-300" data-doseporkg="30" data-dos="300" data-pos="3" data-forma="cp" data-tipodose="padrao" data-camporequired="both">(2) 8011 Quinina 300mg Comp</option>
-										</optgroup>								
-										<optgroup label="PENICILINAS">
-											<option  value="Fenox-cp" data-doseporkg="50" data-dos="500" data-pos="3" data-forma="cp" data-tipodose="dosecomp" data-camporequired="peso">(1) 8A1 Penicilina V (Fenoximetil) 500mg Comp</option>
+					<!-- MAIN -->
+					<section class="main">
 
-											<option value="Fenox-susp" data-doseporkg="50" data-dos="250" data-pos="3" data-dil="5" data-forma="susp" data-tipodose="dosesusp" data-camporequired="peso">(1) 8A2 Penicilina V (Fenoximetil) 250mg/5ml Susp</option>
+						<div class="container-dos-cards">
+							<div class="card card-da-cdp">
+								<picture>
+									<img src="img/calculadora_de_doses.png" alt="Calculadora de Doses Pediátricas"/>
+								</picture>
 
-											<option  value="Benzatina" data-doseporkg="50000" data-dos="2400000"  data-pos="1" data-forma="inj-IM" data-tipodose="parenteral" data-camporequired="peso">(1) 8A4 Penicilina Benzatinica 2.4 milhões U.I Inj</option>
+								<div class="description">
+									<h3>Calculadora de Doses Pediátricas</h3>
+									<p>Determina automaticamente doses terapêuticas dos medicamentos mais prescritos na prática clínica, com base no Formulário Nacional de Medicamentos, bastando o usuário inserir o peso, a idade e selecionar o nome do medicamento a prescrever e, subsequentemente a dose e a posologia aparecem na secção correspondente</p>
 
-											<option value="Procaina" data-doseporkg="50000" data-dos="3000000" data-pos="1" data-forma="inj-IM" data-tipodose="parenteral" data-camporequired="both">(1) 8A6 Penicilina Procaina 3 milhões U.I Inj</option>
-
-											<!--<option value="Amoxicilina-cp" data-doseporkg="50" data-dos="250" data-pos="3" data-forma="cp" data-tipodose="dosecomp" data-camporequired="peso">(1) 8A7 Amoxicilina 250mg Comp</option>-->
-
-											<option value="Amoxicilina-susp" data-doseporkg="50" data-dos="250" data-pos="3" data-dil="5" data-forma="susp" data-tipodose="dosesusp" data-camporequired="peso">(1) 8A8 Amoxicilina 250mg/5ml Susp</option>
-
-											<option value="Clavamox-375" data-doseporkg="50" data-dos="375" data-pos="3" data-forma="cp" data-tipodose="dosecomp" data-camporequired="peso">(3) 8A10 Amoxicilina e Ácido Clavulânico 375mg Comp</option>
-
-											<option value="Clavamox-susp" data-doseporkg="50" data-dos="312.5" data-pos="3" data-dil="5" data-forma="susp" data-tipodose="dosesusp" data-camporequired="peso">(3) 8A12 Amoxicilina e Ácido Clavulânico 312.5mg/5ml Susp</option>
-
-											<!--A dose de Flucloxacilina é de 12-25mg/kg/dose ou 36-75mg/kg divida em 3 tomas -->
-											<option value="Flucloxacilina-susp" data-doseporkg="36" data-dos="125" data-pos="3" data-dil="5" data-forma="susp" data-tipodose="dosesusp" data-camporequired="peso">(3) 8A15 Flucloxacilina 125mg/5ml Susp</option>
-										</optgroup>
-										<optgroup label="CEFALOSPORINAS">
-
-											<!--A dose de Cefuroxima é de 10-15mg/kg/dose ou 20mg-30mg/kg divida em 2 tomas -->
-											<option value="Cefuroxima" data-doseporkg="20" data-dos="250" data-pos="2" data-forma="cp" data-tipodose="dosecomp" data-camporequired="peso">(3) 8B1 Cefuroxima 250mg Comp</option>
-
-											<option value="Cefuroxima-susp" data-doseporkg="20" data-dos="125" data-pos="2" data-dil="5" data-forma="susp" data-tipodose="dosesusp" data-camporequired="peso">(3) 8B1 Cefuroxima 125mg/5ml Susp</option>
-
-											<option value="Ceftriaxona" data-doseporkg="50" data-dos="1000" data-pos="1" data-dil="4" data-forma="inj-IM" data-tipodose="parenteral" data-camporequired="peso">(3) 8B8 Ceftriaxona 1g/4ml Inj</option>
-
-										</optgroup>
-										<optgroup label="MACRÓLIDOS">
-
-											<option value="Azitromicina-cp" data-doseporkg="10" data-dos="500" data-pos="1" data-forma="cp" data-tipodose="dosecomp" data-camporequired="peso">(3) 8F1 Azitromicina 500mg Comp</option>
-
-											<option value="Azitromicina" data-doseporkg="10" data-dos="250" data-pos="1" data-dil="5" data-forma="susp" data-tipodose="dosesusp" data-camporequired="peso">(3) 8F2 Azitromicina 200mg/5ml Susp</option>
-
-											<option value="Eritromicina-susp" data-doseporkg="50" data-dos="250" data-pos="3" data-dil="5" data-forma="susp" data-tipodose="dosesusp" data-camporequired="peso">(2) 8F8 Eritromicina 250mg/5ml Susp</option>
-										</optgroup>
-										<optgroup label="QUINOLONAS">
-
-											<option value="Nalidixico-cp" data-doseporkg="50" data-dos="500" data-pos="3" data-forma="cp" data-tipodose="dosecomp" data-camporequired="peso">(2) 8H1 Ácido Nalidíxico 500mg Comp</option>
-
-											<option value="Nalidixico-susp" data-doseporkg="50" data-dos="300" data-pos="3" data-dil="5" data-forma="susp" data-tipodose="dosesusp" data-camporequired="peso">(2) 8H2 Ácido Nalidixico 300mg/5ml Susp</option>
-
-										</optgroup>
-
-										<!--A dose de CTZ é de 20mg/kg/dose ou 40mg/kg divida em 2 tomas -->
-										<optgroup label="SULFAMIDAS">
-											<option value="CTZ-cp" data-doseporkg="40" data-dos="480
-											" data-pos="2" data-forma="cp" data-tipodose="padrao" data-camporequired="idade">(1) 8I1 Cotrimoxazol 480mg Comp</option>
-
-											<option value="CTZ-susp" data-doseporkg="40" data-dos="240" data-pos="2" data-dil="5" data-forma="susp" data-tipodose="padrao" data-camporequired="idade">(1) 8I3 Cotrimoxazol 240mg/5ml Susp</option>
-										</optgroup>
-										<optgroup label="NITROIMIDAZÓLICO(S)">
-
-											<!--<option value="Metronidazol-cp" data-doseporkg="22.5" data-dos="250
-											" data-pos="3" data-forma="cp" data-tipodose="dosecomp" data-camporequired="peso">(1) 8K4 Metronidazol 250mg Comp</option>-->
-
-											<option value="Metronidazol-susp" data-doseporkg="22.5" data-dos="200" data-pos="3" data-dil="5" data-forma="susp" data-tipodose="dosesusp" data-camporequired="peso">(1) 8K7 Metronidazol 200mg/5ml Susp</option>
-
-											<option value="Metronidazol-susp-125" data-doseporkg="22.5" data-dos="125" data-pos="3" data-dil="5" data-forma="susp" data-tipodose="dosesusp" data-camporequired="peso">(1) 8K7 Metronidazol 125mg/5ml Susp</option>
-
-										</optgroup> 
-										<optgroup label="ANFENICÓIS E OUTRO(S)">
-											<option value="Cloranfenicol-susp" data-doseporkg="50" data-dos="250" data-pos="3" data-dil="5" data-forma="susp" data-tipodose="dosesusp" data-camporequired="peso">(2) 8K3 Cloranfenicol 250mg/5ml Susp</option>
-
-											<option value="Nitrofurantoina" data-doseporkg="3" data-dos="50" data-pos="3" data-forma="cp" data-tipodose="dosecomp" data-camporequired="peso">(1) 8K8 Nitrofurantoina 50mg Comp</option>
-										</optgroup> 
-										<optgroup label="ANTI-HELMINTICOS">
-											<option value="Albendazol-200" data-dos="200" data-pos="1" data-forma="cp" data-tipodose="padrao" data-camporequired="idade">(1) 8N1 Albendazol 200mg Comp</option>
-
-											<option value="Albendazol-400" data-dos="400" data-pos="1" data-forma="cp" data-tipodose="padrao" data-camporequired="idade">(1) 8N1 Albendazol 400mg Comp</option>
-
-											<option value="Mebendazol-100" data-dos="100" data-pos="2" data-forma="cp" data-tipodose="padrao" data-camporequired="peso">(1) 8N4 Mebendazol 100mg Comp</option>
-											
-											<!---<option>(1) 8N4 Mebendazol 500mg Comp</option>-->
-											<option  value="Praziquantel" data-doseporkg="40" data-dos="600" data-pos="1" data-forma="cp" data-tipodose="dosecomp" data-camporequired="peso">(1) 8N6 Praziquantel 600mg Comp</option>
-										</optgroup>
-										<optgroup label="ANTI-FÚNGICOS">
-
-											<option value="Fluconazol-200" data-doseporkg="6" data-dos="200" data-pos="1" data-forma="cp" data-tipodose="dosecomp" data-camporequired="peso">(3) 8Q3 Fluconazol 200mg Comp</option>
-
-											<option value="Griseofulvina" data-doseporkg="10" data-dos="500" data-pos="1" data-forma="cp" data-tipodose="dosecomp" data-camporequired="peso">(3) 8Q5 Griseofulvina 500mg Comp</option>
-
-											<option value="Ketoconazol" data-doseporkg="3" data-dos="200" data-pos="1" data-forma="cp" data-tipodose="dosecomp" data-camporequired="peso">(3) 8Q6 Ketoconazol 200mg Comp</option>
-
-											<option value="Nistatina" data-doseporkg="1" data-dos="100000" data-pos="1" data-dil="1" data-forma="susp" data-tipodose="dosesusp" data-camporequired="idade">(1) 8Q7 Nistatina 100.000 U.I/ml Susp</option>
-										</optgroup>
-										<optgroup label="ANTIVIRAIS">
-											<option value="Aciclovir" data-doseporkg="20" data-dos="400" data-pos="3" data-forma="cp" data-tipodose="padrao" data-camporequired="idade">8R1 Aciclovir 400mg Comp</option>
-										</optgroup>
-										<optgroup label="ANALGÉSICOS-ANTI-PIRÉTICOS, AINES">
-											<option value="Paracetamol-cp" data-doseporkg="30" data-dos="500" data-pos="3" data-forma="cp" data-tipodose="padrao" data-camporequired="both">(0) 7A3 Paracetamol 500mg Comp</option>
-
-											<option value="Paracetamol-inj" data-doseporkg="15" data-dos="1000" data-pos="3" data-dil="100" data-forma="inj-EV" data-tipodose="parenteral" data-camporequired="peso">(2) 7A4 Paracetamol 1g/100ml Inj</option>
-
-											<option value="Paracetamol-sup" data-doseporkg="30" data-dos="250" data-pos="3" data-forma="sup" data-tipodose="padrao" data-camporequired="both">(2) 7A5 Paracetamol 250mg Sup</option>
-
-											<!--Dose de Paracetamol susp: 10mg/kg/dose ou 30mg/kg/dia-->
-											<option value="Paracetamol-susp" data-doseporkg="30" data-dos="120" data-pos="3" data-dil="5" data-forma="susp" data-tipodose="dosesusp" data-camporequired="peso">(0) 7A6 Paracetamol 120mg/5ml Susp</option>
-
-											<option value="Diclofenac" data-doseporkg="3" data-dos="50" data-pos="3" data-forma="cp" data-tipodose="dosecomp" data-camporequired="peso">(2) 14A1 Diclofenac 50mg Comp</option>
-
-											<option value="Ibuprofeno-cp" data-doseporkg="20" data-dos="200" data-pos="3" data-forma="cp" data-tipodose="dosecomp" data-camporequired="peso">(2) 14A3 Ibuprofeno 200mg Comp</option>
-
-											<option value="Ibuprofeno-susp" data-doseporkg="20" data-dos="100" data-pos="3" data-dil="5" data-forma="susp" data-tipodose="dosesusp" data-camporequired="peso">(2) 14A4 Ibuprofeno 100mg/5ml Susp</option>
-
-											<optgroup label="ANALGÉSICOS OPIÓIDES">
-												<!-- A dose de codeina é 1mg/kg de 8/8h ou 3mg/kg/3 tomas-->
-												<option value="Codeina" data-doseporkg="1" data-dos="30" data-pos="3" data-forma="cp" data-tipodose="padrao" data-camporequired="both">(2) 7BI Codeína  30mg Comp</option>
-
-												<option value="Codeina-susp" data-doseporkg="3" data-dos="25" data-pos="3" data-dil="5" data-forma="susp" data-tipodose="padrao" data-camporequired="both">(2) 7B2 Codeína  25mg/5ml Susp</option>
+									<p><a href="#">Acessar</a> <a href="#">Ver instruções</a></p>
+								</div>
 								
-											</optgroup>
-											
-										</optgroup>
-										<optgroup label="ANTI-ESPASMÓDICOS">
-											<option value="Buscopam" data-dos="10" data-pos="3"  data-forma="cp" data-tipodose="padrao" data-camporequired="idade">(0) 2B1 Butilescopolamina 10mg Comp</option>
-										</optgroup>
-										<optgroup label="ANTI-EMÉTICOS">
-											<option value="meto" data-dos="10" data-pos="3" data-forma="cp" data-tipodose="padrao" data-camporequired="both">(1) 2C1 Metoclopramida 10mg Comp</option>
+							</div>
 
-											<option value="Metoclopramida-inj" data-dos="10" data-pos="3" data-dil="2" data-forma="inj-IM" data-tipodose="parenteral" data-camporequired="both">(2) 2C2 Metoclopramida 10mg/2ml Inj</option>
+							<div class="card card-do-darv">
 
-											<option value="meto" data-doseporkg="0.5" data-dos="5" data-pos="3" data-dil="5" data-forma="susp" data-tipodose="dosesusp" data-camporequired="both">(2) 2C3 Metoclopramida 5mg/5ml Xpe</option>
-										</optgroup>
-										<optgroup label="LAXANTES">
-											<option value="Bisacodil" data-dos="5" data-pos="1" data-forma="cp" data-tipodose="padrao" data-camporequired="idade">(1) 2D1 Bisacodil 5mg Comp</option>
-
-											<option value="Lactulose" data-dos="100" data-pos="2" data-forma="susp" data-tipodose="padrao" data-camporequired="idade">(3) 2D6 Lactulose 100mg Xpe</option>
-
-											<option value="Parafina_liquida" data-dos="100" data-pos="1" data-forma="susp" data-tipodose="padrao" data-camporequired="idade">(0) 2D7 Parafina Liquida 100g Emulsão</option>
-										</optgroup>
-										<optgroup label="CORTICOSTERÓIDES">
-											<option value="Hidrocortisona" data-dos="100" data-pos="3" data-dil="3" data-forma="inj-EV" data-tipodose="parenteral" data-camporequired="idade">(1) 3A3 Hidrocortisona 100mg Inj</option>
-
-											<!--<option value="Predinisolona" data-doseporkg="2" data-dos="5" data-pos="3">(2) 3A4 Prednisolona 5mg Comp</option>-->
-
-											<option value="Prednisolona-inj" data-doseporkg="2" data-dos="50" data-pos="3" data-dil="10" data-forma="inj-EV" data-tipodose="parenteral" data-camporequired="peso">(1) 3A5 Prednisolona 50mg/10ml Inj</option>
-										</optgroup>
-										<optgroup label="ANTI-ASMÁTICOS">
-											<option value="Aminofilina" data-doseporkg="10" data-dos="100" data-pos="3" data-forma="cp" data-tipodose="dosecomp" data-camporequired="peso">(1) 5A1 Aminofilina 100mg Comp</option>
-
-
-											<option value="Aminofilina-inj" data-doseporkg="6" data-dos="240" data-pos="3" data-dil="10" data-forma="inj-EV" data-tipodose="parenteral" data-camporequired="peso">(1) 5A1 Aminofilina 240mg/10ml Inj</option>
-											
-											<option value="Salbutamol-cp"  data-dos="2" data-pos="3" data-forma="cp" data-tipodose="padrao" data-camporequired="idade">(2) 5A9 Salbutamol 2mg Comp</option>
-											
-											<option value="Salbutamol-neb" data-dos="5" data-pos="5" data-forma="aerossol" data-tipodose="padrao" data-camporequired="peso">(2) 5A11 Salbutamol 5mg/ml Sol. nebulizável</option>
-
-											<option value="Salbutamol-susp" data-dos="100" data-pos="3" data-forma="susp" data-tipodose="padrao" data-camporequired="idade">(2) 5A12 Salbutamol 2mg/5ml Xpe</option>
-										</optgroup>
-										<optgroup label="ANTI-ANÉMICOS">
-											<option value="Acido-folico" data-dos="5" data-pos="1" data-forma="cp" data-tipodose="padrao" data-camporequired="both">(2) 6A1 Ácido Fólico 5mg Comp</option>
-
-											<option value="Gluconato-de-ferro" data-doseporkg="6" data-dos="30" data-pos="2" data-dil="5" data-forma="susp" data-tipodose="dosesusp" data-camporequired="peso">(1) 6A4 Gluconato de Ferro 30mg/5ml Xpe.</option>
-
-											<option value="Vitamina-B12" data-dos="1" data-pos="1" data-dil="1" data-forma="inj-IM" data-tipodose="parenteral" data-camporequired="idade">(2) 6A5 Hidroxicobalamina (Vit. B12) 1mg/ml Inj</option>
-
-											<option value="Sulfato-ferroso" data-dos="200" data-pos="1" data-forma="cp" data-tipodose="padrao" data-camporequired="idade">(1) 6A6 Sulfato Ferroso 200mg Comp</option>
-
-											<option value="Sulfato-ferroso-301" data-doseporkg="6" data-dos="300" data-pos="2" data-forma="cp" data-tipodose="dosecomp" data-camporequired="peso">(1) 6A7 Sulfato Ferroso  e Ácido Fólico 301mg Comp</option>
-										</optgroup>
-										<optgroup label="VITAMINAS">
-											<option  value="Vitamina-C" data-dos="100" data-pos="1" data-forma="cp" data-tipodose="padrao" data-camporequired="idade">(1) 12DI Ácido Ascórbico (Vit. C) 100mg Comp</option>
-
-											<option value="retinol" data-dos="200000" data-pos="1" data-forma="susp" data-tipodose="padrao" data-camporequired="idade">(1) 12D4 Axeroftol (Vit. A) 200.000 U.I Cáps</option>
+								<picture>
+									<img src="img/doseador_de_arvs.png" alt="Doseador de ARVs"/>
+								</picture>
+	
+								<div class="description">
+									<h3>Doseador de ARVs</h3>
+									<p>Calcula automaticamente doses terapêuticas dos Antirretrovirais e dos fármacos profiláticos contra infecções oportunistas bastando o usuário inserir o peso da criança e subsequentemente a dose, a posologia e a quantidade de fármacos a dispensar aparecem na secção correspondente.</p>
+									<p><a href="#">Acessar</a> <a href="#">Ver instruções</a></p>
+								</div>
+							</div>
+						</div>
 
 							
-											<option value="Complexo-B" data-pos="2" data-forma="cp" data-tipodose="padrao" data-camporequired="idade">(1) 12D6 Complexo B Comp</option>
-
-											<option value="Multivitaminas-cp" data-pos="2" data-forma="cp" data-tipodose="padrao" data-camporequired="idade">(0) 12D10 Multivitaminas Comp</option>
-
-											<option value="Multivitaminas-susp" data-pos="2" data-forma="susp" data-tipodose="padrao" data-camporequired="idade">(0) 12D11 Multivitaminas Xpe</option>
-											
-										</optgroup>
-										<optgroup label="ANTI-HISTAMINICOS">
-											<option value="Clorfeniramina-cp" data-doseporkg="0.4" data-dos="4" data-pos="3" data-forma="cp" data-tipodose="dosecomp" data-camporequired="peso">(1) 13A2 Clorfeniramina 4mg Comp</option>
-
-											<option value="Clorfeniramina-susp" data-doseporkg="0.4" data-dos="2" data-pos="3" data-dil="5" data-forma="susp" data-tipodose="dosesusp" data-camporequired="peso">(1) 13A3 Clorfeniramina 2mg/5ml Xpe</option>
-										</optgroup>
-										<optgroup label="VACINA(S) e IMUNOGLOBULINA(S)">
-											<option value="IGAR" data-doseporkg="20" data-dos="1000" data-pos="1" data-dil="5" data-forma="inj-IM" data-tipodose="parenteral" data-camporequired="peso">(3) 19A3 Imunoglobulina Anti-Rábica (IGAR) 1000 U.I/5ml Inj</option>
-
-											<option value="VAR" data-dos="1" data-pos="1" data-forma="inj-IM" data-tipodose="parenteral" data-camporequired="idade">(1) 19B6 Vacina Anti-Rábica 1ml Inj</option>
-										</optgroup>
-										<optgroup label="ANSIOLÍTICO(S) E HIPNOSETATIVO(S)">
-											<option value="Diazepam-inj" data-doseporkg="0.3" data-dos="10" data-pos="3" data-dil="2" data-forma="inj-EV" data-tipodose="parenteral" data-camporequired="peso">(1) 7I7 Diazepam 10mg/2ml Inj</option>
-										</optgroup>
-									</select>
-								</p>
-							</fieldset>
-								<fieldset>
-								<legend align="center">Dose e Posologia</legend>
-									<p class="resultado"></p>
-								</fieldset>
-							
-
-						</form>
-							
-					</div>
-
-					<!--- Fronteira entre o conteúdo principal e o lateral -->
-					<div class="aside-content body-row-last-column">
-						<aside>
-							<h3>Links recomendados</h3>
-							<nav>
-								<ul>
-									<li><a href="pages/tarv.html" title="Doseador de Arv's">Doseador de ARV's</a></li>
-									<li><a href="pages/documentacao.html" title="Como usar a Calculadora">Documentação</a></li>
-									<li><a href="pages/sobre.html" title="Saber mais sobre o criador da Página">Sobre o Desenvolvedor</a></li>
-								</ul>
-							</nav>
-						</aside>
-					</div>
-				</div>
-
-				<!-- Secao de Redes sociais -->
-				<div class="row row-of-social-sites page-index">
-					<div class="unica-coluna-da-linha-de-redes-sociais social-sites-container">
-						<a href="https://www.facebook.com/sharer/sharer.php?u=https://quinamine.github.io/abordagem-pediatrica/index.html">
-							<h6>Partilhar no &nbsp;</h6> 
-							<img src="img/fb_icon.jpg" alt="icone do facebook">
-						</a> 
+					<!-- CONTEÚDO-SOBRE -->
 						
-						<a href="https://api.whatsapp.com/send?text=https://quinamine.github.io/abordagem-pediatrica/index.html">
-							<h6>Partilhar no &nbsp;</h6> 
-							<img src="img/sup_icon.jpg" alt="icone do whatsap">
-						</a>
+						<div class="conteudo-sobre display-none">
+							<p>O Abordagem Pediátrica é um projecto virtual idealizado e concretizado por mim <a href="pages/sobre.html">(Adérito Félix Quinamine)</a> com vista a simplificar o cálculo da dose e promover sobretudo a Prescrição Racional e Correcta dos Medicamentos.</p>
+
+							<p>
+								A prescrição de medicamentos para a população pediátrica mórbida (crianças doentes) deve ser relativa ao peso desta(s) ou em casos excepcionais com base na sua idade e, NÃO de forma padronizada e/ou estática, sob risco de causar intoxicações medicamentosas por superdosagem ou falência terapêutica por subdosagem que à curto, médio ou longo prazo, pode culminar com aumento da resistência dos patógenos aos medicamentos e aumento da morbi-mortalidade (maioritariamente prevenível).
+							</p>
+							<!-- Exemplo -->
+							<p class="exemplo margens-laterais-dez-pixels bg-fquatro">
+								Por exemplo:
+								Para uma criança (que chamaremos de Quintino), com &Delta; (diagnóstico) de <abbr title="Infecção das Vias Respiratórias Superiores">IVRS</abbr> sem complicações, cujo peso é de 5 kg, o Clínico prescreve Fenoximetil de 250mg/5ml em suspensão, na dose de 2.5 ml (equivalente a 125 mg) para tomar 3 vezes ao dia com intervalos de 8 horas (totalizando 375mg/dia).
+							</p>
+	
+							<!--AQUI USAREI 1 SCANNED DE RECEITA MANUSCRITA DE PENICILINA V-->
+							<picture id="moldura-de-receita-de-fenox">
+								<source media="(max-width:379px)" srcset="img/mobile_s/receita_s.jpg"/>
+								<img src="img/receita.jpg" alt="Receita de Fenoximetil"/>
+							</picture>
+	
+							<p>
+								Analisemos e vejamos se a dose prescrita foi correcta em conformidade com o peso: 
+							</p>
+	
+							<p class="nota nota-de-formulario font-weight-bold margens-laterais-dez-pixels bg-fquatro">
+								NOTA BEM: De acordo com o Formulário Nacional de Medicamentos (FNM), a dose recomendada de Fenoximetil para crianças é de 25-50mg/kg/dia dividida em 4 tomas (3 tomas usualmente). 
+							</p>
+	
+							<p class="assim-sendo-teriamos">
+								Assim sendo, teriamos: 
+							</p>
+	
+							<ol>
+								<li class="font-weight-bold">50 mg  &times; 5 kg = 250 mg</li>
+							</ol>
+	
+							<p>
+								Em que: 
+							</p>	
+	
+							<ol>
+								<li>
+									<span class="font-weight-bold">50 mg</span> corresponde à dose recomendada &times; <span class="font-weight-bold">5 kg</span> (peso da criança) = <span class="font-weight-bold">250 mg</span> (dose diária/ainda não dividida pelas 3 tomas).
+								</li>
+							</ol>
+	
+							<p style="padding: 0px 10px 0px 10px;">
+								E após a divisão de 250 mg por 3, teriamos 83.333 mg por dose, isto é:
+							</p>
+							
+							<ol>
+								<li class="font-weight-bold">250 mg &divide; 3 tomas = 83 mg (arredondando por defeito).</li>
+							</ol>  
+							
+							<p>
+								Até aqui, podemos notar a diferença entre a dose prescrita pelo Clínico (125mg/dose) e a dose encontrada após o recálculo com base no peso e de acordo com o FNM (83mg/dose). Contudo, prossigamos para converter a dose em mililitros (ml).
+	
+							</p>
+	
+							<h2>Convertendo a dose de miligramas (mg) para mililitros (ml)</h2>
+							<p>
+								Sabendo que a dosagem de Fenoximetil em Suspensão é de 250mg/5ml (ou seja, em cada 5 ml estão suspensos ou dissolvidos 250 mg de principio activo de Fenoximetil), usando a regra matemática de 3 simples, teremos: 
+							</p>
+	
+							<p class="regra-de-tres-simples font-weight-bold margens-laterais-dez-pixels bg-fquatro">	
+								250 mg ---------<span class="trecho-com-display-none-in-mobile tracejado">----------</span>------------------- 5 ml <br/>
+								83 mg  ----------<span class="trecho-com-display-none-in-mobile tracejado">----------</span>-------------------- <var>X</var> <br/>
+								<var>X</var> = 83 <del>mg</del> &times; 5 ml / 250 <del>mg</del> <br/>
+								<var>X</var> = 1.66 ml.
+							</p>
+							<h3>Conclusão</h3>
+							<p>
+								Com o resultado da variável <var>X</var> (1.66 ml), podemos concluir que a dose prescrita (2.5 ml) pelo Clínico está incorrecta (superdosagem). 
+							</p>
+							<p>
+								A prescrição mais próxima da perfeição seria:
+							</p>
+							<p class="prescricao-correcta font-weight-bold margens-laterais-dez-pixels bg-fquatro">
+								R/ <br/>
+								8A2 Fenoximetil 250mg/5ml Susp. <br/>
+								1.7 ml &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;8/8h&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;7d&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;1Fr.
+								
+							</p>
+							<p class="conclusao">
+								Certamente que o exemplo supra-apresentado é uma realidade frequente na prática clínica e, com esta afirmação não quero julgar ou defender o Clínico acima ou os demais profissionais da área que se identificaram com o exemplo, talvez Quintino seja apenas uma de mais de 150 outras crianças a espera de Atendimento pelo mesmo Clínico, e é a partir dai que surge a ideia do projecto “Abordagem Pediátrica”, para apoiar os Clínicos e não só, a calcularem a dose correcta de forma rápida, automática e portanto apoiá-los na prescrição de doses CORRECTAS e EFICIENTES dos medicamentos. O projecto “Abordagem Pediátrica" possui uma <a href="../calculadora-de-doses-pediatricas.html">Calculadora</a> que determina automaticamente doses terapêuticas dos medicamentos mais prescritos na prática clínica, com base no Formulário Nacional de Medicamentos, bastando simplesmente o usuário inserir o peso, a idade (facultativa) da criança e selecionar o nome do medicamento a prescrever e, subsequentemente a dose e a posologia aparecem na secção correspondente <a href="../calculadora-de-doses-pediatricas.html">(veja a mágica a acontecer).</a>
+							</p>
+						</div>
+					</section>
+
+
+
+					<!-- CAPSULA -->
+					<div class="capsula-container">
+						<div class="capsula">
+							<div class="parte-laranja">
+								<h2>Abordagem Pediátrica</h2>
+							</div>
+							<div class="parte-castanha">
+								<p>A plataforma digital com calculadoras que determinam automaticamente doses pediátricas dos medicamentos mais usuais na prática clinica.</p>
+							</div>
+						</div>
 					</div>
+						
+					
 				</div>
 			</main>
 			<!-- Footer ---->
-			<footer>
+			<footer>	
 				<div class="row footer-row">
-					<div class="footer-row-only-column">
-						<p>Desenvolvido por <a href="pages/sobre.html">Adérito Félix Quinamine</a> | &copy; Todos Direitos Reservados | Desenvolvimento e Programação Web 2021</p>
-					</div>
+					
+					<p>Desenvolvido por <a href="sobre.html">Adérito Félix Quinamine</a> | &copy; Todos Direitos Reservados | Desenvolvimento e Programação Web 2021</p>
+					
 				</div>
 			</footer>
 		</div>
+
+		
 	</body>
 </html>

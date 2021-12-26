@@ -1,11 +1,11 @@
 function voltar(){
     let origem = window.location.hash;
-    if(origem=="#tarv"){
-        window.location.href = "../tarv.html";
+    if(origem=="#darv"){
+        window.location.href = "../doseador-de-antirretrovirais.html";
     }
 
     else {
-        window.location.href = "../../index.html";
+        window.location.href = "../calculadora-de-doses-pediatricas.html";
     }
 }
 

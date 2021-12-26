@@ -6,15 +6,16 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
 		<meta http-equiv="X-UA-Compatible" content="ie=edge"/>
 		<meta name="robots" content="index, follow"/>
-		<meta name="description" content="Caso tenha tido dúvidas de uso da Calculadora de Doses Pediátricas, pode enviar uma mensagem para o endereço de email ou para a minha conta do Facebook: https://www.facebook.com/aderito.felix.77/"/>
+		<meta name="description" content="Caso tenha tido dúvidas de uso das calculadoras, pode enviar uma mensagem para o endereço de email ou para a minha conta do Facebook: https://www.facebook.com/aderito.felix.77/"/>
 		<meta name="author" content="Adérito Félix Quinamine"/>
 		
 		<!-- CSS -->
 		<link rel="stylesheet" type="text/css" href="../css/reset.css"/>
-		<link rel="stylesheet" type="text/css" href="../css/common_style.css"/>
-		<link rel="stylesheet" type="text/css" href="../css/contato_style.css"/>
-		<link rel="stylesheet" type="text/css" href="../css/common_responsive_style.css"/>
-		<link rel="stylesheet" type="text/css" href="../css/contato_responsive_style.css"/>
+		<link rel="stylesheet" type="text/css" href="../css/layout.css"/>
+		<link rel="stylesheet" type="text/css" href="../css/layout_mq.css"/>
+		<link rel="stylesheet" type="text/css" href="../css/contato.css"/>
+		<link rel="stylesheet" type="text/css" href="../css/menureticencias.css"/>
+		
 		
 		
 		<!-- Fonte da logo da pagina -->
@@ -28,9 +29,10 @@
 		<link href="https://fonts.googleapis.com/css2?family=PT+Serif:wght@400;700&family=Source+Sans+Pro:wght@400;700&display=swap" rel="stylesheet">
 		
 		<!-- Scripts -->
-		<script type="text/javascript" src="../js/menuhamburger.js"></script>
-		<script type="text/javascript" src="../js/applypreferences.js"></script>
+		<script type="text/javascript" src="../js/menu.js"></script>
 		<script type="text/javascript" src="../js/progresso.js"></script>
+		<script type="text/javascript" src="../js/applypreferences.js"></script>
+
 		<noscript>O seu navegador está sem permissão de execução de scripts. Isso certamente interfere completa e negativamente no funcionamento desta ferramenta.</noscript>
 		
 		<!-- Global site tag (gtag.js) - Google Analytics -->
@@ -44,35 +46,64 @@
 		</script>
 	</head>
 	<body>
-		<div class="all-content-container">
+		<div class="all-content-container contacto">
 			<meter></meter>
 			<header>
 				<div class="row header-row">
-					<div class="logo-box header-row-first-column ">
-						<a href="../index.html">Abordagem Pediátrica</a>
+
+					<div class="logo-box">
+						<h1><a href="../index.html">Abordagem Pediátrica</a></h1>
 					</div>
-					<div class="menu-box header-row-last-column" data-menustatus="off">
-						<div class="menu-mobile">
-							<div class="box-do-titulo-menu">
-								<h4>menu</h4>
-							</div>
-							<div class="hamburger-container">
-								<div class="fatia f1"></div>
-								<div class="fatia f2"></div>
-								<div class="fatia f3"></div>
-							</div>
+
+					<!-- Menu Mobile-->
+					<div class="menu-mobile">
+						<div class="box-do-titulo-menu">
+							<h4>menu</h4>
 						</div>
-						<nav>
-							<ul>
-								<li><a href="../index.html">Calculadora</a></li>
-								<li><a href="tarv.html">DARV</a></li>
-								<li><a href="documentacao.html">Documentação</a></li>
-								<li><a href="preferencias.html">Preferências</a></li>
-								<li><a href="sobre.html">Sobre Mim</a></li>
-								<li><a href="contato.html">Contacto</a></li>
-							</ul>
-						</nav>
+						<div class="hamburger-container">
+							<div class="fatia f1"></div>
+							<div class="fatia f2"></div>
+							<div class="fatia f3"></div>
+						</div>
 					</div>
+
+					<nav>
+						<ul>
+							<li><a href="../index.html">
+								<span class="pagina-inicial">Página inicial</span>
+								<span class="inicio">Início</span>
+							</a></li>
+
+							<li class="dropdown-container cdp">
+								<a href="calculadora-de-doses-pediatricas.html" class="target" >Calculadora<span class="trecho-dedoses"> de doses</span></a>
+								
+								<ul class="dropdown-menu">
+									<li><a href="#">Bases da Calculadora</a></li>
+									<li><a href="#">Público Alvo</a></li>
+									<li><a href="#">Ajuda</a></li>
+									<li><a href="#">Baixar FNM</a></li>
+								</ul>
+							</li>
+							
+							<li class="dropdown-container darv">
+								<a href="doseador-de-antirretrovirais.html" class="target">Darv</a>
+
+								<!-- Dropdown menu -->
+								<ul class="dropdown-menu">
+									<li><a href="saibamais/abreviacoes-farmacologicas-na-abordagem-antiretroviral.html#tarv">Siglas dos ARVs</a></li>
+									<li><a href="suporte/instrucoes-de-utilizacao-do-doseador-de-antirretrovirais.html#tarv">Ajuda</a></li>
+								</ul>
+							</li>
+
+
+							<li><a href="preferencias.html">Preferências</a></li>
+
+							<li><a href="sobre.html">Sobre <span class="trecho-mim">mim</span></a></li>
+							<li><a href="contato.html" class="active">Contacto</a></li>
+						</ul>
+					</nav>
+
+					
 				</div>
 			</header>
 			<main>
@@ -121,9 +152,9 @@
 							<h3>Links recomendados</h3>
 							<nav>
 								<ul>
-									<li><a href="../index.html">Calculadora de Doses</a></li>
-									<li><a href="tarv.html" title="Dosagem de Arv's">Doseador de ARV's</a></li>
-									<li><a href="documentacao.html">Documentação</a></li>
+									<li><a href="calculadora-de-doses-pediatricas.html">Calculadora de doses</a></li>
+									<li><a href="doseador-de-antirretrovirais.html">Doseador de ARVs</a></li>
+					
 									<li><a href="sobre.html">Sobre o Desenvolvedor</a></li>
 								</ul>
 							</nav>
@@ -135,9 +166,9 @@
 			<!--INICIO DO FOOTER"-->
 			<footer>
 				<div class="row footer-row">
-					<div class="footer-div-content footer-row-only-column">
-						<p>Desenvolvido por <a href="sobre.html">Adérito Félix Quinamine</a> | &copy; Todos Direitos Reservados | Desenvolvimento e Programação Web 2021</p>
-					</div>
+					
+					<p>Desenvolvido por <a href="sobre.html">Adérito Félix Quinamine</a> | &copy; Todos Direitos Reservados | Desenvolvimento e Programação Web 2021</p>
+					
 				</div>
 			</footer>
 		</div>

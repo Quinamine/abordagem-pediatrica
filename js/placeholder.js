@@ -4,7 +4,7 @@ function changePlaceholder(){
 	let placeholderPeso = document.getElementById("peso");
 
 	if(window.innerWidth >= 521){
-		if(placeholderPeso.dataset.tipopeso == "tarv"){
+		if(placeholderPeso.dataset.tipopeso == "darv"){
 			placeholderPeso.placeholder = "mínimo e máximo: 3 kg e 45 kg respectivamente";
 		}
 

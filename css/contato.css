@@ -25,6 +25,13 @@
 	align-items: center;
 	border-radius: 5px;
 }
+.social-container > div:nth-child(1) {
+	margin-left: 0;
+}
+
+.social-container > div:nth-child(3) {
+	margin-right: 0;
+}
 
 /****** FORMATAÇÃÇÃO DA DIV FILHA COM ENDEREÇO DO MEU FB *****/
 .social-container .rede_social.fb{
@@ -42,6 +49,7 @@
 	background-color: orange;
 	font-family: Arial, Helvetica, sans-serif;
 }
+
 .social-container .rede_social.gmail p {
 	color: #fff;
 	font-size: 3.125rem;
@@ -98,4 +106,34 @@
 	margin-left: 10px;
 	margin-right: 10px;
 	border-radius: 5px;
+}
+
+
+/** RESPONSIVIDADE **/
+
+@media screen and (max-width: 520px){
+	.main-content {
+		display: flex;
+		flex-direction: column;
+	}
+
+	.social-container .sapp a{
+		display: none;
+	}
+
+	/**************** TEXTO **************/
+	.main-content h1 {
+		order: -2;
+	}
+	
+	.main-content div.descricao {
+		order: -1;
+	}
+}
+
+
+@media screen and (min-width: 770px) {
+	meter {
+		display: none;
+	}
 }

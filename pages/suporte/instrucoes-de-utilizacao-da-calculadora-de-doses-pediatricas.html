@@ -2,19 +2,19 @@
 <html dir="ltr" lang="pt-PT">
 	<head>
 		<meta charset="utf-8"/>
-		<title>Documentação | Abordagem Pediátrica</title>
+		<title>Instruções de utilização da Calculadora de Doses Pediátricas | Abordagem Pediátrica</title>
 		<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
 		<meta http-equiv="X-UA-Compatible" content="ie=edge"/>
 		<meta name="robots" content="index, follow"/>
-		<meta name="description" content="O 'Abordagem Pediátrica' é um projecto digital que possui uma calculadora de doses pediátricas (inclusive dos Antiretrovirais) cujo objectivo é simplificar o cálculo da dose e promover sobretudo a Prescrição Racional e Correcta dos Medicamentos..."/>
-		<meta name="author" content="Adérito Félix Quinamine"/>
+
+		<meta name="description" content="Para acessar a Calculadora, basta  clicar sobre o menu do site e depois sobre a opção calculadora. Basicamente a Calculadora apresenta 3 campos de interação: Idade, Peso e Fármaco para inserir a idade em meses ou anos, o peso em Kg e escolher o fármaco do qual pretende calcular a dose respectivamente."/>
 		
 		<!-- CSS -->
-		<link rel="stylesheet" type="text/css" href="../css/reset.css"/>
-		<link rel="stylesheet" type="text/css" href="../css/common_style.css"/>
-		<link rel="stylesheet" type="text/css" href="../css/doc_style.css"/>
-		<link rel="stylesheet" type="text/css" href="../css/common_responsive_style.css"/>
-		<link rel="stylesheet" type="text/css" href="../css/doc_responsive_style.css"/>
+		<link rel="stylesheet" type="text/css" href="../../css/reset.css"/>
+		<link rel="stylesheet" type="text/css" href="../../css/layout.css"/>
+		<link rel="stylesheet" type="text/css" href="../../css/doc_style.css"/>
+		<link rel="stylesheet" type="text/css" href="../../css/layout_mq.css"/>
+		<link rel="stylesheet" type="text/css" href="..././css/doc_responsive_style.css"/>
 		
 		<!-- Fonte da logo da pagina -->
 		<link rel="preconnect" href="https://fonts.googleapis.com">
@@ -48,31 +48,54 @@
 			<meter></meter>
 			<header>
 				<div class="row header-row">
-					<div class="logo-box header-row-first-column " >
+
+					<div class="logo-box">
 						<a href="../index.html">Abordagem Pediátrica</a>
 					</div>
-					<div class="menu-box header-row-last-column" data-menustatus="off">
-						<div class="menu-mobile">
-							<div class="box-do-titulo-menu">
-								<h4>menu</h4>
-							</div>
-							<div class="hamburger-container">
-								<div class="fatia f1"></div>
-								<div class="fatia f2"></div>
-								<div class="fatia f3"></div>
-							</div>
+
+					<!-- Menu Mobile-->
+					<div class="menu-mobile">
+						<div class="box-do-titulo-menu">
+							<h4>menu</h4>
 						</div>
-						<nav>
-							<ul>
-								<li><a href="../index.html">Calculadora</a></li>
-								<li><a href="tarv.html">DARV</a></li>
-								<li><a href="documentacao.html">Documentação</a></li>
-								<li><a href="preferencias.html">Preferências</a></li>
-								<li><a href="sobre.html">Sobre Mim</a></li>
-								<li><a href="contato.html">Contacto</a></li>
-							</ul>
-						</nav>
+						<div class="hamburger-container">
+							<div class="fatia f1"></div>
+							<div class="fatia f2"></div>
+							<div class="fatia f3"></div>
+						</div>
 					</div>
+
+					<nav>
+						<ul>
+							<li><a href="../index.html">
+								<span class="pagina-inicial">Página inicial</span>
+								<span class="inicio">Início</span>
+							</a></li>
+
+							<li class="dropdown-container cdp">
+								<a href="../calculadora-de-doses-pediatricas.html" class="active target" >Calculadora<span class="trecho-dedoses"> de doses</span></a>
+								
+								<ul class="dropdown-menu">
+									<li><a href="bases-da-calculadora.html">Bases da Calculadora</a></li>
+									<li><a href="saibamais/objectivo-e-publico-alvo-da-calculadora-de-doses.html">Público Alvo</a></li>
+									<li><a href="#">Ajuda</a></li>
+									<li><a href="#">Baixar FNM</a></li>
+								</ul>
+							</li>
+							<li class="dropdown-container darv">
+								<a href="doseador-de-antirretrovirais.html" class="target">Darv</a>
+
+								<!-- Dropdown menu -->
+								<ul class="dropdown-menu">
+									<li><a href="saibamais/abreviacoes-farmacologicas-na-abordagem-antiretroviral.html#tarv">Siglas dos ARVs</a></li>
+									<li><a href="suporte/instrucoes-de-utilizacao-do-doseador-de-antirretrovirais.html#tarv">Ajuda</a></li>
+								</ul>
+							</li>
+							<li><a href="preferencias.html">Preferências</a></li>
+							<li><a href="sobre.html">Sobre <span class="trecho-mim">mim</span></a></li>
+							<li><a href="contato.html">Contacto</a></li>
+						</ul>
+					</nav>
 				</div>
 			</header>
 			<main>
@@ -81,113 +104,25 @@
 						Estruturado por "Adérito Félix Quinamine" 
 					-->
 					<div class="main-content body-row-first-column">
-						<h1>DOCUMENTAÇÃO</h1>
+						<h1>Instruções de utilização da CDP</h1>
 
 						<!-- Secao de Redes sociais -->
 						<div class="row row-of-social-sites">
 							<div class="unica-coluna-da-linha-de-redes-sociais social-sites-container">
 								<a href="https://www.facebook.com/sharer/sharer.php?u=https://quinamine.github.io/abordagem-pediatrica/pages/documentacao.html">
 									<h6>Partilhar no &nbsp;</h6> 
-									<img src="../img/fb_icon.jpg" alt="Ícone do facebook">
+									<img src="../../img/fb_icon.jpg" alt="Ícone do facebook">
 								</a> 
 								
 								<a href="https://api.whatsapp.com/send?text=https://quinamine.github.io/abordagem-pediatrica/pages/documentacao.html">
 									<h6>Partilhar no &nbsp;</h6> 
-									<img src="../img/sup_icon.jpg" alt="Ícone do WhatsApp">
+									<img src="../../img/sup_icon.jpg" alt="Ícone do WhatsApp">
 								</a>
 							</div>
 						</div>
 						
-						<!-- Inicio da Documentacao -->
-
-						<p>
-							O “Abordagem Pediátrica” é uma plataforma digital idealizada e concretizada por mim (<a href="sobre.html">Adérito Félix Quinamine</a>) com vista a simplificar o cálculo da dose e promover sobretudo a Prescrição Racional e Correcta dos Medicamentos.
-						</p>
-
-						<p>
-							A prescrição de medicamentos para a população pediátrica mórbida (crianças doentes) deve ser relativa ao peso desta(s) ou em casos excepcionais com base na sua idade e, NÃO de forma padronizada e/ou estática, sob risco de causar intoxicações medicamentosas por superdosagem ou falência terapêutica por subdosagem que à curto, médio ou longo prazo, pode culminar com aumento da resistência dos patógenos aos medicamentos e aumento da morbi-mortalidade (maioritariamente prevenível).
-						</p>
-						<!-- Exemplo -->
-						<p class="exemplo margens-laterais-dez-pixels bg-fquatro">
-							Por exemplo:
-							Para uma criança (que chamaremos de Quintino), com &Delta; (diagnóstico) de <abbr title="Infecção das Vias Respiratórias Superiores">IVRS</abbr> sem complicações, cujo peso é de 5 kg, o Clínico prescreve Fenoximetil de 250mg/5ml em suspensão, na dose de 2.5 ml (equivalente a 125 mg) para tomar 3 vezes ao dia com intervalos de 8 horas (totalizando 375mg/dia).
-						</p>
-
-						<!--AQUI USAREI 1 SCANNED DE RECEITA MANUSCRITA DE PENICILINA V-->
-						<picture id="moldura-de-receita-de-fenox">
-							<source media="(max-width:379px)" srcset="../img/mobile_s/receita_s.jpg"/>
-							<img src="../img/receita.jpg" alt="Receita de Fenoximetil"/>
-						</picture>
-
-						<p>
-							Analisemos e vejamos se a dose prescrita foi correcta em conformidade com o peso: 
-						</p>
-
-						<p class="nota nota-de-formulario font-weight-bold margens-laterais-dez-pixels bg-fquatro">
-							NOTA BEM: De acordo com o Formulário Nacional de Medicamentos (FNM), a dose recomendada de Fenoximetil para crianças é de 25-50mg/kg/dia dividida em 4 tomas (3 tomas usualmente). 
-						</p>
-
-						<p class="assim-sendo-teriamos">
-							Assim sendo, teriamos: 
-						</p>
-
-						<ol>
-							<li class="font-weight-bold">50 mg  &times; 5 kg = 250 mg</li>
-						</ol>
-
-						<p style="padding: 0px 10px 0px 10px;">
-							Em que: 
-						</p>	
-
-						<ol>
-							<li>
-								<span class="font-weight-bold">50 mg</span> corresponde à dose recomendada &times; <span class="font-weight-bold">5 kg</span> (peso da criança) = <span class="font-weight-bold">250 mg</span> (dose diária/ainda não dividida pelas 3 tomas).
-							</li>
-						</ol>
-
-						<p style="padding: 0px 10px 0px 10px;">
-							E após a divisão de 250 mg por 3, teriamos 83.333 mg por dose, isto é:
-						</p>
-						
-						<ol>
-							<li class="font-weight-bold">250 mg &divide; 3 tomas = 83 mg (arredondando por defeito).</li>
-						</ol>  
-						
-						<p>
-							Até aqui, podemos notar a diferença entre a dose prescrita pelo Clínico (125mg/dose) e a dose encontrada após o recálculo com base no peso e de acordo com o FNM (83mg/dose). Contudo, prossigamos para converter a dose em mililitros (ml).
-
-						</p>
-
-						<h4>Convertendo a dose de miligramas (mg) para mililitros (ml)</h4>
-						<p>
-							Sabendo que a dosagem de Fenoximetil em Suspensão é de 250mg/5ml (ou seja, em cada 5 ml estão suspensos ou dissolvidos 250 mg de principio activo de Fenoximetil), usando a regra matemática de 3 simples, teremos: 
-						</p>
-
-						<p class="regra-de-tres-simples font-weight-bold margens-laterais-dez-pixels bg-fquatro">	
-							250 mg ---------<span class="trecho-com-display-none-in-mobile tracejado">----------</span>------------------- 5 ml <br/>
-							83 mg  ----------<span class="trecho-com-display-none-in-mobile tracejado">----------</span>-------------------- <var>X</var> <br/>
-							<var>X</var> = 83 <del>mg</del> &times; 5 ml / 250 <del>mg</del> <br/>
-							<var>X</var> = 1.66 ml.
-						</p>
-						<h4>Conclusão</h4>
-						<p>
-							Com o resultado da variável <var>X</var> (1.66 ml), podemos concluir que a dose prescrita (2.5 ml) pelo Clínico está incorrecta (superdosagem). 
-						</p>
-						<p>
-							A prescrição mais próxima da perfeição seria:
-						</p>
-						<p class="prescricao-correcta font-weight-bold margens-laterais-dez-pixels bg-fquatro">
-							R/ <br/>
-							8A2 Fenoximetil 250mg/5ml Susp. <br/>
-							1.7 ml &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;8/8h&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;7d&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;1Fr.
-							
-						</p>
-						<p class="conclusao">
-							Certamente que o exemplo supra-apresentado é uma realidade frequente na prática clínica e, com esta afirmação não quero julgar ou defender o Clínico acima ou os demais profissionais da área que se identificaram com o exemplo, talvez Quintino seja apenas uma de mais de 150 outras crianças a espera de Atendimento pelo mesmo Clínico, e é a partir dai que surge a ideia do projecto “Abordagem Pediátrica”, para apoiar os Clínicos e não só, a calcularem a dose correcta de forma rápida, automática e portanto apoiá-los na prescrição de doses CORRECTAS e EFICIENTES dos medicamentos. O projecto “Abordagem Pediátrica" possui uma <a href="../index.html">Calculadora</a> que determina automaticamente doses pediátricas dos medicamentos mais usuais na prática clínica, com base no Formulário Nacional de Medicamentos, bastando simplesmente o usuário inserir o peso, a idade (facultativa) da criança e selecionar o nome do medicamento a prescrever e, subsequentemente a dose e a posologia aparecem na secção correspondente <a href="../index.html">(veja a magia a acontecer).</a>
-						</p>
-
 						<!--INTRODUCAO À CALCULADORA PROPRIAMENTE DITA-->
- 						<h4>Apresentação da Calculadora e Modo de Utilização</h4>
+ 						<h2>Apresentação da Calculadora e Modo de Utilização</h2>
 
 						<p>
 							Para acessar a Calculadora, basta  clicar <span class="trecho-com-display-none-no-pc">sobre o menu do site e depois</span> 
@@ -203,13 +138,13 @@
 						
 						<picture>
 							<source media="(max-width:424px)" srcset="../img/mobile_s/calculadora_s.jpg"/>
-							<source media="(min-width:425px) and (max-width:520px)" srcset="../img/mobile_m/calculadora_m.jpg"/>
-							<source media="(min-width:521px) and (max-width:700px)" srcset="../img/ipad/calculadora_ipad.jpg"/>
-							<img src="../img/calculadora.jpg" alt="Ilustração da Calculadora" />
+							<source media="(min-width:425px) and (max-width:520px)" srcset="../../img/mobile_m/calculadora_m.jpg"/>
+							<source media="(min-width:521px) and (max-width:700px)" srcset="../../img/ipad/calculadora_ipad.jpg"/>
+							<img src="../../img/calculadora.jpg" alt="Ilustração da Calculadora" />
 						</picture>
 
 						<!--DESCRICAO DA SESSAO "DADOS DA CRIANCA"-->
-						<h5>1ª Secção: Dados da Criança</h5>
+						<h3>1ª Secção: Dados da Criança</h3>
 						<p>
 							Esta secção apresenta duas opções, nomeadamente:
 						</p>
@@ -223,10 +158,10 @@
 
 						<!--ILUSTRACAO DA SESSAO "DADOS DA CRIANCA"-->
 						<picture>
-								<source media="(max-width:424px)" srcset="../img/mobile_s/dados_da_crianca_s.jpg"/>
-							<source media="(min-width:425px) and (max-width:520px)" srcset="../img/mobile_m/dados_da_crianca_m.jpg"/>
-							<source media="(min-width:521px) and (max-width:700px)" srcset="../img/ipad/dados_da_crianca_ipad.jpg">
-								<img src="../img/secao_dadosdacrianca.jpg" alt="Ilustração da secção 'Dados da criança'" />
+								<source media="(max-width:424px)" srcset="../../img/mobile_s/dados_da_crianca_s.jpg"/>
+							<source media="(min-width:425px) and (max-width:520px)" srcset="../../img/mobile_m/dados_da_crianca_m.jpg"/>
+							<source media="(min-width:521px) and (max-width:700px)" srcset="../../img/ipad/dados_da_crianca_ipad.jpg">
+								<img src="../../img/secao_dadosdacrianca.jpg" alt="Ilustração da secção 'Dados da criança'" />
 						</picture>
 
 						<p class="nota margens-laterais-dez-pixels bg-fquatro">
@@ -234,7 +169,7 @@
 						</p>
 
 						<!--DESCRICAO DA SESSAO "ESPECIFICACAO DO MEDICAMENTO"-->
-						<h5>2ª Secção: Especificação do Fármaco</h5>
+						<h3>2ª Secção: Especificação do Fármaco</h3>
 						<p>
 							Nesta secção existe apenas uma opção <span class="font-weight-bold">(Nome do fármaco)</span> com um campo de seleção. Aqui SÓ é possível SELECIONAR o nome do fármaco a prescrever com base na lista disponível, não há opção de introduzir ou digitar dados. 
 							A lista dos medicamentos está seccionada em Classes (em maiúsculas) para facilitar a localização destes, e portanto o conhecimento da Classe à que um determinado fármaco pertence, torna mais rápida a sua localização.
@@ -274,10 +209,10 @@
 						<!--ILUSTRACAO DA SESSAO "ESPECIFICACAO DO FARMACO"-->
 						<div>
 						<picture>
-								<source media="(max-width:424px)" srcset="../img/mobile_s/spec_farmaco_s.jpg"/>
-							<source media="(min-width:425px) and (max-width:520px)" srcset="../img/mobile_m/spec_farmaco_m.jpg"/>
-							<source media="(min-width:521px) and (max-width:700px)" srcset="../img/ipad/spec_farmaco_ipad.jpg">
-								<img src="../img/spec_farmaco.jpg" alt="Ilustração da secção 'Especificação do fármaco" />
+								<source media="(max-width:424px)" srcset="../../img/mobile_s/spec_farmaco_s.jpg"/>
+							<source media="(min-width:425px) and (max-width:520px)" srcset="../../img/mobile_m/spec_farmaco_m.jpg"/>
+							<source media="(min-width:521px) and (max-width:700px)" srcset="../../img/ipad/spec_farmaco_ipad.jpg">
+								<img src="../../img/spec_farmaco.jpg" alt="Ilustração da secção 'Especificação do fármaco" />
 						</picture>
 						</div>
 						<p class="nota margens-laterais-dez-pixels bg-fquatro">
@@ -285,21 +220,21 @@
 						</p>
 
 						<!--DESCRICAO DA SESSAO "DOSE E POSOLOGIA"-->
-						<h5>3ª Secção: Dose e Posologia</h5>
+						<h3>3ª Secção: Dose e Posologia</h3>
 						<p class="secao-de-dose-e-posologia">
 							Esta é uma secção inicialmente  vazia, em que serão mostrados automaticamente os resultados (dose e posologia) e/ou outras informações relevantes do medicamento selecionado após o preenchimento correcto dos campos acima citados.
 						</p>
 
 						<!--ILUSTRACAO DA SESSAO "DOSE E POSOLOGIA"-->
 						<picture>
-								<source media="(max-width:424px)" srcset="../img/mobile_s/doseposologia_s.jpg"/>
-							<source media="(min-width:425px) and (max-width:520px)" srcset="../img/mobile_m/doseposologia_m.jpg"/>
-							<source media="(min-width:521px) and (max-width:700px)" srcset="../img/ipad/doseposologia_ipad.jpg">
-								<img src="../img/dose_posologia.jpg" alt="ilustração da secção 'Dose e Posologia'" />
+								<source media="(max-width:424px)" srcset="../../img/mobile_s/doseposologia_s.jpg"/>
+							<source media="(min-width:425px) and (max-width:520px)" srcset="../../img/mobile_m/doseposologia_m.jpg"/>
+							<source media="(min-width:521px) and (max-width:700px)" srcset="../../img/ipad/doseposologia_ipad.jpg">
+								<img src="../../img/dose_posologia.jpg" alt="ilustração da secção 'Dose e Posologia'" />
 						</picture>
 
 						<!--CONCLUSAO DA DOCUMENTACAO"-->
-						<h4 class="nota-conclusiva">NOTA</h4>
+						<h2 class="nota-conclusiva">NOTA</h2>
 						<p class="nota paragrafo-da-nota-conclusiva margens-laterais-dez-pixels bg-fquatro">
 							Importa recordar que a Calculadora deve ser usada após um &Delta; (diagnóstico) prévio e decisão de prescrever um fármaco. 
 							<br/>
@@ -324,7 +259,7 @@
 								<div class="container-of-the-section-sobre-o-autor-and-its-description">
 									<div class="container-of-image-and-title-sobre-o-autor">
 										<h6 class="font-weight-bold">Sobre o Autor</h6>
-										<img src="../img/myminiphoto.jpg" alt="foto do autor (Adérito)">
+										<img src="../../img/myminiphoto.jpg" alt="foto do autor (Adérito)">
 									</div>
 									<div class="container-of-description">
 										<p>

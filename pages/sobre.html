@@ -11,10 +11,11 @@
 		
 		<!-- CSS -->
 		<link rel="stylesheet" type="text/css" href="../css/reset.css"/>
-		<link rel="stylesheet" type="text/css" href="../css/common_style.css"/>
+		<link rel="stylesheet" type="text/css" href="../css/layout.css"/>
+		<link rel="stylesheet" type="text/css" href="../css/layout_mq.css"/>
 		<link rel="stylesheet" type="text/css" href="../css/sobre.css">
-		<link rel="stylesheet" type="text/css" href="../css/common_responsive_style.css"/>
-		<link rel="stylesheet" type="text/css" href="../css/sobre_responsive_style.css"/>
+		<link rel="stylesheet" type="text/css" href="../css/sobre_mq.css"/>
+		<link rel="stylesheet" type="text/css" href="../css/menureticencias.css"/>
 		
 		
 		<!-- Fonte da logo da pagina -->
@@ -28,10 +29,11 @@
 		<link href="https://fonts.googleapis.com/css2?family=PT+Serif:wght@400;700&family=Source+Sans+Pro:wght@400;700&display=swap" rel="stylesheet">
 		
 		<!-- Scripts -->
-		<script src="../js/progresso.js"></script>
 		<script type="text/javascript" src="../js/sobre.js"></script>
-		<script type="text/javascript" src="../js/menuhamburger.js"></script>
+		<script type="text/javascript" src="../js/progresso.js"></script>
+		<script type="text/javascript" src="../js/menu.js"></script>
 		<script type="text/javascript" src="../js/applypreferences.js"></script>
+		
 		<noscript>O seu navegador está sem permissão de execução de scripts. Isso certamente interfere completa e negativamente no funcionamento desta ferramenta.</noscript>
 		
 		<!-- Global site tag (gtag.js) - Google Analytics -->
@@ -45,36 +47,64 @@
 		</script>
 	</head>
 	<body>
-		<div class="all-content-container" id="topo">
+		<div class="all-content-container sobre" id="topo">
 			<meter></meter>
 			<header>
 				<div class="row header-row">
-					<div class="logo-box header-row-first-column ">
-						<a href="../index.html">Abordagem Pediátrica</a>
+
+					<div class="logo-box">
+						<h1><a href="../index.html">Abordagem Pediátrica</a></h1>
 					</div>
-					<div class="menu-box header-row-last-column" data-menustatus="off">
-						<div class="menu-mobile">
-							<div class="box-do-titulo-menu">
-								<h4>menu</h4>
-							</div>
-							<div class="hamburger-container">
-								<div class="fatia f1"></div>
-								<div class="fatia f2"></div>
-								<div class="fatia f3"></div>
-							</div>
+
+					<!-- Menu Mobile-->
+					<div class="menu-mobile">
+						<div class="box-do-titulo-menu">
+							<h4>menu</h4>
 						</div>
-						<nav>
-							<ul>
-								<li><a href="../index.html">Calculadora</a></li>
-								<li><a href="tarv.html">DARV</a></li>
-								<li><a href="documentacao.html">Documentação</a></li>
-								<li><a href="preferencias.html">Preferências</a></li>
-								<li><a href="sobre.html">Sobre Mim</a></li>
-								<li><a href="contato.html">Contacto</a></li>
-								
-							</ul>
-						</nav>
+						<div class="hamburger-container">
+							<div class="fatia f1"></div>
+							<div class="fatia f2"></div>
+							<div class="fatia f3"></div>
+						</div>
 					</div>
+
+					<nav>
+						<ul>
+							<li><a href="../index.html">
+								<span class="pagina-inicial">Página inicial</span>
+								<span class="inicio">Início</span>
+							</a></li>
+							
+							<li class="dropdown-container cdp">
+								<a href="calculadora-de-doses-pediatricas.html" class="target" >Calculadora<span class="trecho-dedoses"> de doses</span></a>
+								
+								<ul class="dropdown-menu">
+									<li><a href="#">Bases da Calculadora</a></li>
+									<li><a href="#">Público Alvo</a></li>
+									<li><a href="#">Ajuda</a></li>
+									<li><a href="#">Baixar FNM</a></li>
+								</ul>
+							</li>
+							
+							<li class="dropdown-container darv">
+								<a href="doseador-de-antirretrovirais.html" class="target">Darv</a>
+
+								<!-- Dropdown menu -->
+								<ul class="dropdown-menu">
+									<li><a href="saibamais/abreviacoes-farmacologicas-na-abordagem-antiretroviral.html#tarv">Siglas dos ARVs</a></li>
+									<li><a href="suporte/instrucoes-de-utilizacao-do-doseador-de-antirretrovirais.html#tarv">Ajuda</a></li>
+								</ul>
+							</li>
+
+
+							<li><a href="preferencias.html">Preferências</a></li>
+
+							<li><a href="sobre.html" class="active">Sobre <span class="trecho-mim">mim</span></a></li>
+							<li><a href="contato.html">Contacto</a></li>
+						</ul>
+					</nav>
+
+					
 				</div>
 			</header>
 			<main>
@@ -212,6 +242,12 @@
 						<!--Galeria de diploma e certificado de TMG)-->
 						<h4>Galeria de diploma e certificado <small>(role a imagem na horizontal para ver mais)</small></h4>
 						<div class="galeria galeria-tmg">
+							<!--DIPLOMA -->
+							<picture>
+								<source media="(max-width:424px)" srcset="../img/mobile_s/diploma_s.jpg"/>
+								<source media="(min-width:425px) and (max-width:600px)" srcset="../img/mobile_m/diploma_m.jpg"/>
+								<img src="../img/diploma.jpg"  alt="Diploma de Tecnico de Medicina Geral" class="object-fit-contain-in-mobile" />
+							</picture>
 							<!-- CERTIFICADO TMG FRONTE -->
 							<picture>
 								<source media="(max-width:424px)" srcset="../img/mobile_s/tmgfronte_s.jpg"/>
@@ -226,12 +262,7 @@
 								<img src="../img/tmg_verso.jpg" alt="certificado-verso de Técnico de Medicina Geral" class="object-fit-contain-in-mobile" />
 							</picture>
 
-							<!--DIPLOMA -->
-							<picture>
-								<source media="(max-width:424px)" srcset="../img/mobile_s/diploma_s.jpg"/>
-								<source media="(min-width:425px) and (max-width:600px)" srcset="../img/mobile_m/diploma_m.jpg"/>
-								<img src="../img/diploma.jpg"  alt="Diploma de Tecnico de Medicina Geral" class="object-fit-contain-in-mobile" />
-							</picture>
+							
 
 						</div>
 						
@@ -258,13 +289,13 @@
 
 						<!--SESSAO PRIMEIROS PASSOS IN WEB-DEVOLOPMENT-->
 						<div class="seccao-sobre-desenvolvimento-web bg-fquatro">
-							<h3>Adérito + Desenvolvimento e Programação Web</h3>
+							<h2>Adérito + Desenvolvimento e Programação Web</h2>
 							<p>
 								Em 2018, por curiosidade, tive o meu primeiro acesso aos conceitos de Desenvolvimento Web e Programação através de pesquisas na internet e, desde então, estudo e pratico os conceitos sempre que oportuno. As principais fontes que contribuiram para o meu conhecimento básico incluem: <a href="https://www.youtube.com/results?search_query=HTML" target="_blank">diferentes canais do YouTube</a> (sobretudo <a href="https://www.youtube.com/user/cursosemvideo" target="_blank">CursoEmVideo</a> e <a href="https://www.youtube.com/user/cfbcursos" target="_blank">CFBCursos</a>)</a> e actualmente <a href="https://www.w3schools.com/" target="_blank">W3schools.com</a>.
 							</p>
 
 							<!--Lista de competências (WEB e Programação)-->
-							<h5>Domínio de linguagens</h5>
+							<h3>Domínio de linguagens</h3>
 							<ul class="lista-de-linguagens-dominadas">
 								
 								<li><abbr title="Hypertext Markup Language/Linguagem de Marcação de Hipertexto"><a href="https://pt.wikipedia.org/wiki/HTML" target="_blank">HTML</a>
@@ -294,9 +325,8 @@
 							<h3>Links recomendados</h3>
 							<nav>
 								<ul>
-									<li><a href="../index.html" title="Saber mais sobre o criador da Página">Calculadora de Doses</a></li>
-									<li><a href="documentacao.html" title="Como usar a Calculadora">Documentação</a></li>
-									<li><a href="tarv.html" title="Dosagem de Arv's">Doseador de ARV's</a></li>
+									<li><a href="calculadora-de-doses-pediatricas.html">Calculadora de doses</a></li>
+									<li><a href="doseador-de-antirretrovirais.html">Doseador de ARVs</a></li>
 									
 								</ul>
 							</nav>
@@ -308,11 +338,13 @@
 			<!--INÍCIO DO RODAPÉ-->
 			<footer>
 				<div class="row footer-row">
-					<div class="footer-div-content footer-row-only-column">
-						<p>Desenvolvido por <a href="sobre.html">Adérito Félix Quinamine</a> | &copy; Todos Direitos Reservados | Desenvolvimento e Programação Web 2021</p>
-					</div>
+					
+					<p>Desenvolvido por <a href="sobre.html">Adérito Félix Quinamine</a> | &copy; Todos Direitos Reservados | Desenvolvimento e Programação Web 2021</p>
+					
 				</div>
 			</footer>
 		</div>
+
+		
 	</body>
 </html>

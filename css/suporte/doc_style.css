@@ -1,15 +1,11 @@
-/***********FORMATACAO DO CONTEUDO PRINCIPAL************
-	Designed by Adérito Félix Quinamine
-*/
-/**    reset e reformatacao de menu              **/
+
+/** reset e reformatacao de menu **/
 
 nav ul {
 	padding-left:0px;
 }
 
-
-
-/*************** MOLDURAS E IMGS **************/
+/* MOLDURAS E IMGS */
 .main-content picture {
 	width: 100%;
 	max-width: 641px;
@@ -34,14 +30,9 @@ nav ul {
 
 .main-content h5 {
 	display: inline-block;
-
 	margin: 20px auto 10px auto;
-
 	border-radius: 8px;
-
 	padding: 10px;
-
-	
 }
 
 /*********** PARÁGRAFOS E TRECHOS DE TEXTOS ************/
@@ -65,14 +56,11 @@ p.regra-de-tres-simples, p.prescricao-correcta {
 	padding-right: 5%;
 }
 
-
-
 p.slogan-do-misau {
 	color: rgb(250, 160, 50);
 	text-align: center;
 	font-size: 1.25rem;
 }
-
 
 p.assim-sendo-teriamos {
 	padding-bottom: 0;
@@ -148,34 +136,16 @@ div.container-of-description {
 .row-of-social-sites {
 	width: 97%;
 	padding: 5px;
-
 	margin-top: 10px;
 	margin-bottom: 10px;
-	
-
 	border-radius: 5px;
 }
-
 
 /*************** CSS - REUTILIZAVEL **************/
 .main-content .font-weight-bold, h4, h5, dl dt {font-weight: bold;}
 
 
 
-/**** Preferencias ******/
-
-.cor-do-link-sobre-o-autor {
-	color: #ddd !important;
-}
-
-.cor-do-link-sobre-o-autor:visited {
-	color: #ccc !important;
-}
-
-
-.cor-cinza-claro-do-body {
-	color: #ddd !important;
-}
 
 
 
