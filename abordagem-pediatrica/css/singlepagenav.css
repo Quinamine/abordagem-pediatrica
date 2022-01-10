@@ -1,0 +1,50 @@
+/** NAV **/
+
+.corpo nav ul {
+    display: flex;
+}
+
+.corpo nav ul li{
+   flex: 1;
+   display: flex;
+}
+
+.corpo nav ul li a{
+    flex: 1;
+    text-align: center;
+    padding: 15px 5px;
+    border: 1px solid #ddd;
+    color: #aaa;
+    background-color: #eee;
+} 
+
+.corpo nav ul li:first-child a {
+    border-left: none;
+} 
+
+.corpo nav ul li:last-child a{
+    border-right: none;
+} 
+
+.corpo nav ul li a.aba-actual {
+    color: inherit;
+    font-weight: bold;
+    border: none;
+    outline: none;
+    background-color: #fff;
+} 
+
+a.aba-actual.bg-ffe {
+    background-color: #ffe !important;
+}
+
+.corpo nav ul li a.aba-actual.fundo-branco {
+    background-color: #fff;
+} 
+
+
+/** JS e CSS reutilizavel **/
+
+.hide {
+    display: none !important;
+}

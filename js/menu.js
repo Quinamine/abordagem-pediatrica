@@ -2,14 +2,14 @@
 const menu = {
 
     hamburger: () => {
-        let headerRow = document.getElementsByClassName("header-row")[0];
-        if(headerRow.classList.contains("menuOn")){
-            headerRow.classList.remove("menuOn");
+        let linha_do_cabecalho = document.getElementsByClassName("linha-do-cabecalho")[0];
+        if(linha_do_cabecalho.classList.contains("com-menu-aberto")){
+            linha_do_cabecalho.classList.remove("com-menu-aberto");
             document.body.style.overflow = "initial";
         }
 
         else{
-            headerRow.classList.add("menuOn");
+            linha_do_cabecalho.classList.add("com-menu-aberto");
             document.body.style.overflow = "hidden";
         }  
     },
@@ -19,11 +19,11 @@ const menu = {
         let menuContainer = document.querySelector(".container-dos-tres-pontos");
     
         menuContainer.addEventListener("click", () => {
-            if(menuSection.classList.contains("active")){
-                menuSection.classList.remove("active");
+            if(menuSection.classList.contains("activo")){
+                menuSection.classList.remove("activo");
             }
             else {
-                menuSection.classList.add("active");
+                menuSection.classList.add("activo");
             }
         })
     
@@ -78,7 +78,7 @@ const menu = {
 function load() {
 
     try {
-        document.querySelector(".hamburger-container").addEventListener("click",() =>{
+        document.querySelector(".contentor-do-menu-hamburguer").addEventListener("click",() =>{
             menu.hamburger();
         });
     } 

@@ -1,218 +1,8 @@
 ﻿
-@media screen and (min-width: 614px) and (max-width: 1071px) {
-	.header-row {flex-direction: column;}
-
-	.header-row .logo-box {margin-bottom: 20px;}
-
-	.header-row nav {width: 100%;}
-
-	.header-row nav ul {
-		max-width: 1071px;
-		justify-content: center;
-		align-items: center;
-	}
-
-	.header-row nav ul li{
-		flex: 1;
-		text-align: center;
-	}
-
-	.header-row nav ul li a{padding: 18px 10px;}
-
-	.header-row nav ul li a span.trecho-dedoses {display: none;}
-
-}
-
-
-@media screen and (min-width: 1006px) and (max-width: 1071px) {
-
-	li.dropdown-container.cdp ul.dropdown-menu{
-		left: 14.5%;
-	}
-}
-
-
-@media screen and (min-width: 614px) and (max-width: 623px) {
-	.trecho-mim {
-		display: none;
-	}
-}
-
-
-/* MENU RETICENCIAS  */
-@media screen and (min-width:614px) and (max-width:1005px){
-    section.menu-reticencias {
-        max-width: 590px;
-    }
-
-    .container-dos-tres-pontos {
-        border-radius: 0 !important;
-    }
-
-    /*** MENU RETICENCIAS ON ****/
-
-    section.menu-reticencias.active div.conteudo-do-menu-reticencias {
-        right: 3%;
-    }
-
-    section.menu-reticencias {
-        position: relative;
-    }
-
-    div.conteudo-do-menu-reticencias {
-        /*position: absolute;*/
-        right: 5%;
-    }
-}
-
-/* Menu reticicencias hide no Desktop e DISPLAY DROPDOWN-MENU */
-@media screen and (min-width:1006px){
-    div.body-row {
-        margin-top: 40px !important;
-    }
-
-    section.menu-reticencias {
-        display: none;
-    }
-
-    /* Dropdown Menu */
-    .header-row nav{
-        position: relative;
-    }
-
-    li.dropdown-container.on a.target {
-        background-color: #f4f4f4;
-        color: #333;
-    }
-
-    li.dropdown-container ul.dropdown-menu {
-        display: none ;
-        transition: all 300ms;
-    }
-
-    li.dropdown-container.on ul.dropdown-menu {
-        display: block;
-        position: absolute;
-        top: 40px;
-        background-color: #fff;
-        border: 1px solid #ddd;
-        border-top: none;
-        box-shadow: 0 2px 0 #aaa;
-        transition: all 300ms;
-		z-index: 10;
-    }
-
-
-    li.dropdown-container.on ul.dropdown-menu li{
-        line-height: 3;
-        border-top: 1px solid #eee;
-        display: flex;
-        transition: all 300ms;
-    }
-
-    li.dropdown-container.on ul.dropdown-menu li a {
-        color: #333;
-        padding: 10px 28px !important;
-        flex: 1;
-        overflow: hidden;
-    }
-
-    li.dropdown-container.on ul.dropdown-menu li a:hover {
-        border-bottom:none;
-    }
-
-   
-}
-
-/* Menu reticicencias display none no mobile e tablet */
-@media screen and (max-width: 1005px){
-    .header-row nav ul.dropdown-menu {
-        display: none;
-    }
-}
 
 
 
-/*     TABLET MAIN CONTENT  */
-@media screen and (min-width: 521px) and (max-width: 1005px){	
-	
-	/** RESET DO BODY **/
-	body {
-		width: 100%;
-		background-color: #fff;
-	} 
-
-	/* CABECALHO */
-	.header-row .logo-box{
-		display: flex;
-		width: 89%;
-	}
-
-	.header-row nav ul li a:hover, a.active{
-		background-color: inherit;
-	}
-	
-	.header-row nav ul li a span.pagina-inicial {display: none;}
-
-	.header-row nav ul li a span.inicio {display: initial;}
-	
-
-
-	/* CORPO */
-
-	.body-row {
-		border-radius: 0;
-		padding: 20px;
-		max-width: 700px;
-		margin: 0 auto;
-		background-color: #fff !important;
-	}
-
-	.body-row .main-content {
-		padding: 0;
-		border: none;
-	}
-
-	.body-row .main-content form#calculadora {margin: 25px auto 0;}
-
-
-	/* RESET */
-	a:hover {text-decoration: none;}
-
-	.body-row .aside-content {display: none;} 
-
-
-	/******** RODAPE ***********/
-	footer p {
-		text-align: center;
-		line-height: 1.5;
-	}
-
-	footer p a {display: block;}
-
-
-	/*** PREFERENCIAS ***/
-
-	body.dark {
-		background-color: #444;
-	}
-
-	body.dark header {
-		border-bottom: 2px solid #555;
-	}
-
-	body.dark footer {
-		border-top: 2px solid #555;
-	}
-
-	body.dark .body-row {
-		margin: 0px auto 0px auto;	
-	}
-
-}
-
-
-/* Small and Medium phone HEADER */
+/* MOBILE */
 @media screen and (max-width: 613px){
 
 	/* RESET */
@@ -351,7 +141,7 @@
 
 	.header-row.menuOn nav ul li {
 		width: 100%;
-		border-bottom: 1px solid rgb(77, 77, 77);
+		border-bottom: 1px solid rgb(241, 14, 14);
 	}
 
 	.header-row.menuOn nav ul li:last-child {
@@ -368,83 +158,9 @@
 	.header-row.menuOn nav ul li a:hover{
 		border: none;
 	}
-
-	/*** PREFERENCIAS ****/
-
-	body.dark, 
-	body.dark div.body-row, 
-	body.dark div.main-content,
-	body.dark .row-of-social-sites,
-	body.dark fieldset
-	{
-		background-color: #222 !important;
-		color: #D6D8DA;
-	}
-
-	/** HEADER */
-	body.dark header, body.dark footer{
-		background-color: rgb(46, 43, 43) !important;;
-	}
-
-	/** Titulos **/
-	body.dark .main-content h1,
-	body.dark .main-content h2,
-	body.dark .main-content h3,
-	body.dark .main-content h4,
-	body.dark .main-content h5{
-		background-color: initial !important;
-		color: #D6D8DA !important;
-	}
-
-	/** Destaques **/
-
-	body.dark .column-container-of-calculator h1, 
-	body.dark .column-container-of-calculator h2, 
-	body.dark .main-content h4.nota-conclusiva,
-	body.dark .aside-content h3, 
-	body.dark p.exemplo,
-	body.dark p.nota, 
-	body.dark p.regra-de-tres-simples,
-	body.dark p.prescricao-correcta,
-	body.dark p.return-top a,
-	body.dark form#calculadora p, 
-	body.dark form input,
-	body.dark form select {
-		background-color: rgb(46, 43, 43) !important;
-		color: #D6D8DA !important;
-	}
-
-	/** BORDAS **/
-	body.dark .body-row,
-	body.dark .main-content,
-	body.dark .banner-row,
-	body.dark h4.nota-conclusiva,
-	body.dark .seccao-sobre-desenvolvimento-web h3,
-	body.dark fieldset,
-	body.dark input,
-	body.dark select,
-	body.dark p,
-	body.dark .print-alerta,
-	body.dark hr,
-	body.dark table,
-	body.dark th,
-	body.dark td {
-		border-color: #444 !important;
-	}
-
-	body.dark p.paragrafo-da-nota-conclusiva {
-		border: none !important;
-	}
 }
 
-/** Alinhamento do menu Humbeger ao Logo **/
-@media screen and (min-width: 338px) {
-	.header-row.menuOn .logo-box {margin-top: 10px;}
 
-	.header-row.menuOn .menu-mobile {padding-top: 0px;}
-}
-
-/* Small and Medium phone Body and Footer */
 @media screen and (max-width: 520px){
 	
 		body {
@@ -472,8 +188,6 @@
 	/******** TITULOS *************/
 	div.body-row .main-content h3, .main-content h4, .main-content h5 {
 		color: #555;
-		margin-right: 10px !important;
-		margin-left: 10px !important;
 	}
 
 	div.body-row{
@@ -530,6 +244,15 @@
 	table td, table th {
 		border: 1px solid #888 !important;
 	}
+}
+
+
+
+/** Alinhamento do menu Hamburger ao Logo **/
+@media screen and (min-width: 338px) {
+	.header-row.menuOn .logo-box {margin-top: 6px;}
+
+	.header-row.menuOn .menu-mobile {padding-top: 0px;}
 }
 
 

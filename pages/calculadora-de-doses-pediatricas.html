@@ -150,7 +150,7 @@
 
 									<label for="idade">Idade</label>
 
-									<input type="number" name="idade" id="idade" required min="0" /> 
+									<input type="number" name="idade" id="idade" required min="0"/> 
 
 									<select class="input-extension year-ext" id="ext">
 										<option value="m">meses</option>
@@ -161,7 +161,7 @@
 
 									<label for="peso">Peso&nbsp;</label>
 
-									<input type="number" name="peso" min="2" id="peso" max="36"  data-tipopeso="CDP" /> 
+									<input type="number" name="peso" min="2" id="peso" max="36"/> 
 									<select class="input-extension weight-ext">
 										<option>Kg</option>
 									</select>
@@ -172,8 +172,10 @@
 								<p id="paragrafo-parent-de-farmaco" class="p-da-calculadora">
 									<label for="farmaco" id="nome-farm">Nome</label>
 									<select id="farmaco">
+										<option value="select" selected>ESCOLHER FÁRMACO</option>
+
 										<optgroup label="1. ANTI-MALÁRICOS">
-											<option value="AL" data-dos="140"  data-pos="2" data-forma="cp" data-tipodose="padrao" data-camporequired="both" selected>(1) 805 Arteméter e Lumefantrina (Coartem) 140mg Comp</option>
+											<option value="AL" data-dos="140"  data-pos="2" data-forma="cp" data-tipodose="padrao" data-camporequired="both">(1) 805 Arteméter e Lumefantrina (Coartem) 140mg Comp</option>
 
 											<option value="Quinina-300" data-doseporkg="30" data-dos="300" data-pos="3" data-forma="cp" data-tipodose="padrao" data-camporequired="both">(2) 8011 Quinina 300mg Comp</option>
 										</optgroup>	

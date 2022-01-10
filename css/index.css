@@ -54,14 +54,12 @@ section.progress {
 }
 
 section.progress div {
-    width: 12px;
-    height: 12px;
     margin: 5px;
-    padding: 5px;
+    padding: 4px;
     border: 1px solid #fff;
-    border-radius: 50%;
     justify-content: center;
     position: relative;
+    border-radius: 50%;
 }
 
 section.progress div.full {
@@ -114,6 +112,8 @@ section.progress div.full {
     text-align: center;
     font-size: 1.75rem;
     line-height: 1.2;
+
+    font-weight: initial;
 }
 
 .parte-castanha{
@@ -139,7 +139,7 @@ section.progress div.full {
 
 .main-content nav ul {
     margin: 0;
-    display: flex;
+    display: flex ;
 }
 
 .main-content nav ul li{
@@ -176,7 +176,7 @@ section.progress div.full {
     border-bottom: 1px solid #EEE;
 }
 
-.card-do-darv{background-color: #EEF;}
+.card-do-darv {background-color: #EEF;}
 
 
 .card picture, 
@@ -204,14 +204,18 @@ section.progress div.full {
     text-align: center;
     padding: 8px 0;
     border-radius: 5px;
+    text-decoration: none;
 }
 
 
 .card div.description p a:nth-child(1){
     background-color: rgb(250, 160, 50);
     color: #fff;
-
     margin-right: 5px;
+}
+
+.card div.description p a:nth-child(1):hover{
+    background-color: rgba(250, 160, 50, .8);
 }
 
 .card div.description p a:nth-child(2){
@@ -220,20 +224,101 @@ section.progress div.full {
     background-color: #ddd;
 }
 
+.card div.description p a:nth-child(2):hover{
+    background-color: rgba(221, 221, 221, .8);
+}
+
 
 /*** conteudo sobre ***/
-
-
 .conteudo-sobre {
     padding: 20px;
     max-width: 697px;
-  
     border-bottom: 1px solid #ddd;
     border-radius: 15px;
-    margin-top: 30px;
     background-color: #FFE;
+    border-radius: 0;
 }
 
+.conteudo-sobre #moldura-de-receita-de-fenox img {
+    display: block;
+    margin: 0 auto;
+}
+
+.conteudo-sobre ol,
+.conteudo-sobre ul {
+    padding-left: 6%;
+    list-style: disc inside;
+}
+
+.conteudo-sobre .destaque.conversao-da-dose,
+.conteudo-sobre .destaque.prescricao-correcta {
+    max-width: 350px;
+    border-radius: 5px;
+}
+
+
+.dialog-box-container {
+    display: none;
+}
+
+.dialog-box-container.on {
+    display: block;
+    position: relative;
+}
+
+.dialog-box-container.on .dialog-box {
+    width: 250px;
+    background-color: #fff;
+    font-size: 14px;
+    border-radius: 5px;
+    box-shadow: 0 0 8px #888;
+    position: absolute;
+    bottom: 20px;
+    left: 30%;
+}
+
+.dialog-box h4 {
+    margin: 0;
+    padding: 10px;
+    text-align: center;
+    font-weight: normal;
+    border-bottom: 1px solid #eee;
+}
+
+.dialog-box nav {
+    border: none;
+    
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+.dialog-box nav a{
+    width: 100%;
+    padding: 20px 10px;
+    flex: 1;
+    color: inherit;
+    text-align: center;
+}
+
+.dialog-box button {
+    border: none;
+    width: 100%;
+    background-color: inherit;
+    font-size: 18px;
+    padding: 10px;
+    border-top: 1px solid #eee;
+    color: red;
+}
+
+.dialog-box button:hover {
+    cursor: pointer;
+}
+
+
+/*** Css reutilizavel ***/
 .display-none {display: none;}
 
 

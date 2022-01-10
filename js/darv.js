@@ -892,9 +892,18 @@ function classObject(){
             return false;
         }
         else {
+            
             let arvSelected = arvs.options[arvs.selectedIndex].value;
-            let dosearv = new Tarv(peso.value, arvs, arvSelected);
-            dosearv.calcularDose();
+
+            if(arvSelected == "select") {
+                output.innerHTML = "";
+            }
+
+            else {
+                let dosearv = new Tarv(peso.value, arvs, arvSelected);
+                dosearv.calcularDose();
+            }
+            
         }
         
     }

@@ -1012,7 +1012,7 @@ class Doseparenteral extends Dosespadrao{
 	/****************** IMPRESSAO DA DOSE ****************/
 
 	printDose(dose, forma, doseml, pos, via){
-		if(this.getFormafarmaceutica=="U."){
+		if(this.getFormafarmaceutica=="U.I"){
 			doseml = "";
 		}
 
@@ -1035,13 +1035,19 @@ class Doseparenteral extends Dosespadrao{
 
 		let dosemg = (this.doseporkg * peso);
 
+	
+
 		// Formatacao para nao apresentar nenhum ponto flutuante ou casa decimal
-		if((this.farmaco=="Benzatina") 
-			||(this.farmaco=="Procaina")
-			||(this.farmaco=="Ceftriaxona")
+		
+		
+		if((this.farmaco=="Ceftriaxona")
 			||(this.farmaco=="Paracetamol-inj")
 			||(this.farmaco=="Aminofilina-inj")
-			||(this.farmaco=="Prednisolona-inj")){dosemg = dosemg.toFixed(0);}
+			||(this.farmaco=="Prednisolona-inj")){dosemg = dosemg.toFixed(0)}
+		
+		else if((this.farmaco=="Benzatina") ||(this.farmaco=="Procaina")) {
+			dosemg = dosemg.toLocaleString();
+		}
 		else {
 			dosemg = dosemg.toFixed(1);
 		}
@@ -1093,14 +1099,14 @@ class Doseparenteral extends Dosespadrao{
 						if(this.tipoidade=="m"){
 							let idademeses = idade;
 
-							if(idademeses<144){dosemg = this.doseporkg * peso;}
-							else{dosemg ='1200.000';} // dose em UI
+							if(idademeses<144){dosemg = (this.doseporkg * peso).toLocaleString();}
+							else{dosemg ='1.200.000';} // dose em UI
 						}
 						else if(this.tipoidade=="y"){
 							let idadeanos = idade;
 
-							if(idadeanos<12){dosemg = this.doseporkg * peso;}
-							else{dosemg = '1200.000';} // dose em UI
+							if(idadeanos<12){dosemg = (this.doseporkg * peso).toLocaleString();}
+							else{dosemg = '1.200.000';} // dose em UI
 						}
 					}
 					else{
@@ -1394,8 +1400,8 @@ function load(){
 
 	
 	/********** EVENTS **********/
-	eventos = [peso, idade];
-	eventosDois = [tipoidade, farmacos];
+	let eventos = [peso, idade];
+	let eventosDois = [tipoidade, farmacos];
 
 	for(var evento of eventos){
 		evento.addEventListener("keyup", classCaller);

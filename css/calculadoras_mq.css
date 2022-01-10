@@ -152,10 +152,11 @@
 	}
 	
 	/**** Calculator's title ****/
-	div.main-content h1, div.main-content h2 {
+	div.main-content h1 {
 		margin-bottom: 0px;
 		margin: 20px 3% 0 3%;
 		border-radius: 5px !important;
+		padding: 5px;
 	}
 
 

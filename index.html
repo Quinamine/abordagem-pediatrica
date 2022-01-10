@@ -2,19 +2,18 @@
 <html dir="ltr" lang="pt-PT" >
 	<head>
 		<meta charset="utf-8"/>
-		<title>Abordagem Pediátrica</title>
+		<title>Página Inicial | Abordagem Pediátrica</title>
 		<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
 		<meta http-equiv="X-UA-Compatible" content="ie=edge"/>
 		<meta name="robots" content="index, follow"/>
 
-		<meta name="description" content="A plataforma digital com calculadoras que determinam automaticamente doses pediátricas dos medicamentos mais usuais na prática clinica."/>
+		<meta name="description" content="A plataforma digital com doseadores que calculam e apresentam doses terapêuticas dos medicamentos mais usuais na prática clinica inclusive doses de Antirretrovirais para a população infanto-juvenil."/>
 
 		<meta name="author" content="Adérito Félix Quinamine"/>
 		
 		<!--     CSS   -->
 		<link rel="stylesheet" type="text/css" href="css/reset.css">
-		<link rel="stylesheet" type="text/css" href="css/layout.css"/>
-		<link rel="stylesheet" type="text/css" href="css/layout_mq.css"/>
+		<link rel="stylesheet" type="text/css" href="css/anatomia.css"/>
 		<link rel="stylesheet" type="text/css" href="css/index.css"/>
 		
 		<!--     FONTES  -->
@@ -35,6 +34,8 @@
 		<script type="text/javascript" src="js/menu.js"></script>
 		<script type="text/javascript" src="js/indexnavigation.js"></script>
 		<script type="text/javascript" src="js/applypreferences.js"></script>
+		<script type="text/javascript" src="js/dialog.js"></script>
+
 		
 		<noscript>O seu navegador está sem permissão de execução de scripts. Isso certamente interfere completa e negativamente no funcionamento desta ferramenta.</noscript>
 		
@@ -73,9 +74,9 @@
 					<nav>
 						<ul>
 							<li><a href="index.html" class="active">
-								<span class="pagina-inicial">Página inicial</span>
-								<span class="inicio">Início</span>
-							</a></li>
+								Página inicial
+							</a>
+						</li>
 
 							
 							<li class="dropdown-container cdp">
@@ -92,8 +93,10 @@
 								</ul>
 							</li>
 							<li class="dropdown-container darv">
-								<a href="pages/doseador-de-antirretrovirais.html" class="target">Darv</a>
-
+								<a href="pages/doseador-de-antirretrovirais.html" class="target"> 
+									<span class="doseador">Doseador de ARVs</span>
+									<span class="darv">Darv</span>
+								</a>
 								<!-- Dropdown menu -->
 								<ul class="dropdown-menu">
 									<li><a href="saibamais/abreviacoes-farmacologicas-na-abordagem-antiretroviral.html#tarv">Siglas dos ARVs</a></li>
@@ -167,9 +170,10 @@
 
 								<div class="description">
 									<h3>Calculadora de Doses Pediátricas</h3>
-									<p>Determina automaticamente doses terapêuticas dos medicamentos mais prescritos na prática clínica, com base no Formulário Nacional de Medicamentos, bastando o usuário inserir o peso, a idade e selecionar o nome do medicamento a prescrever e, subsequentemente a dose e a posologia aparecem na secção correspondente</p>
 
-									<p><a href="#">Acessar</a> <a href="#">Ver instruções</a></p>
+									<p>Determina automaticamente doses terapêuticas dos medicamentos mais usuais na prática clínica, com base no Formulário Nacional de Medicamentos, bastando o usuário inserir o peso, a idade e selecionar o nome do medicamento a prescrever e, subsequentemente a dose e a posologia aparecem na secção correspondente.</p>
+
+									<p><a href="pages/calculadora-de-doses-pediatricas.html">Acessar</a> <a href="pages/suporte/instrucoes-de-utilizacao-da-calculadora-de-doses-pediatricas.html">Ver instruções</a></p>
 								</div>
 								
 							</div>
@@ -182,8 +186,10 @@
 	
 								<div class="description">
 									<h3>Doseador de ARVs</h3>
-									<p>Calcula automaticamente doses terapêuticas dos Antirretrovirais e dos fármacos profiláticos contra infecções oportunistas bastando o usuário inserir o peso da criança e subsequentemente a dose, a posologia e a quantidade de fármacos a dispensar aparecem na secção correspondente.</p>
-									<p><a href="#">Acessar</a> <a href="#">Ver instruções</a></p>
+
+									<p>Calcula automaticamente e apresenta a dose, a posologia e a quantidade de comprimidos ou frascos a dispensar dos Antirretrovirais e dos fármacos usados na profilaxia contra infecções oportunistas. O usuário só precisa inserir o peso.</p>
+
+									<p><a href="pages/doseador-de-antirretrovirais.html">Acessar</a> <a href="pages/suporte/instrucoes-de-utilizacao-do-doseador-de-antirretrovirais.html">Ver instruções</a></p>
 								</div>
 							</div>
 						</div>
@@ -192,13 +198,15 @@
 					<!-- CONTEÚDO-SOBRE -->
 						
 						<div class="conteudo-sobre display-none">
+
 							<p>O Abordagem Pediátrica é um projecto virtual idealizado e concretizado por mim <a href="pages/sobre.html">(Adérito Félix Quinamine)</a> com vista a simplificar o cálculo da dose e promover sobretudo a Prescrição Racional e Correcta dos Medicamentos.</p>
 
 							<p>
 								A prescrição de medicamentos para a população pediátrica mórbida (crianças doentes) deve ser relativa ao peso desta(s) ou em casos excepcionais com base na sua idade e, NÃO de forma padronizada e/ou estática, sob risco de causar intoxicações medicamentosas por superdosagem ou falência terapêutica por subdosagem que à curto, médio ou longo prazo, pode culminar com aumento da resistência dos patógenos aos medicamentos e aumento da morbi-mortalidade (maioritariamente prevenível).
 							</p>
+
 							<!-- Exemplo -->
-							<p class="exemplo margens-laterais-dez-pixels bg-fquatro">
+							<p class="destaque">
 								Por exemplo:
 								Para uma criança (que chamaremos de Quintino), com &Delta; (diagnóstico) de <abbr title="Infecção das Vias Respiratórias Superiores">IVRS</abbr> sem complicações, cujo peso é de 5 kg, o Clínico prescreve Fenoximetil de 250mg/5ml em suspensão, na dose de 2.5 ml (equivalente a 125 mg) para tomar 3 vezes ao dia com intervalos de 8 horas (totalizando 375mg/dia).
 							</p>
@@ -213,7 +221,7 @@
 								Analisemos e vejamos se a dose prescrita foi correcta em conformidade com o peso: 
 							</p>
 	
-							<p class="nota nota-de-formulario font-weight-bold margens-laterais-dez-pixels bg-fquatro">
+							<p class="destaque bold">
 								NOTA BEM: De acordo com o Formulário Nacional de Medicamentos (FNM), a dose recomendada de Fenoximetil para crianças é de 25-50mg/kg/dia dividida em 4 tomas (3 tomas usualmente). 
 							</p>
 	
@@ -221,9 +229,9 @@
 								Assim sendo, teriamos: 
 							</p>
 	
-							<ol>
-								<li class="font-weight-bold">50 mg  &times; 5 kg = 250 mg</li>
-							</ol>
+							<ul>
+								<li class="bold">50 mg  &times; 5 kg = 250 mg</li>
+							</ul>
 	
 							<p>
 								Em que: 
@@ -231,16 +239,16 @@
 	
 							<ol>
 								<li>
-									<span class="font-weight-bold">50 mg</span> corresponde à dose recomendada &times; <span class="font-weight-bold">5 kg</span> (peso da criança) = <span class="font-weight-bold">250 mg</span> (dose diária/ainda não dividida pelas 3 tomas).
+									<span class="bold">50 mg</span> corresponde à dose recomendada &times; <span class="bold">5 kg</span> (peso da criança) = <span class="bold">250 mg</span> (dose diária/ainda não dividida pelas 3 tomas).
 								</li>
 							</ol>
 	
-							<p style="padding: 0px 10px 0px 10px;">
+							<p>
 								E após a divisão de 250 mg por 3, teriamos 83.333 mg por dose, isto é:
 							</p>
 							
 							<ol>
-								<li class="font-weight-bold">250 mg &divide; 3 tomas = 83 mg (arredondando por defeito).</li>
+								<li class="bold">250 mg &divide; 3 tomas = 83 mg (arredondando por defeito).</li>
 							</ol>  
 							
 							<p>
@@ -253,7 +261,7 @@
 								Sabendo que a dosagem de Fenoximetil em Suspensão é de 250mg/5ml (ou seja, em cada 5 ml estão suspensos ou dissolvidos 250 mg de principio activo de Fenoximetil), usando a regra matemática de 3 simples, teremos: 
 							</p>
 	
-							<p class="regra-de-tres-simples font-weight-bold margens-laterais-dez-pixels bg-fquatro">	
+							<p class="destaque conversao-da-dose bold">	
 								250 mg ---------<span class="trecho-com-display-none-in-mobile tracejado">----------</span>------------------- 5 ml <br/>
 								83 mg  ----------<span class="trecho-com-display-none-in-mobile tracejado">----------</span>-------------------- <var>X</var> <br/>
 								<var>X</var> = 83 <del>mg</del> &times; 5 ml / 250 <del>mg</del> <br/>
@@ -266,15 +274,26 @@
 							<p>
 								A prescrição mais próxima da perfeição seria:
 							</p>
-							<p class="prescricao-correcta font-weight-bold margens-laterais-dez-pixels bg-fquatro">
+							<p class="destaque prescricao-correcta bold">
 								R/ <br/>
 								8A2 Fenoximetil 250mg/5ml Susp. <br/>
 								1.7 ml &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;8/8h&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;7d&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;1Fr.
 								
 							</p>
-							<p class="conclusao">
-								Certamente que o exemplo supra-apresentado é uma realidade frequente na prática clínica e, com esta afirmação não quero julgar ou defender o Clínico acima ou os demais profissionais da área que se identificaram com o exemplo, talvez Quintino seja apenas uma de mais de 150 outras crianças a espera de Atendimento pelo mesmo Clínico, e é a partir dai que surge a ideia do projecto “Abordagem Pediátrica”, para apoiar os Clínicos e não só, a calcularem a dose correcta de forma rápida, automática e portanto apoiá-los na prescrição de doses CORRECTAS e EFICIENTES dos medicamentos. O projecto “Abordagem Pediátrica" possui uma <a href="../calculadora-de-doses-pediatricas.html">Calculadora</a> que determina automaticamente doses terapêuticas dos medicamentos mais prescritos na prática clínica, com base no Formulário Nacional de Medicamentos, bastando simplesmente o usuário inserir o peso, a idade (facultativa) da criança e selecionar o nome do medicamento a prescrever e, subsequentemente a dose e a posologia aparecem na secção correspondente <a href="../calculadora-de-doses-pediatricas.html">(veja a mágica a acontecer).</a>
+							<p class="last-p">
+								Certamente que o exemplo supra-apresentado é uma realidade frequente na prática clínica e, com esta afirmação não quero julgar ou defender o Clínico acima ou os demais profissionais da área que se identificaram com o exemplo, talvez Quintino seja apenas uma de mais de 150 outras crianças a espera de atendimento pelo mesmo Clínico, e é a partir dai que surge a ideia do projecto “Abordagem Pediátrica”, para apoiar os Clínicos e não só, a calcularem a dose correcta de forma rápida, automática e portanto apoiá-los na prescrição de doses CORRECTAS e EFICIENTES dos medicamentos. O projecto “Abordagem Pediátrica" possui Doseadores que calculam automaticamente e apresentam doses terapêuticas dos medicamentos mais prescritos na prática clínica (inclusive os Antirretrovirais), com base no Formulário Nacional de Medicamentos e na Tabela de Dosagem de ARVs actualmente vigente no Serviço Nacional de Saúde (SNS), bastando simplesmente o usuário inserir o peso, a idade (facultativa) da criança e selecionar o nome do medicamento a prescrever e, subsequentemente a dose e a posologia aparecem na secção correspondente <a href="javascript:void(0);" class="veja-a-magica">(veja a mágica a acontecer).</a>
 							</p>
+							<div class="dialog-box-container">
+								<div class="dialog-box">
+									<h4>Você pretende acessar:</h4>
+									<nav>
+										<a href="pages/calculadora-de-doses-pediatricas.html">Calculadora de Doses</a>
+										<a href="pages/doseador-de-antirretrovirais.html">Doseador de ARVs</a>
+									</nav>
+									<button>X</button>		
+								</div>
+							</div>
+							
 						</div>
 					</section>
 

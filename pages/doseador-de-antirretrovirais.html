@@ -6,7 +6,7 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
 		<meta http-equiv="X-UA-Compatible" content="ie=edge"/>
 		<meta name="robots" content="index, follow"/>
-		<meta name="description" content="O Doseador de ARVs calcula automaticamente doses pediátricas dos Antirretrovirais e dos fármacos profiláticos contra Infecções oportunistas bastando o usuário inserir o peso da criança e subsequentemente a dose, a posologia e a quantidade de fármacos a dispensar aparecem na secção correspondente."/>
+		<meta name="description" content="Calcula automaticamente e apresenta a dose, a posologia e o número de comprimidos ou frascos a dispensar dos Antirretrovirais e dos fármacos usados na profilaxia contra infecções oportunistas. O usuário só precisa inserir o peso e escolher o ARV."/>
 		<meta name="author" content="Adérito Félix Quinamine"/>
 		
 		<!-- CSS -->
@@ -140,7 +140,7 @@
 
 									<label for="peso">Peso&nbsp;</label>
 
-									<input type="number" name="peso" min="3" id="peso" max="45"  data-tipopeso="darv" /> 
+									<input type="number" name="peso" min="3" id="peso" max="45"/> 
 									<select class="input-extension weight-ext">
 										<option>Kg</option>
 									</select>
@@ -150,13 +150,15 @@
 								<legend align="center">Especificação do ARV*</legend>
 								<p id="paragrafo-parent-de-farmaco" class="p-da-calculadora">
 									<label for="arvs" id="nome-farm">Nome </label>
-									<select id="arvs" class="select-da-pagina-tarv" style="max-width: 27.5rem;">
 
+									<select id="arvs" class="select-da-pagina-tarv">
+
+										<option value="select" selected>Escolher fármaco</option>
                                         <optgroup label="ABACAVIR + LAMIVUDINA">
 
                                             <option value="ABC">ABC 60mg</option>
                                             <option value="ABC/3TC-60-30mg">ABC/3TC 60mg/30mg Comp</option>
-                                            <option value="ABC/3TC-120-60mg" selected>ABC/3TC 120mg/60mg Comp</option>
+                                            <option value="ABC/3TC-120-60mg">ABC/3TC 120mg/60mg Comp</option>
                                             <option value="ABC/3TC-600-300mg">ABC/3TC 600mg/300mg Comp</option>
 										</optgroup>
 										
@@ -226,13 +228,13 @@
 											<option value="piridoxina-25">Piridoxina 25mg Comp</option>
 											<option value="piridoxina-50">Piridoxina 50mg Comp</option>
 										</optgroup>
-									</select> &nbsp;
+									</select>
 								</p>
 							</fieldset>
-								<fieldset>
-								<legend align="center">Dose e Posologia</legend>
-									<p class="resultado"></p>
-								</fieldset>
+							<fieldset>
+							<legend align="center">Dose e Posologia</legend>
+								<p class="resultado"></p>
+							</fieldset>
 							
 
 						</form>

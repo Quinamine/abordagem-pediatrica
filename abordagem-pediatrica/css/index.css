@@ -1,0 +1,300 @@
+
+/* reset */
+.corpo {
+    padding: 0;
+}
+
+.main {
+    border-top: none;
+    margin: 0;
+    padding: 0;
+    border-radius: 0;
+    
+}
+
+/* Banner Rotativo */
+
+.banner-rotativo {  
+    display: flex;
+    overflow: hidden;
+    background-color: #FAA032;
+    max-height: 300px;
+
+    position: relative;
+}
+
+@keyframes slide {
+    0% {right: 0;}
+
+    100% {right: 1024px}
+}
+
+.banner-rotativo picture {
+    min-width: 100%;
+    position: relative;
+    right: -700px;
+    transition: all 250ms;
+}
+
+.banner-rotativo picture img {
+    width: 100%;
+    height: 100%;
+}
+
+.banner-rotativo picture.pic-actual {
+    order: -1;
+    right: 0px;
+    animation-name: slide;
+    animation-delay: 4400ms;
+    animation-duration: 250ms;
+}
+
+
+/* BARRA DE PROGRESSAO */
+
+@media screen and (min-width: 768px) {
+    .banner-rotativo section {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        z-index: 8;
+        position: absolute;
+        bottom: 10px;
+    }
+    
+    .banner-rotativo section div {
+        margin: 5px;
+        padding: 4px;
+        border: 1px solid #fff;
+        justify-content: center;
+        position: relative;
+        border-radius: 50%;
+    }
+    
+    .banner-rotativo section div.cheia {
+        background-color: #fff;
+    }
+}
+
+
+
+
+/*** PROPAGANDA ***/
+
+main .contentor-da-propaganda, 
+.artigo, .contentor-da-capsula {
+    padding: 30px 4%;
+    width: 100%;
+}
+
+main .contentor-da-propaganda.darv {
+    background-color: #FFE;
+}
+
+main .contentor-da-propaganda.cdp {
+    background-color: #EEF;
+}
+
+.propaganda {
+    border-radius: 5px;
+    max-width: 330px;
+    margin: 0 auto;
+    border: 8px solid #eee;
+    border-radius: 10px;
+    box-shadow:  0 0 8px #555;
+}
+
+
+.propaganda img {
+    width: 100%;
+}
+
+.propaganda .descricao {
+    border: 1px solid #ddd;
+    padding: 10px;
+    background-color: rgb(255, 246, 246);
+
+}
+
+
+.propaganda .descricao h3, 
+.propaganda .descricao p {
+    font-size: 14px;
+}
+
+
+.propaganda .descricao h3 {
+    margin: 0 0 8px 0;
+}
+
+.propaganda .descricao p {
+    margin: 8px 0;
+}
+
+.propaganda .descricao p:last-child{
+    display: flex;
+}
+
+.propaganda .descricao p:last-child a{
+    flex: 1;
+    padding: 8px 4px;
+    color: inherit;
+    text-align: center;
+    border-radius: 5px;
+}
+
+.propaganda .descricao p:last-child a:first-child{
+    background-color: #FAA032;
+    margin-right: 5px;
+}
+
+.propaganda .descricao p:last-child a:last-child{
+    background-color: #ddd;
+}
+
+
+
+/** CONTEUDO SOBRE **/
+.artigo {
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+
+.artigo img {
+    border: 1px solid #ddd;
+}
+
+
+.prescricao-correcta span.involucro {
+    width: 100%;
+    max-width: 300px;
+    display: flex;
+}
+
+.prescricao-correcta span.involucro span {
+    flex-grow: 1;
+    flex-shrink: 0;
+}
+
+.conversao-da-dose,
+.prescricao-correcta {
+    max-width: 355px;
+}
+
+
+a.veja-a-magica:hover {
+    text-decoration: underline;
+}
+
+
+a.veja-a-magica.visited {
+    color: #FAA032;
+}
+
+/** Caixa de Diálogo **/
+.contentor-da-caixa-de-dialogo {
+    display: none;
+}
+
+.caixa-de-dialogo {
+    width: 100%;
+    background-color: #fff;
+    font-size: 14px;
+    position: absolute;
+    bottom: 25vh;
+    z-index: 8;
+    border-radius: 5px;
+}
+
+.caixa-de-dialogo h4 {
+    margin: 0;
+    padding: 10px;
+    text-align: center;
+    font-weight: normal;
+    border-bottom: 1px solid #ddd;
+}
+
+.caixa-de-dialogo nav {
+    border: none;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+
+.caixa-de-dialogo nav a {
+    width: 100%;
+    padding: 20px 10px;
+    flex: 1;
+    color: inherit;
+    text-align: center;
+}
+
+.caixa-de-dialogo button {
+    border: none;
+    width: 100%;
+    font-size: 18px;
+    color: red;
+    background-color: inherit;
+    border-top: 1px solid #ddd;
+    padding: 10px;
+    cursor: pointer;
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+}
+
+/* Abrir caixa de Dialogo */
+
+.contentor-da-caixa-de-dialogo.abrir {
+    display: block;
+    width: 100%;
+    max-width: 300px;
+    margin: auto;
+    position: relative;
+}
+
+body.com-caixa-de-dialogo-aberta, 
+body.com-caixa-de-dialogo-aberta .main {
+    background-color: rgba(0, 0, 0, .3);
+    overflow: hidden;
+}
+
+
+body.com-caixa-de-dialogo-aberta .destaque {
+    background-color: #888;
+
+}
+
+
+/** CAPSULA **/
+
+.contentor-da-capsula {
+    display: none;
+    
+}
+
+
+/** Responsividade */
+
+
+
+@media screen and (min-width: 600px) {
+
+    .main section {
+        display: flex;
+    }
+
+    .contentor-da-propaganda.cdp {
+        background-color: #FfE !important;
+    }
+}
+
+
+
+
+
+
+
