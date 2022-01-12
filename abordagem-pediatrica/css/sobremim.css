@@ -16,7 +16,6 @@
     border-radius: 0;
 }
 
-
 .artigo img {
     margin: initial;
     border: 1px solid #ccc
@@ -27,8 +26,7 @@
     padding: 2px;
     font-size: 12px;
     max-width: 322px;
-    background: #f8f8f8;
-    color: #555;
+    color: #6E655C;
 }
 
 ul.dominio-de-linguagens li a, 
@@ -45,10 +43,6 @@ ul.dominio-de-linguagens li a:visited{
     margin: auto; 
 }
 
-.galeria.aberta {
-    border-top: none;
-}
-
 .galeria:first-child {
     margin-top: 20px;
 }
@@ -58,56 +52,16 @@ ul.dominio-de-linguagens li a:visited{
     margin-bottom: 20px;
 }
 
-
-.galeria.tmg .contentor-das-imagens {
-    max-height: 440px;
-}
-
-.galeria.tmg .contentor-das-imagens img{
-    object-fit: cover;
-}
-
-
 .galeria .titulo-da-galeria {
     display: flex;
 }
 
-
-.galeria.aberta .titulo-da-galeria {
-    box-shadow: 0 0 8px #ddd;
-    background-color: #555;
-    color: #d4d8da;
-}
 
 .titulo-da-galeria.hover {
     cursor: pointer;
     background-color: #eee;
     color: #333;
 }
-
-.galeria .icone {
-    width: 35px;
-    height: 35px;
-    display: grid;
-    grid-template-columns: repeat(2, 50%);
-    grid-gap: 1px;
-    padding: 10px;
-    transform: rotate(45deg);
-    transition-duration: 250ms;
-}
-
-.galeria.aberta .icone {
-    grid-gap: 3px;
-}
-
-.galeria .icone div {
-   background-color: #888;
-}
-
-.galeria.aberta .icone div,
-.titulo-da-galeria.hover .icone div {
-    background-color: #faa032;
- }
 
 .galeria .legenda {
     width: 100%;
@@ -124,7 +78,23 @@ ul.dominio-de-linguagens li a:visited{
     align-items: center;
 }
 
-.galeria .contentor-das-imagens {
+.galeria .icone {
+    width: 35px;
+    height: 35px;
+    display: grid;
+    grid-template-columns: repeat(2, 50%);
+    grid-gap: 1px;
+    padding: 10px;
+    transform: rotate(45deg);
+    transition-duration: 250ms;
+}
+
+.galeria .icone div {
+    background-color: #888;
+ }
+
+
+ .galeria .contentor-das-imagens {
     height: 0;
     opacity: 0;
     overflow-x: scroll;
@@ -132,9 +102,42 @@ ul.dominio-de-linguagens li a:visited{
 }
 
 
+.galeria.tmg .contentor-das-imagens {
+    max-height: 440px;
+}
+
 .galeria .contentor-das-imagens img {
     flex: 1 0 100%;
 }
+
+.galeria.tmg .contentor-das-imagens img{
+    object-fit: cover;
+}
+
+
+/** Galeria Aberta **/
+.galeria.aberta {
+    border-top: none;
+}
+
+.galeria.aberta .titulo-da-galeria {
+    box-shadow: 0 0 8px #ddd;
+    background-color: #555;
+    color: #d4d8da;
+}
+
+.galeria.aberta figcaption {
+    color: #d4d8da;
+}
+
+.galeria.aberta .icone {
+    grid-gap: 3px;
+}
+
+.galeria.aberta .icone div,
+.titulo-da-galeria.hover .icone div {
+    background-color: #faa032;
+ }
 
 .galeria.aberta .contentor-das-imagens { 
     opacity: 1;
@@ -146,52 +149,45 @@ ul.dominio-de-linguagens li a:visited{
     position: relative;
 }
 
-
 .galeria.aberta .contentor-das-imagens img {
     border: none;
 }
-
-.galeria.tmg img.diploma {
-    max-height: 440px;
-}
-
 
 .galeria.concurso img {
     margin: auto; 
 }
 
-
-.galeria.aberta .contentor-das-imagens span {
+.galeria.aberta .contentor-dos-botoes {
+    width: 100%;
     position: absolute;
+    bottom: 0;
+    display: flex;
+    justify-content: center;
+}
+
+.galeria.aberta .contentor-dos-botoes button {
+    font-size: 20px;
+    border: none;
+    outline: none;
+    color: #fff;
     background-color: rgba(0, 0, 0, .2);
-    color: #555;
-    font-size: 30px;
-    bottom: 0%;
-    padding: 10px;
+    margin: 0 5px;
+    padding: 5px 25px;
+    border-radius: 4px;
     cursor: pointer;
 }
 
-.galeria.aberta .contentor-das-imagens span.hover {
-    color: #faa032;
-    background-color: #888;
+.galeria.aberta .contentor-dos-botoes button.clicado {
+    background-color: rgba(197, 99, 99, 0.4);
 }
 
-span.hide {
-    display: none;
-}
-
-
-.galeria.aberta .contentor-das-imagens span.avancar {
-    right: 0;
-}
-
-.galeria.aberta .contentor-das-imagens span.voltar {
-    left: 0;
-}
 
 .ordem-zero {
     order: -1 !important;
 }
+
+
+/* Responsividade */
 
 @media screen and (max-width: 560px) {
     .galeria.tmg .contentor-das-imagens {
