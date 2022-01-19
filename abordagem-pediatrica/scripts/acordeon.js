@@ -81,12 +81,6 @@ function init() {
             Acordeon.changeImg(bt.dataset.parentpos, bt.dataset.selfpos);
         })
     })
-
-
-    /** Manter Acordeon Fechado */
-    if(window.innerWidth>=768) {
-        document.querySelector(".galeria.tmg").classList.add("aberta");
-    } 
 }
 
 

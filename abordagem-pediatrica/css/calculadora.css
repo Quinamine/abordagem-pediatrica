@@ -7,11 +7,6 @@
 }
 
 
-.linha-do-corpo {
-    padding: 0;
-}
-
-
 .main h1 {
     padding: 5px;
     margin: 20px 4%;
@@ -97,57 +92,43 @@ p.ancestral-de-farmacos select {
 }
 
 
-/*** Links de compartilhamento **/
+/* Links de Partilha */
 .contentor-dos-links-de-partilha {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+    margin: 0;
     background-color: #f8f8f8;
+    justify-content: space-between;
 }
 
 .contentor-dos-links-de-partilha a {
-    display: flex;
-    align-items: center;
+    padding: 10px calc(4% + 10px);
     font-size: 11px;
-    padding: 10px calc(4% + 8px);
-    color: #555;
-    font-weight: bold;
 }
-
-.contentor-dos-links-de-partilha img {
-    display: inline-block;
-    width: 20px;
-    height: 20px;
-    margin-left: 4px;
-}
-
-
 
 /* Responsividade */
 
 @media screen and (min-width: 600px) {
 
-    .linha-do-corpo .instrucoes {
-        display: block !important;
+    .linha-do-corpo {
+        padding-bottom: 30px;
     }
 
     .main {
         display: flex;
         flex-wrap: wrap;
-        justify-content: space-between;
-        border: 1px solid #ddd;
+        justify-content: space-between; 
+        padding-top: 30px;
     }
 
     .main > div {
         flex: 1;
     }
 
-
     .contentor-da-calculadora {   
         border-radius: 10px;
         max-width: 425px;
         padding: 15px 15px 0 15px;
         box-shadow: 0 0 8px #555;
+        margin: 0 auto;
     }
 
     .contentor-da-calculadora h1 {
@@ -157,7 +138,6 @@ p.ancestral-de-farmacos select {
         background-color: inherit;
     }
 
-
     .contentor-da-calculadora fieldset {
         border: 2px solid #ddd;
         border-radius: 6px;    
@@ -166,7 +146,6 @@ p.ancestral-de-farmacos select {
     .contentor-da-calculadora legend {
         padding: 6px;
     }
-
 
     .contentor-da-calculadora form p {
         margin-right: 10px;
@@ -180,14 +159,25 @@ p.ancestral-de-farmacos select {
 
 
     /** INSTRUCOES */
-
     .main .instrucoes {
+        display: none;
+    }
+    
+}
+
+
+@media screen and (min-width: 768px) {
+    .main {
+        max-width: 100%;
+    }
+    
+    .main .instrucoes {
+        display: block !important;
         max-height: 495px;
         margin-left: 40px;
         overflow-y: scroll;
         padding: 10px;
         border: 15px solid rgba(240, 240, 240, .7);
-        border-right: none;
         box-shadow: 0 0 8px #555;
         font-size: 0.875rem;
     }
@@ -207,7 +197,6 @@ p.ancestral-de-farmacos select {
        font-style: italic;
        color: #000;
    }
-
 
     .main .instrucoes h2 {
         font-size: 1.125rem;
@@ -253,14 +242,22 @@ p.ancestral-de-farmacos select {
         text-align: left;
     }
     
-
-    
 }
-
-
 
 @media screen and (min-width: 911px) {
     .main .instrucoes {
         max-height: 462px !important;
+        border-right: none;
     }
 }
+
+
+@media screen and (max-width: 1023px) {
+    .linha-do-corpo {
+        padding-top: 0;
+        margin-top: 0;
+        border-top: 0;
+    }
+}
+
+

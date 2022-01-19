@@ -1,13 +1,7 @@
 
-
-.linha-do-corpo {
-    padding: 0;
-}
-
 .contentor-de-preferencias {
-    margin: 0 auto;
-    margin: 0 4%;
-
+    margin-left: 4% !important;
+    margin-right: 4% !important;
 }
 
 .contentor-de-preferencias h1 {
@@ -51,30 +45,5 @@ form#preferencias select  {
     background-color: #f8f8f8;
     font-size: 0.875rem;
 }
-
-
-
-
-@media screen and (min-width: 600px) {
-    .contentor-de-preferencias h1 {
-        margin-top: 0;
-    }
-
-    form#preferencias fieldset {
-        padding: 10px;
-    }
-
-    form#preferencias legend { 
-        padding-left: 8px;
-        padding-right: 8px;
-    }
-
-
-    form#preferencias fieldset p{ 
-        padding-left: 17px;
-    }
-
-}
-
 
 

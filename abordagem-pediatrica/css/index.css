@@ -1,15 +1,9 @@
 
-/* reset */
-.corpo {
-    padding: 0;
-}
-
-.main {
+.linha-do-corpo {
+    margin: 0 auto;
     border-top: none;
-    margin: 0;
     padding: 0;
     border-radius: 0;
-    
 }
 
 /* Banner Rotativo */
@@ -19,7 +13,6 @@
     overflow: hidden;
     background-color: #FAA032;
     max-height: 300px;
-
     position: relative;
 }
 
@@ -51,7 +44,7 @@
 
 /* BARRA DE PROGRESSAO */
 
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 601px) {
     .banner-rotativo section {
         width: 100%;
         display: flex;
@@ -77,8 +70,6 @@
 }
 
 
-
-
 /*** PROPAGANDA ***/
 
 main .contentor-da-propaganda, 
@@ -87,33 +78,31 @@ main .contentor-da-propaganda,
     width: 100%;
 }
 
-main .contentor-da-propaganda.darv {
-    background-color: #FFE;
-}
+
 
 main .contentor-da-propaganda.cdp {
-    background-color: #EEF;
+    background-color: #eee;
 }
 
 .propaganda {
-    border-radius: 5px;
-    max-width: 330px;
+    max-width: 375px;
     margin: 0 auto;
-    border: 8px solid #eee;
-    border-radius: 10px;
-    box-shadow:  0 0 8px #555;
+    box-shadow: 0 2px 15px #888;
+    border: 5px solid #ddd;
+    background-color: #fff;
 }
 
 
 .propaganda img {
     width: 100%;
+    border-radius: 8px;
 }
 
-.propaganda .descricao {
-    border: 1px solid #ddd;
-    padding: 10px;
-    background-color: rgb(255, 246, 246);
 
+.propaganda .descricao {
+    padding: 10px 16px;
+    background-color: rgb(255, 246, 246);
+    border-top: 1px solid #ddd;
 }
 
 
@@ -146,23 +135,27 @@ main .contentor-da-propaganda.cdp {
 .propaganda .descricao p:last-child a:first-child{
     background-color: #FAA032;
     margin-right: 5px;
+    color: #fff;
 }
 
 .propaganda .descricao p:last-child a:last-child{
     background-color: #ddd;
 }
 
+.propaganda .descricao p:last-child a:first-child:hover{
+    background-color: #fa9110;
+}
 
-
-/** CONTEUDO SOBRE **/
-.artigo {
-    padding-top: 10px;
-    padding-bottom: 10px;
+.propaganda .descricao p:last-child a:last-child:hover{
+    background-color: #ccc;
 }
 
 
+
+/** CONTEUDO SOBRE **/
 .artigo img {
     border: 1px solid #ddd;
+    margin: initial;
 }
 
 
@@ -183,114 +176,152 @@ main .contentor-da-propaganda.cdp {
 }
 
 
-a.veja-a-magica:hover {
-    text-decoration: underline;
+/*** CAIXA DE DIALOGO **/
+
+body.com-caixa-de-dialogo-aberta .destaque,
+body.com-caixa-de-dialogo-aberta .propaganda {
+	background-color: rgba(219, 146, 57, .4);
+	
 }
 
-
-a.veja-a-magica.visited {
-    color: #FAA032;
-}
-
-/** Caixa de Diálogo **/
-.contentor-da-caixa-de-dialogo {
-    display: none;
-}
-
-.caixa-de-dialogo {
-    width: 100%;
-    background-color: #fff;
-    font-size: 14px;
-    position: absolute;
-    bottom: 25vh;
-    z-index: 8;
-    border-radius: 5px;
-}
-
-.caixa-de-dialogo h4 {
-    margin: 0;
-    padding: 10px;
-    text-align: center;
-    font-weight: normal;
-    border-bottom: 1px solid #ddd;
-}
-
-.caixa-de-dialogo nav {
-    border: none;
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: flex-start;
-}
-
-
-.caixa-de-dialogo nav a {
-    width: 100%;
-    padding: 20px 10px;
-    flex: 1;
-    color: inherit;
-    text-align: center;
-}
-
-.caixa-de-dialogo button {
-    border: none;
-    width: 100%;
-    font-size: 18px;
-    color: red;
-    background-color: inherit;
-    border-top: 1px solid #ddd;
-    padding: 10px;
-    cursor: pointer;
-    border-bottom-left-radius: 5px;
-    border-bottom-right-radius: 5px;
-}
-
-/* Abrir caixa de Dialogo */
-
-.contentor-da-caixa-de-dialogo.abrir {
-    display: block;
-    width: 100%;
-    max-width: 300px;
-    margin: auto;
-    position: relative;
-}
-
-body.com-caixa-de-dialogo-aberta, 
-body.com-caixa-de-dialogo-aberta .main {
-    background-color: rgba(0, 0, 0, .3);
-    overflow: hidden;
-}
-
-
-body.com-caixa-de-dialogo-aberta .destaque {
-    background-color: #888;
-
-}
 
 
 /** CAPSULA **/
-
 .contentor-da-capsula {
     display: none;
-    
 }
 
 
 /** Responsividade */
+@media screen and (min-width: 700px) {
+    .main {
+        max-width: 100%;
+        padding: 0;
+    }
 
+    .artigo {
+        max-width: 700px;
+        margin: 0 auto;
+        padding: 0 15px;
+    }
+
+    .contentor-da-propaganda {
+        padding-left: 15px !important;
+        padding-right: 15px !important;
+        
+    }
+
+    .propaganda {
+        justify-content: center !important;
+    }
+
+    .propaganda .descricao {
+        margin-left: 40px !important;
+    }
+
+    .propaganda .descricao h3, 
+    .descricao p {
+        font-size: 1rem !important;
+    }
+
+    .propaganda .descricao p:last-child {
+        flex-direction: column;
+    }
+
+    .descricao p:last-child a:first-child {
+        margin-right: 0 !important;
+        margin-bottom: 8px;
+    }
+
+    .main .contentor-da-propaganda.cdp {
+        background-color: inherit;
+        border-top: 1px solid #eee;
+    }
+
+
+}
 
 
 @media screen and (min-width: 600px) {
 
-    .main section {
+    .propaganda {
+        margin: initial;
+        border: none;
+        box-shadow: none;
+        max-width: 100%;
+        margin: 0 auto;
         display: flex;
+        justify-content: space-between;
     }
 
-    .contentor-da-propaganda.cdp {
-        background-color: #FfE !important;
+    .propaganda picture {
+        flex: 1 0 50%;
+        max-width: 350px;
+    }
+
+    .propaganda .descricao {
+        background-color: inherit;
+        border: none;
+        max-width: 350px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        margin-left: 10px;
+        padding: 5px;
+    }
+
+    .main .contentor-da-propaganda.cdp {
+        background-color: inherit;
+        border-top: 1px solid #eee;
+    }
+
+    
+    /* Capsula */
+
+    .contentor-da-capsula {
+        display: flex;
+        border-top: 1px solid #eee;
+    }
+
+
+    .capsula {
+        width: 650px;
+        min-height: 230px;
+        margin: auto;
+        display: flex;
+
+    }
+
+    .capsula > div {
+        flex: 1;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 10px;
+        font-size: 14px;
+    }
+
+    .capsula .parte-laranja {
+        background-color: #FAA032;
+        color: #5E330B;
+        border-top-left-radius: 50%;
+        border-bottom-left-radius: 50%;
+    }
+
+    .capsula .parte-laranja h2 {
+        font-weight: initial;
+    }
+
+    .capsula .parte-castanha {
+        background-color: #5E330B;;
+        color: #FAA032;
+        border-top-right-radius: 50%;
+        border-bottom-right-radius: 50%;
     }
 }
+
+
+
 
 
 

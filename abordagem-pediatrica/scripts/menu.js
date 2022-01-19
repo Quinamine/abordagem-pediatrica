@@ -16,24 +16,17 @@ const menu = {
 
     reticencias: () => {
         let menuSection = document.querySelector(".menu-reticencias");
-        let menuContainer = document.querySelector(".container-dos-tres-pontos");
+        let menuContainer = document.querySelector(".contentor-dos-tres-pontos");
     
         menuContainer.addEventListener("click", () => {
-            if(menuSection.classList.contains("activo")){
-                menuSection.classList.remove("activo");
-            }
-            else {
-                menuSection.classList.add("activo");
-            }
+            menuSection.classList.add("activo");
         })
     
-        menuClosers = document.querySelectorAll("header, .body-row");
+        menuClosers = document.querySelectorAll("header, main");
         
         for (const closer of menuClosers) {
             closer.addEventListener("click", ()=> {
-                if(menuSection.classList.contains("active")){
-                    menuSection.classList.remove("active");
-                }
+               menuSection.classList.remove("activo");  
             })
         }
     },

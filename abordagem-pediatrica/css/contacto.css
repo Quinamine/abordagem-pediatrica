@@ -1,91 +1,50 @@
- .linha-do-corpo {
-    padding: 0;
-}
-
 .main {
-    padding: 10px 4%;
+    margin: 0 4%;
 }
 
-.main > div {
-    max-width: 700px;
+.main h1 {
+    margin-top: 10px;
 }
 
-.main > div:first-child p {
-    margin-bottom: 10px;
-}
 
 .contentor-dos-contactos {
     display: flex;
     justify-content: space-around;
     align-items: center;
-    border-top: 1px solid #ddd;
-    
-}
-
-.contentor-dos-contactos p {
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    border-top: 1px solid #ddd; 
 }
 
 
-.contentor-dos-contactos  p:first-child {
+.contentor-dos-contactos p:first-child a {
+    display: block;
+    width: 45px;
+    height: 45px;
+
     display: flex;
-    align-items: center;
     justify-content: center;
-    font-size: 50px;
-    padding-top: 5px;
-    width: 50px;
-    height: 50px;
+    align-items: center;
+    padding-top: 20px;
+
+    font-size: 55px;
     font-weight: bold;
+    box-shadow: 0 0 8px #aaa;
     border-radius: 50%;
+    overflow: hidden;
+}
+
+
+.contentor-dos-contactos p:last-child a {
+    display: block;
     box-shadow: 0 0 8px #aaa;
-    color: blue;
-}
-
-.contentor-dos-contactos  p:last-child {
-    cursor: pointer;
-    box-shadow: 0 0 8px #aaa;
-    border-radius: 5px;
-    height: 40px;
-}
-
-.contentor-dos-contactos p a {
-    flex: 1;
-    text-align: center;
 }
 
 
-@media screen and (min-width: 600px) {
-    .main {
-        display: flex;
-        justify-content: space-between;
+@media screen and (min-width: 768px) {
+    footer {
+        width: 100%;
+        position: fixed;
+        bottom: 0;
     }
-
-
-    .contentor-dos-contactos {
-        align-items: center;
-        justify-items: center;
-    }
-
-    .contentor-dos-contactos  p:first-child {
-        font-size: 90px;
-        width: 80px;
-        height: 80px;
-        padding-top: 10px;
-        border-radius: 50%;
-        cursor: pointer;
-        margin-left: 20px;
-    }
-
-    .contentor-dos-contactos  p:last-child {
-        height: auto;
-        margin-left: 20px;
-        box-shadow: 0 0 0 #fff;
-        border: 1px solid #ddd;
-        border-radius: 0;
-    }
-    
 }
 
 

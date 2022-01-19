@@ -1,7 +1,5 @@
 
 /* MOBILE FIRST */
-
-
 body {
 	color: #333;
 	font-family: sans-serif, Arial, Helvetica, 'Source Sans Pro', sans-serif;
@@ -11,7 +9,6 @@ body {
 	color: #fff;
 	background-color: #FAA032;
 }
-
 
 a {
 	text-decoration: none;
@@ -26,7 +23,6 @@ nav a:visited {
 	text-decoration: none;
 }
 
-
 meter {
 	width: 100%;
 	position: fixed;
@@ -40,7 +36,6 @@ img {
 	margin: auto;
 }
 
-
 /* Omissão de elementos do Desktop */
 
 header nav, aside, ul.dropdown-menu, 
@@ -48,8 +43,6 @@ span.darv, .trecho-com-display-none-no-cel,
 .separador-do-rodape {
 	display: none;
 }
-
-
 
 /* linhas */
 header, footer {
@@ -60,7 +53,6 @@ header, footer {
 	width: 100%;
 	padding: 0 4%;
 }
-
 
 /* Cabecalho */
 
@@ -78,8 +70,6 @@ header {
 	margin: auto;
 }
 
-
-
 .linha-do-cabecalho .contentor-da-logo {
 	flex-basis: 72%;
 }
@@ -90,7 +80,6 @@ header {
 	color: #FAA032;
 	font-family: "Lobster", cursive, Arial, Helvetica, sans-serif;
 }
-
 
 /* SESSAO DE MENU-MOBILE */
 .linha-do-cabecalho .contentor-do-menu-hamburguer {
@@ -125,7 +114,6 @@ div.contentor-das-fatias-do-menu-hamburguer {
 	transition: all 150ms ease-out;
 }
 
-
 /* MENU ABERTO */
 .linha-do-cabecalho.com-menu-aberto .contentor-da-logo{
 	margin-top: 10px;
@@ -141,7 +129,6 @@ div.contentor-das-fatias-do-menu-hamburguer {
 	}
 }
 
-
 .linha-do-cabecalho.com-menu-aberto {
 	position: absolute;
 	top: 0;
@@ -155,9 +142,7 @@ div.contentor-das-fatias-do-menu-hamburguer {
 	border-bottom: 8px groove orange;
 	align-items: flex-start;
 	transition: height 150ms linear;
-
 }
-
 
 .linha-do-cabecalho.com-menu-aberto .contentor-do-menu-hamburguer {
 	border: none;
@@ -184,8 +169,6 @@ div.contentor-das-fatias-do-menu-hamburguer {
 	transition: transform 150ms ease-in;
 }
 
-
-
 /* MOSTRAR ITEMS DO MENU */
 .linha-do-cabecalho.com-menu-aberto nav {
 	display: block;
@@ -209,7 +192,6 @@ div.contentor-das-fatias-do-menu-hamburguer {
 	border-bottom: 1px solid rgb(77, 77, 77);
 }
 
-	
 .linha-do-cabecalho.com-menu-aberto nav ul li a{
 	display: block;
 	color: #fff;
@@ -219,18 +201,21 @@ div.contentor-das-fatias-do-menu-hamburguer {
 	background-color: rgba(219, 146, 57, .4);
 }
 
-
 /* SESSAO DE MENU RETICENCIAS */
 section.menu-reticencias {
-	display: none;
 	height: 30px;
+	border-bottom: 1px solid #ddd;
+	display: flex;
+	justify-content: flex-end;
+	max-width: 1024px;
 }
 
 div.contentor-dos-tres-pontos {
-    width:34px;
-    border-radius: 8px;
+    width: 34px;
+    border-radius: 50%;
     margin-right: 4%;
-    padding: 10px 5px; 
+	padding: 10px 5px;
+	display: flex; 
 }
 
 div.contentor-dos-tres-pontos:hover {
@@ -242,7 +227,7 @@ div.contentor-dos-tres-pontos > div {
     height: 4px;
     background-color: #888;
     border-radius: 3px;
-    margin: 1px;
+    margin: 2px;
 }
 
 
@@ -254,16 +239,16 @@ div.conteudo-do-menu-reticencias {
     background-color: #FFf;
     box-shadow: 0 0 5px #888;
     color: #888;
-    width: 0;
-    transition: width 150ms;
+	width: 0;
+	/*height: 0;*/
+    transition: width 100ms;
     overflow: hidden;
 }
 
-
 div.conteudo-do-menu-reticencias nav{
+	display: block !important;
     padding: 0px;
 }
-
 
 div.conteudo-do-menu-reticencias nav ul li {
     list-style: none !important;
@@ -271,31 +256,43 @@ div.conteudo-do-menu-reticencias nav ul li {
     display: flex;
 }
 
-div.conteudo-do-menu-reticencias nav ul li a{
+div.conteudo-do-menu-reticencias nav ul li a {
     flex: 1;
     padding: 10px 10px 10px 15px;
-    color: #555;
+	color: #333;
+	font-size: 14px;
+}
+
+div.conteudo-do-menu-reticencias nav ul li a:visited { 
+	color: #333;
 }
 
 /*** MENU RETICENCIAS ABERTO ****/
-
 section.menu-reticencias.activo
-div.conteudo-do-menu-reticencias, 
+div.conteudo-do-menu-reticencias,
+div.menu-reticencias.activo
 div.conteudo-do-menu-reticencias nav {
-    right: 1%;
-    display: block;
-    width: 75vw;
+    right: 4% !important;
+    display: block !important;
+	width: 50vw !important;
+	z-index: 5;
 }
 
 
-/* CORPO DA PÁGINA */
 
-.main {
+
+.linha-do-corpo {
+	padding: 0;
 	margin-top: 30px;
 	border-top: 1px solid #ddd;
 }
-/* Titulos */
 
+.artigo {
+    padding-top: 10px !important;
+    padding-bottom: 10px !important;
+}
+
+/* Titulos */
 .main h1 {
 	font-size: 1.5rem;
 	margin-bottom: 10px;
@@ -337,7 +334,6 @@ abbr {
 
 .main li, dl, dd, dt {margin: 10px 0;}
 
-
 .destaque {
 	padding: 10px;
 	background-color: #f4f4f4;
@@ -347,14 +343,11 @@ p {
 	position: relative;
 }
 
-
 .bold {
 	font-weight: bold;
 }
 
 /* Listas */
-
-
 .main ol {list-style: decimal inside;}
 
 .main ul {list-style: disc inside;}
@@ -364,7 +357,6 @@ table {
     border-collapse: collapse;
     width: 100%;
 }
-
 
 .main table th,
 .main table td {
@@ -382,9 +374,7 @@ tfoot td {
 	background-color: #EEE;
 }
 
-
 /* RODAPÉ */
-
 .linha-do-rodape {
 	padding-top: 10px;
 	padding-bottom: 10px;
@@ -408,16 +398,133 @@ footer a {
 }
 
 
+/*** Links de compartilhamento **/
+.contentor-dos-links-de-partilha {
+    display: flex;
+	align-items: center;
+	margin: 20px 0;
+}
+
+.contentor-dos-links-de-partilha a {
+    display: flex;
+    align-items: center;
+	font-size: 12px;
+	justify-content: center;
+	color: inherit;
+}
+
+.contentor-dos-links-de-partilha a:first-child {
+    margin-right: 40px;
+}
+
+.contentor-dos-links-de-partilha img {
+    display: inline-block;
+    width: 22px;
+    height: 22px;
+	margin-left: 5px !important;
+	border: none !important;
+}
+
+
+/** CAIXA DE DIÁLOGO */
+.contentor-da-caixa-de-dialogo {
+    display: none;
+}
+
+.caixa-de-dialogo {
+    width: 100%;
+    background-color: #fff;
+    font-size: 14px;
+	position: absolute;
+    bottom: 15vh;
+    z-index: 8;
+    border-radius: 5px;
+}
+
+.caixa-de-dialogo h4 {
+	margin: 0;
+    padding: 10px;
+	text-align: center;
+	font-size: 16px;
+    font-weight: normal;
+    border-bottom: 1px solid #ddd;
+}
+
+.caixa-de-dialogo nav {
+    border: none;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+
+.caixa-de-dialogo nav a {
+    width: 100%;
+    padding: 20px 10px;
+    flex: 1;
+    color: inherit;
+    text-align: center;
+}
+
+.caixa-de-dialogo button {
+    border: none;
+    width: 100%;
+    font-size: 18px;
+    color: red;
+    background-color: inherit;
+	border-top: 1px solid #ddd;
+    padding: 10px;
+    cursor: pointer;
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+}
+
+/* Abrir caixa de Dialogo */
+
+.contentor-da-caixa-de-dialogo.abrir {
+    display: block;
+    width: 100%;
+    max-width: 300px;
+    margin: auto;
+    position: relative;
+}
+
+
+body.com-caixa-de-dialogo-aberta,
+body.com-caixa-de-dialogo-aberta .linha-do-corpo {
+	background-color: rgba(219, 146, 57, .4);
+	
+}
+
+
+body.com-caixa-de-dialogo-aberta a.chave-de-dialogo {
+	color: #FAA032;
+}
+
+
+@media screen and (max-width: 600px) {
+	body.com-caixa-de-dialogo-aberta {
+		overflow: hidden;
+	}
+
+	.caixa-de-dialogo {
+		bottom: 25vh;
+	}
+
+	section.menu-reticencias.activo
+	div.conteudo-do-menu-reticencias,
+	div.menu-reticencias.activo
+	div.conteudo-do-menu-reticencias nav {
+		width: 75vw !important;
+	}
+}
 
 /** RESPONSIVIDADE **/
 
-@media screen and (min-width: 700px) {
 
-		/*header nav, aside, ul.dropdown-menu, 
-span.darv, .trecho-com-display-none-in-mobile,
-.separador-do-rodape {
-	display: none; 
-}*/
+@media screen and (min-width: 700px) {
 	/** Omissão de elementos Mobilie */
 
 	.contentor-do-menu-hamburguer,
@@ -431,15 +538,12 @@ span.darv, .trecho-com-display-none-in-mobile,
 		display: inline;
 	}
 
-	
 	.linha {
 		max-width: 1024px;
 		margin: 0 auto;
 	}
 	
-	
 	/* Cabecalho */
-	
 	.linha-do-cabecalho {
 		flex-wrap: nowrap;
 		padding: 0;
@@ -447,10 +551,8 @@ span.darv, .trecho-com-display-none-in-mobile,
 		align-items: center;
 	}
 
-	
 	.linha-do-cabecalho .contentor-da-logo {
 		flex-basis: initial;
-		text-align: center;
 		width: 100%;
 		padding: 10px;
 	}
@@ -487,7 +589,6 @@ span.darv, .trecho-com-display-none-in-mobile,
 
 	.linha-do-cabecalho nav ul li a.activo {
 		border-bottom: 2px solid #eee;
-		border-radius: 4px;
 		color: #fff;
 	}
 
@@ -496,45 +597,29 @@ span.darv, .trecho-com-display-none-in-mobile,
 	}
 
 	/** Main **/
-	body {
-		background-color: #f4f4f4;
-	}
+	
 
 	.linha-do-corpo {
-		padding-right: 10px;
-		padding-left: 10px;
-	}
-
-	.main  {
-		box-shadow: 0 0 8px #ddd;
 		background-color: #fff;
+		padding: 30px 0;
 	}
 
-	.main .artigo {
+	.main {
 		max-width: 700px;
-		margin: 0 auto; 
-		padding: 10px 15px;
+		margin: 0 auto !important;
+		padding: 0 15px;
+		border: none !important;
 	}
-
 
 	/* Listas */
-
 	.main ol, .main ul {
 		padding-left: 5%;
 	}
-
-	/** Index ***/
-	.corpo .banner-rotativo, 
-	.corpo .banner-rotativo + nav {
-		box-shadow: 0 0 8px #ddd;
-	}
-
 
 	/* Rodape */
 	footer a {
 		display: inline-block;
 	}
-
 }
 
 
@@ -553,15 +638,74 @@ span.darv, .trecho-com-display-none-in-mobile,
 	}
 }
 
-
 @media screen and (min-width: 1024px) {
-	.main {
+	body {
+		background-color: #f4f4f4;
+	}
+
+	.linha-do-corpo {
+		box-shadow: 0 0 8px #ddd;
 		margin: 40px auto;
-        padding: 40px;
+        padding: 30px;
         border-radius: 15px;
 	}
 
-	.linha-do-cabecalho .contentor-da-logo {
-		text-align: left;	
+	.menu-reticencias {
+		display: none !important;
+	}
+
+
+	/** DROPDOWN MENU ***/
+
+	li.dropdown-container {
+		position: relative;
+	}
+	
+	li.dropdown-container.on a.target {
+		color: #fff;
+	}
+	
+	li.dropdown-container ul.dropdown-menu {
+		display: none ;
+		transition: all 150ms ease-out;
+	}
+	
+	li.dropdown-container.on ul.dropdown-menu {
+		display: block;
+		position: absolute;
+		top: 35px;
+		background-color: #555;
+		border: 1px solid #888;
+		border-top: none;
+		box-shadow: 0 0 5px #555;
+		transition: all 300ms;
+		z-index: 10;
+		width: 100%;
+
+		border-bottom: 8px groove #FAA032 !important;
+	}
+	
+	
+	li.dropdown-container.on ul.dropdown-menu li{
+		line-height: 3;
+		border-top: 1px solid #666;
+		display: flex;
+		transition: all 150ms;
+		position: relative;
+	}
+	
+	
+	li.dropdown-container.on ul.dropdown-menu li a {
+		color: #fff;
+		padding: 7px 10px;
+		flex: 1;
+		overflow: hidden;
+		font-size: 0.75rem;
+	}
+	
+	li.dropdown-container.on ul.dropdown-menu li a:hover {
+		border-bottom:none;
 	}
 }
+
+

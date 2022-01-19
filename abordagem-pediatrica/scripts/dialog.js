@@ -2,7 +2,7 @@
 window.addEventListener("load", () => {
     /* Caixa de Diálogo */
     let dialogWrapper = document.querySelector(".contentor-da-caixa-de-dialogo");
-    let openerLink = document.querySelector(".veja-a-magica");
+    let openerLink = document.querySelector(".chave-de-dialogo");
     let closerButton = document.querySelector(".caixa-de-dialogo button");
 
     
