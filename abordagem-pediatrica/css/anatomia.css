@@ -14,7 +14,7 @@ a {
 	text-decoration: none;
 }
 
-a:active,  a:visited {
+a:visited {
 	color:#FAA032;
 }
 
@@ -197,9 +197,9 @@ div.contentor-das-fatias-do-menu-hamburguer {
 	color: #fff;
 }
 
-.linha-do-cabecalho.com-menu-aberto nav ul li a:hover{
+/*.linha-do-cabecalho.com-menu-aberto nav ul li a:hover{
 	background-color: rgba(219, 146, 57, .4);
-}
+}*/
 
 /* SESSAO DE MENU RETICENCIAS */
 section.menu-reticencias {
@@ -319,13 +319,13 @@ div.conteudo-do-menu-reticencias nav {
 .main h6 {
 	margin: 20px 0px 0px 0px;
 	line-height: 1.5;
-	font-weight: bold;
+	color: initial;
 }
 
 /* Paragrafos e trechos de texto */
-.main p, dl, dd, dt, .main li{line-height: 1.6;}
+.main p, dl, dd, dt, .main li{line-height: 1.5;}
 
-.main p, .main ul, .main dl {margin: 20px 0;}
+.main p, .main ul, .main dl, .main ol {margin: 20px 0;}
 
 abbr {
 	text-decoration: none;
@@ -336,7 +336,14 @@ abbr {
 
 .destaque {
 	padding: 10px;
-	background-color: #f4f4f4;
+	background-color: #f4f4f4;	
+	color: #000;
+}
+
+.main  .subdestaque {
+	margin-left: 5% !important;
+	font-size: 0.75rem;
+	border-left: 1px solid #faa032;
 }
 
 p {
@@ -345,12 +352,31 @@ p {
 
 .bold {
 	font-weight: bold;
+	color: #555;
+}
+
+
+
+.nota {
+	text-align: center;
+}
+
+.slogan-do-misau {
+	font-size: 1.125rem;
+	font-weight: bold;
+	color: #faa032;
+	text-align: center;
 }
 
 /* Listas */
 .main ol {list-style: decimal inside;}
 
 .main ul {list-style: disc inside;}
+
+/* Listas */
+.main ol, .main ul {
+	padding-left: 5%;
+}
 
 /* Tabelas */
 table {
@@ -362,16 +388,22 @@ table {
 .main table td {
 	line-height: 1.5;
 	padding: 5px;
-	border: 1px solid #888;
+	border: 1px solid #ddd;
+	vertical-align: middle;
 }
 
 .main table thead tr:first-child th{
-	background-color: #FAA032;
+	background-color: #eee;
 }
 
 .main table thead tr:nth-child(2) th, 
 tfoot td {
-	background-color: #EEE;
+	background-color: #fafafa;
+}
+
+tfoot td {
+	font-size: 0.75rem;
+	color: #555;
 }
 
 /* RODAPÉ */
@@ -529,13 +561,22 @@ body.com-caixa-de-dialogo-aberta a.chave-de-dialogo {
 
 	.contentor-do-menu-hamburguer,
 	header nav a span.trecho-dedoses,
-	header nav a span.doseador  {
+	header nav a span.doseador, .trecho-com-display-none-no-pc {
 		display: none !important;
 	}
 
 	header nav a span.darv,
-	.separador-do-rodape {
+	.separador-do-rodape,
+	.trecho-com-display-none-no-cel {
 		display: inline;
+	}
+
+	.nota {
+		background-color: #eee;
+	}
+	
+	.nota + p {
+		margin-top: 0;
 	}
 
 	.linha {
@@ -611,10 +652,7 @@ body.com-caixa-de-dialogo-aberta a.chave-de-dialogo {
 		border: none !important;
 	}
 
-	/* Listas */
-	.main ol, .main ul {
-		padding-left: 5%;
-	}
+	
 
 	/* Rodape */
 	footer a {
@@ -666,7 +704,7 @@ body.com-caixa-de-dialogo-aberta a.chave-de-dialogo {
 	}
 	
 	li.dropdown-container ul.dropdown-menu {
-		display: none ;
+		display: none;
 		transition: all 150ms ease-out;
 	}
 	
@@ -678,7 +716,7 @@ body.com-caixa-de-dialogo-aberta a.chave-de-dialogo {
 		border: 1px solid #888;
 		border-top: none;
 		box-shadow: 0 0 5px #555;
-		transition: all 300ms;
+		transition: all 150ms ease-out;
 		z-index: 10;
 		width: 100%;
 
@@ -700,7 +738,6 @@ body.com-caixa-de-dialogo-aberta a.chave-de-dialogo {
 		padding: 7px 10px;
 		flex: 1;
 		overflow: hidden;
-		font-size: 0.75rem;
 	}
 	
 	li.dropdown-container.on ul.dropdown-menu li a:hover {

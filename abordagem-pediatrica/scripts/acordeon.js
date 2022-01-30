@@ -1,21 +1,7 @@
 
 
 
-const Acordeon = {
-
-    changeHeaderBg: () => {
-        /** MOUSEHOVER DO CABELHO OU TITULO DO ACORDEON */
-        titulos_da_galeria.forEach( titulo => {
-            titulo.addEventListener("mouseover", () => {
-                titulo.classList.add("hover");
-            })
-    
-            titulo.addEventListener("mouseleave", () => {
-                titulo.classList.remove("hover");
-            })  
-        })
-    },
-    
+const Acordeon = {  
     showImages: (i) => {
         let galeria = document.querySelectorAll(".galeria");
     
@@ -53,9 +39,6 @@ function init() {
     galeria = document.querySelectorAll(".galeria"); /* CountImgs */
 
     titulos_da_galeria = document.querySelectorAll(".titulo-da-galeria"); // ChangeHeaderBg 
-
-    /** MUDANÇA DO FUNDO DO CABEÇALHO DO ACORDEON ON MOUSEOVER */
-    Acordeon.changeHeaderBg();
 
     /** MOSTRAR AS IMAGENS  */
     titulos_da_galeria.forEach( titulo => {

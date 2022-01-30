@@ -4,13 +4,13 @@
         <meta charset="UTF-8" />
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Calculadora de Doses Pediátricas - Abordagem Pediátrica</title>
+        <title>Calculadora de doses - Abordagem Pediátrica</title>
 
         <meta name="robots" content="index, follow"/>
 
         <meta name="description" content="Calcula automaticamente doses terapêuticas dos medicamentos mais usuais com base no Formulário Nacional de Medicamentos, bastando o usuário inserir o peso, a idade e selecionar o nome do medicamento e subsequentemente a dose e a posologia aparecem na secção correspondente."/>
 
-        <meta name="keywords" content="Arteméter e Lumefantrina, Quinina, Fenoximetil, Amoxicilina, Penicilina Benzatínica, Penicilina Procaina, Ácido Clavulânico, Cefuroxima, Ceftriaxona, Azitromicina, Eritromicina, Ácido Nalidixico, Cotrimoxazol, Metronidazol, Cloranfenicol, Nitrofurantoina, Albendazol, Mebendazol, Fluconazol, Ketoconazol, Nistatina, Aciclovir, Paracetamol, Diclofenac, Ibuprofeno, Codeina, Butilescopolamina, Bisacodil, Lactulose, Parafina liquida, Predinisolona, Hidrocortisona, Vitamina A, Vitamina C, Vitamina B12, Clorfeniramina, Imunoglobulina Anti-Rábica, Vacina Anti-Rábica, Diazepam." />
+        <meta name="keywords" content="Arteméter e lumefantrina, Quinina, Fenoximetil, Amoxicilina, Penicilina benzatínica, Penicilina procaína, Ácido clavulânico, Cefuroxima, Ceftriaxona, Azitromicina, Eritromicina, Ácido nalidíxico, Cotrimoxazol, Metronidazol, Cloranfenicol, Nitrofurantoina, Albendazol, Mebendazol, Fluconazol, Ketoconazol, Nistatina, Aciclovir, Paracetamol, Diclofenac, Ibuprofeno, Codeina, Butilescopolamina, Bisacodil, Lactulose, Parafina liquida, Vitamina A, Vitamina C, Vitamina B12, Clorfeniramina, Imunoglobulina anti-rábica, Vacina anti-rábica, Diazepam." />
 
         <meta name="author" content="Adérito Félix Quinamine" />
 
@@ -21,7 +21,7 @@
         <meta property="og:type" content="website" />
         <meta property="og:site_name" content="Abordagem Pediátrica"/>
 
-        <meta property="og:title" content="Calculadora de Doses Pediátricas "/>
+        <meta property="og:title" content="Calculadora de doses"/>
         <meta property="og:description" content="Calcula automaticamente doses terapêuticas dos medicamentos mais usuais com base no Formulário Nacional de Medicamentos, bastando o usuário inserir o peso, a idade e selecionar o nome do medicamento e subsequentemente a dose e a posologia aparecem na secção correspondente." />
 
         <meta property="og:image" content="https://www.quinamine.github.io/abordagem-pediatrica/" />
@@ -50,7 +50,8 @@
         <!-- SCRIPTS -->
         <script src="../scripts/menu.js"></script>
  
-        <script src="../scripts/calculadora.js"></script>
+		
+		<script src="../scripts/calculator.js"></script>
 
         
 
@@ -103,11 +104,8 @@
 								<a href="calculadora-de-doses.html" class="target activo" >Calculadora<span class="trecho-dedoses"> de doses</span></a>
 								
 								<ul class="dropdown-menu">
-									<li><a href="suporte/bases-da-calculadora.html">Doses por kg</a></li>
-
-									<li><a href="suporte/objectivo-e-publico-alvo-da-calculadora-de-doses.html">Público alvo</a></li>
-
-									<li><a href="suporte/docfiles/formulario-nacional-de-medicamentos" download="Formulário Nacional de Medicamentos">Baixar FNM</a></li>
+									<li><a href="#">Doses por kg</a></li>				
+									<li><a href="#">Baixar FNM</a></li>
 								</ul>
 							</li>
 
@@ -118,7 +116,7 @@
 								</a>
 								<!-- Dropdown menu -->
 								<ul class="dropdown-menu">
-									<li><a href="suporte/abreviacoes-farmacologicas-na-abordagem-antiretroviral.html#tarv">Siglas dos ARVs</a></li>
+									<li><a href="#">Siglas dos ARVs</a></li>
 								</ul>
 							</li>
 
@@ -137,21 +135,19 @@
 				<!-- MENU RETICENCIAS -->
 				<section class="menu-reticencias">
 					<div class="contentor-dos-tres-pontos">
-						<div class="ponto primeiro-ponto"></div>
-						<div class="ponto primeiro-ponto"></div>
-						<div class="ponto primeiro-ponto"></div>
+						<div></div>
+						<div></div>
+						<div></div>
 					</div>
 
 					<div class="conteudo-do-menu-reticencias">
 						<nav>
 							<ul>
-								<li><a href="#">Doses por kg</a></li>
+								<li><a href="suporte/instrucoes-de-utilizacao-da-calculadora-de-doses.html">Instruções de utilização</a></li>
 
-								<li><a href="#">Público alvo</a></li>
+								<li><a href="suporte/doses-por-kg-utilizadas-pela-calculadora.html">Doses por kg</a></li>
 
-								<li><a href="#">Ajuda</a></li>
-
-								<li><a href="docfiles/formulario-nacional-de-medicamentos.pdf" download="Formulario-Nacional-de-Medicamentos">Baixar FNM</a></li>
+								<li><a href="#">Baixar FNM</a></li>
 							</ul>
 						</nav>
 					</div>	
@@ -166,11 +162,11 @@
                         <form id="calculadora">
 							<fieldset class="dados-da-crianca">
 
-								<legend align="center">Dados da Criança</legend>
+								<legend align="center">Dados da criança</legend>
 
 								<p class="ancestral-de-idade">
 
-									<input type="number" name="idade" id="idade" placeholder="Idade" required min="0"/> 
+									<input type="number" name="idade" id="idade" placeholder="Idade" min="0" /> 
 
 									<select class="input-extension year-ext" id="ext">
 										<option value="m">meses</option>
@@ -180,146 +176,147 @@
 
 								<p class="ancestral-de-peso"> 
 
-									<input type="number" name="peso" placeholder="Peso" min="2" id="peso" max="36"/> 
+									<input type="number" name="peso" placeholder="Peso" min="3" id="peso" max="45"/> 
 									<select class="input-extension weight-ext">
-										<option>Kg</option>
+										<option>kg</option>
 									</select>
 								</p>
 							</fieldset>
 							<fieldset>
-								<legend align="center">Especificação do Fármaco</legend>
+								<legend align="center">Especificação do fármaco</legend>
 
 								<p class="ancestral-de-farmacos">
-									<select id="farmaco">
+									<select id="farmacos">
 										<option value="select" selected>Escolher fármaco</option>
 
-										<optgroup label="1. ANTI-MALÁRICOS">
-											<option value="AL" data-dos="140"  data-pos="2" data-forma="cp" data-tipodose="padrao" data-camporequired="both">(1) 805 Arteméter e Lumefantrina (Coartem) 140mg Comp</option>
+										<optgroup label="1. PENICILINAS">
+											<option  value="fenox-cp" data-doseporkg="50" data-dos="500" data-pos="3" data-forma="cp" data-tipodose="dosecomp" data-camporequired="peso">(1) 8A1 Fenoximetilpenicilina 500mg Comp.</option>
 
-											<option value="Quinina-300" data-doseporkg="30" data-dos="300" data-pos="3" data-forma="cp" data-tipodose="padrao" data-camporequired="both">(2) 8011 Quinina 300mg Comp</option>
-										</optgroup>	
+											<option value="fenox-susp" data-doseporkg="50" data-dos="250" data-pos="3" data-dil="5" data-forma="susp" data-tipodose="dosesusp" data-camporequired="peso">(1) 8A2 Fenoximetilpenicilina 250mg/5ml Susp.</option>
 
-										<optgroup label="2. PENICILINAS">
-											<option  value="Fenox-cp" data-doseporkg="50" data-dos="500" data-pos="3" data-forma="cp" data-tipodose="dosecomp" data-camporequired="peso">(1) 8A1 Penicilina V (Fenoximetil) 500mg Comp</option>
+											<option  value="benzatina" data-doseporkg="50000" data-dos="2400000"  data-pos="1" data-forma="inj-im" data-tipodose="parenteral" data-camporequired="peso">(1) 8A4 Penicilina benzatínica 2.4 milhões U.I Inj.</option>
 
-											<option value="Fenox-susp" data-doseporkg="50" data-dos="250" data-pos="3" data-dil="5" data-forma="susp" data-tipodose="dosesusp" data-camporequired="peso">(1) 8A2 Penicilina V (Fenoximetil) 250mg/5ml Susp</option>
+											<option value="procaina" data-doseporkg="50000" data-dos="3000000" data-pos="1" data-forma="inj-im" data-tipodose="parenteral" data-camporequired="both">(1) 8A6 Penicilina procaína 3 milhões U.I Inj.</option>
 
-											<option  value="Benzatina" data-doseporkg="50000" data-dos="2400000"  data-pos="1" data-forma="inj-IM" data-tipodose="parenteral" data-camporequired="peso">(1) 8A4 Penicilina Benzatinica 2.4 milhões U.I Inj</option>
+											<!--<option value="Amoxicilina-cp" data-doseporkg="50" data-dos="250" data-pos="3" data-forma="cp" data-tipodose="dosecomp" data-camporequired="peso">(1) 8A7 Amoxicilina 250mg Comp.</option>-->
 
-											<option value="Procaina" data-doseporkg="50000" data-dos="3000000" data-pos="1" data-forma="inj-IM" data-tipodose="parenteral" data-camporequired="both">(1) 8A6 Penicilina Procaina 3 milhões U.I Inj</option>
+											<option value="amoxicilina-susp" data-doseporkg="50" data-dos="250" data-pos="3" data-dil="5" data-forma="susp" data-tipodose="dosesusp" data-camporequired="peso">(1) 8A8 Amoxicilina 250mg/5ml Susp.</option>
 
-											<!--<option value="Amoxicilina-cp" data-doseporkg="50" data-dos="250" data-pos="3" data-forma="cp" data-tipodose="dosecomp" data-camporequired="peso">(1) 8A7 Amoxicilina 250mg Comp</option>-->
+											<option value="clavamox-375" data-doseporkg="50" data-dos="375" data-pos="3" data-forma="cp" data-tipodose="dosecomp" data-camporequired="peso">(3) 8A10 Amoxicilina e ácido clavulânico 375mg Comp.</option>
 
-											<option value="Amoxicilina-susp" data-doseporkg="50" data-dos="250" data-pos="3" data-dil="5" data-forma="susp" data-tipodose="dosesusp" data-camporequired="peso">(1) 8A8 Amoxicilina 250mg/5ml Susp</option>
-
-											<option value="Clavamox-375" data-doseporkg="50" data-dos="375" data-pos="3" data-forma="cp" data-tipodose="dosecomp" data-camporequired="peso">(3) 8A10 Amoxicilina e Ácido Clavulânico 375mg Comp</option>
-
-											<option value="Clavamox-susp" data-doseporkg="50" data-dos="312.5" data-pos="3" data-dil="5" data-forma="susp" data-tipodose="dosesusp" data-camporequired="peso">(3) 8A12 Amoxicilina e Ácido Clavulânico 312.5mg/5ml Susp</option>
+											<option value="clavamox-susp" data-doseporkg="50" data-dos="312.5" data-pos="3" data-dil="5" data-forma="susp" data-tipodose="dosesusp" data-camporequired="peso">(3) 8A12 Amoxicilina e ácido clavulânico 312.5mg/5ml Susp.</option>
 
 											<!--A dose de Flucloxacilina é de 12-25mg/kg/dose ou 36-75mg/kg divida em 3 tomas -->
-											<option value="Flucloxacilina-susp" data-doseporkg="36" data-dos="125" data-pos="3" data-dil="5" data-forma="susp" data-tipodose="dosesusp" data-camporequired="peso">(3) 8A15 Flucloxacilina 125mg/5ml Susp</option>
+											<option value="flucloxacilina-susp" data-doseporkg="36" data-dos="125" data-pos="3" data-dil="5" data-forma="susp" data-tipodose="dosesusp" data-camporequired="peso">(3) 8A15 Flucloxacilina 125mg/5ml Susp.</option>
 										</optgroup>
 
-										<optgroup label="3. CEFALOSPORINAS">
+										<optgroup label="2. CEFALOSPORINAS">
 
 											<!--A dose de Cefuroxima é de 10-15mg/kg/dose ou 20mg-30mg/kg divida em 2 tomas -->
-											<option value="Cefuroxima" data-doseporkg="20" data-dos="250" data-pos="2" data-forma="cp" data-tipodose="dosecomp" data-camporequired="peso">(3) 8B1 Cefuroxima 250mg Comp</option>
+											<option value="cefuroxima" data-doseporkg="20" data-dos="250" data-pos="2" data-forma="cp" data-tipodose="dosecomp" data-camporequired="peso">(3) 8B1 Cefuroxima 250mg Comp.</option>
 
-											<option value="Cefuroxima-susp" data-doseporkg="20" data-dos="125" data-pos="2" data-dil="5" data-forma="susp" data-tipodose="dosesusp" data-camporequired="peso">(3) 8B1 Cefuroxima 125mg/5ml Susp</option>
+											<option value="cefuroxima-susp" data-doseporkg="20" data-dos="125" data-pos="2" data-dil="5" data-forma="susp" data-tipodose="dosesusp" data-camporequired="peso">(3) 8B1 Cefuroxima 125mg/5ml Susp.</option>
 
-											<option value="Ceftriaxona" data-doseporkg="50" data-dos="1000" data-pos="1" data-dil="4" data-forma="inj-IM" data-tipodose="parenteral" data-camporequired="peso">(3) 8B8 Ceftriaxona 1g/4ml Inj</option>
+											<option value="ceftriaxona" data-doseporkg="50" data-dos="1000" data-pos="1" data-dil="4" data-forma="inj-im" data-tipodose="parenteral" data-camporequired="peso">(3) 8B8 Ceftriaxona 1g/4ml Inj.</option>
 
 										</optgroup>
 
-										<optgroup label="4. MACRÓLIDOS">
+										<optgroup label="3. MACRÓLIDOS">
 
-											<option value="Azitromicina-cp" data-doseporkg="10" data-dos="500" data-pos="1" data-forma="cp" data-tipodose="dosecomp" data-camporequired="peso">(3) 8F1 Azitromicina 500mg Comp</option>
+											<option value="azitromicina-cp" data-doseporkg="10" data-dos="500" data-pos="1" data-forma="cp" data-tipodose="dosecomp" data-camporequired="peso">(3) 8F1 Azitromicina 500mg Comp.</option>
 
-											<option value="Azitromicina" data-doseporkg="10" data-dos="250" data-pos="1" data-dil="5" data-forma="susp" data-tipodose="dosesusp" data-camporequired="peso">(3) 8F2 Azitromicina 200mg/5ml Susp</option>
+											<option value="azitromicina" data-doseporkg="10" data-dos="250" data-pos="1" data-dil="5" data-forma="susp" data-tipodose="dosesusp" data-camporequired="peso">(3) 8F2 Azitromicina 200mg/5ml Susp.</option>
 
-											<option value="Eritromicina-susp" data-doseporkg="50" data-dos="250" data-pos="3" data-dil="5" data-forma="susp" data-tipodose="dosesusp" data-camporequired="peso">(2) 8F8 Eritromicina 250mg/5ml Susp</option>
+											<option value="eritromicina-susp" data-doseporkg="50" data-dos="250" data-pos="3" data-dil="5" data-forma="susp" data-tipodose="dosesusp" data-camporequired="peso">(2) 8F8 Eritromicina 250mg/5ml Susp.</option>
 										</optgroup>
 
-										<optgroup label="5. QUINOLONAS">
+										<optgroup label="4. QUINOLONAS">
 
-											<option value="Nalidixico-cp" data-doseporkg="50" data-dos="500" data-pos="3" data-forma="cp" data-tipodose="dosecomp" data-camporequired="peso">(2) 8H1 Ácido Nalidíxico 500mg Comp</option>
+											<option value="nalidixico-cp" data-doseporkg="50" data-dos="500" data-pos="3" data-forma="cp" data-tipodose="dosecomp" data-camporequired="peso">(2) 8H1 Ácido nalidíxico 500mg Comp.</option>
 
-											<option value="Nalidixico-susp" data-doseporkg="50" data-dos="300" data-pos="3" data-dil="5" data-forma="susp" data-tipodose="dosesusp" data-camporequired="peso">(2) 8H2 Ácido Nalidixico 300mg/5ml Susp</option>
+											<option value="nalidixico-susp" data-doseporkg="50" data-dos="300" data-pos="3" data-dil="5" data-forma="susp" data-tipodose="dosesusp" data-camporequired="peso">(2) 8H2 Ácido nalidixico 300mg/5ml Susp.</option>
 
 										</optgroup>
 
 										<!--A dose de CTZ é de 20mg/kg/dose ou 40mg/kg divida em 2 tomas -->
-										<optgroup label="6. SULFAMIDAS">
-											<option value="CTZ-cp" data-doseporkg="40" data-dos="480
-											" data-pos="2" data-forma="cp" data-tipodose="padrao" data-camporequired="idade">(1) 8I1 Cotrimoxazol 480mg Comp</option>
+										<optgroup label="5. SULFAMIDAS">
+											<option value="ctz-cp" data-doseporkg="40" data-dos="480
+											" data-pos="2" data-forma="cp" data-tipodose="padrao" data-camporequired="idade">(1) 8I1 Cotrimoxazol 480mg Comp.</option>
 
-											<option value="CTZ-susp" data-doseporkg="40" data-dos="240" data-pos="2" data-dil="5" data-forma="susp" data-tipodose="padrao" data-camporequired="idade">(1) 8I3 Cotrimoxazol 240mg/5ml Susp</option>
+											<option value="ctz-susp" data-doseporkg="40" data-dos="240" data-pos="2" data-dil="5" data-forma="susp" data-tipodose="padrao" data-camporequired="idade">(1) 8I3 Cotrimoxazol 240mg/5ml Susp.</option>
 										</optgroup>
+
+										<optgroup label="6. ANFENICÓIS E OUTRO(S)">
+											<option value="cloranfenicol-susp" data-doseporkg="50" data-dos="250" data-pos="3" data-dil="5" data-forma="susp" data-tipodose="dosesusp" data-camporequired="peso">(2) 8K3 Cloranfenicol 250mg/5ml Susp.</option>
+
+											<option value="nitrofurantoina" data-doseporkg="3" data-dos="50" data-pos="3" data-forma="cp" data-tipodose="dosecomp" data-camporequired="peso">(1) 8K8 Nitrofurantoína 50mg Comp.</option>
+										</optgroup> 
 
 										<optgroup label="7. NITROIMIDAZÓLICO(S)">
 
 											<!--<option value="Metronidazol-cp" data-doseporkg="22.5" data-dos="250
-											" data-pos="3" data-forma="cp" data-tipodose="dosecomp" data-camporequired="peso">(1) 8K4 Metronidazol 250mg Comp</option>-->
+											" data-pos="3" data-forma="cp" data-tipodose="dosecomp" data-camporequired="peso">(1) 8K4 Metronidazol 250mg Comp.</option>-->
 
-											<option value="Metronidazol-susp" data-doseporkg="22.5" data-dos="200" data-pos="3" data-dil="5" data-forma="susp" data-tipodose="dosesusp" data-camporequired="peso">(1) 8K7 Metronidazol 200mg/5ml Susp</option>
+											<option value="metronidazol-susp" data-doseporkg="22.5" data-dos="200" data-pos="3" data-dil="5" data-forma="susp" data-tipodose="dosesusp" data-camporequired="peso">(1) 8K7 Metronidazol 200mg/5ml Susp.</option>
 
-											<option value="Metronidazol-susp-125" data-doseporkg="22.5" data-dos="125" data-pos="3" data-dil="5" data-forma="susp" data-tipodose="dosesusp" data-camporequired="peso">(1) 8K7 Metronidazol 125mg/5ml Susp</option>
+											<option value="metronidazol-susp-125" data-doseporkg="22.5" data-dos="125" data-pos="3" data-dil="5" data-forma="susp" data-tipodose="dosesusp" data-camporequired="peso">(1) 8K7 Metronidazol 125mg/5ml Susp.</option>
 
 										</optgroup> 
 
-										<optgroup label="8. ANFENICÓIS E OUTRO(S)">
-											<option value="Cloranfenicol-susp" data-doseporkg="50" data-dos="250" data-pos="3" data-dil="5" data-forma="susp" data-tipodose="dosesusp" data-camporequired="peso">(2) 8K3 Cloranfenicol 250mg/5ml Susp</option>
+										<optgroup label="8. ANTI-HELMINTICOS">
+											<option value="albendazol-200" data-dos="200" data-pos="1" data-forma="cp" data-tipodose="padrao" data-camporequired="idade">(1) 8N1 Albendazol 200mg Comp.</option>
 
-											<option value="Nitrofurantoina" data-doseporkg="3" data-dos="50" data-pos="3" data-forma="cp" data-tipodose="dosecomp" data-camporequired="peso">(1) 8K8 Nitrofurantoina 50mg Comp</option>
-										</optgroup> 
+											<option value="albendazol-400" data-dos="400" data-pos="1" data-forma="cp" data-tipodose="padrao" data-camporequired="idade">(1) 8N1 Albendazol 400mg Comp.</option>
 
-										<optgroup label="9. ANTI-HELMINTICOS">
-											<option value="Albendazol-200" data-dos="200" data-pos="1" data-forma="cp" data-tipodose="padrao" data-camporequired="idade">(1) 8N1 Albendazol 200mg Comp</option>
-
-											<option value="Albendazol-400" data-dos="400" data-pos="1" data-forma="cp" data-tipodose="padrao" data-camporequired="idade">(1) 8N1 Albendazol 400mg Comp</option>
-
-											<option value="Mebendazol-100" data-dos="100" data-pos="2" data-forma="cp" data-tipodose="padrao" data-camporequired="peso">(1) 8N4 Mebendazol 100mg Comp</option>
+											<option value="mebendazol-100" data-dos="100" data-pos="2" data-forma="cp" data-tipodose="padrao" data-camporequired="peso">(1) 8N4 Mebendazol 100mg Comp.</option>
 											
-											<!---<option>(1) 8N4 Mebendazol 500mg Comp</option>-->
-											<option  value="Praziquantel" data-doseporkg="40" data-dos="600" data-pos="1" data-forma="cp" data-tipodose="dosecomp" data-camporequired="peso">(1) 8N6 Praziquantel 600mg Comp</option>
+											<!---<option>(1) 8N4 Mebendazol 500mg Comp.</option>
+											<option  value="praziquantel" data-doseporkg="40" data-dos="600" data-pos="1" data-forma="cp" data-tipodose="dosecomp" data-camporequired="peso">(1) 8N6 Praziquantel 600mg Comp.</option>
+											-->
 										</optgroup>
+
+										<optgroup label="9. ANTI-MALÁRICOS">
+											<option value="al" data-dos="140"  data-pos="2" data-forma="cp" data-tipodose="padrao" data-camporequired="both">(1) 805 Arteméter e lumefantrina (Coartem) 140mg Comp.</option>
+
+											<option value="quinina" data-doseporkg="30" data-dos="300" data-pos="3" data-forma="cp" data-tipodose="padrao" data-camporequired="both">(2) 8011 Quinina 300mg Comp.</option>
+										</optgroup>	
 
 										<optgroup label="10. ANTI-FÚNGICOS">
 
-											<option value="Fluconazol-200" data-doseporkg="6" data-dos="200" data-pos="1" data-forma="cp" data-tipodose="dosecomp" data-camporequired="peso">(3) 8Q3 Fluconazol 200mg Comp</option>
+											<option value="fluconazol" data-doseporkg="3" data-dos="200" data-pos="1" data-forma="cp" data-tipodose="dosecomp" data-camporequired="peso">(3) 8Q3 Fluconazol 200mg Comp.</option>
 
-											<option value="Griseofulvina" data-doseporkg="10" data-dos="500" data-pos="1" data-forma="cp" data-tipodose="dosecomp" data-camporequired="peso">(3) 8Q5 Griseofulvina 500mg Comp</option>
+											<option value="griseofulvina" data-doseporkg="10" data-dos="500" data-pos="1" data-forma="cp" data-tipodose="dosecomp" data-camporequired="peso">(3) 8Q5 Griseofulvina 500mg Comp.</option>
 
-											<option value="Ketoconazol" data-doseporkg="3" data-dos="200" data-pos="1" data-forma="cp" data-tipodose="dosecomp" data-camporequired="peso">(3) 8Q6 Ketoconazol 200mg Comp</option>
+											<option value="ketoconazol" data-doseporkg="3" data-dos="200" data-pos="1" data-forma="cp" data-tipodose="dosecomp" data-camporequired="peso">(3) 8Q6 Ketoconazol 200mg Comp.</option>
 
-											<option value="Nistatina" data-doseporkg="1" data-dos="100000" data-pos="1" data-dil="1" data-forma="susp" data-tipodose="dosesusp" data-camporequired="idade">(1) 8Q7 Nistatina 100.000 U.I/ml Susp</option>
+											<option value="nistatina" data-doseporkg="1" data-dos="100000" data-pos="1" data-dil="1" data-forma="susp" data-tipodose="dosesusp" data-camporequired="idade">(1) 8Q7 Nistatina 100.000 U.I/ml Susp.</option>
 										</optgroup>
 
 										<optgroup label="11. ANTIVIRAIS">
-											<option value="Aciclovir" data-doseporkg="20" data-dos="400" data-pos="3" data-forma="cp" data-tipodose="padrao" data-camporequired="idade">8R1 Aciclovir 400mg Comp</option>
+											<option value="aciclovir" data-doseporkg="20" data-dos="400" data-pos="3" data-forma="cp" data-tipodose="padrao" data-camporequired="idade">8R1 Aciclovir 400mg Comp.</option>
 										</optgroup>
 
 										<optgroup label="12. ANALGÉSICOS-ANTI-PIRÉTICOS, AINES">
-											<option value="Paracetamol-cp" data-doseporkg="30" data-dos="500" data-pos="3" data-forma="cp" data-tipodose="padrao" data-camporequired="both">(0) 7A3 Paracetamol 500mg Comp</option>
+											<option value="paracetamol-cp" data-doseporkg="30" data-dos="500" data-pos="3" data-forma="cp" data-tipodose="padrao" data-camporequired="both">(0) 7A3 Paracetamol 500mg Comp.</option>
 
-											<option value="Paracetamol-inj" data-doseporkg="15" data-dos="1000" data-pos="3" data-dil="100" data-forma="inj-EV" data-tipodose="parenteral" data-camporequired="peso">(2) 7A4 Paracetamol 1g/100ml Inj</option>
+											<option value="paracetamol-inj" data-doseporkg="15" data-dos="1000" data-pos="3" data-dil="100" data-forma="inj-ev" data-tipodose="parenteral" data-camporequired="peso">(2) 7A4 Paracetamol 1g/100ml Inj.</option>
 
-											<option value="Paracetamol-sup" data-doseporkg="30" data-dos="250" data-pos="3" data-forma="sup" data-tipodose="padrao" data-camporequired="both">(2) 7A5 Paracetamol 250mg Sup</option>
+											<option value="paracetamol-sup" data-doseporkg="30" data-dos="250" data-pos="3" data-forma="sup" data-tipodose="padrao" data-camporequired="both">(2) 7A5 Paracetamol 250mg Sup.</option>
 
 											<!--Dose de Paracetamol susp: 10mg/kg/dose ou 30mg/kg/dia-->
-											<option value="Paracetamol-susp" data-doseporkg="30" data-dos="120" data-pos="3" data-dil="5" data-forma="susp" data-tipodose="dosesusp" data-camporequired="peso">(0) 7A6 Paracetamol 120mg/5ml Susp</option>
+											<option value="paracetamol-susp" data-doseporkg="30" data-dos="120" data-pos="3" data-dil="5" data-forma="susp" data-tipodose="dosesusp" data-camporequired="peso">(0) 7A6 Paracetamol 120mg/5ml Susp.</option>
 
-											<option value="Diclofenac" data-doseporkg="3" data-dos="50" data-pos="3" data-forma="cp" data-tipodose="dosecomp" data-camporequired="peso">(2) 14A1 Diclofenac 50mg Comp</option>
+											<option value="diclofenac" data-doseporkg="3" data-dos="50" data-pos="3" data-forma="cp" data-tipodose="dosecomp" data-camporequired="peso">(2) 14A1 Diclofenac 50mg Comp.</option>
 
-											<option value="Ibuprofeno-cp" data-doseporkg="20" data-dos="200" data-pos="3" data-forma="cp" data-tipodose="dosecomp" data-camporequired="peso">(2) 14A3 Ibuprofeno 200mg Comp</option>
+											<option value="ibuprofeno-cp" data-doseporkg="20" data-dos="200" data-pos="3" data-forma="cp" data-tipodose="dosecomp" data-camporequired="peso">(2) 14A3 Ibuprofeno 200mg Comp.</option>
 
-											<option value="Ibuprofeno-susp" data-doseporkg="20" data-dos="100" data-pos="3" data-dil="5" data-forma="susp" data-tipodose="dosesusp" data-camporequired="peso">(2) 14A4 Ibuprofeno 100mg/5ml Susp</option>
+											<option value="ibuprofeno-susp" data-doseporkg="20" data-dos="100" data-pos="3" data-dil="5" data-forma="susp" data-tipodose="dosesusp" data-camporequired="peso">(2) 14A4 Ibuprofeno 100mg/5ml Susp.</option>
 
 											<optgroup label="12.1. ANALGÉSICOS OPIÓIDES">
 												<!-- A dose de codeina é 1mg/kg de 8/8h ou 3mg/kg/3 tomas-->
-												<option value="Codeina" data-doseporkg="1" data-dos="30" data-pos="3" data-forma="cp" data-tipodose="padrao" data-camporequired="both">(2) 7BI Codeína  30mg Comp</option>
+												<option value="codeina" data-doseporkg="3" data-dos="30" data-pos="3" data-forma="cp" data-tipodose="padrao" data-camporequired="both">(2) 7BI Codeína 30mg Comp.</option>
 
-												<option value="Codeina-susp" data-doseporkg="3" data-dos="25" data-pos="3" data-dil="5" data-forma="susp" data-tipodose="padrao" data-camporequired="both">(2) 7B2 Codeína  25mg/5ml Susp
+												<option value="codeina-susp" data-doseporkg="3" data-dos="25" data-pos="3" data-dil="5" data-forma="susp" data-tipodose="padrao" data-camporequired="both">(2) 7B2 Codeína  25mg/5ml Susp.
 												</option>
 								
 											</optgroup>
@@ -327,94 +324,89 @@
 										</optgroup>
 
 										<optgroup label="13. ANTI-ESPASMÓDICOS">
-											<option value="Buscopam" data-dos="10" data-pos="3"  data-forma="cp" data-tipodose="padrao" data-camporequired="idade">(0) 2B1 Butilescopolamina 10mg Comp</option>
+											<option value="buscopam" data-dos="10" data-pos="3"  data-forma="cp" data-tipodose="padrao" data-camporequired="idade">(0) 2B1 Butilescopolamina 10mg Comp.</option>
 										</optgroup>
 
 										<optgroup label="14. ANTI-EMÉTICOS">
-											<option value="meto" data-dos="10" data-pos="3" data-forma="cp" data-tipodose="padrao" data-camporequired="both">(1) 2C1 Metoclopramida 10mg Comp</option>
+											<option value="metoclopramida-cp" data-dos="10" data-pos="3" data-forma="cp" data-tipodose="padrao" data-camporequired="both">(1) 2C1 Metoclopramida 10mg Comp.</option>
 
-											<option value="Metoclopramida-inj" data-dos="10" data-pos="3" data-dil="2" data-forma="inj-IM" data-tipodose="parenteral" data-camporequired="both">(2) 2C2 Metoclopramida 10mg/2ml Inj</option>
+											<option value="metoclopramida-inj" data-dos="10" data-pos="3" data-dil="2" data-forma="inj-im" data-tipodose="parenteral" data-camporequired="both">(2) 2C2 Metoclopramida 10mg/2ml Inj.</option>
 
-											<option value="meto" data-doseporkg="0.5" data-dos="5" data-pos="3" data-dil="5" data-forma="susp" data-tipodose="dosesusp" data-camporequired="both">(2) 2C3 Metoclopramida 5mg/5ml Xpe</option>
+											<option value="metoclopramida-susp" data-doseporkg="0.5" data-dos="5" data-pos="3" data-dil="5" data-forma="susp" data-tipodose="dosesusp" data-camporequired="both">(2) 2C3 Metoclopramida 5mg/5ml Xpe.</option>
 										</optgroup>
 
 										<optgroup label="15. LAXANTES">
-											<option value="Bisacodil" data-dos="5" data-pos="1" data-forma="cp" data-tipodose="padrao" data-camporequired="idade">(1) 2D1 Bisacodil 5mg Comp</option>
+											<option value="bisacodil" data-dos="5" data-pos="1" data-forma="cp" data-tipodose="padrao" data-camporequired="idade">(1) 2D1 Bisacodil 5mg Comp.</option>
 
-											<option value="Lactulose" data-dos="100" data-pos="2" data-forma="susp" data-tipodose="padrao" data-camporequired="idade">(3) 2D6 Lactulose 100mg Xpe</option>
+											<option value="lactulose" data-dos="100" data-pos="2" data-forma="susp" data-tipodose="padrao" data-camporequired="idade">(3) 2D6 Lactulose 100mg Xpe.</option>
 
-											<option value="Parafina_liquida" data-dos="100" data-pos="1" data-forma="susp" data-tipodose="padrao" data-camporequired="idade">(0) 2D7 Parafina Liquida 100g Emulsão</option>
+											<option value="parafina_liquida" data-dos="100" data-pos="1" data-forma="susp" data-tipodose="padrao" data-camporequired="idade">(0) 2D7 Parafina líquida 100g Emulsão</option>
 										</optgroup>
 
+										<!--
 										<optgroup label="16. CORTICOSTERÓIDES">
-											<option value="Hidrocortisona" data-dos="100" data-pos="3" data-dil="3" data-forma="inj-EV" data-tipodose="parenteral" data-camporequired="idade">(1) 3A3 Hidrocortisona 100mg Inj</option>
+											<option value="hidrocortisona" data-dos="100" data-pos="3" data-dil="3" data-forma="inj-ev" data-tipodose="parenteral" data-camporequired="idade">(1) 3A3 Hidrocortisona 100mg Inj.</option>
 
-											<!--<option value="Predinisolona" data-doseporkg="2" data-dos="5" data-pos="3">(2) 3A4 Prednisolona 5mg Comp</option>-->
+										<option value="Predinisolona" data-doseporkg="2" data-dos="5" data-pos="3">(2) 3A4 Prednisolona 5mg Comp.</option>
 
-											<option value="Prednisolona-inj" data-doseporkg="2" data-dos="50" data-pos="3" data-dil="10" data-forma="inj-EV" data-tipodose="parenteral" data-camporequired="peso">(1) 3A5 Prednisolona 50mg/10ml Inj</option>
+											<option value="Prednisolona-inj" data-doseporkg="2" data-dos="50" data-pos="3" data-dil="10" data-forma="inj-ev" data-tipodose="parenteral" data-camporequired="peso">(1) 3A5 Prednisolona 50mg/10ml Inj.</option>
 										</optgroup>
+										-->
 
 										<optgroup label="17. ANTI-ASMÁTICOS">
-											<option value="Aminofilina" data-doseporkg="10" data-dos="100" data-pos="3" data-forma="cp" data-tipodose="dosecomp" data-camporequired="peso">(1) 5A1 Aminofilina 100mg Comp</option>
+											<option value="aminofilina" data-doseporkg="10" data-dos="100" data-pos="3" data-forma="cp" data-tipodose="dosecomp" data-camporequired="peso">(1) 5A1 Aminofilina 100mg Comp.</option>
 
 
-											<option value="Aminofilina-inj" data-doseporkg="6" data-dos="240" data-pos="3" data-dil="10" data-forma="inj-EV" data-tipodose="parenteral" data-camporequired="peso">(1) 5A1 Aminofilina 240mg/10ml Inj</option>
+											<option value="aminofilina-inj" data-doseporkg="6" data-dos="240" data-pos="3" data-dil="10" data-forma="inj-ev" data-tipodose="parenteral" data-camporequired="peso">(1) 5A1 Aminofilina 240mg/10ml Inj.</option>
 											
-											<option value="Salbutamol-cp"  data-dos="2" data-pos="3" data-forma="cp" data-tipodose="padrao" data-camporequired="idade">(2) 5A9 Salbutamol 2mg Comp</option>
+											<option value="salbutamol-cp"  data-dos="2" data-pos="3" data-forma="cp" data-tipodose="padrao" data-camporequired="idade">(2) 5A9 Salbutamol 2mg Comp.</option>
 											
-											<option value="Salbutamol-neb" data-dos="5" data-pos="5" data-forma="aerossol" data-tipodose="padrao" data-camporequired="peso">(2) 5A11 Salbutamol 5mg/ml Sol. nebulizável</option>
+											<option value="salbutamol-neb" data-dos="5" data-pos="5" data-forma="aerossol" data-tipodose="padrao" data-camporequired="peso">(2) 5A11 Salbutamol 5mg/ml Sol. nebulizável</option>
 
-											<option value="Salbutamol-susp" data-dos="100" data-pos="3" data-forma="susp" data-tipodose="padrao" data-camporequired="idade">(2) 5A12 Salbutamol 2mg/5ml Xpe</option>
+											<option value="Salbutamol-susp" data-dos="100" data-pos="3" data-forma="susp" data-tipodose="padrao" data-camporequired="idade">(2) 5A12 Salbutamol 2mg/5ml Xpe.</option>
 										</optgroup>
 
-										<optgroup label="18. ANTI-ANÉMICOS">
-											<option value="Acido-folico" data-dos="5" data-pos="1" data-forma="cp" data-tipodose="padrao" data-camporequired="both">(2) 6A1 Ácido Fólico 5mg Comp</option>
+										<optgroup label="18. ANTI-ANÉMICOS">										
+											<option value="gluconato-de-ferro" data-doseporkg="6" data-dos="30" data-pos="2" data-dil="5" data-forma="susp" data-tipodose="dosesusp" data-camporequired="peso">(1) 6A4 Gluconato de ferro 30mg/5ml Xpe.</option>
 
-											<option value="Gluconato-de-ferro" data-doseporkg="6" data-dos="30" data-pos="2" data-dil="5" data-forma="susp" data-tipodose="dosesusp" data-camporequired="peso">(1) 6A4 Gluconato de Ferro 30mg/5ml Xpe.</option>
+											<option value="vitamina-b12" data-dos="1" data-pos="1" data-dil="1" data-forma="inj-im" data-tipodose="parenteral" data-camporequired="idade">(2) 6A5 Hidroxicobalamina (Vit. B12) 1mg/ml Inj.</option>
 
-											<option value="Vitamina-B12" data-dos="1" data-pos="1" data-dil="1" data-forma="inj-IM" data-tipodose="parenteral" data-camporequired="idade">(2) 6A5 Hidroxicobalamina (Vit. B12) 1mg/ml Inj</option>
+											<option value="sulfato-ferroso" data-dos="200" data-pos="1" data-forma="cp" data-tipodose="padrao" data-camporequired="idade">(1) 6A6 Sulfato Ferroso 200mg Comp.</option>
 
-											<option value="Sulfato-ferroso" data-dos="200" data-pos="1" data-forma="cp" data-tipodose="padrao" data-camporequired="idade">(1) 6A6 Sulfato Ferroso 200mg Comp</option>
-
-											<option value="Sulfato-ferroso-301" data-doseporkg="6" data-dos="300" data-pos="2" data-forma="cp" data-tipodose="dosecomp" data-camporequired="peso">(1) 6A7 Sulfato Ferroso  e Ácido Fólico 301mg Comp</option>
+											
 										</optgroup>
 
 										<optgroup label="19. VITAMINAS">
-											<option  value="Vitamina-C" data-dos="100" data-pos="1" data-forma="cp" data-tipodose="padrao" data-camporequired="idade">(1) 12DI Ácido Ascórbico (Vit. C) 100mg Comp</option>
+											<option  value="vitamina-c" data-dos="100" data-pos="1" data-forma="cp" data-tipodose="padrao" data-camporequired="idade">(1) 12DI Ácido Ascórbico (Vit. C) 100mg Comp.</option>
 
-											<option value="retinol" data-dos="200000" data-pos="1" data-forma="susp" data-tipodose="padrao" data-camporequired="idade">(1) 12D4 Axeroftol (Vit. A) 200.000 U.I Cáps</option>
+											<option value="retinol" data-dos="200000" data-pos="1" data-forma="susp" data-tipodose="padrao" data-camporequired="idade">(1) 12D4 Axeroftol (Vit. A) 200.000 U.I Cáps.</option>
 
-							
-											<option value="Complexo-B" data-pos="2" data-forma="cp" data-tipodose="padrao" data-camporequired="idade">(1) 12D6 Complexo B Comp</option>
-
-											<option value="Multivitaminas-cp" data-pos="2" data-forma="cp" data-tipodose="padrao" data-camporequired="idade">(0) 12D10 Multivitaminas Comp</option>
-
-											<option value="Multivitaminas-susp" data-pos="2" data-forma="susp" data-tipodose="padrao" data-camporequired="idade">(0) 12D11 Multivitaminas Xpe</option>
+											<option value="multivitaminas-susp" data-pos="2" data-forma="susp" data-tipodose="padrao" data-camporequired="idade">(0) 12D11 Multivitaminas Xpe.</option>
 											
 										</optgroup>
 
 										<optgroup label="20. ANTI-HISTAMÍNICOS">
-											<option value="Clorfeniramina-cp" data-doseporkg="0.4" data-dos="4" data-pos="3" data-forma="cp" data-tipodose="dosecomp" data-camporequired="peso">(1) 13A2 Clorfeniramina 4mg Comp</option>
+											<option value="clorfeniramina-cp" data-doseporkg="0.4" data-dos="4" data-pos="3" data-forma="cp" data-tipodose="dosecomp" data-camporequired="peso">(1) 13A2 Clorfeniramina 4mg Comp.</option>
 
-											<option value="Clorfeniramina-susp" data-doseporkg="0.4" data-dos="2" data-pos="3" data-dil="5" data-forma="susp" data-tipodose="dosesusp" data-camporequired="peso">(1) 13A3 Clorfeniramina 2mg/5ml Xpe</option>
+											<option value="clorfeniramina-susp" data-doseporkg="0.4" data-dos="2" data-pos="3" data-dil="5" data-forma="susp" data-tipodose="dosesusp" data-camporequired="peso">(1) 13A3 Clorfeniramina 2mg/5ml Xpe.</option>
 										</optgroup>
 
 										<optgroup label="21. VACINA(S) e IMUNOGLOBULINA(S)">
-											<option value="IGAR" data-doseporkg="20" data-dos="1000" data-pos="1" data-dil="5" data-forma="inj-IM" data-tipodose="parenteral" data-camporequired="peso">(3) 19A3 Imunoglobulina Anti-Rábica (IGAR) 1000 U.I/5ml Inj</option>
+											<option value="igar" data-doseporkg="20" data-dos="1000" data-pos="1" data-dil="5" data-forma="inj-im" data-tipodose="parenteral" data-camporequired="peso">(3) 19A3 Imunoglobulina anti-rábica (IGAR) 1000 U.I/5ml Inj.</option>
 
-											<option value="VAR" data-dos="1" data-pos="1" data-forma="inj-IM" data-tipodose="parenteral" data-camporequired="idade">(1) 19B6 Vacina Anti-Rábica 1ml Inj</option>
+											<option value="var" data-dos="1" data-pos="1" data-forma="inj-im" data-tipodose="parenteral" data-camporequired="idade">(1) 19B6 Vacina anti-rábica 1ml Inj.</option>
 										</optgroup>
 
 										<optgroup label="22. ANSIOLÍTICO(S) E HIPNOSETATIVO(S)">
-											<option value="Diazepam-inj" data-doseporkg="0.3" data-dos="10" data-pos="3" data-dil="2" data-forma="inj-EV" data-tipodose="parenteral" data-camporequired="peso">(1) 7I7 Diazepam 10mg/2ml Inj</option>
+											<option value="diazepam-inj" data-doseporkg="0.3" data-dos="10" data-pos="1" data-dil="2" data-forma="inj-ev" data-tipodose="parenteral" data-camporequired="peso">(1) 7I7 Diazepam 10mg/2ml Inj.</option>
 										</optgroup>
 									</select>
 								</p>
 							</fieldset>
 
 								<fieldset>
-								    <legend align="center">Dose e Posologia</legend>
-									<p class="resultado"></p>
+								    <legend align="center">Dose e posologia</legend>
+									<p id="dose-e-posologia"></p>
 								</fieldset>
 
 						</form>
@@ -440,21 +432,21 @@
 					<div class="instrucoes hide">
 				
 							<!--INTRODUCAO À CALCULADORA PROPRIAMENTE DITA-->
-								<h2>Apresentação da Calculadora e Modo de Utilização</h2>
+								<h2>Apresentação da Calculadora e modo de utilização</h2>
 
 							<p>
 								Basicamente a Calculadora apresenta três (3) secções diferentes: 
 							</p>
 
 							<ol class="bold">
-								<li>Dados da Criança;</li>
-								<li>Especificação do Fármaco;</li>
-								<li>Dose e Posologia.</li>
+								<li>Dados da criança;</li>
+								<li>Especificação do fármaco;</li>
+								<li>Dose e posologia.</li>
 							</ol>  
 							
 
 							<!--DESCRICAO DA SESSAO "DADOS DA CRIANCA"-->
-							<h3>1ª Secção: Dados da Criança</h3>
+							<h3>1ª secção: Dados da criança</h3>
 							<p>
 								Esta secção apresenta dois campos, nomeadamente:
 							</p>
@@ -471,20 +463,20 @@
 							</p>
 
 							<!--DESCRICAO DA SESSAO "ESPECIFICACAO DO MEDICAMENTO"-->
-							<h3>2ª Secção: Especificação do Fármaco</h3>
+							<h3>2ª secção: Especificação do fármaco</h3>
 							<p>
-								Nesta secção existe um campo de seleção com a lista dos medicamentos. Aqui SÓ é possível escolher o nome do fármaco a prescrever com base na lista disponível, não há opção de introduzir ou digitar dados. 
-								A lista dos medicamentos está seccionada em Classes (em maiúsculas) para facilitar a localização destes, e portanto o conhecimento da Classe à que um determinado fármaco pertence, torna mais rápida a sua localização.
+								Nesta secção existe um campo de seleção com a lista dos medicamentos. Aqui só é possível escolher o nome do fármaco a prescrever com base na lista disponível, não há opção de introduzir ou digitar dados. 
+								A lista dos medicamentos está seccionada em classes (em maiúsculas) para facilitar a localização destes, e portanto o conhecimento da classe à que um determinado fármaco pertence, torna mais rápida a sua localização.
 								A nomenclatura dos medicamentos está apresentada da seguinte forma:
 							</p>
 
 							<ul>
 								<li>
-									<span class="bold">Um número entre parênteses</span>, exemplo (0) que indica o <span class="bold">Nível de prescrição.</span> Saiba mais no Formulário Nacional de Medicamentos (FNM) clicando<a href="#" > aqui.</a>
+									<span class="bold">Um número entre parênteses</span>, exemplo (0) que indica o <span class="bold">nível de prescrição.</span> <a href="../download/Formulario-Nacional-de-Medicamentos-2007.pdf" download="Formulário Nacional de Medicamentos">Saiba mais no Formulário Nacional de Medicamentos</a>.
 								</li>
 
 								<li>
-									<span class="bold">Um código contendo 3 caracteres</span> (2 números nos extremos e uma letra no meio) indicando o <span class="bold">Código do fármaco no Formulário Nacional de Medicamentos.</span> Vide mais no <abbr title="Formulário Nacional de Medicamentos">FNM</abbr> <a href="#"> aqui.</a>
+									<span class="bold">Um código contendo 3 caracteres</span> (2 números nos extremos e uma letra no meio) indicando o <span class="bold">código do fármaco no FNM.</span> 
 								</li>
 
 								<li><span class="bold">Nome genérico internacional do fármaco, Dosagem e Forma farmacêutica.</span></li>
@@ -494,7 +486,7 @@
 								
 							</p>
 							<ul class="bold">
-								<li>(1) 8A2 Amoxicilina 250mg/5ml Susp</li>
+								<li>(1) 8A2 Amoxicilina 250 mg/5 ml Susp.</li>
 								
 							</ul>
 							<p>
@@ -503,23 +495,23 @@
 							<ul>
 								<li><span class="bold">(1)</span> – é o nível de prescrição;</span></li>
 
-								<li><span class="bold">8A8</span> – é o código do fármaco (Amoxicilina Suspensão) no <a href="#">FNM</a>;</li>
+								<li><span class="bold">8A8</span> – é o código de Amoxicilina em suspensão no FNM;</li>
 								
-								<li><span class="bold">Amoxicilina 250mg/5ml Susp</span> – são Nome genérico internacional, Dosagem e Forma farmacêutica respectivamente.</li>
+								<li><span class="bold">Amoxicilina 250 mg/5 ml Susp.</span> – são Nome genérico internacional, Dosagem e Forma farmacêutica respectivamente.</li>
 							</ul>
 							
 							<!--ILUSTRACAO DA SESSAO "ESPECIFICACAO DO FARMACO"-->
 							<div>
 							<picture>
-									<img src="../imagens/desktop/calculadora400.png" alt="Calculadora de Doses Pediátricas" />
+									<img src="../imagens/desktop/secao_ef.png" alt="Calculadora de doses" />
 							</picture>
 							</div>
 							<p class="destaque">
-								<span class="bold">Dica valiosa:</span> A lista de medicamentos pode ser extensa, portanto para flexibilizar a localização, recomendo que procure primeiro pela classe à qual o medicamento pertence e depois pelo medicamento dentro daquela classe. A título de exemplo, se alguém quisesse localizar <span class="bold">"Clorfeniramina 4 mg comp."</span>, bastava localizar a classe de <span class="bold">"ANTI-HISTAMÍNICOS"</span> e depois procurar pelo fármaco propriamente dito dentro da classe, neste caso Clorfeniramina.
+								<span class="bold">Observação:</span> A lista de medicamentos pode ser extensa, portanto para flexibilizar a localização, recomendo que procure primeiro pela classe à qual o medicamento pertence e depois pelo medicamento dentro daquela classe. A título de exemplo, se alguém quisesse localizar <span class="bold">"Clorfeniramina 4 mg comp."</span>, bastava localizar a classe de <span class="bold">"ANTI-HISTAMÍNICOS"</span> e depois procurar pelo fármaco propriamente dito dentro da classe, neste caso Clorfeniramina.
 							</p>
 
 							<!--DESCRICAO DA SESSAO "DOSE E POSOLOGIA"-->
-							<h3>3ª Secção: Dose e Posologia</h3>
+							<h3>3ª secção: Dose e posologia</h3>
 							<p>
 								Esta é uma secção com um campo inicialmente vazio, em que serão mostrados automaticamente os resultados (dose e posologia) e/ou outras informações relevantes do medicamento selecionado após o preenchimento correcto dos campos acima citados.
 							</p>
@@ -534,7 +526,7 @@
 							
 								Lembra:
 								<abbr title="Calculadora de Doses Pediátricas">CDP</abbr> ajuda-o a determinar basicamente quanto prescrever (dose e posologia) e não o que prescrever.
-								Para mais informações ou esclarecimento de dúvidas, visite a página de contacto no menu do site ou <a href="contato.html">aqui.</a>
+								Para mais informações ou esclarecimento de dúvidas, visite a página de contacto no menu do site ou <a href="contacto.html">aqui.</a>
 								
 							</p>
 
@@ -559,7 +551,7 @@
 
 								<div class="contentor-da-descricao">
 									<p>
-										Adérito Félix Quinamine, comumente conhecido por Dery, sou Técnico de Medicina Geral, formado no CFPS-Pemba, Desenvolvedor e Programador Web autodidata...ver mais&raquo;
+										Adérito Félix Quinamine, Técnico de Medicina Geral, formado no Centro de Formação do Pessoal de Saúde de Pemba, Desenvolvedor e Programador Web autodidata...ver mais&raquo;
 									</p>
 								</div>
 							</div>

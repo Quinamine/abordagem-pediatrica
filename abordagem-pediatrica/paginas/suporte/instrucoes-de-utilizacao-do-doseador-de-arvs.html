@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html dir="ltr" lang="pt-PT">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Instruções de utilização da Calculadora de doses - Abordagem Pediátrica</title>
+        <meta name="author" content="Adérito Félix Quinamine" />
+
+        <!-- DESIGN -->
+		<link rel="stylesheet" href="../../css/reset.css" />
+        <link rel="stylesheet" href="../../css/anatomia.css" />
+        <link rel="stylesheet" href="../../css/suporte.css">
+
+        <!-- FONTES -->
+		<link rel="preconnect" href="https://fonts.googleapis.com">
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+		<link href="https://fonts.googleapis.com/css2?family=Lobster&display=swap" rel="stylesheet">
+		
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+		<link href="https://fonts.googleapis.com/css2?family=PT+Serif:wght@400;700&family=Source+Sans+Pro:wght@400;700&display=swap" rel="stylesheet">
+
+
+        <!-- SCRIPTS -->
+        <script src="../../scripts/menu.js"></script>
+
+        <!-- Global site tag (gtag.js) - Google Analytics -->
+		<script async src="https://www.googletagmanager.com/gtag/js?id=G-TE35PF9T58"></script>
+		<script>
+			window.dataLayer = window.dataLayer || [];
+			function gtag(){dataLayer.push(arguments);}
+			gtag('js', new Date());
+
+			gtag('config', 'G-TE35PF9T58');
+		</script>	
+
+        <noscript>O seu navegador está sem permissão de execução de scripts. Isso certamente interfere completa e negativamente no funcionamento desta ferramenta. Habilite o JavaScript e tente novamente.</noscript>
+
+    </head>
+    <body>
+        
+        <div class="involucro">
+
+            <header>
+                <div class="linha linha-do-cabecalho">
+
+                    <div class="contentor-da-logo">
+						<h1><a href="../../index.html">Abordagem Pediátrica</a></h1>
+					</div>
+
+                    <!-- MOBILE MENU -->
+					<div class="contentor-do-menu-hamburguer">
+						<div class="contentor-do-titulo-do-menu-hamburguer">
+							<h4>menu</h4>
+						</div>
+						<div class="contentor-das-fatias-do-menu-hamburguer">
+							<div class="fatia f1"></div>
+							<div class="fatia f2"></div>
+							<div class="fatia f3"></div>
+						</div>
+					</div>
+
+                    <nav>
+
+						<ul>
+							<li>
+                                <a href="../../index.html">Página inicial</a>
+						    </li>
+
+							<li class="dropdown-container cdp">
+
+								<a href="../calculadora-de-doses.html" class="target" >Calculadora<span class="trecho-dedoses"> de doses</span></a>
+								
+								<ul class="dropdown-menu">
+									<li><a href="#">Doses por kg</a></li>				
+									<li><a href="#">Baixar FNM</a></li>
+								</ul>
+							</li>
+
+							<li class="dropdown-container darv">
+								<a href="../doseador-de-arvs.html" class="target  activo"> 
+									<span class="doseador">Doseador de ARVs</span>
+									<span class="darv">Darv</span>
+								</a>
+								<!-- Dropdown menu -->
+								<ul class="dropdown-menu">
+									<li><a href="#">Siglas dos ARVs</a></li>
+								</ul>
+							</li>
+
+							<li><a href="../preferencias.html">Preferências</a></li>
+
+							<li><a href="../sobremim.html">Sobre <span class="trecho-mim">mim</span></a></li>
+
+							<li><a href="../contacto.html">Contacto</a></li>
+						</ul>
+                    </nav>
+
+                    <div class="contentor-da-seta-de-volta">
+                        <div>
+                            <div class="traco1"></div>
+                            <div class="traco2"></div>
+                            <div class="traco3"></div>
+                        </div>
+                    </div>
+
+
+                    <div class="contentor-do-titulo">
+                        <h2>Centro de ajuda</h2>
+                    </div>
+                </div>
+            </header>
+
+            <div class="linha linha-do-corpo corpo">
+                <main class="main">
+					
+					<h1>Instruções de utilização do Doseador de ARVs</h1>
+
+                        <p>O Doseador de ARVs (Darv) é uma das calculadoras da plataforma Abordagem Pediátrica que de forma automática calcula e apresenta doses terapêuticas dos antirretrovirais para a população infanto-juvenil (crianças e jovens) em cuidados e tratamento. Esse é baseado na Tabela de Dosagem de ARVs actualmente vigente no Serviço Nacional de Saúde.</p>
+
+
+                        <h3>Conhecendo o Darv</h3>
+                        <p>O Darv possui três secções distintas, a saber:</p>
+                        <ol>
+                            <li>Dados da criança: com um campo para inserir o peso da criança;</li>
+
+                            <li>Especificação do ARV*: com um campo de seleção com a lista dos antirretrovirais. Aqui o usuário escolhe o antirretroviral do qual pretende calcular a dose. 
+                                <p class="destaque subdestaque"><span class="bold">Observação:</span> A lista dos antirretrovirais também inclui alguns antibióticos profiláticos, mas para fins de enfatização refiramo-nos à esta secção como "Especificação do ARV".</p>
+                            </li>
+
+                            <li>Dose e posologia: com um campo inicialmente vazio em que serão mostrados automaticamente a dose e a posologia do antirretroviral selecionado de acordo com o peso inserido.</li>
+                        </ol>
+                        
+                            <h4>Apresentação da Dose</h4>
+
+                            <p>Normalmente a dose é apresentada numa mini-tabela com cinco (5) linhas e número váriavel de colunas.</p>
+
+                            <p>A 1ª linha possui duas células ou colunas (<span class="bold">Dose Manhã e Dose Noite</span>). 
+							
+							<p>Na 2ª linha abaixo da célula "Dose manhã" é mostrada a dose do ARV que deve ser tomada ou administrada de manhã e abaixo da célula "Dose Noite" é mostrada a dose do ARV que deve ser tomada ou administrada a noite.</p>
+
+                            <p>Na 3ª linha apresenta-se a unidade de medição da dose (exemplo: cps ou ml se o fármaco for em suspensão e/ou xarope).</p>
+
+                            <p>Na 6ª linha é indicada a quantidade de comprimidos ou frascos que deve ser fornecida ao paciente de acordo com o tipo de dispensa.  A primeira célula da linha mostra o número de comprimidos ou frascos a fornecer ao paciente se a dispensa for mensal (DM) e a segunda célula mostra o número de comprimidos ou frascos que deve ser fornecido ao paciente se a dispensa for trimestral (DT).</p>
+
+                            <p>
+                                As linhas 4 e 5 são titulos da 6ª linha, isto é, indicam o tipo de Dispensa.
+                            </p>
+
+                            <h3>Situações em que a dose aparece como traço horizontal</h3>
+                            <p>O traço deve ser interpretado como <span class="bold">“Não aplicável”</span>. Abaixo segue a descrição. Existem três situações em que a dose aparece como traço:</p>
+
+                            <ol>
+                                <li><span class="bold">Traço só na célula correspondente à Dose Noite</span> – neste caso significa que não há dose nocturna ou seja a dose deve ser tomada só de manhã. Por exemplo, A OMS recomenda que o ABC/3TC seja administrado uma vez/dia.</li>
+
+                                <li><span class="bold">Traço só na célula correspondente à Dose Manhã</span> – significa que não há dose matinal, o fármaco só deve ser tomado a noite. Exemplo EFV 200mg.</li>
+
+                                <li>
+                                    <span class="bold">Traços em ambas células (Dose Manhã e Dose Noite)</span> – significando que não deve ser tomado ou administrado. As possiveis razões podem ser duas (2):
+                                    <ol class="sublista-ordenada instrucoes-darv">
+                                        
+                                        <li>
+											A composição farmacológica do Antiretroviral é insuficiente para o peso ou exigiria a toma de muitos comprimidos (o que pode comprometer a adesão). Por exemplo, o ABC/3TC de 120mg/60mg está indicado para crianças com peso de até 24.9 kg. A partir dos 25 kg a criança já pode tomar o ABC/3TC 600/300mg, uma vez/dia.
+
+										</li>
+
+                                        
+                                        <li>
+                                            A composição farmacológica do antiretroviral é demais para o peso.
+                                            Por exemplo, o ABC/3TC de 600mg/300mg está indicado apenas para crianças com peso a partir de 25 kg e abaixo disso não é aplicável (recomenda-se o ABC/3TC de 120mg/60mg).
+                                        </li>
+                                    </ol>
+                                </li>
+                            </ol>
+
+                            <p>
+                                Nas situações em que a dose se apresenta como traços em ambas células (Dose manhã e Dose noite), o Doseador de ARV geralmente mostra uma mensagem de sugestão indicando o mesmo fármaco porém com composição farmacológica aplicável para o peso inserido.
+                            </p>
+                            <picture>
+                                <source media="(min-width: )" srcset="">
+                                <img src="" alt="">
+                            </picture>
+    
+                        <!--SLOGAN DO MISAU"-->
+                        <p class="slogan-do-misau">O Nosso Maior Valor é a Vida</p>
+    
+                 </main>
+            </div>
+
+            <footer>
+                <div class="linha linha-do-rodape">
+
+					<p>Desenvolvido por <a href="../sobremim.html">Adérito Félix Quinamine</a> 
+						<span class="separador-do-rodape">|</span> 
+						&copy; <a href="./../index.html" class="website">Abordagem Pediátrica</a>  2021 &minus; 2022
+					
+				</div>
+            </footer>
+        </div>
+    </body>
+</html>

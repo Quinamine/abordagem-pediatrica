@@ -1,6 +1,7 @@
 
 /*** Sumir com elementos Desktop ***/
 
+
 .linha-do-corpo nav,
 .instrucoes {
     display: none !important;
@@ -9,12 +10,13 @@
 
 .main h1 {
     padding: 5px;
-    margin: 20px 4%;
+    margin: 0 4% 20px 4%;
     background-color: #eee;
     border-radius: 5px;
 }
 
 .main .contentor-da-calculadora {
+    padding-top: 20px;
     border: 1px solid #ddd;
     border-top: none;
 }
@@ -48,33 +50,48 @@
     background-color: rgba(240, 240, 240, .7);
 }
 
-.contentor-da-calculadora form p.resultado {
-    border: none;
-}
-
 .contentor-da-calculadora form p:hover {
     border: 1px solid #faa032;
+}
+
+.contentor-da-calculadora form p#dose-e-posologia {
+    border: none; 
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+}
+
+.contentor-da-calculadora form p.dose-e-posologia:hover {
+    border: none;
 }
 
 .contentor-da-calculadora form p * {
     border: none;
     outline: none;
-    font-weight: bold;
     font-size: 0.875rem;
     background-color: rgba(240, 240, 240, .5);
 }
 
 
 .contentor-da-calculadora form p input,
-p.ancestral-de-farmacos select {
+p.ancestral-de-farmacos select{
     padding: 8px 10px;
 }
 
+.contentor-da-calculadora p#dose-e-posologia output {
+    width: 100%;
+    padding: 6.5px 10px;
+}
+
+.contentor-da-calculadora p#dose-e-posologia output a,
+p#dose-e-posologia output a {
+    color: inherit;
+}
 
 .contentor-da-calculadora form p select.input-extension {
     padding: 8px 4px;
+    min-width: 72px;
 }
-
 
 
 .contentor-da-calculadora form p input {
@@ -126,7 +143,7 @@ p.ancestral-de-farmacos select {
     .contentor-da-calculadora {   
         border-radius: 10px;
         max-width: 425px;
-        padding: 15px 15px 0 15px;
+        padding: 15px 15px 0 15px !important;
         box-shadow: 0 0 8px #555;
         margin: 0 auto;
     }
@@ -182,15 +199,14 @@ p.ancestral-de-farmacos select {
         font-size: 0.875rem;
     }
 
-    .main .instrucoes.darv {
-        max-height: 406px !important;
+    .main .instrucoes picture img{
+        border: 2px solid #ddd;
+        border-radius: 8px;
     }
 
-    .main .instrucoes.darv .subdestaque {
-        margin-left: 5% !important;
-        font-style: italic;
-        font-size: 0.75rem;
-        font-weight: bold;
+
+    .main .instrucoes.darv {
+        max-height: 406px !important;
     }
 
     .instrucoes.darv .sublista-ordenada {
@@ -211,13 +227,6 @@ p.ancestral-de-farmacos select {
     .main .instrucoes h4,
     .main .instrucoes h5 {
         font-size: 1rem;
-    }
-
-    .slogan-do-misau {
-        font-size: 1.125rem;
-        font-weight: bold;
-        color: #faa032;
-        text-align: center;
     }
     
     /** Sobre mim */
@@ -261,3 +270,25 @@ p.ancestral-de-farmacos select {
 }
 
 
+/*** SESSAO JS ***/
+
+.observacao {
+    color: brown;
+}
+
+output.alerta {
+    color: #555;
+    border-top: thin solid #ddd !important;
+}
+
+output.alerta.obs {
+    color: inherit;
+}
+
+.destacar {
+    color: #333 !important;
+}
+
+p.hide {
+    display: none !important;
+}

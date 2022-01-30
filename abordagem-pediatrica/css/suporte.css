@@ -1,0 +1,195 @@
+/** CSS DE INSTRUCOES */
+
+
+/* Títulos */
+.main h1 {
+    font-weight: initial !important;
+    color: initial !important;
+}
+
+.main h1 {
+    text-align: left;
+    margin: 10px 0;
+}
+
+header h2 {
+    font-weight: bold;
+}
+
+
+/* Listas */
+.sublista-ordenada.instrucoes-darv {
+   list-style: none;
+}
+
+.sublista-ordenada.instrucoes-darv li:first-child::before {
+    content: '3.1. ';
+ }
+
+
+ .sublista-ordenada.instrucoes-darv li:last-child::before {
+    content: '3.2. ';
+ }
+
+
+ /* Trechos de texto */
+.subdestaque {
+    padding-left: 8px;
+    font-style: normal !important;
+}
+
+.main img {
+    border: 1px solid #ddd;  
+}
+
+
+@media screen and (min-width: 600px) {
+    .main img {
+        border: 2px solid #ddd;
+        max-width: 300px;
+    }
+}
+
+
+@media screen and (max-width: 699px) {
+    header {
+        border-bottom: none !important;
+        position: fixed;
+        top: 0;
+        width: 100%;
+        z-index: 8;
+        background-color:#D27832;
+    }
+    
+    .linha-do-cabecalho {
+        align-items: center;
+        justify-content: flex-start;
+        flex-direction: row !important;
+    }
+    
+    .linha-do-cabecalho nav, .contentor-da-logo,
+    .contentor-do-menu-hamburguer {
+        display: none !important;
+    }
+    
+    .linha-do-cabecalho h2 {
+        color: #fff;
+        font-size: 18px;
+    }
+    
+    .contentor-da-seta-de-volta {
+        border-radius: 50%;
+        width: 40px;
+        margin-right: 10px;
+        margin-left: -2%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        clip-path: circle(45%);
+      
+    }
+    
+    .contentor-da-seta-de-volta:hover {
+        background-color: #faa032;
+    }
+    
+    .contentor-da-seta-de-volta > div div {
+        width: 30px;
+        height: 3px;
+        margin: 5px;
+        background-color: #fff;
+    }
+    
+    .contentor-da-seta-de-volta div.traco1 {
+        transform: rotate(-50deg) translateX(-7px);
+        width: 10px;
+    }
+    
+    .contentor-da-seta-de-volta div.traco2 {width: 15px;}
+    
+    .contentor-da-seta-de-volta div.traco3 {
+        transform: rotate(50deg) translateX(-7px);;
+        width: 10px;
+    }
+    
+    /* Linha do corpo */
+    .linha-do-corpo {
+        padding: 30px 4%;
+    }
+}
+
+
+@media screen and (min-width: 700px) {
+    .linha-do-cabecalho .contentor-da-seta-de-volta,
+    .linha-do-cabecalho .contentor-do-titulo,
+    img.hide-on-pc {
+        display: none;
+    }
+  
+    .main, .contentor-da-secao-ef {
+        position: relative;
+    }
+
+    .main picture.first-child,
+    .main picture.second-child {
+        padding: 10px;
+        position: absolute;
+        top: 63px;
+        right: 0;
+    }
+
+    .main picture.second-child {
+        top: 218px;
+    }
+
+    .main .short {
+        max-width: 380px;
+        margin-right: 20px;
+    }
+
+    .main p.short {
+        display: inline-block;
+    }
+
+    .main li.short {
+        max-width: 310px;
+    }
+
+    .main img {
+        border-radius: 8px;
+        margin: initial;
+    }
+}
+
+
+/** CSS DE TABELA */
+.contentor-da-tabela {
+    max-width: 500px;
+    margin: auto;
+}
+
+.contentor-da-tabela  h1 {
+    margin-bottom: 20px;
+}
+
+
+.contentor-da-tabela table th{
+    text-align: left;
+    color: #000;
+}
+
+.contentor-da-tabela table td{
+    color: #555;
+}
+
+
+
+
+.contentor-da-tabela table .classe {
+    background-color: #fafafa;
+    vertical-align: middle;
+}
+
+p.ou {
+    text-align: center;
+}

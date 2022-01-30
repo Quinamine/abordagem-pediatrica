@@ -5,7 +5,7 @@
 }
 
 .contentor-de-preferencias h1 {
-    margin: 10px 0 20px 0;
+    margin: 10px 0;
 }
 
 form#preferencias {
@@ -37,6 +37,7 @@ form#preferencias label {
 
 
 form#preferencias select  {
+    outline: none;
     padding: 8px;
     border: 1px solid #ddd;
     border-radius: 3px;
@@ -46,4 +47,13 @@ form#preferencias select  {
     font-size: 0.875rem;
 }
 
+form#preferencias select:hover  {
+    border: 1px solid #faa032;
+}
+
+@media screen and (max-width: 699px) {
+    .linha-do-corpo {
+        margin-bottom: 30px;
+    }
+}
 

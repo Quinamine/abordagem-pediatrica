@@ -52,7 +52,7 @@ a.voltar-ao-topo:visited {
 }
 
 
-.titulo-da-galeria.hover {
+.titulo-da-galeria:hover {
     cursor: pointer;
     background-color: #eee;
     color: #333;
@@ -78,10 +78,10 @@ a.voltar-ao-topo:visited {
     height: 35px;
     display: grid;
     grid-template-columns: repeat(2, 50%);
-    grid-gap: 1px;
+    grid-gap: 0px;
     padding: 10px;
     transform: rotate(45deg);
-    transition-duration: 250ms;
+    transition: grid-gap 100ms ease-out;
 }
 
 .galeria .icone div {
@@ -126,7 +126,7 @@ a.voltar-ao-topo:visited {
 }
 
 .galeria.aberta .icone {
-    grid-gap: 3px;
+    grid-gap: 2px;
 }
 
 .galeria.aberta .icone div,

@@ -95,7 +95,7 @@ main .contentor-da-propaganda.cdp {
 
 .propaganda img {
     width: 100%;
-    border-radius: 8px;
+    border: 2px solid #ddd;
 }
 
 
@@ -175,6 +175,17 @@ main .contentor-da-propaganda.cdp {
     max-width: 355px;
 }
 
+.sem-negrito {
+    font-weight: initial !important;
+    color: initial !important;
+}
+
+mark {
+    background-color: #f4f4f4 !important;
+    border-top: 1px solid #eee;
+    border-bottom: 1px solid #eee;
+    color: initial;
+}
 
 /*** CAIXA DE DIALOGO **/
 
@@ -257,6 +268,10 @@ body.com-caixa-de-dialogo-aberta .propaganda {
     .propaganda picture {
         flex: 1 0 50%;
         max-width: 350px;
+    }
+
+    .propaganda img {
+        border-radius: 8px;
     }
 
     .propaganda .descricao {
