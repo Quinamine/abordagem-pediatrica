@@ -70,6 +70,7 @@
     outline: none;
     font-size: 0.875rem;
     background-color: rgba(240, 240, 240, .5);
+    color: #333;
 }
 
 
@@ -228,6 +229,10 @@ p#dose-e-posologia output a {
     .main .instrucoes h5 {
         font-size: 1rem;
     }
+
+    .main .instrucoes h3.last-title {
+        text-align: center;
+    }
     
     /** Sobre mim */
     .link-sobremim {
@@ -273,22 +278,33 @@ p#dose-e-posologia output a {
 /*** SESSAO JS ***/
 
 .observacao {
-    color: brown;
+    color: brown !important;
 }
 
 output.alerta {
-    color: #555;
+    color: #555 !important;
     border-top: thin solid #ddd !important;
 }
 
-output.alerta.obs {
+output.alerta.obs,
+span.destacar {
     color: inherit;
-}
-
-.destacar {
-    color: #333 !important;
 }
 
 p.hide {
     display: none !important;
+}
+
+.contentor-da-calculadora.darv p#dose-e-posologia table {
+    text-align: center;
+}
+
+.contentor-da-calculadora.darv p#dose-e-posologia table th, 
+.contentor-da-calculadora.darv p#dose-e-posologia table td {
+    border: thin solid #ddd;
+    background-color: #fafafa;
+}
+
+.contentor-da-calculadora.darv p#dose-e-posologia table th {
+    background-color: rgba(219, 146, 57, 0.1);
 }

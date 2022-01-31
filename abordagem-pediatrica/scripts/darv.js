@@ -1,4 +1,4 @@
-class Tarv {
+class Darv {
     constructor(peso, arvs, arv){
         this.peso = peso;
         this.arvs = arvs;
@@ -6,7 +6,7 @@ class Tarv {
     }
 
     
-    get getForma(){
+    get retornarForma(){
         let forma;
         if((this.arv=="LPV/r-xpe")||(this.arv=="ctx-susp")){
             forma = "ml";
@@ -18,21 +18,19 @@ class Tarv {
         else {
             forma = "cp(s)";
         }
-
         return forma;
     }
 
 
-    get getFormulacao(){
-
+    get retornarFormulacao(){
         let formulacao;
 
         if(this.arv=="LPV/r-xpe"){
-            formulacao = "frascos de 60 ml";
+            formulacao = "frascos de 60 ml para";
         }
 
         else if(this.arv=="ctx-susp"){
-            formulacao = "frascos de 100 ml"
+            formulacao = "frascos de 100 ml para"
         }
         else if(this.arv=="LPV/r-40-10mg") {
             formulacao = "saquetas para";
@@ -47,105 +45,105 @@ class Tarv {
     }
 
     /* MÉTODO DE RECOMENDAÇÃO */
-    printAlerta(){
+    mostrarAlerta(){
 
         /** ABACAVIR + LAMIVUDINA */
         if((this.arv=="ABC") || (this.arv=="ABC/3TC-60-30mg") || (this.arv=="ABC/3TC-120-60mg")){
             if(this.peso>=25){
-                output.innerHTML += `<span class="print-alerta ">Ver "${this.arvs[3].textContent}".</span>`; // Ver ABC/3TC 600mg/300mg;
+                doseEposologia.innerHTML += `<output class="alerta">Ver "<span class="destacar">${this.arvs[4].textContent}</span>".</output>`; // Ver ABC/3TC 600mg/300mg;
             }
         }
 
         else if(this.arv=="ABC/3TC-600-300mg"){
             if(this.peso<25){
-                output.innerHTML += `<span class="print-alerta ">Ver "${this.arvs[2].textContent}" ou "${this.arvs[1].textContent}".</span>`; 
+                doseEposologia.innerHTML += `<output class="alerta ">Ver "<span class="destacar">${this.arvs[3].textContent}</span>" ou "<span class="destacar">${this.arvs[2].textContent}<span class="destacar">".</output>`; 
             }
         }
 
         /** LOPINAVIR + RITONAVIR */
         else if((this.arv=="LPV/r-40-10mg") ||(this.arv=="LPV/r-xpe")){
             if(this.peso>=20){
-                output.innerHTML += `<span class="print-alerta ">Ver "${this.arvs[6].textContent}" ou "${this.arvs[7].textContent}".</span>`; 
+                doseEposologia.innerHTML += `<output class="alerta">Ver "<span class="destacar">${this.arvs[7].textContent}</span>" ou "<span class="destacar">${this.arvs[8].textContent}</span>".</output>`; 
             }
         }
 
         else if(this.arv=="ABC/3TC-LPV/r"){
             if((this.peso>=20)&&(this.peso<25)){
-                output.innerHTML += `<span class="print-alerta ">Ver "${this.arvs[2].textContent}" e "${this.arvs[6].textContent}" ou "${this.arvs[7].textContent}".</span>`;
+                doseEposologia.innerHTML += `<output class="alerta">Ver "<span class="destacar">${this.arvs[3].textContent}</span>" e "<span class="destacar">${this.arvs[7].textContent}</span>" ou "<span class="destacar">${this.arvs[8].textContent}</span>".</output>`;
             } 
             else if(this.peso>=25){
-                output.innerHTML += `<span class="print-alerta ">Ver "${this.arvs[3].textContent}" e "${this.arvs[7].textContent}" ou "${this.arvs[6].textContent}".</span>`;
+                doseEposologia.innerHTML += `<output class="alerta">Ver "<span class="destacar">${this.arvs[4].textContent}</span>" e "<span class="destacar">${this.arvs[8].textContent}</span>" ou "<span class="destacar">${this.arvs[7].textContent}</span>".</output>`;
             }
         }
 
         else if(this.arv=="LPV/r-100-25mg"){
             if(this.peso<10){
-                output.innerHTML += `<span class="print-alerta ">Ver "${this.arvs[5].textContent}" ou "${this.arvs[4].textContent}".</span>`; 
+                doseEposologia.innerHTML += `<output class="alerta">Ver "<span class="destacar">${this.arvs[6].textContent}</span>" ou "<span class="destacar">${this.arvs[5].textContent}</span>".</output>`; 
             }
             else if(this.peso>=10){
-                output.innerHTML += `<span class="print-alerta">Os comprimidos não devem ser partidos, esmagados ou mastigados, pois a eficácia reduz muito se assim forem manipulados.</span>`; 
+                doseEposologia.innerHTML += `<output class="alerta">Os comprimidos não devem ser partidos, esmagados ou mastigados, pois a eficácia reduz muito se assim forem manipulados.</output>`; 
             }
             
         }
 
         else if(this.arv=="LPV/r-200-50mg"){
             if(this.peso<10){
-                output.innerHTML += `<span class="print-alerta">Ver "${this.arvs[5].textContent}" ou "${this.arvs[4].textContent}".</span>`; 
+                doseEposologia.innerHTML += `<output class="alerta">Ver "<span class="destacar">${this.arvs[6].textContent}</span>" ou "<span class="destacar">${this.arvs[5].textContent}</span>".</output>`; 
             }
 
             else if(this.peso<14){
-                output.innerHTML += `<span class="print-alerta">Ver "${this.arvs[6].textContent}" ou "${this.arvs[4].textContent}".</span>`; 
+                doseEposologia.innerHTML += `<output class="alerta">Ver "<span class="destacar">${this.arvs[7].textContent}</span>" ou "<span class="destacar">${this.arvs[5].textContent}</span>".</output>`; 
             }
         }
 
         /** DOLUTEGRAVIR */
         else if(this.arv=="TDF/3TC/DTG"){
             if(this.peso<30){
-                output.innerHTML += `<span class="print-alerta">A Dose Fixa Combinada de "${this.arvs[9].textContent}" está indicada apenas para crianças com peso &ge; 30kg.</span>`; 
+                doseEposologia.innerHTML += `<output class="alerta">A Dose Fixa Combinada de "${this.arvs[9].textContent}" está indicada apenas para crianças com peso &ge; 30 kg.</output>`; 
             }
         }
    
         else if(this.arv=="DTG-10mg"){
             if(this.peso>=20){
-                output.innerHTML += `<span class="print-alerta ">Ver "${this.arvs[11].textContent}".</span>`; 
+                doseEposologia.innerHTML += `<output class="alerta">Ver "<span class="destacar">${this.arvs[12].textContent}</span>".</output>`; 
             }
         }
 
         else if(this.arv=="DTG-50mg"){
             if(this.peso<20){
-                output.innerHTML += `<span class="print-alerta ">Ver "${this.arvs[10].textContent}".</span>`; 
+                doseEposologia.innerHTML += `<output class="alerta">Ver "<span class="destacar">${this.arvs[11].textContent}</span>".</output>`; 
             }
         }
 
         /** AZIDOTIMIDINA + LAMIVUDINA + NEVIRAPINA */
         else if(this.arv=="Duovir-ped"){
             if(this.peso>=25){
-                output.innerHTML += `<span class="print-alerta ">Ver "${this.arvs[13].textContent}".</span>`; 
+                doseEposologia.innerHTML += `<output class="alerta">Ver "<span class="destacar">${this.arvs[14].textContent}</span>".</output>`; 
             }
         }
 
         else if(this.arv=="Duovir-adult"){
             if(this.peso<14){
-                output.innerHTML += `<span class="print-alerta ">Ver "${this.arvs[12].textContent}".</span>`; 
+                doseEposologia.innerHTML += `<output class="alerta">Ver "<span class="destacar">${this.arvs[13].textContent}</span>".</output>`; 
             }
         }
 
         else if(this.arv=="DuovirN-ped"){
             if(this.peso>=25){
-                output.innerHTML += `<span class="print-alerta ">Ver "${this.arvs[15].textContent}".</span>`; 
+                doseEposologia.innerHTML += `<output class="alerta">Ver "<span class="destacar">${this.arvs[16].textContent}</span>".</output>`; 
             }
         }
 
         else if(this.arv=="DuovirN-adult"){
             if(this.peso<14){
-                output.innerHTML += `<span class="print-alerta ">Ver "${this.arvs[14].textContent}".</span>`; 
+                doseEposologia.innerHTML += `<output class="print-alerta ">Ver "<span class="destacar">${this.arvs[15].textContent}</span>".</output>`; 
             }
         }
 
         /** TENOFOVIR + LAMIVUDINA */
         else if(this.arv=="TDF/3TC"){
             if(this.peso<35){
-                output.innerHTML += `<span class="print-alerta">A Dose Fixa Combinada (DFC) de "${this.arvs[16].textContent}" só deve ser administrada em crianças com peso &ge; 35 kg. Constitui o fármaco de eleição para Profilaxia Pré-Exposição (PrEP).</span>`; 
+                doseEposologia.innerHTML += `<output class="alerta">A Dose Fixa Combinada (DFC) de "${this.arvs[17].textContent}" só deve ser administrada em crianças com peso &ge; 35 kg. Constitui o fármaco de eleição para Profilaxia Pré-Exposição (PrEP).</output>`; 
             } 
         }
 
@@ -153,17 +151,17 @@ class Tarv {
 
         else if(this.arv=="TDF/3TC/EFV"){
             if(this.peso<35){
-                output.innerHTML += `<span class="print-alerta">O "${this.arvs[17].textContent}" só deve ser administrado em crianças com peso &ge; 35kg.</span>`; 
+                doseEposologia.innerHTML += `<output class="alerta">O "${this.arvs[18].textContent}" só deve ser administrado em crianças com peso &ge; 35 kg.</span>`; 
             }
         }
 
         /** ATAZANAVIR */ 
         else if(this.arv=="ATV/r"){
             if(this.peso<25){
-                output.innerHTML += `<span class="print-alerta">O "${this.arvs[19].textContent}" só deve ser administrado em crianças com peso &ge; 25 kg.</span>`; 
+                doseEposologia.innerHTML += `<output class="alerta">O "${this.arvs[20].textContent}" só deve ser administrado em crianças com peso &ge; 25 kg.</output>`; 
             }
             else {
-                output.innerHTML += `<span class="print-alerta">Nota: Pacientes que estiverem a usar a Rifampicina devem substituir o "ATV/r" por "DTG" e ajustar a dose de "DTG (DTG 12/12 horas)" durante o tempo que recebem RIF e por mais 2 semanas. Depois mantêm o "DTG" e passam a tomar apenas 1 vez/dia.</span>`; 
+                doseEposologia.innerHTML += `<output class="alerta">Observação: Pacientes que estiverem a usar a Rifampicina devem substituir o "ATV/r" por "DTG" e ajustar a dose de "DTG (DTG 12/12 horas)" durante o tempo que recebem Rifampicina e por mais 2 semanas. Depois mantêm o "DTG" e passam a tomar apenas 1 vez/dia.</output>`; 
             }
         }
  
@@ -171,33 +169,33 @@ class Tarv {
         /** RALTEGRAVIR */ 
         else if(this.arv=="RAL-25"){
             if(this.peso>=25) {
-                output.innerHTML += `<span class="print-alerta ">Ver "${this.arvs[21].textContent}".</span>`; 
+                doseEposologia.innerHTML += `<output class="alerta ">Ver "<span class="destacar">${this.arvs[22].textContent}</span>".</output>`; 
             }
         }
 
         else if(this.arv=="RAL-400"){
             if(this.peso<25){
-                output.innerHTML += `<span class="print-alerta ">Ver "${this.arvs[20].textContent}".</span>`; 
+                doseEposologia.innerHTML += `<output class="alerta">Ver "<span class="destacar">${this.arvs[21].textContent}</span>".</output>`; 
             }
         }
 
         /** RITONAVIR */ 
         else if((this.arv=="RTV-25") || (this.arv=="RTV-100")){
             if(this.peso<10){
-                output.innerHTML += `<span class="print-alerta">Recomendado para crianças co-infectadas (TB/HIV) com peso &ge; 10 kg em uso de "LPV/r" para potenciação durante o tratamento da TB.</span>`; 
+                doseEposologia.innerHTML += `<output class="alerta">Recomendado para crianças co-infectadas (TB/HIV) com peso &ge; 10 kg em uso de "LPV/r" para potenciação durante o tratamento da Tuberculose.<output/>`; 
             }
             else {
                 if(this.arv=="RTV-25"){
                     if(this.peso>=25){
-                        output.innerHTML += `<span class="print-alerta ">Ver "${this.arvs[23].textContent}".</span>`; 
+                        doseEposologia.innerHTML += `<output class="alerta">Ver "<span class="destacar">${this.arvs[24].textContent}</span>".</output>`; 
                     }
                     else {
-                        output.innerHTML += `<span class="print-alerta">O "RTV isolado" deve ser usado para fazer a potenciação em crianças em uso de "LPV/r" com TB/HIV sensivel. Recomendado para crianças com peso &ge; 10kg, que sejam capazes de deglutir inteiro. Não pode ser quebrado, esmagado nem dissolvido em liquidos ou alimentos.</span>`;
+                        doseEposologia.innerHTML += `<output class="alerta">O "RTV isolado" deve ser usado para fazer a potenciação em crianças em uso de "LPV/r" com TB/HIV sensivel. Recomendado para crianças com peso &ge; 10kg, que sejam capazes de deglutir inteiro. Não pode ser quebrado, esmagado nem dissolvido em liquidos ou alimentos.</output>`;
                     }
                 }
 
                 else if(this.arv=="RTV-100"){
-                    output.innerHTML += `<span class="print-alerta">O "RTV isolado" deve ser usado para fazer a potenciação em crianças em uso de "LPV/r" com TB/HIV sensivel. Recomendado para crianças com peso &ge; 10kg, que sejam capazes de deglutir inteiro. Não pode ser quebrado, esmagado nem dissolvido em liquidos ou alimentos.</span>`;
+                    doseEposologia.innerHTML += `<output class="alerta">O "RTV isolado" deve ser usado para fazer a potenciação em crianças em uso de "LPV/r" com TB/HIV sensivel. Recomendado para crianças com peso &ge; 10kg, que sejam capazes de deglutir inteiro. Não pode ser quebrado, esmagado nem dissolvido em liquidos ou alimentos.</output>`;
                 }
                 
             }
@@ -206,75 +204,77 @@ class Tarv {
         /** COTRIMXAZOL */
         /** COTRIMXAZOL */
         else if(this.arv=="ctx-cp"){
-            output.innerHTML += `<span class="print-alerta"><a href='../pages/saibamais/profilaxia-de-infeccoes-oportunistas-com-ctx.html#tarv' id='link-de-redirecionamento'>Para ver critérios de TPC, clique aqui.</a></span>`; 
+            doseEposologia.innerHTML += `<output class="alerta"><a href='profilaxias/tratamento-profilatico-com-cotrimoxazol.html'>Clique aqui para ver critérios do tratamento profilático com cotrimoxazol.</a></output>`; 
         }
 
         else if(this.arv=="ctx-susp"){
             if(this.peso>=20){
-                output.innerHTML += `<span class="print-alerta ">Ver "${this.arvs[24].textContent}".</span>`; 
+                doseEposologia.innerHTML += `<output class="alerta ">Ver "<span class="destacar">${this.arvs[24].textContent}</span>".</output>`; 
             }
             else {
-                output.innerHTML += `<span class="print-alerta"><a href='../pages/saibamais/profilaxia-de-infeccoes-oportunistas-com-ctx.html#tarv' id='link-de-redirecionamento'>Para ver critérios de TPC, clique aqui.</a></span>`;
+                doseEposologia.innerHTML += `<output class="alerta"><a href='profilaxias/tratamento-profilatico-com-cotrimoxazol.html'>Clique aqui para ver critérios do tratamento profilático com cotrimoxazol.</a></output>`;
             }
         }
 
         /** ISONIAZIDA */
         else if(this.arv=="isoniazida-300"){
             if(this.peso<25){
-                output.innerHTML += `<span class="print-alerta ">Ver "${this.arvs[26].textContent}".</span>`; 
+                doseEposologia.innerHTML += `<output class="alerta ">Ver "<span class="destacar">${this.arvs[26].textContent}</span>".</output>`; 
             }
             else {
-                output.innerHTML += `<span class="print-alerta"><a href='../pages/saibamais/profilaxia-de-tb-com-isoniazida.html#tarv' id='link-de-redirecionamento'>Para ver critérios de TPI, clique aqui.</a></span>`;
+                doseEposologia.innerHTML += `<output class="alerta"><a href='profilaxias/tratamento-profilatico-com-isoniazida.html'>Clique aqui para ver critérios do tratamento profilático com isoniazida.</a></output>`;
             }
         }
 
         else if(this.arv=="isoniazidacem"){
-            output.innerHTML += `<span class="print-alerta"><a href='../pages/saibamais/profilaxia-de-tb-com-isoniazida.html#tarv' id='link-de-redirecionamento'>Para ver critérios de TPI, clique aqui.</a></span>`;
+            doseEposologia.innerHTML += `<output class="alerta"><a href='profilaxias/tratamento-profilatico-com-isoniazida.html'>Clique aqui para ver critérios do tratamento profilático com isoniazida.</a></output>`;
         }
 
         /** LEVOFLOXACINA */
         else if(this.arv=="levofloxacina100"){
             if(this.peso>=26){
-                output.innerHTML += `<span class="print-alerta ">Ver "${this.arvs[29].textContent}".</span>`; 
+                doseEposologia.innerHTML += `<output class="alerta ">Ver "<span class="destacar">${this.arvs[30].textContent}</span>".</output>`; 
             }
             else{
-                output.innerHTML += `<span class="print-alerta">Nota: Se o caso fonte de TB-MR tiver resistência comprovada a Fluroquinolonas, o TPT com Levofloxacina não deve ser oferecido.</span>`;
+                doseEposologia.innerHTML += `<output class="alerta">Observação: se o caso fonte de tuberculose multiresistente tiver resistência comprovada a fluroquinolonas, o tratamento profilático de tuberculose (TPT) com levofloxacina não deve ser oferecido.</output>`;
             }
         }
 
         else if(this.arv=="levofloxacina250"){
             if(this.peso<4){
-                output.innerHTML += `<span class="print-alerta">Ver "${this.arvs[28].textContent}".</span>`;
+                doseEposologia.innerHTML += `<output class="alerta">Ver ""<span class="destacar">${this.arvs[29].textContent}</span>".</output>`;
             }
             else{
-                output.innerHTML += `<span class="print-alerta">Nota: Se o caso fonte de TB-MR tiver resistência comprovada a Fluroquinolonas, o TPT com Levofloxacina não deve ser oferecido.</span>`;
+                doseEposologia.innerHTML += `<output class="alerta">Observação: se o caso fonte de tuberculose multiresistente tiver resistência comprovada a fluroquinolonas, o tratamento profilático de tuberculose (TPT) com levofloxacina não deve ser oferecido.</output>`;
             }
         }
 
         /** PIRIDOXINA*/
         else if(this.arv=="piridoxina-50"){
             if(this.peso<5){
-                output.innerHTML = `<span class="print-alerta">Não aplicável (N/A). Ver "${this.arvs[30].textContent}".</span>`; 
+                doseEposologia.innerHTML = `<output class="alerta">Não aplicável (N/A). Ver "<span class="destacar>${this.arvs[31].textContent}</span>".</output>`; 
             }
         }
 
     }
 
     /* MÉTODO DE IMPRESSÃO */
-    printDose(dosemanha, dosenoite){
+    mostrarDose(dosemanha, dosenoite){
         if(this.arv.includes("piridoxina")){
-            output.innerHTML = `<span class="print-dose">Tomar: ${dosemanha}.</span>`;
+            doseEposologia.innerHTML = `<output>Tomar: ${dosemanha}.</output>`;
         }
-
 
         else if((dosemanha=="&minus;") && (dosenoite=="&minus;") || (dosemanha=="N/A")){
-            output.innerHTML = `<table><tr><th>Dose manhã</th><th>Dose noite</th></tr>
+            doseEposologia.innerHTML = `<output>
+            <table><tr><th>Dose manhã</th><th>Dose noite</th></tr>
             <tr><td>${dosemanha}</td><td>${dosenoite}</td></tr>
-            </table>`;
+            </table>
+            </output>
+            `;
         }
         else {
-            let formamanha = this.getForma;
-            let formanoite = this.getForma;
+            let formamanha = this.retornarForma;
+            let formanoite = this.retornarForma;
 
             let qtdManha = dosemanha;
             let qtdNoite = dosenoite;
@@ -339,18 +339,20 @@ class Tarv {
             
 
 
-            output.innerHTML = `<table>
+            doseEposologia.innerHTML = `<output>
+            <table>
             <tr><th>Dose manhã</th><th>Dose noite</th></tr>
             <tr><td>${dosemanha}</td><td>${dosenoite}</td></tr>
             <tr><td>${formamanha}</td><td>${formanoite}</td></tr>
-            <tr><th colspan="2">Quantidade de ${this.getFormulacao}</th></tr>
+            <tr><th colspan="2">Quantidade de ${this.retornarFormulacao}</th></tr>
             <tr><th class="gray">1 mês</th><th class="gray">3 meses</th></tr>
             <tr><td>${quantidadeMensal}</td><td>${quantidadeTrimestral}</td></tr>
-
-            </table>`;
+            </table>
+            </output>
+            `;
         }
 
-        this.printAlerta();
+        this.mostrarAlerta();
         
     }
 
@@ -361,8 +363,6 @@ class Tarv {
         let dosenoite;
 
         let peso = this.peso;
-
-       
 
         /* ABACAVIR + LAMIVUDINA */
         if((this.arv=="ABC") || (this.arv=="ABC/3TC-60-30mg")){
@@ -880,40 +880,52 @@ class Tarv {
             dosenoite = "&minus;";
         }
 
-        this.printDose(dosemanha, dosenoite);
+        this.mostrarDose(dosemanha, dosenoite);
     }
 }
 
+/** Validacao */
 
-function classObject(){
-    if(peso.value!=""){
-        if((peso.value<3) || (peso.value>45)){
-            output.innerHTML = `<span class='print-error'>Observação: o peso deve ser &ge; 3 e &le; 45.</span>`;
+function errodePeso(){
+	doseEposologia.innerHTML = `<output class='observacao'>Observação: o peso deve ser &ge; 3 e &le; 45.</output>`;
+}
+
+function resetarDoseEposologia() {doseEposologia.innerHTML = "";}
+
+
+
+function instanciarClasse() {
+
+    let arvSelecionado = arvs.options[arvs.selectedIndex].value;
+
+    if(peso.value != "") {
+        if((peso.value < 3) || (peso.value > 45)) {
+            errodePeso();
             return false;
         }
-        else {
-            let arvSelected = arvs.options[arvs.selectedIndex].value;
-            let dosearv = new Tarv(peso.value, arvs, arvSelected);
-            dosearv.calcularDose();
+        else if(arvSelecionado == "select"){
+            resetarDoseEposologia();
         }
-        
+        else {
+            let dose = new Darv(peso.value, arvs, arvSelecionado);
+            dose.calcularDose();
+        }
     }
     else {
-        output.innerHTML = "";
+        resetarDoseEposologia();
     }
 }
 
-
-var peso, arvs, output;
+var peso, arvs, doseEposologia;
 function starter(){
     peso = document.getElementById("peso");
     arvs = document.getElementById("arvs");
-    output = document.getElementsByClassName("resultado")[0];
+    doseEposologia = document.getElementById("dose-e-posologia");
     
     // Eventos
-    peso.addEventListener("keyup", classObject);
-    peso.addEventListener("mouseup", classObject);
-    arvs.addEventListener("change", classObject);
+    peso.addEventListener("keyup", instanciarClasse);
+    peso.addEventListener("mouseup", instanciarClasse);
+    arvs.addEventListener("change", instanciarClasse);
 
 }
 

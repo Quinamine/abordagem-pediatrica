@@ -337,7 +337,6 @@ abbr {
 .destaque {
 	padding: 10px;
 	background-color: #f4f4f4;	
-	color: #000;
 }
 
 .main  .subdestaque {
@@ -345,6 +344,11 @@ abbr {
 	font-size: 0.75rem;
 	border-left: 1px solid #faa032;
 }
+
+.full-black {
+	color: #000;
+}
+
 
 p {
 	position: relative;
@@ -354,8 +358,6 @@ p {
 	font-weight: bold;
 	color: #555;
 }
-
-
 
 .nota {
 	text-align: center;
@@ -679,6 +681,13 @@ body.com-caixa-de-dialogo-aberta a.chave-de-dialogo {
 @media screen and (min-width: 1024px) {
 	body {
 		background-color: #f4f4f4;
+	}
+
+	.linha-do-cabecalho nav a:active {
+		background-color: rgba(219, 146, 57, .4) !important;
+	}
+	.main a:active {
+		color: #faa032 !important;
 	}
 
 	.linha-do-corpo {
