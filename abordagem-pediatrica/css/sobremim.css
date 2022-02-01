@@ -44,7 +44,7 @@ a.voltar-ao-topo:visited {
 
 .galeria:last-child {
     border-bottom: 1px solid #ddd;
-    margin-bottom: 80px;
+    margin-bottom: 20px;
 }
 
 .galeria .titulo-da-galeria {
@@ -180,14 +180,6 @@ a.voltar-ao-topo:visited {
 .ordem-zero {
     order: -1 !important;
 }
-
-footer.fixo {
-	width: 100%;
-    position: fixed;
-    bottom: 0;
-    margin-top: 20px;
-}
-
 
 /* Responsividade */
 @media screen and (max-width: 560px) {

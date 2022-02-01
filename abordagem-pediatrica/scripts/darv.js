@@ -37,7 +37,7 @@ class Darv {
         }
 
         else {
-            formulacao = "cp(s) para";
+            formulacao = "comprimidos para";
         }
 
         return formulacao;
@@ -99,7 +99,7 @@ class Darv {
         /** DOLUTEGRAVIR */
         else if(this.arv=="TDF/3TC/DTG"){
             if(this.peso<30){
-                doseEposologia.innerHTML += `<output class="alerta">A Dose Fixa Combinada de "${this.arvs[9].textContent}" está indicada apenas para crianças com peso &ge; 30 kg.</output>`; 
+                doseEposologia.innerHTML += `<output class="alerta">A Dose Fixa Combinada de "${this.arvs[10].textContent}" está indicada apenas para crianças com peso &ge; 30 kg.</output>`; 
             }
         }
    
@@ -209,7 +209,7 @@ class Darv {
 
         else if(this.arv=="ctx-susp"){
             if(this.peso>=20){
-                doseEposologia.innerHTML += `<output class="alerta ">Ver "<span class="destacar">${this.arvs[24].textContent}</span>".</output>`; 
+                doseEposologia.innerHTML += `<output class="alerta ">Ver "<span class="destacar">${this.arvs[25].textContent}</span>".</output>`; 
             }
             else {
                 doseEposologia.innerHTML += `<output class="alerta"><a href='profilaxias/tratamento-profilatico-com-cotrimoxazol.html'>Clique aqui para ver critérios do tratamento profilático com cotrimoxazol.</a></output>`;
@@ -252,7 +252,7 @@ class Darv {
         /** PIRIDOXINA*/
         else if(this.arv=="piridoxina-50"){
             if(this.peso<5){
-                doseEposologia.innerHTML = `<output class="alerta">Não aplicável (N/A). Ver "<span class="destacar>${this.arvs[31].textContent}</span>".</output>`; 
+                doseEposologia.innerHTML = `<output class="alerta">Não aplicável. Ver "<span class="destacar">${this.arvs[31].textContent}</span>".</output>`; 
             }
         }
 
@@ -261,10 +261,10 @@ class Darv {
     /* MÉTODO DE IMPRESSÃO */
     mostrarDose(dosemanha, dosenoite){
         if(this.arv.includes("piridoxina")){
-            doseEposologia.innerHTML = `<output>Tomar: ${dosemanha}.</output>`;
+            doseEposologia.innerHTML = `<output class="bg-cinza">Tomar: ${dosemanha}.</output>`;
         }
 
-        else if((dosemanha=="&minus;") && (dosenoite=="&minus;") || (dosemanha=="N/A")){
+        else if((dosemanha=="&minus;") && (dosenoite=="&minus;") || (dosemanha=="&minus;")){
             doseEposologia.innerHTML = `<output>
             <table><tr><th>Dose manhã</th><th>Dose noite</th></tr>
             <tr><td>${dosemanha}</td><td>${dosenoite}</td></tr>
@@ -738,7 +738,7 @@ class Darv {
                 dosemanha = 10;
             }
             else {
-                dosemanha = "N/A";
+                dosemanha = "&minus;";
             }
         }
 
@@ -861,7 +861,7 @@ class Darv {
 
         else if(this.arv=="piridoxina-50"){
             if(peso<5){
-                this.printAlerta();
+                this.mostrarAlerta();
                 return false;
             }
 

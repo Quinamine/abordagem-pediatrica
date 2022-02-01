@@ -44,7 +44,8 @@ form#preferencias select  {
     width: 100%;
     max-width: 200px;
     background-color: #f8f8f8;
-    font-size: 0.875rem;
+    font-size: 0.9375rem;
+    color: #555;
 }
 
 form#preferencias select:hover  {

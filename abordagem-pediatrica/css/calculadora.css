@@ -68,7 +68,7 @@
 .contentor-da-calculadora form p * {
     border: none;
     outline: none;
-    font-size: 0.875rem;
+    font-size: 0.9375rem;
     background-color: rgba(240, 240, 240, .5);
     color: #333;
 }
@@ -197,7 +197,7 @@ p#dose-e-posologia output a {
         padding: 10px;
         border: 15px solid rgba(240, 240, 240, .7);
         box-shadow: 0 0 8px #555;
-        font-size: 0.875rem;
+        font-size: 0.9375rem;
     }
 
     .main .instrucoes picture img{
@@ -216,8 +216,7 @@ p#dose-e-posologia output a {
    }
 
     .main .instrucoes h2 {
-        font-size: 1.125rem;
-        text-align: center;
+        font-size: 1.25rem;
     }
 
     .main .instrucoes h2:first-child {
@@ -227,7 +226,7 @@ p#dose-e-posologia output a {
     .main .instrucoes h3,
     .main .instrucoes h4,
     .main .instrucoes h5 {
-        font-size: 1rem;
+        font-size: 1.125rem;
     }
 
     .main .instrucoes h3.last-title {
@@ -295,16 +294,36 @@ p.hide {
     display: none !important;
 }
 
-.contentor-da-calculadora.darv p#dose-e-posologia table {
+
+.darv p#dose-e-posologia table {
     text-align: center;
 }
 
-.contentor-da-calculadora.darv p#dose-e-posologia table th, 
-.contentor-da-calculadora.darv p#dose-e-posologia table td {
-    border: thin solid #ddd;
-    background-color: #fafafa;
+.darv p#dose-e-posologia output {
+    background-color: #fff;
 }
 
-.contentor-da-calculadora.darv p#dose-e-posologia table th {
-    background-color: rgba(219, 146, 57, 0.1);
+.darv p#dose-e-posologia output.alerta,
+.darv p#dose-e-posologia output.observacao,
+.darv p#dose-e-posologia .bg-cinza {
+    background-color: rgba(240, 240, 240, .5);
+    border-top: none !important;
 }
+
+.darv p#dose-e-posologia table th, 
+.darv p#dose-e-posologia table td {
+    border: thin solid #aaa;
+    padding: 3px;
+}
+
+.darv p#dose-e-posologia table th {
+    color: #555;
+}
+
+.darv p#dose-e-posologia table td {
+    background-color: #fff;
+}
+
+
+
+
