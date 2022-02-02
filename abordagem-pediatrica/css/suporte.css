@@ -138,6 +138,10 @@ header h2 {
         right: 0;
     }
 
+    .main picture.doseador.first-child {
+        top: 165px;
+    }
+
     .main picture.second-child {
         top: 218px;
     }

@@ -161,7 +161,7 @@ class Darv {
                 doseEposologia.innerHTML += `<output class="alerta">O "${this.arvs[20].textContent}" só deve ser administrado em crianças com peso &ge; 25 kg.</output>`; 
             }
             else {
-                doseEposologia.innerHTML += `<output class="alerta">Observação: Pacientes que estiverem a usar a Rifampicina devem substituir o "ATV/r" por "DTG" e ajustar a dose de "DTG (DTG 12/12 horas)" durante o tempo que recebem Rifampicina e por mais 2 semanas. Depois mantêm o "DTG" e passam a tomar apenas 1 vez/dia.</output>`; 
+                doseEposologia.innerHTML += `<output class="alerta">Observação: Pacientes que estiverem a usar a rifampicina devem substituir o "ATV/r" por "DTG" e ajustar a dose de "DTG (DTG 12/12 horas)" durante o tempo que recebem rifampicina e por mais 2 semanas. Depois mantêm o "DTG" e passam a tomar apenas 1 vez/dia.</output>`; 
             }
         }
  
@@ -182,7 +182,7 @@ class Darv {
         /** RITONAVIR */ 
         else if((this.arv=="RTV-25") || (this.arv=="RTV-100")){
             if(this.peso<10){
-                doseEposologia.innerHTML += `<output class="alerta">Recomendado para crianças co-infectadas (TB/HIV) com peso &ge; 10 kg em uso de "LPV/r" para potenciação durante o tratamento da Tuberculose.<output/>`; 
+                doseEposologia.innerHTML += `<output class="alerta">Recomendado para crianças co-infectadas (TB/HIV) com peso &ge; 10 kg em uso de "LPV/r" para potenciação durante o tratamento da tuberculose.</output>`; 
             }
             else {
                 if(this.arv=="RTV-25"){
@@ -204,7 +204,7 @@ class Darv {
         /** COTRIMXAZOL */
         /** COTRIMXAZOL */
         else if(this.arv=="ctx-cp"){
-            doseEposologia.innerHTML += `<output class="alerta"><a href='profilaxias/tratamento-profilatico-com-cotrimoxazol.html'>Clique aqui para ver critérios do tratamento profilático com cotrimoxazol.</a></output>`; 
+            doseEposologia.innerHTML += `<output class="alerta"><a href='profilaxias/tratamento-profilatico-com-cotrimoxazol.html'>Clique aqui para ver os critérios de tratamento profilático com cotrimoxazol.</a></output>`; 
         }
 
         else if(this.arv=="ctx-susp"){
