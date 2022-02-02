@@ -163,6 +163,29 @@ header h2 {
         border-radius: 8px;
         margin: initial;
     }
+
+
+    .ilustracao-do-exemplo-abc {
+        display: flex;
+        border: thin solid #eee;
+        padding: 10px 10px 0 10px;
+        background-color: #fafafa;
+    }
+
+    .ilustracao-do-exemplo-abc picture img {
+        border: none;
+        border-radius: 0;
+
+    }
+
+    .ilustracao-do-exemplo-abc .interpretacao-do-exemplo {
+        font-size: 14.70px;
+        margin-left: 20px;
+    }
+
+    .ilustracao-do-exemplo-abc .interpretacao-do-exemplo h5{
+        margin: 0;
+    }
 }
 
 
