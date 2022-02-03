@@ -175,17 +175,6 @@ main .contentor-da-propaganda.cdp {
     max-width: 355px;
 }
 
-.sem-negrito {
-    font-weight: initial !important;
-    color: initial !important;
-}
-
-mark {
-    background-color: #f4f4f4 !important;
-    border-top: 1px solid #eee;
-    border-bottom: 1px solid #eee;
-    color: initial;
-}
 
 /*** CAIXA DE DIALOGO **/
 

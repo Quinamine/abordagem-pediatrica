@@ -18,10 +18,13 @@ a:visited {
 	color:#FAA032;
 }
 
-nav a:visited {
+
+nav a:visited,
+a.sem-destaque {
 	color: inherit;
 	text-decoration: none;
 }
+
 
 meter {
 	width: 100%;
@@ -233,16 +236,21 @@ div.contentor-dos-tres-pontos > div {
 
 div.conteudo-do-menu-reticencias {
     position: absolute;
-    top: 12%;
-    right: 8%; 
+    top: 10%;
+    right: 4%; 
     border-radius: 4px;
     background-color: #FFf;
     box-shadow: 0 0 5px #888;
-    color: #888;
+	color: #888;
+	
+	height: 0;
 	width: 0;
-	/*height: 0;*/
-    transition: width 100ms;
-    overflow: hidden;
+	max-height: 240px;
+	overflow: hidden;
+
+	transition: all 80ms linear;
+	transition-delay: 160ms;
+	z-index: 5;
 }
 
 div.conteudo-do-menu-reticencias nav{
@@ -260,7 +268,6 @@ div.conteudo-do-menu-reticencias nav ul li a {
     flex: 1;
     padding: 10px 10px 10px 15px;
 	color: #333;
-	font-size: 14px;
 }
 
 div.conteudo-do-menu-reticencias nav ul li a:visited { 
@@ -268,18 +275,12 @@ div.conteudo-do-menu-reticencias nav ul li a:visited {
 }
 
 /*** MENU RETICENCIAS ABERTO ****/
-section.menu-reticencias.activo
-div.conteudo-do-menu-reticencias,
-div.menu-reticencias.activo
-div.conteudo-do-menu-reticencias nav {
-    right: 4% !important;
-    display: block !important;
-	width: 50vw !important;
-	z-index: 5;
+section.menu-reticencias.activo .conteudo-do-menu-reticencias {
+	width: 50vw;
+	height: auto;
+	max-height: auto;
+	top: 12%;
 }
-
-
-
 
 .linha-do-corpo {
 	padding: 0;
@@ -332,7 +333,15 @@ abbr {
 	font-style: normal;
 }
 
+mark, .mark {
+    background-color: #f4f4f4 !important;
+    border-top: 1px solid #eee;
+    border-bottom: 1px solid #eee;
+    color: initial;
+}
+
 .main li, dl, dd, dt {margin: 10px 0;}
+
 
 .destaque {
 	padding: 10px;
@@ -349,6 +358,10 @@ abbr {
 	color: #000;
 }
 
+.sem-negrito {
+    font-weight: initial !important;
+    color: initial !important;
+}
 
 p {
 	position: relative;
@@ -743,10 +756,14 @@ body.com-caixa-de-dialogo-aberta a.chave-de-dialogo {
 	
 	
 	li.dropdown-container.on ul.dropdown-menu li a {
-		color: #fff;
+		color: #ccc;
 		padding: 7px 10px;
 		flex: 1;
 		overflow: hidden;
+	}
+
+	li.dropdown-container.on ul.dropdown-menu li a:hover {
+		color: #fff;
 	}
 	
 	li.dropdown-container.on ul.dropdown-menu li a:hover {

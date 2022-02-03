@@ -197,7 +197,7 @@ p#dose-e-posologia output a {
         padding: 10px;
         border: 15px solid rgba(240, 240, 240, .7);
         box-shadow: 0 0 8px #555;
-        font-size: 0.9375rem;
+        font-size: 0.875rem;
     }
 
     .main .instrucoes picture img{
@@ -216,7 +216,7 @@ p#dose-e-posologia output a {
    }
 
     .main .instrucoes h2 {
-        font-size: 1.25rem;
+        font-size: 1.125rem;
     }
 
     .main .instrucoes h2:first-child {

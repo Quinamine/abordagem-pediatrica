@@ -261,10 +261,10 @@ class Darv {
     /* MÉTODO DE IMPRESSÃO */
     mostrarDose(dosemanha, dosenoite){
         if(this.arv.includes("piridoxina")){
-            doseEposologia.innerHTML = `<output class="bg-cinza">Tomar: ${dosemanha}.</output>`;
+            doseEposologia.innerHTML = `<output>Tomar: ${dosemanha}.</output>`;
         }
 
-        else if((dosemanha=="&minus;") && (dosenoite=="&minus;") || (dosemanha=="&minus;")){
+        else if((dosemanha=="&minus;") && (dosenoite=="&minus;")){
             doseEposologia.innerHTML = `<output>
             <table><tr><th>Dose manhã</th><th>Dose noite</th></tr>
             <tr><td>${dosemanha}</td><td>${dosenoite}</td></tr>

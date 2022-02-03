@@ -10,7 +10,8 @@
         <!-- DESIGN -->
 		<link rel="stylesheet" href="../../css/reset.css" />
         <link rel="stylesheet" href="../../css/anatomia.css" />
-        <link rel="stylesheet" href="../../css/suporte.css">
+        <link rel="stylesheet" href="../../css/suporte.css" />
+        <link rel="stylesheet" href="../../css/suportedarv.css" />
 
         <!-- FONTES -->
 		<link rel="preconnect" href="https://fonts.googleapis.com">
@@ -133,8 +134,8 @@
                         </ol>
 
                         <picture class="doseador first-child">
-                            <source media="(max-width: 599px)" srcset="../../imagens/mobile_m/doseador.png" />                     
-                            <img src="../../imagens/desktop/doseador-de-arvs.png" alt="Ilustração da Calculadora" />
+                            <source media="(max-width: 599px)" srcset="../../imagens/mobile_m/doseador-de-arvs.png" />                     
+                            <img src="../../imagens/desktop/doseador-de-arvs.png" alt="Ilustração do Doseador de ARVs" />
                         </picture>
                         
                             <h2>Apresentação da dose</h2>
@@ -155,38 +156,60 @@
 
                             <p class="destaque">Por exemplo: Utilizando o Doseador de ARVs para o cálculo da dose para uma criança com peso de 14 kg em uso de ABC/3TC 120 mg/60 mg, teríamos o seguinte resultado:</p>
 
-                            <div class="ilustracao-do-exemplo-abc">
-                                <picture>
-                                    <img src="../../imagens/desktop/exemploabc.png" alt="Ilustração da impressão de dose" srcset="">
-                                </picture>
+                            <div class="ilustracao-da-impressao-da-dose">
+                                <figure>
+                                    <img src="../../imagens/exemploabc.png" alt="Ilustração da impressão de dose" srcset="">
+                                </figure>
                                 <div class="interpretacao-do-exemplo">                                
                                     <h5>Interpretação</h5>
-                                    <p>Neste caso significa que  diariamente o paciente deve tomar 2.5 comprimidos de manhã e devem ser fornecidos ao paciente 75 comprimidos (se a dispensa for mensal) ou 225 comprimidos (se a dispensa for trimestral).</p>
+                                    <p>Neste caso significa que  diariamente o paciente deve tomar 2.5 comprimidos de manhã e devem ser fornecidos ao paciente 75 comprimidos (se a dispensa for mensal)ou 225 comprimidos (se a dispensa for trimestral).</p>
                                 </div>
                             </div>
 
                             <h2>Situações em que a dose aparece como traço horizontal</h2>
-                            <p>O traço deve ser interpretado como <span class="bold">“Não aplicável”</span>. Existem três situações em que a dose aparece como traço:</p>
+                            <p>O traço deve ser interpretado como "<span class="full-black mark">Não aplicável</span>". Existem três situações em que a dose aparece como traço:</p>
 
-                            <ol>
-                                <li><span class="bold">Traço só na célula correspondente à Dose Noite</span> – neste caso significa que não há dose nocturna ou seja a dose deve ser tomada só de manhã. Por exemplo, A OMS recomenda que o ABC/3TC seja administrado uma vez/dia.</li>
+                            <ol class="lista-de-razoes-de-nao-aplicavel">
+                                <li><span class="full-black mark">Traço só na célula correspondente à Dose noite</span> – neste caso significa que não há dose nocturna ou seja, o fármaco deve ser tomado só de manhã. Por exemplo, a Organização Mundial da Saúde (OMS) recomenda que o ABC/3TC seja administrado uma vez/dia.</li>
 
-                                <li><span class="bold">Traço só na célula correspondente à Dose Manhã</span> – significa que não há dose matinal, o fármaco só deve ser tomado a noite. Exemplo EFV 200mg.</li>
+                                    <figure>
+                                        <img src="../../imagens/traconadosenoite.png" alt="Ilustração do traço na Dose noite">
+                                    </figure>
 
+                                <li><span class="full-black mark">Traço só na célula correspondente à Dose manhã</span> – significa que não há dose matinal, o fármaco deve ser tomado somente a noite. Exemplo EFV 200 mg.     
+                                </li>
+
+                                    <figure>
+                                        <img src="../../imagens/traconadosemanha.png" alt="Ilustração do traço na Dose manhã">
+                                    </figure>
+                               
                                 <li>
-                                    <span class="bold">Traços em ambas células (Dose Manhã e Dose Noite)</span> – significando que não deve ser tomado ou administrado. As possiveis razões podem ser duas (2):
-                                    <ol class="sublista-ordenada instrucoes-darv">
-                                        
-                                        <li>
-											A composição farmacológica do Antiretroviral é insuficiente para o peso ou exigiria a toma de muitos comprimidos (o que pode comprometer a adesão). Por exemplo, o ABC/3TC de 120mg/60mg está indicado para crianças com peso de até 24.9 kg. A partir dos 25 kg a criança já pode tomar o ABC/3TC 600/300mg, uma vez/dia.
+                                    <span class="full-black mark">Traços em ambas células (Dose manhã e Dose noite)</span> – significando que não deve ser tomado ou administrado. As possiveis razões podem ser duas (2):
+                                    <ol class="sublista-ordenada instrucoes-darv">                      
+                                        <li class="tres-ponto-um">
+											A composição farmacológica do antirretroviral é insuficiente para o peso ou exigiria a toma de muitos comprimidos (o que pode comprometer a adesão). Por exemplo, o ABC/3TC de 120mg/60mg está indicado para crianças com peso de até 24.9 kg. A partir de 25 kg a criança já pode tomar o ABC/3TC 600/300mg.
+                                        </li>
 
-										</li>
+                                        <figure class="hide-on-pc">                                    
+                                            <img src="../../imagens/mobile_m/videabc600.png" alt="Peso máximo aplicável para uso de ABC/3TC 120 mg/60 mg" class="hide-on-pc"/>
+                                        </figure>
 
                                         
-                                        <li>
+                                        <li class="tres-ponto-dois">
                                             A composição farmacológica do antiretroviral é demais para o peso.
                                             Por exemplo, o ABC/3TC de 600mg/300mg está indicado apenas para crianças com peso a partir de 25 kg e abaixo disso não é aplicável (recomenda-se o ABC/3TC de 120mg/60mg).
                                         </li>
+                                        <div class="album-de-nao-aplicavel">
+                                            <picture>
+                                                <source media="(max-width: 599px)" srcset="../../imagens/mobile_m/videabc120.png" /> 
+                                                
+                                                <img src="../../imagens/desktop/videabc600.png" alt="Peso máximo aplicável para uso de ABC/3TC 120 mg/60 mg" class="hide-on-pc"/>
+                                            </picture>
+
+                                            <figure class="hide-on-mobile">           
+                                                <img src="../../imagens/desktop/videabc120.png" alt="Peso máximo aplicável para uso de ABC/3TC 120 mg/60 mg"/>
+                                            </figure>
+                                        </div>
                                     </ol>
                                 </li>
                             </ol>
@@ -194,10 +217,6 @@
                             <p>
                                 Nas situações em que a dose se apresenta como traços em ambas células (Dose manhã e Dose noite), o Doseador de ARV geralmente mostra uma mensagem de sugestão indicando o mesmo fármaco porém com composição farmacológica aplicável para o peso inserido.
                             </p>
-                            <picture>
-                                <source media="(min-width: )" srcset="">
-                                <img src="" alt="">
-                            </picture>
     
                         <!--SLOGAN DO MISAU"-->
                         <p class="slogan-do-misau">O Nosso Maior Valor é a Vida</p>

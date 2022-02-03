@@ -793,12 +793,12 @@ class Doseparenteral extends Dosepadrao{
 			pos = " dose única diária.";
 			if(this.farmaco=="vitamina-b12"){pos = " 3 vezes por semana (em dias alternados) durante 2 semanas.";}
 			if(this.farmaco=="var"){pos = " nos dias 0, 3, 7, 14, 30 e 90.";}
+			if((this.farmaco=="aminofilina-inj") || (this.farmaco=="diazepam-inj")){pos = ".";}
 		}
 		else if(this.posologia == 2){pos = " de 12 em 12 horas.";}
 
 		else if(this.posologia == 3){
 			pos = " de 8 em 8 horas.";
-			if((this.farmaco=="aminofilina-inj") || (this.farmaco=="diazepam-inj")){pos = ".";}
 		}
 
 		return pos;
