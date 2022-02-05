@@ -6,6 +6,10 @@
     margin-top: 10px;
 }
 
+.main .chave-de-dialogo {
+    z-index: 5;
+}
+
 
 .contentor-dos-contactos {
     display: flex;
@@ -37,6 +41,7 @@
     display: block;
     box-shadow: 0 0 8px #aaa;
 }
+
 
 
 

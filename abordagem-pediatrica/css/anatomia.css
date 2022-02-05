@@ -239,7 +239,7 @@ div.conteudo-do-menu-reticencias {
     top: 10%;
     right: 4%; 
     border-radius: 4px;
-    background-color: #FFf;
+    background-color: #fff;
     box-shadow: 0 0 5px #888;
 	color: #888;
 	
@@ -475,7 +475,8 @@ footer a {
 
 /** CAIXA DE DIÁLOGO */
 .contentor-da-caixa-de-dialogo {
-    display: none;
+	display: none;
+	
 }
 
 .caixa-de-dialogo {
@@ -484,8 +485,8 @@ footer a {
     font-size: 14px;
 	position: absolute;
     bottom: 15vh;
-    z-index: 8;
-    border-radius: 5px;
+	border-radius: 5px;
+	z-index: 8;
 }
 
 .caixa-de-dialogo h4 {
@@ -697,10 +698,15 @@ body.com-caixa-de-dialogo-aberta a.chave-de-dialogo {
 	}
 
 	.linha-do-cabecalho nav a:active,
-	.main a:active, 
-	.caixa-de-dialogo button:active {
+	.caixa-de-dialogo a:active,
+	.caixa-de-dialogo button:active,
+	.propaganda a:active {
 		color: #fff !important;
 		background: radial-gradient(circle, #faa032, #555);
+	}
+
+	.main a:active {
+		color: red;
 	}
 
 

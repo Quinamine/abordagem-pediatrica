@@ -177,20 +177,15 @@ main .contentor-da-propaganda.cdp {
 
 
 /*** CAIXA DE DIALOGO **/
-
 body.com-caixa-de-dialogo-aberta .destaque,
 body.com-caixa-de-dialogo-aberta .propaganda {
 	background-color: rgba(219, 146, 57, .4);
-	
 }
-
-
 
 /** CAPSULA **/
 .contentor-da-capsula {
     display: none;
 }
-
 
 /** Responsividade */
 @media screen and (min-width: 700px) {

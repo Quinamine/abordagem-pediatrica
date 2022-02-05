@@ -22,8 +22,15 @@ class Dosecomp {
             pos = "de 8 em 8 horas";
         }
         return pos;
-    }
+	}
+	
+	mostrarAlerta() {
+		if(this.farmaco=="diclofenac"){
+			doseEposologia.innerHTML += `<output class='alerta'>É recomendável tomar com alimentos para diminuir os efeitos irritantes gastrointestinais.</output>`;
 
+			doseEposologia.innerHTML += `<output class='alerta obs'>Não está estabelecida a segurança em crianças menores de 2 anos.</output>`;
+		}
+	}
 
     mostrarDose(dose, pos) {
         let dos = this.dosagem;
@@ -92,6 +99,8 @@ class Dosecomp {
 		if(this.farmaco=="paracetamol-sup"){doseEposologia.innerHTML = `<output>Introduzir no recto: ${dose} sup. ${pos}.</output>`;} 
 
 		else{doseEposologia.innerHTML = `<output>Tomar: ${dose} cp(s) ${pos}.</output>`;}
+
+		this.mostrarAlerta();
     }
 
 
@@ -469,11 +478,11 @@ class Dosepadrao {
 					else if(idademeses>60){dose=2;}
 				}
 
-				/***** DICLOFENAC *****/
+				/***** DICLOFENAC *****
 				else if(farmaco=="diclofenac"){
 					if(idademeses<24){this.naoRecomendado(); return false;}
 					else{this.preencherPeso(); return false;}
-				}
+				}*/
 
 				/***** CODEINA *****/
 				else if(farmaco=="codeina"){
@@ -639,11 +648,11 @@ class Dosepadrao {
 					else if(idadeanos>5){dose=2;}
 				}
 
-				/***** Diclofenac *****/
+				/***** Diclofenac *****
 				else if(farmaco=="diclofenac"){
 					if(idadeanos<2){this.naoRecomendado(); return false;}
 					else{this.preencherPeso(); return false;}
-				}
+				}*/
 
 				/***** CODEINA *****/
 				else if(farmaco=="codeina"){

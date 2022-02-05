@@ -292,7 +292,6 @@ p#dose-e-posologia output a {
     }
 }
 
-
 /*** SESSAO JS ***/
 
 .observacao {
@@ -306,7 +305,7 @@ output.alerta {
 
 output.alerta.obs,
 span.destacar {
-   color: #333;
+   color: inherit !important;
 }
 
 p.hide {
@@ -330,7 +329,7 @@ p.hide {
 
 .darv p#dose-e-posologia table th, 
 .darv p#dose-e-posologia table td {
-    border: 1px solid #aaa;
+    border: thin solid #aaa;
     padding: 3px;
 }
 

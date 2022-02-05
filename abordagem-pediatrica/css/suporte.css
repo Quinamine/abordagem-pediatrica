@@ -50,7 +50,7 @@ header h2 {
         flex-direction: row !important;
         flex-wrap: nowrap;
     }
-    
+   
     .linha-do-cabecalho nav, .contentor-da-logo,
     .contentor-do-menu-hamburguer {
         display: none !important;
@@ -69,21 +69,28 @@ header h2 {
         display: flex;
         align-items: center;
         justify-content: center;
-        clip-path: circle(45%);
-      
     }
     
+    .contentor-da-seta-de-volta:active,
     .contentor-da-seta-de-volta:hover {
         background-color: #faa032;
     }
-    
+    contentor-da-seta-de-volta.sem-historico:active,
+    .contentor-da-seta-de-volta.sem-historico:hover {
+        background-color: #D27832;
+    }
+
     .contentor-da-seta-de-volta > div div {
         width: 30px;
         height: 3px;
         margin: 5px;
         background-color: #fff;
     }
-    
+
+    .contentor-da-seta-de-volta.sem-historico > div div {
+        background-color: #faa032; 
+    }
+
     .contentor-da-seta-de-volta div.traco1 {
         transform: rotate(-50deg) translateX(-7px);
         width: 10px;
@@ -95,7 +102,69 @@ header h2 {
         transform: rotate(50deg) translateX(-7px);;
         width: 10px;
     }
-    
+
+    /** Menu reticencas **/
+    .contentor-do-menu-reticencias {
+        flex: 1;
+        display: flex;
+        justify-content: flex-end;
+        margin-right: -10px;
+    }
+
+    .menu-reticencias {
+        width: 34px;
+        border-radius: 50%;
+        padding: 5px;
+        display: flex; 
+        align-items: center;
+        flex-direction: column;
+    }
+
+    .menu-reticencias:active {
+        background-color: #faa032;
+    }
+
+    .menu-reticencias .ponto {
+        width: 4px;
+        height: 4px;
+        background-color: #fff;
+        border-radius: 3px;
+        margin: 1px;
+    }
+
+    /** conteudo do menu-reticenias **/
+    div.contentor-do-botao-de-abertura {
+        position: absolute;   
+        top: 0;
+        right: 0; 
+        border-radius: 2px;
+        
+        width: 0;
+        height: 0;
+        transition: all 80ms linear;
+        transition-delay: 50ms;
+        overflow: hidden;
+        max-height: 50px;
+    }
+
+    div.contentor-do-botao-de-abertura button {
+        border: none;
+        background-color: #fff;
+        color: #333;
+        font-size: 1rem;
+        line-height: 2;
+        width: 100%;
+        height: 100%;
+        text-align: left;
+        padding: 9px 10px;
+        overflow: hidden;
+    }
+
+    .contentor-do-menu-reticencias.aberto div.contentor-do-botao-de-abertura {
+        width: 50vw !important;
+        height: auto !important;
+    }
+
     /* Linha do corpo */
     .linha-do-corpo {
         padding: 30px 4%;
@@ -106,7 +175,7 @@ header h2 {
 @media screen and (min-width: 700px) {
     .linha-do-cabecalho .contentor-da-seta-de-volta,
     .linha-do-cabecalho .contentor-do-titulo,
-    figure.hide-on-pc {
+    .contentor-do-menu-reticencias, figure.hide-on-pc {
         display: none;
     }
   
