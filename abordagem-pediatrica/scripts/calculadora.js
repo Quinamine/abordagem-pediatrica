@@ -242,16 +242,22 @@ class Dosepadrao {
 			doseEposologia.innerHTML += `<output class='alerta'>
 			Dia 0: na altura do diagnóstico;</br>
 			Dia 1: no dia seguinte ao do diagnóstico;</br>
-			Dia 14: duas semanas mais tarde.
-			<br/>
-			Observação: a dose acima é para o tratamento da hipovitaminose A (todos graus de xeroftalmia, casos de sarampo e pós-sarampo, kwashiorkor grave,  diarreia de repetição, infecções respiratórias de repetição e de evolução prolongada). <br/>
-			 <a href='profilaxias/prevencao-da-hipovitaminose-a.html'> Para ver doses profiláticas, clique aqui
-			.</a></output>`;
-
+			Dia 14: duas semanas mais tarde.</output>`
+			
+			doseEposologia.innerHTML += `<output class='alerta obs'> Observação: a dose acima é para o tratamento da hipovitaminose A (todos graus de xeroftalmia, casos de sarampo e pós-sarampo, kwashiorkor grave,  diarreia de repetição, infecções respiratórias de repetição e de evolução prolongada). <br/>
+			 <a href='profilaxias/prevencao-da-hipovitaminose-a.html'> Para ver doses profiláticas, clique aqui.</a></output>`;
 		}
 		
 		else if((this.farmaco=="vitamina-c")){
 			doseEposologia.innerHTML += `<output class='alerta'>A ingestão de 90 à 120 ml/dia de sumos de fruta pode curar o escorbuto.</output>`;
+		}
+
+		else if(this.farmaco=="paracetamol-sup"){
+			doseEposologia.innerHTML += `<output class='alerta'>Por via rectal é menos activo e o tratamento mais caro do que por via oral pelo que os supositórios só devem ser usados quando a via oral não é possível.</output>`;
+		}
+
+		else if(this.farmaco=="bisacodil"){
+			doseEposologia.innerHTML += `<output class='alerta'>Geralmente o efeito é obtido 10 à 12 horas após a administração.</output>`;
 		}
 	}
 
@@ -304,19 +310,12 @@ class Dosepadrao {
 					if(this.tipoidade=="m"){
 						let idademeses = this.idade;
 
-						if(idademeses<3){
-							dose=10*peso;
-							let doselocal = new Dosecomp(farmaco, doseporkg, dosagem, posologia, this.peso);
-							doselocal.mostrarDose(dose, this.retornarPosologia);
-							return false;
-						}
-						else if(idademeses<12){dose='1/4';}
+						if(idademeses<12){dose='1/4';}
 						else if(idademeses<=60){dose='1/2';}
 						else if(idademeses>60){dose=1;}
 					}
 					else if(this.tipoidade=="y"){
 						let idadeanos = this.idade;
-
 						if(idadeanos<1){this.especificarMeses(); return false;}
 						else if(idadeanos<=5){dose='1/2';}
 						else if(idadeanos>5){dose=1;}
@@ -331,13 +330,7 @@ class Dosepadrao {
 					if(this.tipoidade=="m"){
 						let idademeses = this.idade;
 
-						if(idademeses<3){
-							dose=10*peso;
-							let doselocal = new Dosecomp(farmaco, doseporkg, dosagem, posologia, this.peso);
-							doselocal.mostrarDose(dose, this.retornarPosologia);
-							return false;
-						}
-						else if(idademeses<12){dose='1/2';}
+						if(idademeses<12){dose='1/2';}
 						else if(idademeses<=60){dose=1;}
 						else if(idademeses>60){dose=2;}
 					}
@@ -616,7 +609,7 @@ class Dosepadrao {
 
 				/*****  ARTEMÉTER E LUMEFANTRINA (Fonte: Normas de Tratatamento de Malária em Moçambique) *****/
 				if(farmaco=="al"){ 
-					if(idadeanos<1){this.naoRecomendado(); return false;}
+					if(idadeanos<1){this.especificarMeses(); return false;}
 					else if(idadeanos<=5){dose=1;}
 					else if(idadeanos<=8){dose=2;}
 					else if(idadeanos<=12){dose=3;}
@@ -786,7 +779,7 @@ class Doseparenteral extends Dosepadrao{
 	get retornarPosologia(){
 		let pos;
 		if(this.farmaco=="benzatina") {
-			pos = ` dose única na sífilis recente (primária, secundária ou latente precoce) ou uma dose por semana durante 3 semanas na sífilis tardia (latente tardia e terciária).`;
+			pos = ` dose única na sífilis recente (primária, secundária e latente precoce) ou uma dose por semana durante 3 semanas na sífilis tardia (latente tardia e terciária).`;
 		}
 
 		else if(this.posologia == 1){
@@ -1095,16 +1088,6 @@ function omitirCampo() {
 					}
 				}
 
-				else if((farmaco=="paracetamol-cp")||(farmaco=="paracetamol-sup")){
-					if(idademeses>=3){
-						peso.value = "";
-						paragrafo_de_peso.classList.add("hide"); // Omissao do peso se idade <= 12 anos;
-					}
-					else if(idade<3){
-						paragrafo_de_peso.classList.remove("hide"); // Criancas menores de 3 é obrigatorio dosear c/ base no peso;
-					}
-				}
-
 				else if((farmaco=="codeina") || (farmaco=="codeina-susp")){
 					if(idademeses<12){
 						peso.value = "";
@@ -1129,12 +1112,6 @@ function omitirCampo() {
 				}
 
 				// Omissao de peso se tipoidade for = anos (independente da idade)
-				if((farmaco=="paracetamol-cp")
-					||(farmaco=="paracetamol-sup")){
-					peso.value = "";
-					paragrafo_de_peso.classList.add("hide");
-				}
-
 				else if((farmaco=="codeina") || (farmaco=="codeina-susp")){
 					if(idadeanos<1){
 						peso.value = "";

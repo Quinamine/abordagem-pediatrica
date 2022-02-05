@@ -91,7 +91,7 @@ p#dose-e-posologia output a {
 
 .contentor-da-calculadora form p select.input-extension {
     padding: 8px 4px;
-    min-width: 72px;
+    min-width: 75px;
 }
 
 
@@ -213,7 +213,20 @@ p#dose-e-posologia output a {
     .instrucoes.darv .sublista-ordenada {
        font-style: italic;
        color: #000;
-   }
+    }
+
+    .sublista-ordenada {
+        list-style: none !important;
+    }
+
+   .sublista-ordenada li.tres-ponto-um::before {
+        content: '3.1. ';
+    }
+
+    /* Razoes de nao aplicabilidade de arvs */
+    .sublista-ordenada li.tres-ponto-dois::before {
+        content: '3.2. ';
+    }
 
     .main .instrucoes h2 {
         font-size: 1.125rem;
@@ -254,6 +267,12 @@ p#dose-e-posologia output a {
     .contentor-do-conteudo-sobremim p {
         text-align: left;
     }
+
+
+    .instrucoes h6 {
+        font-weight: bold;
+        color: #333;
+    }
     
 }
 
@@ -287,13 +306,12 @@ output.alerta {
 
 output.alerta.obs,
 span.destacar {
-    color: inherit;
+   color: #333;
 }
 
 p.hide {
     display: none !important;
 }
-
 
 .darv p#dose-e-posologia table {
     text-align: center;
@@ -312,16 +330,13 @@ p.hide {
 
 .darv p#dose-e-posologia table th, 
 .darv p#dose-e-posologia table td {
-    border: thin solid #aaa;
+    border: 1px solid #aaa;
     padding: 3px;
-}
-
-.darv p#dose-e-posologia table th {
-    color: #555;
 }
 
 .darv p#dose-e-posologia table td {
     background-color: #fff;
+    color: #555;
 }
 
 

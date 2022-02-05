@@ -48,6 +48,7 @@ header h2 {
         align-items: center;
         justify-content: flex-start;
         flex-direction: row !important;
+        flex-wrap: nowrap;
     }
     
     .linha-do-cabecalho nav, .contentor-da-logo,
