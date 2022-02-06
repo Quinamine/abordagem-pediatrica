@@ -136,7 +136,7 @@ class Darv {
 
         else if(this.arv=="DuovirN-adult"){
             if(this.peso<14){
-                doseEposologia.innerHTML += `<output class="print-alerta ">Ver "<span class="destacar">${this.arvs[15].textContent}</span>".</output>`; 
+                doseEposologia.innerHTML += `<output class="alerta ">Ver "<span class="destacar">${this.arvs[15].textContent}</span>".</output>`; 
             }
         }
 
@@ -190,12 +190,16 @@ class Darv {
                         doseEposologia.innerHTML += `<output class="alerta">Ver "<span class="destacar">${this.arvs[24].textContent}</span>".</output>`; 
                     }
                     else {
-                        doseEposologia.innerHTML += `<output class="alerta">O "RTV isolado" deve ser usado para fazer a potenciação em crianças em uso de "LPV/r" com TB/HIV sensivel. Recomendado para crianças com peso &ge; 10kg, que sejam capazes de deglutir inteiro. Não pode ser quebrado, esmagado nem dissolvido em liquidos ou alimentos.</output>`;
+                        doseEposologia.innerHTML += `<output class="alerta">O "RTV isolado" deve ser usado para fazer a potenciação em crianças em uso de "LPV/r" com TB/HIV sensivel.</output>`;
+
+                        doseEposologia.innerHTML += `<output class="alerta subalerta">Recomendado para crianças com peso &ge; 10 kg, que sejam capazes de deglutir inteiro. Não pode ser quebrado, esmagado nem dissolvido em liquidos ou alimentos.</output>`;
                     }
                 }
 
                 else if(this.arv=="RTV-100"){
-                    doseEposologia.innerHTML += `<output class="alerta">O "RTV isolado" deve ser usado para fazer a potenciação em crianças em uso de "LPV/r" com TB/HIV sensivel. Recomendado para crianças com peso &ge; 10kg, que sejam capazes de deglutir inteiro. Não pode ser quebrado, esmagado nem dissolvido em liquidos ou alimentos.</output>`;
+                    doseEposologia.innerHTML += `<output class="alerta">O "RTV isolado" deve ser usado para fazer a potenciação em crianças em uso de "LPV/r" com TB/HIV sensivel.</output>`;
+
+                    doseEposologia.innerHTML += `<output class="alerta subalerta">Recomendado para crianças com peso &ge; 10 kg, que sejam capazes de deglutir inteiro. Não pode ser quebrado, esmagado nem dissolvido em liquidos ou alimentos.</output>`;
                 }
                 
             }
@@ -212,7 +216,7 @@ class Darv {
                 doseEposologia.innerHTML += `<output class="alerta ">Ver "<span class="destacar">${this.arvs[25].textContent}</span>".</output>`; 
             }
             else {
-                doseEposologia.innerHTML += `<output class="alerta"><a href='profilaxias/tratamento-profilatico-com-cotrimoxazol.html'>Clique aqui para ver critérios do tratamento profilático com cotrimoxazol.</a></output>`;
+                doseEposologia.innerHTML += `<output class="alerta"><a href='profilaxias/tratamento-profilatico-com-cotrimoxazol.html'>Clique aqui para ver os critérios de tratamento profilático com cotrimoxazol.</a></output>`;
             }
         }
 
@@ -222,12 +226,12 @@ class Darv {
                 doseEposologia.innerHTML += `<output class="alerta ">Ver "<span class="destacar">${this.arvs[26].textContent}</span>".</output>`; 
             }
             else {
-                doseEposologia.innerHTML += `<output class="alerta"><a href='profilaxias/tratamento-profilatico-com-isoniazida.html'>Clique aqui para ver critérios do tratamento profilático com isoniazida.</a></output>`;
+                doseEposologia.innerHTML += `<output class="alerta"><a href='profilaxias/tratamento-profilatico-com-isoniazida.html'>Clique aqui para ver os critérios de tratamento profilático com isoniazida.</a></output>`;
             }
         }
 
         else if(this.arv=="isoniazidacem"){
-            doseEposologia.innerHTML += `<output class="alerta"><a href='profilaxias/tratamento-profilatico-com-isoniazida.html'>Clique aqui para ver critérios do tratamento profilático com isoniazida.</a></output>`;
+            doseEposologia.innerHTML += `<output class="alerta"><a href='profilaxias/tratamento-profilatico-com-isoniazida.html'>Clique aqui para ver os critérios de tratamento profilático com isoniazida.</a></output>`;
         }
 
         /** LEVOFLOXACINA */
@@ -252,7 +256,7 @@ class Darv {
         /** PIRIDOXINA*/
         else if(this.arv=="piridoxina-50"){
             if(this.peso<5){
-                doseEposologia.innerHTML = `<output class="alerta">Não aplicável. Ver "<span class="destacar">${this.arvs[31].textContent}</span>".</output>`; 
+                doseEposologia.innerHTML = `<output class="alerta obs">Não aplicável. Ver "${this.arvs[31].textContent}".</output>`; 
             }
         }
 
@@ -261,7 +265,7 @@ class Darv {
     /* MÉTODO DE IMPRESSÃO */
     mostrarDose(dosemanha, dosenoite){
         if(this.arv.includes("piridoxina")){
-            doseEposologia.innerHTML = `<output>Tomar: ${dosemanha}.</output>`;
+            doseEposologia.innerHTML = `<output class="alerta obs">Tomar: ${dosemanha}.</output>`;
         }
 
         else if((dosemanha=="&minus;") && (dosenoite=="&minus;")){
@@ -844,18 +848,18 @@ class Darv {
         /* Piridoxina       */
         else if(this.arv=="piridoxina-25"){
             if(peso<5){
-                dosemanha = "1/2 cp 3&times;/semana";
+                dosemanha = "1/2 cp(s) 3 vezes por semana";
             }
             else if(peso<8){
-                dosemanha = "1/2 cp/dia";
+                dosemanha = "1/2 cp(s) por dia";
             }
 
             else if(peso<15){
-                dosemanha = "1 cp/dia";
+                dosemanha = "1 cp(s) por dia";
             }
 
             else {
-                dosemanha = "2 cps/dia";
+                dosemanha = "2 cp(s) por dia";
             }
         }
 
@@ -866,11 +870,11 @@ class Darv {
             }
 
             else if(peso<15){
-                dosemanha = "1/2 cp 3&times;/semana";
+                dosemanha = "1/2 cp(s) 3 vezes por semana";
             }
 
             else {
-                dosemanha = "1 cp/dia";
+                dosemanha = "1 cp(s) por dia";
             }
         }
 

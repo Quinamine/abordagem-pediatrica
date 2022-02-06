@@ -2,55 +2,57 @@
 
 const Acordeontwo = {
 
-    extenderAcordeon: (acordeonIndex) => {
-        acordeon[acordeonIndex].classList.toggle("aberto");
+    extenderPeloElemento: (acordeonIndex) => {
+        acordeons[acordeonIndex].classList.toggle("aberto");
     },
 
-   extenderAcordeonPeloMenu: () => {
+   extenderPeloMenu: () => {
+
        if(acordeonStatus==false) {
-           for (const ac of acordeon) {ac.classList.add("aberto");}
+           for (const acordeon of acordeons) {acordeon.classList.add("aberto");}
            menuBtn.textContent = "Fechar todos os itens";
-           acordeonStatus = true;
+           acordeonStatus = true;  
        }
 
        else if(acordeonStatus==true) {
-           for (const ac of acordeon) {ac.classList.remove("aberto");}
+           for (const acordeon of acordeons) {acordeon.classList.remove("aberto");}
            menuBtn.textContent = "Abrir todos os itens";
            acordeonStatus = false;
        }
    }
 }
 
-
-
-
-let acordeon, contentordoMenu, menuBtn,
+let acordeons, contentordoMenu, menuBtn, checkbox,
     acordeonStatus = false;
 function inicializacao() {
-    /** Extender Acordeon */
-    acordeon = document.querySelectorAll(".acordeon");
+
+    /** Extender Acordeon pelo elemento*/
+    acordeons = document.querySelectorAll(".acordeon");
     let acordeonTitle = document.querySelectorAll(".contentor-do-titulo-do-acordeon");
+
+    checkbox = document.querySelector("#ancestral-de-checkbox input#checkbox");
     
     acordeonTitle.forEach ( title => {
         title.addEventListener("click", () => {
-            Acordeontwo.extenderAcordeon(title.dataset.acordeonindex);
+            Acordeontwo.extenderPeloElemento(title.dataset.acordeonindex);
 
-            for (const ac of acordeon) {
-                if(ac.classList.contains("aberto")) {
-                    acordeonStatus = true;
+            for (const acordeon of acordeons) {
+                if(acordeon.classList.contains("aberto")) {
                     menuBtn.textContent = "Fechar todos os itens";
+                    acordeonStatus = true;    
                 }
                 else {
-                    acordeonStatus = false;
                     menuBtn.textContent = "Abrir todos os itens";
+                    acordeonStatus = false;  
                 }
             }
         })
-    })
+    });
 
     /** Mostrar Menu Reticencias  */
     contentordoMenu =  document.querySelector(".contentor-do-menu-reticencias");
     let menuReticencias = document.querySelector(".menu-reticencias");
+
     menuReticencias.addEventListener("click", () => {
         contentordoMenu.classList.add("aberto"); 
     });
@@ -66,86 +68,14 @@ function inicializacao() {
 
     /** Extender Acordeon pelo Menu Reticencias */
     menuBtn = document.querySelector(".contentor-do-botao-de-abertura button");
-    menuBtn.addEventListener("click", Acordeontwo.extenderAcordeonPeloMenu)
-}
+    menuBtn.addEventListener("click", Acordeontwo.extenderPeloMenu);
 
+    /** Extender Acordeon pelo Checkbox no Desktop*/
+    let checkerBox = document.querySelectorAll("#checkbox, #ancestral-de-checkbox label");
+
+    for (const checker of checkerBox) {
+        checker.addEventListener("change", Acordeontwo.extenderPeloMenu)
+    }  
+}
 
 window.addEventListener("load", inicializacao);
-
-
-
-/*
-function showContent(acordeonIndex) {
-    let acordeon = document.querySelectorAll(".acordeon");
-
-    acordeon[acordeonIndex].classList.toggle("aberto")
-}
-
-
-* function abrirItens() {
-    for (const acordeon of acordeons) {
-        acordeon.classList.add("aberto");
-        menuBtn.textContent = "Fechar todos os itens";
-    }
-}
-
-function fecharItens() {
-    for (const acordeon of acordeons) {
-        acordeon.classList.remove("aberto");
-        menuBtn.textContent = "Abrir todos os itens";
-    }
-}
-
-
-
-let acordeons, menuBtn;
-window.addEventListener("load", () => {
-    let acordeonTitle = document.querySelectorAll(".contentor-do-titulo-do-acordeon");
-    acordeons = document.querySelectorAll(".acordeon");
-    menuBtn = document.querySelector(".contentor-do-botao-de-abertura button")
-
-    acordeonTitle.forEach ( title => {
-        title.addEventListener("click", () => {
-            showContent(title.dataset.acordeonindex);
-
-            for (const acordeon of acordeons) {
-                if(acordeon.classList.contains("aberto")) {
-                    menuBtn.textContent = "Fechar todos os itens";
-                }
-                else {
-                    menuBtn.textContent = "Abrir todos os itens";
-                }
-            }
-        })
-
-        
-    })
-
-    /** MENU RETICENCIAS 
-    let menuReticencias = document.querySelector(".menu-reticencias");
-    let contentordoMenu =  document.querySelector(".contentor-do-menu-reticencias");
-    let menuClosers = document.querySelectorAll(".contentor-do-titulo h2, main, .contentor-do-botao-de-abertura button"); 
-
-    menuReticencias.addEventListener("click", () => {
-        contentordoMenu.classList.add("aberto");
-    });
-
-    
-    for (const closer of menuClosers) {
-        closer.addEventListener("click", ()=> {
-            contentordoMenu.classList.remove("aberto");  
-        })
-    }
-
-    ** ABERTURA DOS ITENS 
-    
-    
-    menuBtn.addEventListener("click", () => {
-        if(menuBtn.textContent == "Abrir todos os itens") {
-            abrirItens();
-        }
-        else {
-            fecharItens();
-        }
-    })
-})*/

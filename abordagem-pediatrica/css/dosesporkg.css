@@ -10,12 +10,19 @@
     overflow: hidden;
 }
 
+.acordeon:last-child .contentor-do-titulo-do-acordeon {
+    border-bottom: thin solid #ddd;
+}
+
+.acordeon:last-child  p {
+    border-bottom: 1px solid #eee;
+}
+
 @media screen and (min-width: 1024px) {
     .contentor-do-titulo-do-acordeon:hover {
         background-color: #eee;
     }
 }
-
 
 .acordeon .icone {
     width: 35px;

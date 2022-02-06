@@ -31,7 +31,7 @@ header h2 {
 
 
 @media screen and (max-width: 699px) {
-    .hide-on-mobile {
+    .hide-on-mobile, p#ancestral-de-checkbox {
         display: none;
     }
     
@@ -161,8 +161,14 @@ header h2 {
     }
 
     .contentor-do-menu-reticencias.aberto div.contentor-do-botao-de-abertura {
-        width: 50vw !important;
-        height: auto !important;
+        width: 50vw;
+        height: auto;
+    }
+
+    @media screen and (max-width: 320px){
+        .contentor-do-menu-reticencias.aberto div.contentor-do-botao-de-abertura {
+            width: 75vw;
+        }
     }
 
     /* Linha do corpo */
@@ -221,6 +227,27 @@ header h2 {
         border-radius: 8px;
         margin: initial;
     }
+
+    /*** Abertura do Acordeon da lista de doses por kg ***/
+    .main p#ancestral-de-checkbox {
+        color: #888 !important;
+        text-align: right;
+        margin: 10px 0;
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+        font-size: 12px;
+        cursor: pointer;
+    }
+
+    .main p#ancestral-de-checkbox input {
+        border: thin solid #ddd !important;
+    }
+
+    .main p#ancestral-de-checkbox input {
+        border: thin solid #ddd !important;
+    }
+
 }
 
 

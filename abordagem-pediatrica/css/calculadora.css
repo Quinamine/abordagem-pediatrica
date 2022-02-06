@@ -327,6 +327,10 @@ p.hide {
     border-top: none !important;
 }
 
+.darv p#dose-e-posologia output.alerta.subalerta {
+    border-top: thin solid #ddd !important;
+}
+
 .darv p#dose-e-posologia table th, 
 .darv p#dose-e-posologia table td {
     border: thin solid #aaa;

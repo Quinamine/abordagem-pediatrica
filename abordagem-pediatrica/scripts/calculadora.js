@@ -188,7 +188,7 @@ class Dosepadrao {
 		else if(farmaco.startsWith("albendazol")){pos = "dose única";}  // Inclui Albendazol de 200 e 400;
 		else if(farmaco=="salbutamol-neb"){pos="de 4 em 4 horas (SOS)";}
 		else if(farmaco=="retinol"){pos = "nos dias 0, 1 e 14";}
-		else if((farmaco=="vitamina-c")){pos = "de 12 em 12 horas na 1ª semana e depois 1 cp/dia durante várias semanas para o tratamento de escorbuto";}
+		else if((farmaco=="vitamina-c")){pos = "de 12 em 12 horas na 1ª semana e depois 1 cp(s) por dia durante várias semanas para o tratamento de escorbuto";}
 		else{
 			if(this.posologia==3){pos = 'de 8 em 8 horas';}
 			else if(this.posologia==2){pos = 'de 12 em 12 horas';}
@@ -258,7 +258,7 @@ class Dosepadrao {
 		}
 		
 		else if((this.farmaco=="vitamina-c")){
-			doseEposologia.innerHTML += `<output class='alerta'>A ingestão de 90 à 120 ml/dia de sumos de fruta pode curar o escorbuto.</output>`;
+			doseEposologia.innerHTML += `<output class='alerta'>A ingestão de 90 à 120 ml por dia de sumos de fruta pode curar o escorbuto.</output>`;
 		}
 
 		else if(this.farmaco=="paracetamol-sup"){
@@ -854,18 +854,17 @@ class Doseparenteral extends Dosepadrao{
 			doseEposologia.innerHTML += `<output class='alerta'>Antes de decidir administrar a vitamina B12, procurar sempre esclarecer a causa da anemia megaloblástica e corrigí-la se possivel. Se a causa não for corrigível, administrar uma dose de manutenção de 1 mg a cada 3 meses.</output>`;
 		}
 		else if(this.farmaco=="aminofilina-inj"){
-			doseEposologia.innerHTML += `<output class='alerta'>Observação: a administração rápida pode provocar convulsões, arritmias cardíacas, hipotensão arterial e hemorragia digestiva.</output>`;
+			doseEposologia.innerHTML += `<output class='alerta obs'>Observação: a administração rápida pode provocar convulsões, arritmias cardíacas, hipotensão arterial e hemorragia digestiva.</output>`;
 		}
 		else if(this.farmaco=="var"){
-			doseEposologia.innerHTML += `<output class='alerta'>
+			doseEposologia.innerHTML += `<output class='alerta obs'>
 			Dia 0: no primeiro contacto pós-exposição;</br>
 			Dias 3, 7, 14, 30: após a primeira dose;</br>
-			Dia 90: noventa dias após o contacto suspeito (a partir do dia em que ocorreu a mordedura ou arranhadura). Esta última é facultativa (pode ou não ser administrada). </br> 
-			Num indivíduo anteriormente vacinado adequadamente, dar apenas 2 doses de reforço nos dias 0 e 3.
-			<br/>
-			Devido à deficiente resposta imunitária, evitar a injecção na região nadegueira. Administrar
-			sempre na região deltóideia ou nas crianças mais pequenas na face antero-lateral da coxa.</output>
-			`;
+			Dia 90: noventa dias após o contacto suspeito (a partir do dia em que ocorreu a mordedura ou arranhadura). Esta última é facultativa (pode ou não ser administrada).</output>`;
+
+			doseEposologia.innerHTML+= `<output class="alerta">Num indivíduo anteriormente vacinado adequadamente, dar apenas 2 doses de reforço nos dias 0 e 3.</output>`;
+			
+			doseEposologia.innerHTML+= `<output class="alerta">Devido à deficiente resposta imunitária, evitar a injecção na região nadegueira. Administrar sempre na região deltóideia ou nas crianças mais pequenas na face antero-lateral da coxa.</output>`;
 		}
 
 		else if(this.farmaco=="diazepam-inj"){
