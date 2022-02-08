@@ -22,6 +22,7 @@ form#preferencias fieldset {
 
 form#preferencias legend {
     font-weight: bold;
+    color: #555;
     margin: 10px;
     padding: 4px;
 }
@@ -57,4 +58,6 @@ form#preferencias select:hover  {
         margin-bottom: 30px;
     }
 }
+
+
 

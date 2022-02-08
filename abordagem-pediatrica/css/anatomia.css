@@ -278,7 +278,6 @@ div.conteudo-do-menu-reticencias nav ul li a:visited {
 section.menu-reticencias.activo .conteudo-do-menu-reticencias {
 	width: 50vw;
 	height: auto;
-	max-height: auto;
 	top: 12%;
 }
 
@@ -476,13 +475,12 @@ footer a {
 /** CAIXA DE DIÁLOGO */
 .contentor-da-caixa-de-dialogo {
 	display: none;
-	
 }
 
 .caixa-de-dialogo {
     width: 100%;
     background-color: #fff;
-    font-size: 14px;
+    font-size: 15px;
 	position: absolute;
     bottom: 15vh;
 	border-radius: 5px;
@@ -546,11 +544,9 @@ body.com-caixa-de-dialogo-aberta .linha-do-corpo {
 	
 }
 
-
 body.com-caixa-de-dialogo-aberta a.chave-de-dialogo {
 	color: #FAA032;
 }
-
 
 @media screen and (max-width: 600px) {
 	body.com-caixa-de-dialogo-aberta {

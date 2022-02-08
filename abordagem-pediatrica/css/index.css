@@ -106,7 +106,10 @@ main .contentor-da-propaganda.cdp {
 }
 
 
-.propaganda .descricao h3, 
+.propaganda .descricao h3 {
+    font-size: 16px;
+}
+
 .propaganda .descricao p {
     font-size: 14px;
 }
@@ -124,7 +127,7 @@ main .contentor-da-propaganda.cdp {
     display: flex;
 }
 
-.propaganda .descricao p:last-child a{
+.propaganda .descricao p:last-child a {
     flex: 1;
     padding: 8px 4px;
     color: inherit;
@@ -132,18 +135,24 @@ main .contentor-da-propaganda.cdp {
     border-radius: 5px;
 }
 
-.propaganda .descricao p:last-child a:first-child{
+.propaganda .descricao p:last-child a:first-child {
     background-color: #FAA032;
     margin-right: 5px;
     color: #fff;
+}
+
+.propaganda .descricao p:last-child a:first-child:visited {color: #fff;}
+
+.propaganda .descricao p:last-child a:first-child:hover{
+    background-color: #fa9110;
 }
 
 .propaganda .descricao p:last-child a:last-child{
     background-color: #ddd;
 }
 
-.propaganda .descricao p:last-child a:first-child:hover{
-    background-color: #fa9110;
+.propaganda .descricao p:last-child a:last-child:visited{
+    color: #333;
 }
 
 .propaganda .descricao p:last-child a:last-child:hover{
