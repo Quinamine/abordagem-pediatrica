@@ -880,7 +880,7 @@ class Doseparenteral extends Dosepadrao{
 	/****************** IMPRESSAO DA DOSE ****************/
 
 	mostrarDose(dose, forma, doseml, pos, via){
-		if(this.retornarFormafarmaceutica=="U.I"){
+		if((this.retornarFormafarmaceutica=="U.I") && (this.farmaco != "igar")){
 			doseml = "";
 		}
 

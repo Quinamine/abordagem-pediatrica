@@ -67,7 +67,7 @@ a.voltar-ao-topo:visited {
 .galeria figcaption {
     background-color: inherit;
     border: none;
-    font-size: 13px;
+    font-size: 0.8125rem;
     padding: 5px 10px;
     display: flex;
     align-items: center;

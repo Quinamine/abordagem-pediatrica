@@ -51,7 +51,7 @@ body.escuro .mark,
 body.escuro .full-black,
 body.escuro .propaganda .descricao p:last-child a,
 body.escuro .propaganda .descricao p:last-child a:visited,
-.contentor-do-titulo h2,
+body.escuro .contentor-do-titulo h2,
 body.escuro .corpo > nav ul li a.aba-actual {
     color: #DDD !important;
 }
@@ -478,6 +478,52 @@ body.escuro .galeria.aberta .titulo-da-galeria figcaption {
         width: 4px !important;
     }
 }
+
+
+
+
+
+
+/* FAMILIA DA FONTE */
+body.serifado,
+body.serifado form input,
+body.serifado form select {
+    font-family: "Times New Roman", 'PT Serif', serif !important;
+}
+
+body.cursivo,
+body.cursivo form input,
+body.cursivo form select {
+    font-family: "Lobster", cursive !important;
+}
+
+
+/*** TAMANHO DA FONTE ***/
+
+html.small {
+    font-size: 90%;
+}
+
+html.big {
+    font-size: 110%;
+}
+
+html.big .contentor-da-calculadora form p select.input-extension {
+    min-width: 80px;
+}
+
+@media screen and (min-width: 911px) {
+    html.big .instrucoes {
+        max-height: 474px !important;
+    }
+}
+
+@media screen and (min-width: 768px) {
+    html.big .instrucoes.darv {
+        max-height: 415px !important;
+    }
+}
+
 
 
 

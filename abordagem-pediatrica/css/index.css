@@ -107,11 +107,11 @@ main .contentor-da-propaganda.cdp {
 
 
 .propaganda .descricao h3 {
-    font-size: 16px;
+    font-size: 1rem;
 }
 
 .propaganda .descricao p {
-    font-size: 14px;
+    font-size: 0.875rem;
 }
 
 
@@ -306,7 +306,7 @@ body.com-caixa-de-dialogo-aberta .propaganda {
         align-items: center;
         justify-content: center;
         padding: 10px;
-        font-size: 14px;
+        font-size: 0.875rem;
     }
 
     .capsula .parte-laranja {
