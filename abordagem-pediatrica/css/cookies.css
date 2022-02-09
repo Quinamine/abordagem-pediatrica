@@ -1,5 +1,5 @@
 /** MODO ESCURO  **/
-body.escuro .involucro,
+body.escuro div.involucro,
 body.escuro .linha-do-corpo,
 body.escuro .contentor-da-propaganda,
 body.escuro .propaganda {
@@ -22,15 +22,20 @@ body.escuro .contentor-da-calculadora form p *,
 body.escuro ul.dominio-de-linguagens li a,
 body.escuro ul.dominio-de-linguagens li a:visited,
 body.escuro .slogan-do-misau,
-body.escuro footer,
+body.escuro footer p, body.escuro footer .website,
 body.escuro form#preferencias legend,
-body.escuro .contentor-do-botao-de-abertura button {
-    color: #D2D4D6;
+body.escuro .contentor-do-botao-de-abertura button,
+body.escuro .caixa-de-dialogo nav a, 
+body.escuro .caixa-de-dialogo nav a:visited,
+body.escuro .conteudo-do-menu-reticencias a,
+body.escuro .conteudo-do-menu-reticencias a:visited,
+body.escuro table th, body.escuro .contentor-dos-contactos p:first-child a {
+    color: #D4D8DA;
 }
 
 body.escuro .contentor-das-fatias-do-menu-hamburguer .fatia,
 body.escuro div.contentor-dos-tres-pontos > div {
-    background-color: #D2D4D6;;
+    background-color: #D4D8DA;
 }
 
 
@@ -46,7 +51,8 @@ body.escuro .mark,
 body.escuro .full-black,
 body.escuro .propaganda .descricao p:last-child a,
 body.escuro .propaganda .descricao p:last-child a:visited,
-.contentor-do-titulo h2 {
+.contentor-do-titulo h2,
+body.escuro .corpo > nav ul li a.aba-actual {
     color: #DDD !important;
 }
 
@@ -58,10 +64,6 @@ body.escuro .main a:visited {color: rgb(23, 112, 128);}
 
 body.escuro .contentor-dos-links-de-partilha a,
 body.escuro .contentor-dos-links-de-partilha a:visited,
-body.escuro .caixa-de-dialogo nav a, 
-body.escuro .caixa-de-dialogo nav a:visited,
-body.escuro .conteudo-do-menu-reticencias a,
-body.escuro .conteudo-do-menu-reticencias a:visited,
 body.escuro .propaganda .descricao,
 body.escuro form#preferencias select,
 body.escuro a.voltar-ao-topo, 
@@ -80,7 +82,7 @@ body.escuro .destaque, body.escuro mark, body.escuro .mark {
 body.escuro .linha-do-cabecalho.com-menu-aberto nav ul,
 body.escuro .linha-do-cabecalho.com-menu-aberto nav ul li,
 body.escuro .contentor-do-menu-hamburguer,
-body.escuro form#preferencias select  {
+body.escuro form#preferencias select {
     border-color: #333;
 }
 
@@ -92,8 +94,16 @@ body.escuro .contentor-da-propaganda.cdp,
 body.escuro .contentor-da-capsula,
 body.escuro form#preferencias fieldset,
 body.escuro .galeria,
-body.escuro .contentor-dos-contactos {
-	border-color: #444;
+body.escuro .contentor-dos-contactos,
+body.escuro .darv p#dose-e-posologia table th, 
+body.escuro .darv p#dose-e-posologia table td,
+body.escuro li.dropdown-container.on ul.dropdown-menu,
+body.escuro li.dropdown-container.on ul.dropdown-menu li {
+    border-color: #444;
+}
+
+body.escuro ul.dropdown-menu {
+    box-shadow: none !important;
 }
 
 body.escuro hr, body.escuro figure figcaption {
@@ -114,41 +124,41 @@ body.escuro .contentor-do-botao-de-abertura button {
 
 body.escuro.com-caixa-de-dialogo-aberta,
 body.escuro.com-caixa-de-dialogo-aberta .linha-do-corpo {
-    background-color: rgba(0, 0, 0, .4);
-    color: #333;
+    background-color: rgba(0, 0, 0, .8) !important;
+    color: #555 !important;
 }
 
-body.escuro.com-caixa-de-dialogo-aberta a.chave-de-dialogo,
-body.escuro.com-caixa-de-dialogo-aberta h1, 
-body.escuro.com-caixa-de-dialogo-aberta h2, 
-body.escuro.com-caixa-de-dialogo-aberta h3, 
-body.escuro.com-caixa-de-dialogo-aberta h5,
-body.escuro.com-caixa-de-dialogo-aberta .bold,
+body.escuro.com-caixa-de-dialogo-aberta h3,
+body.escuro.com-caixa-de-dialogo-aberta .chave-de-dialogo,
+body.escuro.com-caixa-de-dialogo-aberta .bold {
+    color: #555 !important;
+}
+
+body.escuro.com-caixa-de-dialogo-aberta .destaque,
 body.escuro.com-caixa-de-dialogo-aberta mark {
-    color: #333 !important;
+    background-color: inherit !important;
+    color: #555 !important;
 }
 
 
 /** Tabelas **/
 body.escuro table th, 
 body.escuro table td {
-    color: #d2d4d6;
     border: 1px solid #444;
 }
 
 body.escuro .main table thead tr:nth-child(2) th, 
-tfoot td {
-    background-color: inherit;
-}
+tfoot td {background-color: inherit;}
 
-body.escuro table td {
-    color: #aaa;
-}
+body.escuro table td {color: #aaa !important;}
 
 body.escuro .main table thead tr:first-child th {
     background-color: rgb(46, 43, 43);
 }
 
+body.escuro .contentor-da-tabela table .classe {
+    background-color: inherit !important;
+}
 
 /** PAGINA INICIAL **/
 
@@ -162,7 +172,6 @@ body.escuro .corpo > nav ul li a {
 
 body.escuro .corpo > nav ul li a.aba-actual {
     background-color: inherit;
-    color: #ddd;
     border: none;
 }
 
@@ -205,7 +214,8 @@ body.escuro .contentor-da-calculadora form p {
 body.escuro .contentor-da-calculadora form p:hover {border: 1px solid #faa032;}
 
 /* Menu reticencias */
-body.escuro div.contentor-dos-tres-pontos:active {background-color: rgb(148, 148, 148) !important;}
+body.escuro div.contentor-dos-tres-pontos:active 
+{background-color: rgb(148, 148, 148) !important;}
 
 /** Links de partilha **/
 body.escuro .contentor-da-calculadora .contentor-dos-links-de-partilha {
@@ -218,30 +228,24 @@ body.escuro .observacao {color: #faa032 !important;}
 
 body.escuro output.alerta.obs,
 body.escuro span.destacar {
-   color: #D2D4D6 !important;
+   color: #D4D8DA !important;
 }
 
 body.escuro .darv p#dose-e-posologia output {
     background-color: #222 !important;
 }
 
-body.escuro output.alerta {
-    color: #aaa !important;
-    border-color: #444 !important;
-}
-
-body.escuro .darv p#dose-e-posologia output.alerta.subalerta {border-color: #444 !important;}
-
 body.escuro .darv p#dose-e-posologia table th, 
-body.escuro .darv p#dose-e-posologia table td {
+body.escuro .darv p#dose-e-posologia table td,
+body.escuro output.alerta,
+body.escuro .darv p#dose-e-posologia 
+output.alerta.subalerta {
     border-color: #444 !important;
-    color: #D2D4D6;
 }
 
-body.escuro .darv p#dose-e-posologia table td {
-    background-color: #222 !important;
-    color: #aaa;
-}
+body.escuro output.alerta {color: #aaa !important;}
+
+body.escuro .darv p#dose-e-posologia table td {background-color: #222 !important;}
 
 body.escuro .darv p#dose-e-posologia output.alerta,
 body.escuro .darv p#dose-e-posologia output.observacao,
@@ -266,7 +270,7 @@ body.escuro .interpretacao-do-exemplo p {
 /** Suporte **/
 body.escuro .contentor-da-seta-de-volta:active,
 body.escuro .contentor-da-seta-de-volta:hover {
-    background-color: #888;
+    background-color: #555;
 }
 
 body.escuro .contentor-da-seta-de-volta.sem-historico:active,
@@ -285,7 +289,6 @@ body.escuro .acordeon th,
 body.escuro .acordeon td { 
     border-color: #444 !important;
     color: #aaa !important;
-    
 }
 
 body.escuro .acordeon th {
@@ -315,6 +318,16 @@ body.escuro .acordeon.aberto span {
 body.escuro .linha-do-cabecalho .menu-reticencias:active {
     background-color: #888;
 }
+
+/** Sobre **/
+body.escuro .galeria .titulo-da-galeria:hover {
+    background-color: inherit;
+}
+
+body.escuro .galeria.aberta .titulo-da-galeria figcaption {
+    color: #D4D8DA !important;
+}
+
 
 /* RESPONSIVIDADE */
 @media screen and (min-width: 600px) {
@@ -352,9 +365,6 @@ body.escuro .linha-do-cabecalho .menu-reticencias:active {
         background-color: #3d3d3d !important;
     }
 
-    body.escuro td.classe {
-        background-color: #222 !important;
-    }
 
     /** INDEX **/
     body.escuro .corpo > nav ul li a.aba-actual {background-color: inherit !important;}
@@ -396,10 +406,6 @@ body.escuro .linha-do-cabecalho .menu-reticencias:active {
     body.escuro .main .instrucoes {
         border-color:#3d3d3d;
         box-shadow: none;
-    }
-
-    body.escuro td.classe {
-        background-color: #333 !important;
     }
 
     body.escuro .link-sobremim .contentor-da-descricao p,
