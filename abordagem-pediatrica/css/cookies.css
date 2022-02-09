@@ -60,7 +60,7 @@ body.escuro .corpo > nav ul li a.aba-actual {
 /** Links e outros **/
 body.escuro .main a {color: rgb(185, 65, 255);}
 
-body.escuro .main a:visited {color: rgb(23, 112, 128);}
+body.escuro .main a:visited, body.escuro a.chave-de-dialogo {color: rgb(23, 112, 128);}
 
 body.escuro .contentor-dos-links-de-partilha a,
 body.escuro .contentor-dos-links-de-partilha a:visited,
