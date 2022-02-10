@@ -857,7 +857,7 @@ class Doseparenteral extends Dosepadrao{
 			doseEposologia.innerHTML += `<output class='alerta obs'>Observação: a administração rápida pode provocar convulsões, arritmias cardíacas, hipotensão arterial e hemorragia digestiva.</output>`;
 		}
 		else if(this.farmaco=="var"){
-			doseEposologia.innerHTML += `<output class='alerta obs'>
+			doseEposologia.innerHTML += `<output class='alerta'>
 			Dia 0: no primeiro contacto pós-exposição;</br>
 			Dias 3, 7, 14, 30: após a primeira dose;</br>
 			Dia 90: noventa dias após o contacto suspeito (a partir do dia em que ocorreu a mordedura ou arranhadura). Esta última é facultativa (pode ou não ser administrada).</output>`;
@@ -955,13 +955,19 @@ class Doseparenteral extends Dosepadrao{
 						if(this.tipoidade=="m"){
 							let idademeses = idade;
 
-							if(idademeses<144){dosemg = (this.doseporkg * peso)}
+							if(idademeses<144){
+								dosemg = (this.doseporkg * peso);
+								if(dosemg>=1200000){dosemg = 1200000;}
+							}
 							else if (idademeses <= 168) {dosemg = 1200000;} // dose em UI
 						}
 						else if(this.tipoidade=="y"){
 							let idadeanos = idade;
 
-							if(idadeanos<12){dosemg = (this.doseporkg * peso);}
+							if(idadeanos<12){
+								dosemg = (this.doseporkg * peso);
+								if(dosemg>=1200000){dosemg = 1200000;}
+							}
 							else if(idadeanos <= 14){dosemg = 1200000;} // dose em UI
 						}
 					}
