@@ -323,7 +323,7 @@ section.menu-reticencias.activo .conteudo-do-menu-reticencias {
 }
 
 /* Paragrafos e trechos de texto */
-.main p, dl, dd, dt, .main li{line-height: 1.5;}
+.main p, dl, dd, dt, .main li {line-height: 1.5;}
 
 .main p, .main ul, .main dl, .main ol {margin: 20px 0;}
 

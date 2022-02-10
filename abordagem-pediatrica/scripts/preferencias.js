@@ -1,6 +1,7 @@
 
+let temaEscolhido, fontePreferida, tamanhoEscolhido, alinhamento;
 function savePrefonLocal() {
-    let temaEscolhido = temas.options[temas.selectedIndex].value,
+        temaEscolhido = temas.options[temas.selectedIndex].value,
         fontePreferida = fontes.options[fontes.selectedIndex].value,
         tamanhoEscolhido = tamanhos.options[tamanhos.selectedIndex].value,
         alinhamento = alinhamentos.options[alinhamentos.selectedIndex].value;
@@ -39,10 +40,7 @@ function loading() {
             showSavedPref(temas, "tema");
             showSavedPref(fontes, "fonte");
             showSavedPref(tamanhos, "tamanho");
-            showSavedPref(alinhamentos, "alinhamento");
-
-            mudarTema();
-            
+            showSavedPref(alinhamentos, "alinhamento"); 
         });
     }
 }
