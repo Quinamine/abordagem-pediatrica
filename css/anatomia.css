@@ -84,6 +84,12 @@ header {
 	font-family: "Lobster", cursive, Arial, Helvetica, sans-serif;
 }
 
+@media screen and (max-width:375px) {
+	.linha-do-cabecalho .contentor-da-logo a {
+		font-size: 20px;
+	}
+}
+
 /* SESSAO DE MENU-MOBILE */
 .linha-do-cabecalho .contentor-do-menu-hamburguer {
 	width: 40px;
@@ -119,18 +125,11 @@ div.contentor-das-fatias-do-menu-hamburguer {
 
 /* MENU ABERTO */
 .linha-do-cabecalho.com-menu-aberto .contentor-da-logo{
-	margin-top: 10px;
+	margin-top: 12px;
 }
 
-@media screen and (max-width: 319px) {
-	.linha-do-cabecalho.com-menu-aberto .contentor-da-logo{
-		margin-top: 0px;
-	}
 
-	.contentor-do-menu-hamburguer {
-		margin-top: 5px;
-	}
-}
+
 
 .linha-do-cabecalho.com-menu-aberto {
 	position: absolute;

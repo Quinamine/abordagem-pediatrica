@@ -19,13 +19,13 @@
 @keyframes slide {
     0% {right: 0;}
 
-    100% {right: 1024px}
+    100% {right: 100%;}
 }
 
 .banner-rotativo picture {
     min-width: 100%;
     position: relative;
-    right: -700px;
+    right: -100%;
     transition: all 250ms;
 }
 
@@ -36,7 +36,7 @@
 
 .banner-rotativo picture.pic-actual {
     order: -1;
-    right: 0px;
+    right: 0px !important;
     animation-name: slide;
     animation-delay: 4400ms;
     animation-duration: 250ms;
