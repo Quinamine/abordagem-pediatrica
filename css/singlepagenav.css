@@ -1,0 +1,53 @@
+/** NAV **/
+
+.corpo > nav ul {
+    display: flex;
+}
+
+.corpo > nav ul li{
+   flex: 1;
+   display: flex;
+}
+
+.corpo > nav ul li a{
+    flex: 1;
+    text-align: center;
+    padding: 15px 5px;
+    border: 1px solid #ddd;
+    color: #aaa;
+    background-color: #eee;
+} 
+
+.corpo > nav ul li:first-child a {
+    border-left: none;
+} 
+
+.corpo > nav ul li:last-child a{
+    border-right: none;
+} 
+
+.corpo > nav ul li a.aba-actual {
+    color: inherit;
+    font-weight: bold;
+    border: none;
+    outline: none;
+    background-color: #fff;
+} 
+
+
+/** JS e CSS reutilizavel **/
+
+.hide {
+    display: none !important;
+}
+
+body.com-caixa-de-dialogo-aberta .corpo > nav ul li a{
+    background-color: rgba(219, 146, 57, .4);
+    color: #888;
+    border: none;
+} 
+
+body.com-caixa-de-dialogo-aberta .corpo > nav ul li a.aba-actual {
+    background-color: #e8b980;
+    color: #333;
+}

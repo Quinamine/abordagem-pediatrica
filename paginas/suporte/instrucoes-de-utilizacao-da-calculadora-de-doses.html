@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html dir="ltr" lang="pt-PT">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Instruções de utilização da Calculadora de doses - Abordagem Pediátrica</title>
+        <meta name="author" content="Adérito Félix Quinamine" />
+
+        <!-- DESIGN -->
+		<link rel="stylesheet" href="../../css/reset.css" />
+        <link rel="stylesheet" href="../../css/anatomia.css" />
+        <link rel="stylesheet" href="../../css/suporte.css" />
+        <link rel="stylesheet" href="../../css/cookies.css" />
+        
+
+        <!-- FONTES -->
+		<link rel="preconnect" href="https://fonts.googleapis.com">
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+		<link href="https://fonts.googleapis.com/css2?family=Lobster&display=swap" rel="stylesheet">
+		
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+		<link href="https://fonts.googleapis.com/css2?family=PT+Serif:wght@400;700&family=Source+Sans+Pro:wght@400;700&display=swap" rel="stylesheet">
+
+
+        <!-- SCRIPTS -->
+        <script src="../../scripts/menu.js"></script>
+        <script src="../../scripts/historico.js"></script>
+        <script src="../../scripts/cookies.js"></script>
+
+        <!-- Global site tag (gtag.js) - Google Analytics -->
+		<script async src="https://www.googletagmanager.com/gtag/js?id=G-TE35PF9T58"></script>
+		<script>
+			window.dataLayer = window.dataLayer || [];
+			function gtag(){dataLayer.push(arguments);}
+			gtag('js', new Date());
+
+			gtag('config', 'G-TE35PF9T58');
+		</script>	
+
+        <noscript>O seu navegador está sem permissão de execução de scripts. Isso certamente interfere completa e negativamente no funcionamento desta ferramenta. Habilite o JavaScript e tente novamente.</noscript>
+
+    </head>
+    <body>
+        
+        <div class="involucro">
+
+            <header>
+                <div class="linha linha-do-cabecalho">
+
+                    <div class="contentor-da-logo">
+						<h1><a href="../../index.html">Abordagem Pediátrica</a></h1>
+					</div>
+
+                    <!-- MOBILE MENU -->
+					<div class="contentor-do-menu-hamburguer">
+						<div class="contentor-do-titulo-do-menu-hamburguer">
+							<h4>menu</h4>
+						</div>
+						<div class="contentor-das-fatias-do-menu-hamburguer">
+							<div class="fatia f1"></div>
+							<div class="fatia f2"></div>
+							<div class="fatia f3"></div>
+						</div>
+					</div>
+
+                    <nav>
+
+						<ul>
+							<li>
+                                <a href="../../index.html">Página inicial</a>
+						    </li>
+
+							<li class="dropdown-container cdp">
+
+								<a href="../calculadora-de-doses.html" class="target activo" >Calculadora<span class="trecho-dedoses"> de doses</span></a>
+								
+								<ul class="dropdown-menu">
+									<li><a href="doses-por-kg-utilizadas-pela-calculadora.html">Doses por kilograma</a></li>
+									<li><a href="doses-de-diazepam-de-acordo-com-a-idade.html">Diazepam por idade</a></li>
+									<li><a href="../../download/formulario-nacional-de-medicamentos.pdf" download="Formulário Nacional de Medicamentos">Baixar formulário</a></li>
+									<li><a href="instrucoes-de-utilizacao-da-calculadora-de-doses.html">Instruções de uso</a></li>
+								</ul>
+							</li>
+
+							<li class="dropdown-container darv">
+								<a href="../doseador-de-arvs.html" class="target"> 
+									<span class="doseador">Doseador de ARVs</span>
+									<span class="darv">Darv</span>
+								</a>
+								<!-- Dropdown menu -->
+								<ul class="dropdown-menu">
+									<li><a href="../profilaxias/tratamento-profilatico-com-isoniazida.html">Critérios de TPI</a></li>
+									<li><a href="../profilaxias/tratamento-profilatico-com-cotrimoxazol.html">Critérios de TPC</a></li>
+									<li><a href="significado-das-siglas-dos-arvs.html">Siglas dos ARVs</a></li>
+									<li><a href="instrucoes-de-utilizacao-do-doseador-de-arvs.html">Instruções de uso</a></li>
+								</ul>
+							</li>
+
+							<li><a href="../preferencias.html">Preferências</a></li>
+
+							<li><a href="../sobremim.html">Sobre <span class="trecho-mim">mim</span></a></li>
+
+							<li><a href="../contacto.html">Contacto</a></li>
+						</ul>
+                    </nav>
+
+                    <div class="contentor-da-seta-de-volta">
+                        <div>
+                            <div class="traco traco1"></div>
+                            <div class="traco traco2"></div>
+                            <div class="traco traco3"></div>
+                        </div>
+                    </div>
+
+
+                    <div class="contentor-do-titulo">
+                        <h2>Centro de ajuda</h2>
+                    </div>
+                </div>
+            </header>
+
+            <div class="linha linha-do-corpo corpo">
+                <main class="main">
+					
+                     <!--INTRODUCAO À CALCULADORA PROPRIAMENTE DITA-->
+                    <h1>Instruções de utilização da Calculadora de doses</h1>
+                    <p class="short">
+                        Para acessá-la, basta clicar <span class="trecho-com-display-none-no-pc">sobre o menu do site e depois sobre a opção <a href="../calculadora-de-doses.html">"Calculadora de doses".</a></span> 
+
+                        <span class="trecho-com-display-none-no-cel">sobre a opção "Calculadora" no menu do site ou <a href="../calculadora-de-doses.html">aqui.</a> <br/> </span> 
+                        Basicamente a Calculadora apresenta três (3) secções distintas: 
+                    </p>
+                    <ol class="full-black sem-margem-superior">
+                        <li>Dados da criança;</li>
+                        <li>Especificação do fármaco;</li>
+                        <li>Dose e posologia.</li>
+                    </ol>  
+
+                    <picture class="first-child">
+                        <source media="(max-width: 599px)" srcset="../../imagens/mobile_m/calculadora.png" />
+                        <source media="(max-width: 699px)" srcset="../../imagens/desktop/calculadora.png" />
+                       
+                        <img src="../../imagens/desktop/secao_dc.png" alt="Ilustração da Calculadora" />
+                    </picture>
+
+                    <h3>1ª secção: Dados da criança</h3>
+
+                    <p class="short">
+                        Esta secção apresenta dois campos, nomeadamente:
+                    </p>
+
+                    <ul>
+                        <li> <span class="full-black">Idade</span>: para inserir a idade em meses ou anos da criança. A idade pode ser digitada ou introduzida com ajuda das setas na extremidade direita do campo (as setas podem não ser visíveis nos telemóveis);</li>
+
+                        <li> <span class="full-black">Peso</span>: campo para inserir o peso em kg da criança. À semelhança da idade, o peso pode ser digitado ou inserido usando as setas na extremidade distal do campo (as setas podem não ser visíveis nos telemóveis).</li>
+                    </ul>
+
+                    <figure class="hide-on-pc">
+                        <!-- MAX WIDTH: 599px-->                      
+                        <img src="../../imagens/mobile_m/secao_dc.png" alt="Ilustração da secção 'Dados da criança'"/>
+                    </figure>
+                
+                    <p class="destaque">
+                        <span class="bold">Observação:</span> O preenchimento de ambos campos (peso e idade) é conveniente e recomendável, entretanto, para o cálculo da dose da maior parte dos medicamentos, dar-se-á maior importância e consideração ao peso em relação a idade. Ademais, a Calculadora utiliza um algoritmo de omissão de um dos campos caso este não seja necessário para o cálculo da dose do medicamento selecionado. Por exemplo, para o cálculo da dose de praziquantel, não importa a idade (somente o peso), por isso na seleção deste fármaco, o campo de idade é omitido automaticamente. Por outro lado, existem escassos medicamentos que necessitam somente da idade (neste caso o campo de peso é omitido). A regra de omissão de campo não se aplica aos fármacos que necessitam de um ou do outro campo (idade ou peso) para o cálculo da dose, por exemplo, para arteméter e lumefantrina (vulgo coartem), importa preencher tanto o campo de peso quanto o da idade, no entanto, o cálculo da dose será feito de acordo com o peso em todos os casos excepto quando o usuário preenche somente a idade (neste caso a dose é apresentada de acordo com a idade).
+                    </p>
+
+                    
+                    <div class="contentor-da-secao-ef">
+                        <!--DESCRICAO DA SESSAO "ESPECIFICACAO DO MEDICAMENTO"-->
+                        <h3>2ª secção: Especificação do fármaco</h3>
+                        <p>
+                            Nesta secção existe um campo de seleção com a lista dos medicamentos. Aqui só é possível escolher o nome do fármaco a prescrever com base na lista disponível, não há opção de introduzir ou digitar dados. 
+                            A lista dos medicamentos está seccionada em classes (em maiúsculas) para facilitar a localização destes, e portanto o conhecimento da classe à que um determinado fármaco pertence, torna mais rápida a sua localização.
+                            A nomenclatura dos medicamentos está apresentada da seguinte forma:
+                        </p>
+
+                        <ul>
+                            <li class="short">
+                                Um número entre parênteses, exemplo (0) que indica o nível de prescrição.</span> <a href="../../download/formulario-nacional-de-medicamentos-2007.pdf" download="Formulário Nacional de Medicamentos">Saiba mais no Formulário Nacional de Medicamentos (FNM).</a>
+                            </li>
+
+                            <li class="short">
+                                Um código contendo 3 caracteres (2 números nos extremos e uma letra no meio) indicando o código do fármaco no FNM.
+                            </li>
+
+                            <li class="short">Nome genérico internacional do fármaco, Dosagem e Forma farmacêutica.</span></li>
+                        </ul>
+                        <p>
+                            Exemplo:  
+                        </p>
+                        <ul>
+                            <li>(1) 8A2 Amoxicilina 250 mg/5 ml Susp</li>
+                            
+                        </ul>
+                        <p>
+                            Em que:
+                        </p>
+                        <ul>
+                            <li>(1)</span> – é o nível de prescrição;</span></li>
+
+                            <li>8A8</span> – é o código de Amoxicilina em suspensão no FNM;</li>
+                            
+                            <li>Amoxicilina 250 mg/5 ml Susp</span> – são Nome genérico internacional, Dosagem e Forma farmacêutica respectivamente.</li>
+                        </ul>
+                        
+                        <!--ILUSTRACAO DA SESSAO "ESPECIFICACAO DO FARMACO"-->
+                        
+                        <picture class="second-child">
+                                <source media="(max-width: 599px)" srcset="../../imagens/mobile_m/secao_ef.png">
+                                <img src="../../imagens/desktop/secao_ef.png" alt="Ilustração da secção 'Especificação do fármaco'" />
+                        </picture>
+                        
+                        <p class="destaque">
+                        <span class="bold">Observação:</span> A lista de medicamentos pode ser extensa, portanto para flexibilizar a localização, recomendo que procure primeiro pela classe à qual o medicamento pertence e depois pelo medicamento dentro daquela classe. A título de exemplo, se alguém quisesse localizar "Clorfeniramina 4 mg comp."</span>, bastava localizar a classe de "ANTI-HISTAMÍNICOS"</span> e depois procurar pelo fármaco propriamente dito dentro da classe, neste caso clorfeniramina.
+                        </p>
+                    </div>
+                
+                    <!--DESCRICAO DA SESSAO "DOSE E POSOLOGIA"-->
+                    <h3>3ª secção: Dose e posologia</h3>
+                    <p>
+                        Esta é uma secção com um campo inicialmente vazio, em que serão mostrados automaticamente os resultados (dose e posologia) e/ou outras informações relevantes do medicamento selecionado após o preenchimento correcto dos campos acima citados.
+                    </p>
+
+                    
+                    <!--CONCLUSAO DA DOCUMENTACAO"-->
+                    <h3 class="nota">NOTA</h3>
+                    <p class="destaque">
+                        Importa recordar que a calculadora deve ser usada após um &Delta; (diagnóstico) prévio e decisão de prescrever um fármaco. 
+                        <br/>
+                    
+                        Lembra: A
+                        <abbr title="Calculadora de Doses Pediátricas"><a href="../calculadora-de-doses.html"  class="sem-destaque">CDP</a></abbr> ajuda-o a determinar basicamente quanto prescrever (dose e posologia) e não o que prescrever.
+                        Para mais informações ou esclarecimento de dúvidas, visite a página de contacto no menu do site ou <a href="../contacto.html">aqui.</a>
+                        
+                    </p>
+                
+                    <!--SLOGAN DO MISAU"-->
+                    <p class="slogan-do-misau">O Nosso Maior Valor é a Vida</p>	
+                 </main>
+            </div>
+
+            <footer>
+                <div class="linha linha-do-rodape">
+
+					<p>Desenvolvido por <a href="../sobremim.html">Adérito Félix Quinamine</a> 
+						<span class="separador-do-rodape">|</span> 
+						&copy; <a href="../../index.html" class="website">Abordagem Pediátrica</a>  2021 &minus; 2022
+					
+				</div>
+            </footer>
+        </div>
+    </body>
+</html>

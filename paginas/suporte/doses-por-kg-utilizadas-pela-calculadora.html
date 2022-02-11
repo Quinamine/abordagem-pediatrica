@@ -1,0 +1,753 @@
+<!DOCTYPE html>
+<html dir="ltr" lang="pt-PT">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Doses usadas pela Calculadora - Abordagem Pediátrica</title>
+        <meta name="author" content="Adérito Félix Quinamine" />
+
+        <!-- DESIGN -->
+		<link rel="stylesheet" href="../../css/reset.css" />
+        <link rel="stylesheet" href="../../css/anatomia.css" />
+        <link rel="stylesheet" href="../../css/suporte.css">
+        <link rel="stylesheet" href="../../css/dosesporkg.css">
+        <link rel="stylesheet" href="../../css/cookies.css">
+
+        <!-- FONTES -->
+		<link rel="preconnect" href="https://fonts.googleapis.com">
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+		<link href="https://fonts.googleapis.com/css2?family=Lobster&display=swap" rel="stylesheet">
+		
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+		<link href="https://fonts.googleapis.com/css2?family=PT+Serif:wght@400;700&family=Source+Sans+Pro:wght@400;700&display=swap" rel="stylesheet">
+
+
+        <!-- SCRIPTS -->
+        <script src="../../scripts/menu.js"></script>
+        <script src="../../scripts/acordeontwo.js"></script>
+        <script src="../../scripts/historico.js"></script>
+        <script src="../../scripts/suporte.js"></script>
+        <script src="../../scripts/cookies.js"></script>
+
+        <!-- Global site tag (gtag.js) - Google Analytics -->
+		<script async src="https://www.googletagmanager.com/gtag/js?id=G-TE35PF9T58"></script>
+		<script>
+			window.dataLayer = window.dataLayer || [];
+			function gtag(){dataLayer.push(arguments);}
+			gtag('js', new Date());
+
+			gtag('config', 'G-TE35PF9T58');
+		</script>	
+
+        <noscript>O seu navegador está sem permissão de execução de scripts. Isso certamente interfere completa e negativamente no funcionamento desta ferramenta. Habilite o JavaScript e tente novamente.</noscript>
+
+    </head>
+    <body>
+        
+        <div class="involucro">
+
+            <header>
+                <div class="linha linha-do-cabecalho">
+
+                    <div class="contentor-da-logo">
+						<h1><a href="../../index.html">Abordagem Pediátrica</a></h1>
+					</div>
+
+                    <!-- MOBILE MENU -->
+					<div class="contentor-do-menu-hamburguer">
+						<div class="contentor-do-titulo-do-menu-hamburguer">
+							<h4>menu</h4>
+						</div>
+						<div class="contentor-das-fatias-do-menu-hamburguer">
+							<div class="fatia f1"></div>
+							<div class="fatia f2"></div>
+							<div class="fatia f3"></div>
+						</div>
+					</div>
+
+                    <nav>
+
+						<ul>
+							<li>
+                                <a href="../../index.html">Página inicial</a>
+						    </li>
+
+							<li class="dropdown-container cdp">
+
+								<a href="../calculadora-de-doses.html" class="target activo" >Calculadora<span class="trecho-dedoses"> de doses</span></a>
+								
+								<ul class="dropdown-menu">
+									<li><a href="doses-por-kg-utilizadas-pela-calculadora.html">Doses por kilograma</a></li>
+									<li><a href="doses-de-diazepam-de-acordo-com-a-idade.html">Diazepam por idade</a></li>
+									<li><a href="../../download/formulario-nacional-de-medicamentos.pdf" download="Formulário Nacional de Medicamentos">Baixar formulário</a></li>
+									<li><a href="instrucoes-de-utilizacao-da-calculadora-de-doses.html">Instruções de uso</a></li>
+								</ul>
+							</li>
+
+							<li class="dropdown-container darv">
+								<a href="../doseador-de-arvs.html" class="target"> 
+									<span class="doseador">Doseador de ARVs</span>
+									<span class="darv">Darv</span>
+								</a>
+								<!-- Dropdown menu -->
+								<ul class="dropdown-menu">
+									<li><a href="../profilaxias/tratamento-profilatico-com-isoniazida.html">Critérios de TPI</a></li>
+									<li><a href="../profilaxias/tratamento-profilatico-com-cotrimoxazol.html">Critérios de TPC</a></li>
+									<li><a href="significado-das-siglas-dos-arvs.html">Siglas dos ARVs</a></li>
+									<li><a href="instrucoes-de-utilizacao-do-doseador-de-arvs.html">Instruções de uso</a></li>
+								</ul>
+							</li>
+
+							<li><a href="../preferencias.html">Preferências</a></li>
+
+							<li><a href="../sobremim.html">Sobre <span class="trecho-mim">mim</span></a></li>
+
+							<li><a href="../contacto.html">Contacto</a></li>
+						</ul>
+                    </nav>
+
+                    
+                    <div class="contentor-da-seta-de-volta">
+                        <div>
+                            <div class="traco traco1"></div>
+                            <div class="traco traco2"></div>
+                            <div class="traco traco3"></div>
+                        </div>
+                    </div>
+                    
+                    <div class="contentor-do-titulo">
+                        <h2>Doses por kilograma</h2>
+                    </div>
+
+                    <div class="contentor-do-menu-reticencias">
+                        <div class="menu-reticencias">
+                            <div class="ponto"></div>
+                            <div class="ponto"></div>
+                            <div class="ponto"></div>
+                        </div>
+                        <div class="contentor-do-botao-de-abertura">
+                            <button>Abrir todos os itens</button>
+                        </div>
+                    </div>
+                </div>
+            </header>
+
+            <div class="linha linha-do-corpo corpo">
+                <main class="main">
+                    <div class="contentor-da-tabela">
+
+                        <h1>Doses por kilograma de peso utilizadas pela Calculadora</h1>
+
+                       <p id="ancestral-de-checkbox"><input type="checkbox" id="checkbox" value="cool" class="checker"> <label for="checkbox" class="checker">Abrir todos</label></p> 
+
+                        <!-- PENICILINAS -->
+                        <div class="acordeon">
+                            <div class="contentor-do-titulo-do-acordeon" data-acordeonindex="0">
+                                <div class="icone">
+                                    <div></div>
+                                    <div></div>
+                                    <div></div>
+                                    <div></div>
+                                </div>
+                                <h2>Fenoximetilpenicilina 500 mg Comp.</h2> <span>&lt;</span>
+                            </div>
+                            <p>50 mg/kg/dia divididos em 3 tomas.</p>
+                            
+                            
+                        </div>
+
+                        <div class="acordeon">
+                            <div class="contentor-do-titulo-do-acordeon" data-acordeonindex="1">
+                                <div class="icone">
+                                    <div></div>
+                                    <div></div>
+                                    <div></div>
+                                    <div></div>
+                                </div>
+                                <h2>Penicilina benzatínica 2.4 milhões U.I Inj.</h2> <span>&lt;</span>
+                            </div>
+                            <p>50.000 U.I/kg em dose única ou 1 dose/semana durante 3 semanas.</p>
+                        </div>
+
+                        <div class="acordeon">
+                            <div class="contentor-do-titulo-do-acordeon" data-acordeonindex="2">
+                                <div class="icone">
+                                    <div></div>
+                                    <div></div>
+                                    <div></div>
+                                    <div></div>
+                                </div>
+                                <h2>Penicilina procaína 3 milhões U.I Inj.</h2> <span>&lt;</span>
+                            </div>                           
+                            <table>
+                                <thead>
+                                    <tr>
+                                        <th>Idade &lt; 12 anos</th>
+                                        <th>Idade &ge; 12 anos</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>
+                                            50.000 U.I/kg em dose única diária.
+                                        </td>
+                                        <td>
+                                            1.200.000 U.I em dose única diária.
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+
+                        <div class="acordeon">
+                            <div class="contentor-do-titulo-do-acordeon" data-acordeonindex="3">
+                                <div class="icone">
+                                    <div></div>
+                                    <div></div>
+                                    <div></div>
+                                    <div></div>
+                                </div>
+                                <h2>Amoxicilina 250 mg/5 ml Susp.</h2> <span>&lt;</span>
+                            </div>                           
+                            <p>50 mg/kg/dia divididos em 3 tomas.</p>
+                        </div>
+
+                        <div class="acordeon">
+                            <div class="contentor-do-titulo-do-acordeon" data-acordeonindex="4">
+                                <div class="icone">
+                                    <div></div>
+                                    <div></div>
+                                    <div></div>
+                                    <div></div>
+                                </div>
+                                <h2>Amoxicilina e ácido clavulânico 375 mg Comp.</h2> <span>&lt;</span>
+                            </div>                           
+                            <p>50 mg/kg/dia divididos em 3 tomas.</p>
+                        </div>
+                        
+                        <div class="acordeon">
+                            <div class="contentor-do-titulo-do-acordeon" data-acordeonindex="5">
+                                <div class="icone">
+                                    <div></div>
+                                    <div></div>
+                                    <div></div>
+                                    <div></div>
+                                </div>
+                                <h2>Amoxicilina e ácido clavulânico 312.5 mg/5 ml Susp.</h2> <span>&lt;</span>
+                            </div>                           
+                            <p>50 mg/kg/dia divididos em 3 tomas.</p>
+                        </div>
+
+                        <div class="acordeon">
+                            <div class="contentor-do-titulo-do-acordeon" data-acordeonindex="6">
+                                <div class="icone">
+                                    <div></div>
+                                    <div></div>
+                                    <div></div>
+                                    <div></div>
+                                </div>
+                                <h2>Flucloxacilina 125mg/5ml Susp.</h2> <span>&lt;</span>
+                            </div>                           
+                            <p>12 mg/kg/dose de 8 em 8 horas.</p>
+                        </div>
+
+                        <!-- CEALOSPORINAS -->
+                        <div class="acordeon">
+                            <div class="contentor-do-titulo-do-acordeon" data-acordeonindex="7">
+                                <div class="icone">
+                                    <div></div>
+                                    <div></div>
+                                    <div></div>
+                                    <div></div>
+                                </div>
+                                <h2>Cefuroxima 250 mg Comp.</h2> <span>&lt;</span>
+                            </div>                           
+                            <p>10 mg/kg/dose de 12 em 12 horas.</p>
+                        </div>
+
+                        <div class="acordeon">
+                            <div class="contentor-do-titulo-do-acordeon" data-acordeonindex="8">
+                                <div class="icone">
+                                    <div></div>
+                                    <div></div>
+                                    <div></div>
+                                    <div></div>
+                                </div>
+                                <h2>Cefuroxima 125 mg/5 ml Susp.</h2> <span>&lt;</span>
+                            </div>                           
+                            <p>10 mg/kg/dose de 12 em 12 horas.</p>
+                        </div>
+
+                        <div class="acordeon">
+                            <div class="contentor-do-titulo-do-acordeon" data-acordeonindex="9">
+                                <div class="icone">
+                                    <div></div>
+                                    <div></div>
+                                    <div></div>
+                                    <div></div>
+                                </div>
+                                <h2>Ceftriaxona 1 g/4 ml Inj.</h2> <span>&lt;</span>
+                            </div>                           
+                            <p>50 mg/kg em dose única diária.</p>
+                        </div>
+
+                        <!-- MACROLIDOS -->
+                        <div class="acordeon">
+                            <div class="contentor-do-titulo-do-acordeon" data-acordeonindex="10">
+                                <div class="icone">
+                                    <div></div>
+                                    <div></div>
+                                    <div></div>
+                                    <div></div>
+                                </div>
+                                <h2>Azitromicina 500 mg Comp.</h2> <span>&lt;</span>
+                            </div>                           
+                            <p>10 mg/kg em dose única diária.</p>
+                        </div>
+
+                        <div class="acordeon">
+                            <div class="contentor-do-titulo-do-acordeon" data-acordeonindex="11">
+                                <div class="icone">
+                                    <div></div>
+                                    <div></div>
+                                    <div></div>
+                                    <div></div>
+                                </div>
+                                <h2>Azitromicina 200 mg/5 ml Susp.</h2> <span>&lt;</span>
+                            </div>                           
+                            <p>10 mg/kg em dose única diária.</p>
+                        </div>
+                       
+                        <div class="acordeon">
+                            <div class="contentor-do-titulo-do-acordeon" data-acordeonindex="12">
+                                <div class="icone">
+                                    <div></div>
+                                    <div></div>
+                                    <div></div>
+                                    <div></div>
+                                </div>
+                                <h2>Eritromicina 250 mg/5 ml Susp.</h2> <span>&lt;</span>
+                            </div>                           
+                            <p>50 mg/kg/dia divididos em 3 tomas.</p>
+                        </div>
+
+                        <!-- QUINOLONAS -->
+                        <div class="acordeon">
+                            <div class="contentor-do-titulo-do-acordeon" data-acordeonindex="13">
+                                <div class="icone">
+                                    <div></div>
+                                    <div></div>
+                                    <div></div>
+                                    <div></div>
+                                </div>
+                                <h2>Ácido nalidíxico 500 mg Comp.</h2> <span>&lt;</span>
+                            </div>                           
+                            <p>50 mg/kg/dia divididos em 3 tomas.</p>
+                        </div>
+
+                        <div class="acordeon">
+                            <div class="contentor-do-titulo-do-acordeon" data-acordeonindex="14">
+                                <div class="icone">
+                                    <div></div>
+                                    <div></div>
+                                    <div></div>
+                                    <div></div>
+                                </div>
+                                <h2>Ácido nalidíxico 300 mg/5 ml Susp.</h2> <span>&lt;</span>
+                            </div>                           
+                            <p>50 mg/kg/dia divididos em 3 tomas.</p>
+                        </div>
+
+                        <!-- ANFENICOIS -->
+                        <div class="acordeon">
+                            <div class="contentor-do-titulo-do-acordeon" data-acordeonindex="15">
+                                <div class="icone">
+                                    <div></div>
+                                    <div></div>
+                                    <div></div>
+                                    <div></div>
+                                </div>
+                                <h2>Cloranfenicol 250 mg /5 ml Susp.</h2> <span>&lt;</span>
+                            </div>                           
+                            <p>50 mg/kg/dia divididos em 3 tomas.</p>
+                        </div>
+
+                        <div class="acordeon">
+                            <div class="contentor-do-titulo-do-acordeon" data-acordeonindex="16">
+                                <div class="icone">
+                                    <div></div>
+                                    <div></div>
+                                    <div></div>
+                                    <div></div>
+                                </div>
+                                <h2>Nitrofurantoina 50 mg Comp.</h2> <span>&lt;</span>
+                            </div>                           
+                            <p>3 mg/kg/dia divididos em 3 tomas.</p>
+                        </div>
+
+                        <!-- NITROIMIDAZOLICOS -->
+
+                        <div class="acordeon">
+                            <div class="contentor-do-titulo-do-acordeon" data-acordeonindex="17">
+                                <div class="icone">
+                                    <div></div>
+                                    <div></div>
+                                    <div></div>
+                                    <div></div>
+                                </div>
+                                <h2>Metronidazol 200 mg/5 ml Susp.</h2> <span>&lt;</span>
+                            </div>                           
+                            <p>7.5 mg/kg/dose de 8 em 8 horas.</p>
+                        </div>
+
+                        <div class="acordeon">
+                            <div class="contentor-do-titulo-do-acordeon" data-acordeonindex="18">
+                                <div class="icone">
+                                    <div></div>
+                                    <div></div>
+                                    <div></div>
+                                    <div></div>
+                                </div>
+                                <h2>Metronidazol 125 mg/5 ml Susp.</h2> <span>&lt;</span>
+                            </div>                           
+                            <p>7.5 mg/kg/dose de 8 em 8 horas.</p>
+                        </div>
+
+                        <!-- ANTI-HELMINTICOS -->
+                        <div class="acordeon">
+                            <div class="contentor-do-titulo-do-acordeon" data-acordeonindex="19">
+                                <div class="icone">
+                                    <div></div>
+                                    <div></div>
+                                    <div></div>
+                                    <div></div>
+                                </div>
+                                <h2>Mebendazol 100mg Comp.</h2> <span>&lt;</span>
+                            </div>                           
+                            <table>
+                                <thead>
+                                    <tr>
+                                        <th>Peso &lt; 20 kg</th>
+                                        <th>Peso &ge; 20 kg</th>
+                                    </tr>
+                                </thead>               
+                                <tbody>
+                                    <tr>
+                                        <td>1/2 comp. de 12/12 h.</td>
+                                        <td>1 comp. de 12/12 h.</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+
+                       
+
+                        <!-- ANTI-MALÁRICOS -->
+                        <div class="acordeon">
+                            <div class="contentor-do-titulo-do-acordeon" data-acordeonindex="20">
+                                <div class="icone">
+                                    <div></div>
+                                    <div></div>
+                                    <div></div>
+                                    <div></div>
+                                </div>
+                                <h2>Arteméter + Lumefantrina 140 mg Comp.</h2> <span>&lt;</span>
+                            </div>                          
+                            <table>
+                                <thead>
+                                    <tr>
+                                        <th>Peso em kg</th>
+                                        <th>Regime posológico</th>
+                                    </tr>
+                                </thead>               
+                                <tbody>
+                                    <tr>
+                                        <td> &lt; 5</td>
+                                        <td>Não recomendado.</td>
+                                    </tr>
+                                    <tr>
+                                        <td>5 - 14.9</td>
+                                        <td>1 comp. de 12/12 h por 3 dias.</td>
+                                    </tr>
+                                    <tr>
+                                        <td>15 - 24.9</td>
+                                        <td>2 comp. de 12/12 h por 3 dias.</td>
+                                    </tr>
+                                    <tr>
+                                        <td>25 - 34.9</td>
+                                        <td>3 comp. de 12/12 h por 3 dias.</td>
+                                    </tr>
+                                    <tr>
+                                        <td>&ge; 35</td>
+                                        <td>4 comp. de 12/12 h por 3 dias.</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+
+                        <div class="acordeon">
+                            <div class="contentor-do-titulo-do-acordeon" data-acordeonindex="21">
+                                <div class="icone">
+                                    <div></div>
+                                    <div></div>
+                                    <div></div>
+                                    <div></div>
+                                </div>
+                                <h2>Quinina 300 mg Comp.</h2> <span>&lt;</span>
+                            </div>                          
+                            <table>
+                                <thead>
+                                    <tr>
+                                        <th>Peso em kg</th>
+                                        <th>Regime posológico</th>
+                                    </tr>
+                                </thead>               
+                                <tbody>
+                                    <tr>
+                                        <td> &lt; 10</td>
+                                        <td>1/4 comp. de 8/8 h por 7 dias.</td>
+                                    </tr>
+                                    <tr>
+                                        <td>10 - 14.9</td>
+                                        <td>1/2 comp. de 8/8 h por 7 dias.</td>
+                                    </tr>
+                                    <tr>
+                                        <td>15 - 24.9</td>
+                                        <td>3/4 comp. de 8/8 h por 7 dias.</td>
+                                    </tr>
+                                    <tr>
+                                        <td>25 - 35</td>
+                                        <td>1 comp. de 8/8 h por 7 dias.</td>
+                                    </tr>
+                                    <tr>
+                                        <td>&gt; 35</td>
+                                        <td>2 comp. de 8/8 h por 7 dias.</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+
+
+                        <!-- ANTI-FUNGICOS -->
+                        <div class="acordeon">
+                            <div class="contentor-do-titulo-do-acordeon" data-acordeonindex="22">
+                                <div class="icone">
+                                    <div></div>
+                                    <div></div>
+                                    <div></div>
+                                    <div></div>
+                                </div>
+                                <h2>Fluconazol 200 mg Comp.</h2> <span>&lt;</span>
+                            </div>                           
+                            <p>3 mg/kg em dose única diária.</p>
+                        </div>
+
+                        <div class="acordeon">
+                            <div class="contentor-do-titulo-do-acordeon" data-acordeonindex="23">
+                                <div class="icone">
+                                    <div></div>
+                                    <div></div>
+                                    <div></div>
+                                    <div></div>
+                                </div>
+                                <h2>Griseofulvina 500 mg Comp.</h2> <span>&lt;</span>
+                            </div>                           
+                            <p>10 mg/kg em dose única diária.</p>
+                        </div>
+
+                        <div class="acordeon">
+                            <div class="contentor-do-titulo-do-acordeon" data-acordeonindex="24">
+                                <div class="icone">
+                                    <div></div>
+                                    <div></div>
+                                    <div></div>
+                                    <div></div>
+                                </div>
+                                <h2>Ketoconazol 200 mg Comp.</h2> <span>&lt;</span>
+                            </div>                           
+                            <p>3 mg/kg em dose única diária.</p>
+                        </div>
+
+
+                        <!-- ANALGESICOS E AINES -->
+                        <div class="acordeon">
+                            <div class="contentor-do-titulo-do-acordeon" data-acordeonindex="25">
+                                <div class="icone">
+                                    <div></div>
+                                    <div></div>
+                                    <div></div>
+                                    <div></div>
+                                </div>
+                                <h2>Paracetamol 120 mg/5 ml Susp.</h2> <span>&lt;</span>
+                            </div>                           
+                            <p>10 mg/kg/dose de 8 em 8 horas.</p>
+                        </div>
+
+
+                        <div class="acordeon">
+                            <div class="contentor-do-titulo-do-acordeon" data-acordeonindex="26">
+                                <div class="icone">
+                                    <div></div>
+                                    <div></div>
+                                    <div></div>
+                                    <div></div>
+                                </div>
+                                <h2>Diclofenac 50 mg Comp.</h2> <span>&lt;</span>
+                            </div>                           
+                            <p>3 mg/kg/dia divididos em 3 tomas.</p>
+                        </div>
+
+                        <div class="acordeon">
+                            <div class="contentor-do-titulo-do-acordeon" data-acordeonindex="27">
+                                <div class="icone">
+                                    <div></div>
+                                    <div></div>
+                                    <div></div>
+                                    <div></div>
+                                </div>
+                                <h2>Ibuprofeno 200 mg Comp.</h2> <span>&lt;</span>
+                            </div>                           
+                            <p>20 mg/kg/dia divididos em 3 tomas.</p>
+                        </div>
+
+                        <div class="acordeon">
+                            <div class="contentor-do-titulo-do-acordeon" data-acordeonindex="28">
+                                <div class="icone">
+                                    <div></div>
+                                    <div></div>
+                                    <div></div>
+                                    <div></div>
+                                </div>
+                                <h2>Ibuprofeno 100 mg/5 ml Susp.</h2> <span>&lt;</span>
+                            </div>                           
+                            <p>20 mg/kg/dia divididos em 3 tomas.</p>
+                        </div>
+
+                        <div class="acordeon">
+                            <div class="contentor-do-titulo-do-acordeon" data-acordeonindex="29">
+                                <div class="icone">
+                                    <div></div>
+                                    <div></div>
+                                    <div></div>
+                                    <div></div>
+                                </div>
+                                <h2>Codeína 30 mg Comp.</h2> <span>&lt;</span>
+                            </div>                           
+                            <p>1 mg/kg/dose de 8 em 8 horas.</p>
+                        </div>
+
+                        <div class="acordeon">
+                            <div class="contentor-do-titulo-do-acordeon" data-acordeonindex="30">
+                                <div class="icone">
+                                    <div></div>
+                                    <div></div>
+                                    <div></div>
+                                    <div></div>
+                                </div>
+                                <h2>Codeína  25 mg/5 ml Susp.</h2> <span>&lt;</span>
+                            </div>                           
+                            <p>1 mg/kg/dose de 8 em 8 horas.</p>
+                        </div>
+
+                        <!-- ANTI-ASMÁTICOS -->
+                        <div class="acordeon">
+                            <div class="contentor-do-titulo-do-acordeon" data-acordeonindex="31">
+                                <div class="icone">
+                                    <div></div>
+                                    <div></div>
+                                    <div></div>
+                                    <div></div>
+                                </div>
+                                <h2>Aminofilina 100 mg Comp</h2> <span>&lt;</span>
+                            </div>                           
+                            <p>10 mg/kg/dia divididos em 3 tomas.</p>
+                        </div>
+
+                        <div class="acordeon">
+                            <div class="contentor-do-titulo-do-acordeon" data-acordeonindex="32">
+                                <div class="icone">
+                                    <div></div>
+                                    <div></div>
+                                    <div></div>
+                                    <div></div>
+                                </div>
+                                <h2>Salbutamol 5 mg/ml Sol. nebulizável</h2> <span>&lt;</span>
+                            </div>                           
+                            <p>0,03 ml/kg + 4 ml de soro fisiológico.</p>
+                        </div>
+
+                        <!-- ANTI-ANÉMICOS -->
+                       
+                        <div class="acordeon">
+                            <div class="contentor-do-titulo-do-acordeon" data-acordeonindex="33">
+                                <div class="icone">
+                                    <div></div>
+                                    <div></div>
+                                    <div></div>
+                                    <div></div>
+                                </div>
+                                <h2>Gluconato de ferro 30 mg/5 ml Xpe.</h2> <span>&lt;</span>
+                            </div>                           
+                            <p>6 mg/kg/dia divididos em 2 tomas.</p>
+                        </div>
+
+
+                        <!-- ANTI-HISTAMICOS -->
+                        <div class="acordeon">
+                            <div class="contentor-do-titulo-do-acordeon" data-acordeonindex="34">
+                                <div class="icone">
+                                    <div></div>
+                                    <div></div>
+                                    <div></div>
+                                    <div></div>
+                                </div>
+                                <h2>Clorfeniramina 4 mg Comp.</h2> <span>&lt;</span>
+                            </div>                           
+                            <p>0.4 mg/kg/dia divididos em 3 tomas</p>
+                        </div>
+
+
+                        <div class="acordeon">
+                            <div class="contentor-do-titulo-do-acordeon" data-acordeonindex="35">
+                                <div class="icone">
+                                    <div></div>
+                                    <div></div>
+                                    <div></div>
+                                    <div></div>
+                                </div>
+                                <h2>Clorfeniramina 2 mg/5 ml Xpe.</h2> <span>&lt;</span>
+                            </div>                           
+                            <p>0.4 mg/kg/dia divididos em 3 tomas</p>
+                        </div>
+
+                        <!-- ANTI-CONVULSIVANTES -->
+                        <div class="acordeon">
+                            <div class="contentor-do-titulo-do-acordeon" data-acordeonindex="36">
+                                <div class="icone">
+                                    <div></div>
+                                    <div></div>
+                                    <div></div>
+                                    <div></div>
+                                </div>
+                                <h2>Diazepam 10 mg/2 ml Inj.</h2> <span>&lt;</span>
+                            </div>                           
+                            <p>0.3 mg/kg/dose.</p>
+                        </div>
+                    </div>
+                 </main>
+            </div>
+
+            <footer>
+                <div class="linha linha-do-rodape">
+
+					<p>Desenvolvido por <a href="../sobremim.html">Adérito Félix Quinamine</a> 
+						<span class="separador-do-rodape">|</span> 
+						&copy; <a href="../../index.html" class="website">Abordagem Pediátrica</a>  2021 &minus; 2022
+					
+				</div>
+            </footer>
+        </div>
+    </body>
+</html>

@@ -1,0 +1,339 @@
+
+.linha-do-corpo {
+    margin: 0 auto;
+    border-top: none;
+    padding: 0;
+    border-radius: 0;
+}
+
+/* Banner Rotativo */
+
+.banner-rotativo {  
+    display: flex;
+    overflow: hidden;
+    background-color: #FAA032;
+    max-height: 300px;
+    position: relative;
+}
+
+@keyframes slide {
+    0% {right: 0;}
+
+    100% {right: 1024px}
+}
+
+.banner-rotativo picture {
+    min-width: 100%;
+    position: relative;
+    right: -700px;
+    transition: all 250ms;
+}
+
+.banner-rotativo picture img {
+    width: 100%;
+    height: 100%;
+}
+
+.banner-rotativo picture.pic-actual {
+    order: -1;
+    right: 0px;
+    animation-name: slide;
+    animation-delay: 4400ms;
+    animation-duration: 250ms;
+}
+
+/* BARRA DE PROGRESSAO */
+
+@media screen and (min-width: 601px) {
+    .banner-rotativo section {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        z-index: 8;
+        position: absolute;
+        bottom: 10px;
+    }
+    
+    .banner-rotativo section div {
+        margin: 5px;
+        padding: 4px;
+        border: 1px solid #fff;
+        justify-content: center;
+        position: relative;
+        border-radius: 50%;
+        cursor: pointer;
+    }
+    
+    .banner-rotativo section div.cheia {
+        background-color: #fff;
+    }
+}
+
+
+/*** PROPAGANDA ***/
+
+main .contentor-da-propaganda, 
+.artigo, .contentor-da-capsula {
+    padding: 30px 4%;
+    width: 100%;
+}
+
+
+
+main .contentor-da-propaganda.cdp {
+    background-color: #eee;
+}
+
+.propaganda {
+    max-width: 375px;
+    margin: 0 auto;
+    box-shadow: 0 2px 15px #888;
+    border: 5px solid #ddd;
+    background-color: #fff;
+}
+
+
+.propaganda img {
+    width: 100%;
+    border: 2px solid #ddd;
+}
+
+
+.propaganda .descricao {
+    padding: 10px 16px;
+    background-color: rgb(255, 246, 246);
+    border-top: 1px solid #ddd;
+}
+
+
+.propaganda .descricao h3 {
+    font-size: 1rem;
+}
+
+.propaganda .descricao p {
+    font-size: 0.875rem;
+}
+
+
+.propaganda .descricao h3 {
+    margin: 0 0 8px 0;
+}
+
+.propaganda .descricao p {
+    margin: 8px 0;
+}
+
+.propaganda .descricao p:last-child{
+    display: flex;
+}
+
+.propaganda .descricao p:last-child a {
+    flex: 1;
+    padding: 8px 4px;
+    color: inherit;
+    text-align: center;
+    border-radius: 5px;
+}
+
+.propaganda .descricao p:last-child a:first-child {
+    background-color: #FAA032;
+    margin-right: 5px;
+    color: #fff;
+}
+
+.propaganda .descricao p:last-child a:first-child:visited {color: #fff;}
+
+.propaganda .descricao p:last-child a:first-child:hover{
+    background-color: #fa9110;
+}
+
+.propaganda .descricao p:last-child a:last-child{
+    background-color: #ddd;
+}
+
+.propaganda .descricao p:last-child a:last-child:visited{
+    color: #333;
+}
+
+.propaganda .descricao p:last-child a:last-child:hover{
+    background-color: #ccc;
+}
+
+
+
+/** CONTEUDO SOBRE **/
+.artigo img {
+    border: 1px solid #ddd;
+    margin: initial;
+}
+
+
+.prescricao-correcta span.involucro {
+    width: 100%;
+    max-width: 300px;
+    display: flex;
+}
+
+.prescricao-correcta span.involucro span {
+    flex-grow: 1;
+    flex-shrink: 0;
+}
+
+.conversao-da-dose,
+.prescricao-correcta {
+    max-width: 355px;
+}
+
+
+/*** CAIXA DE DIALOGO **/
+body.com-caixa-de-dialogo-aberta .destaque,
+body.com-caixa-de-dialogo-aberta .propaganda {
+	background-color: rgba(219, 146, 57, .4);
+}
+
+/** CAPSULA **/
+.contentor-da-capsula {
+    display: none;
+}
+
+/** Responsividade */
+@media screen and (min-width: 700px) {
+    .main {
+        max-width: 100%;
+        padding: 0;
+    }
+
+    .artigo {
+        max-width: 700px;
+        margin: 0 auto;
+        padding: 0 15px;
+    }
+
+    .contentor-da-propaganda {
+        padding-left: 15px !important;
+        padding-right: 15px !important;
+        
+    }
+
+    .propaganda {
+        justify-content: center !important;
+    }
+
+    .propaganda .descricao {
+        margin-left: 40px !important;
+    }
+
+    .propaganda .descricao h3, 
+    .descricao p {
+        font-size: 1rem !important;
+    }
+
+    .propaganda .descricao p:last-child {
+        flex-direction: column;
+    }
+
+    .descricao p:last-child a:first-child {
+        margin-right: 0 !important;
+        margin-bottom: 8px;
+    }
+
+    .main .contentor-da-propaganda.cdp {
+        background-color: inherit;
+        border-top: 1px solid #eee;
+    }
+
+
+}
+
+
+@media screen and (min-width: 600px) {
+
+    .propaganda {
+        margin: initial;
+        border: none;
+        box-shadow: none;
+        max-width: 100%;
+        margin: 0 auto;
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .propaganda picture {
+        flex: 1 0 50%;
+        max-width: 350px;
+    }
+
+    .propaganda img {
+        border-radius: 8px;
+    }
+
+    .propaganda .descricao {
+        background-color: inherit;
+        border: none;
+        max-width: 350px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        margin-left: 10px;
+        padding: 5px;
+    }
+
+    .main .contentor-da-propaganda.cdp {
+        background-color: inherit;
+        border-top: 1px solid #eee;
+    }
+
+    
+    /* Capsula */
+
+    .contentor-da-capsula {
+        display: flex;
+        border-top: 1px solid #eee;
+    }
+
+
+    .capsula {
+        width: 650px;
+        min-height: 230px;
+        margin: auto;
+        display: flex;
+
+    }
+
+    .capsula > div {
+        flex: 1;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 10px;
+        font-size: 0.875rem;
+    }
+
+    .capsula .parte-laranja {
+        background-color: #FAA032;
+        color: #5E330B;
+        border-top-left-radius: 50%;
+        border-bottom-left-radius: 50%;
+    }
+
+    .capsula .parte-laranja h2 {
+        font-weight: initial;
+    }
+
+    .capsula .parte-castanha {
+        background-color: #5E330B;;
+        color: #FAA032;
+        border-top-right-radius: 50%;
+        border-bottom-right-radius: 50%;
+    }
+}
+
+
+
+
+
+
+
+
+
+

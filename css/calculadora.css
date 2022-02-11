@@ -1,0 +1,348 @@
+
+/*** Sumir com elementos Desktop ***/
+
+
+.linha-do-corpo nav,
+.instrucoes {
+    display: none !important;
+}
+
+
+.main h1 {
+    padding: 5px;
+    margin: 0 4% 20px 4%;
+    background-color: #eee;
+    border-radius: 5px;
+}
+
+.main .contentor-da-calculadora {
+    padding-top: 20px;
+    border: 1px solid #ddd;
+    border-top: none;
+}
+
+.contentor-da-calculadora fieldset {
+    border-top: 1px solid #ddd;
+    border-bottom: 1px solid #ddd;
+    margin: 10px 0;
+}
+
+
+.contentor-da-calculadora fieldset:last-child {
+    margin-bottom: 0;
+}
+
+.contentor-da-calculadora legend {
+    background-color: #d27832;
+    padding: 8px;
+    border-radius: 5px;
+    color: #fff;
+    font-weight: bold;
+}
+
+
+.contentor-da-calculadora form p {
+    margin: 20px 4%;
+    border: 1px solid #ddd;
+    display: flex;
+    border-radius: 3px;
+    padding-right: 10px;
+    background-color: rgba(240, 240, 240, .7);
+}
+
+.contentor-da-calculadora form p:hover {
+    border: 1px solid #faa032;
+}
+
+.contentor-da-calculadora form p#dose-e-posologia {
+    border: none; 
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+}
+
+.contentor-da-calculadora form p.dose-e-posologia:hover {
+    border: none;
+}
+
+.contentor-da-calculadora form p * {
+    border: none;
+    outline: none;
+    font-size: 0.9375rem;
+    background-color: rgba(240, 240, 240, .5);
+    color: #333;
+}
+
+
+.contentor-da-calculadora form p input,
+p.ancestral-de-farmacos select{
+    padding: 8px 10px;
+}
+
+.contentor-da-calculadora p#dose-e-posologia output {
+    width: 100%;
+    padding: 6.5px 10px;
+}
+
+.contentor-da-calculadora p#dose-e-posologia output a,
+p#dose-e-posologia output a {
+    color: inherit;
+}
+
+.contentor-da-calculadora form p select.input-extension {
+    padding: 8px 4px;
+    min-width: 75px;
+}
+
+
+.contentor-da-calculadora form p input {
+    width: 100%;
+}
+
+.contentor-da-calculadora form p.ancestral-de-idade, 
+.contentor-da-calculadora form p.ancestral-de-peso {
+    padding-right: 10px;
+}
+
+.contentor-da-calculadora p.ancestral-de-farmacos select {
+    width: 100%;
+    padding-left: 5px;
+}
+
+
+/* Links de Partilha */
+.contentor-dos-links-de-partilha {
+    margin: 0;
+    background-color: #f8f8f8;
+    justify-content: space-between;
+}
+
+.contentor-dos-links-de-partilha a {
+    padding: 10px calc(4% + 8px);
+    font-size: 11px;
+}
+
+/* Responsividade */
+
+@media screen and (min-width: 600px) {
+
+    .linha-do-corpo {
+        padding-bottom: 30px;
+    }
+
+    .main {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between; 
+        padding-top: 30px;
+    }
+
+    .main > div {
+        flex: 1;
+    }
+
+    .contentor-da-calculadora {   
+        border-radius: 10px;
+        max-width: 425px;
+        padding: 15px 15px 0 15px !important;
+        box-shadow: 0 0 8px #555;
+        margin: 0 auto;
+        border: none !important;
+    }
+
+    .contentor-da-calculadora h1 {
+        font-size: 22px;
+        margin: 0 0 15px 0;
+        padding: 0;
+        background-color: inherit;
+    }
+
+    .contentor-da-calculadora fieldset {
+        border: 2px solid #ddd;
+        border-radius: 6px;    
+    }
+
+    .contentor-da-calculadora legend {
+        padding: 6px;
+    }
+
+    .contentor-da-calculadora form p {
+        margin-right: 10px;
+        margin-left: 10px;
+        border: 1px solid #ddd;
+    }
+
+    .contentor-dos-links-de-partilha {
+        background-color: initial;
+    }
+
+
+    /** INSTRUCOES */
+    .main .instrucoes {
+        display: none;
+    }
+    
+}
+
+
+@media screen and (min-width: 768px) {
+    .main {
+        max-width: 100%;
+    }
+    
+    .main .instrucoes {
+        display: block !important;
+        max-height: 495px;
+        margin-left: 40px;
+        overflow-y: scroll;
+        padding: 10px;
+        border: 15px solid rgba(240, 240, 240, .7);
+        box-shadow: 0 0 8px #555;
+        font-size: 0.875rem;
+    }
+
+    .main .instrucoes picture img{
+        border: 2px solid #ddd;
+        border-radius: 8px;
+    }
+
+
+    .main .instrucoes.darv {
+        max-height: 406px !important;
+    }
+
+    .instrucoes.darv .sublista-ordenada {
+       font-style: italic;
+       color: #000;
+    }
+
+    .sublista-ordenada {
+        list-style: none !important;
+    }
+
+   .sublista-ordenada li.tres-ponto-um::before {
+        content: '3.1. ';
+    }
+
+    /* Razoes de nao aplicabilidade de arvs */
+    .sublista-ordenada li.tres-ponto-dois::before {
+        content: '3.2. ';
+    }
+
+    .main .instrucoes h2 {
+        font-size: 1.125rem;
+    }
+
+    .main .instrucoes h2:first-child {
+        margin-top: 0;
+    }
+
+    .main .instrucoes h3,
+    .main .instrucoes h4,
+    .main .instrucoes h5 {
+        font-size: 1.125rem;
+    }
+
+    .main .instrucoes h3.last-title {
+        text-align: center;
+    }
+    
+    /** Sobre mim */
+    .link-sobremim {
+        color: #333;
+        text-align: center;
+    }
+
+    .link-sobremim:visited {
+        color: #333;
+    }
+
+    .contentor-do-conteudo-sobremim h6 {
+        margin-bottom: 8px;
+    }
+
+    .contentor-do-conteudo-sobremim img {
+        border-radius: 50%;
+    }
+
+    .contentor-do-conteudo-sobremim p {
+        text-align: left;
+    }
+
+
+    .instrucoes h6 {
+        font-weight: bold;
+        color: #333;
+    }
+    
+}
+
+@media screen and (min-width: 911px) {
+    .main .instrucoes {
+        max-height: 462px !important;
+        border-right: none;
+    }
+}
+
+
+@media screen and (max-width: 1023px) {
+    .linha-do-corpo {
+        padding-top: 0;
+        margin-top: 0;
+        border-top: 0;
+    }
+}
+
+/*** SESSAO JS ***/
+
+.observacao {
+    color: brown !important;
+}
+
+output.alerta {
+    color: #555 !important;
+    border-top: thin solid #ddd !important;
+}
+
+output.alerta.obs,
+span.destacar {
+   color: inherit !important;
+}
+
+p.hide {
+    display: none !important;
+}
+
+.darv p#dose-e-posologia table {
+    text-align: center;
+}
+
+.darv p#dose-e-posologia output {
+    background-color: #fff;
+}
+
+.darv p#dose-e-posologia output.alerta,
+.darv p#dose-e-posologia output.observacao,
+.darv p#dose-e-posologia .bg-cinza {
+    background-color: rgba(240, 240, 240, .5);
+    border-top: none !important;
+}
+
+.darv p#dose-e-posologia output.alerta.subalerta {
+    border-top: thin solid #ddd !important;
+}
+
+.darv p#dose-e-posologia table th, 
+.darv p#dose-e-posologia table td {
+    border: thin solid #aaa;
+    padding: 3px;
+}
+
+.darv p#dose-e-posologia table td {
+    background-color: #fff;
+    color: #555;
+}
+
+
+
+

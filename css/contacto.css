@@ -1,0 +1,56 @@
+.main {
+    margin: 0 4%;
+}
+
+.main h1 {
+    margin-top: 10px;
+}
+
+.main .chave-de-dialogo {
+    z-index: 5;
+}
+
+
+.contentor-dos-contactos {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    border-top: 1px solid #ddd; 
+}
+
+
+.contentor-dos-contactos p:first-child a {
+    display: block;
+    width: 45px;
+    height: 45px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 20px;
+
+    font-size: 55px;
+    font-weight: bold;
+    box-shadow: 0 0 8px #aaa;
+    border-radius: 50%;
+    overflow: hidden;
+}
+
+
+.contentor-dos-contactos p:last-child a {
+    display: block;
+    box-shadow: 0 0 8px #aaa;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+

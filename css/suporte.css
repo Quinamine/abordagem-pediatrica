@@ -1,0 +1,282 @@
+/** CSS DE INSTRUCOES */
+
+
+/* Títulos */
+.main h1 {
+    font-weight: initial !important;
+    color: initial !important;
+}
+
+.main h1 {
+    text-align: left;
+    margin: 10px 0;
+}
+
+header h2 {
+    font-weight: bold;
+}
+
+
+.main img {
+    border: 1px solid #ddd;  
+}
+
+
+@media screen and (min-width: 600px) {
+    .main img {
+        border: 2px solid #ddd;
+        max-width: 300px;
+    }
+}
+
+
+@media screen and (max-width: 699px) {
+    .hide-on-mobile, p#ancestral-de-checkbox {
+        display: none;
+    }
+    
+    header {
+        border-bottom: none !important;
+        position: fixed;
+        top: 0;
+        width: 100%;
+        z-index: 8;
+        background-color:#D27832;
+    }
+    
+    .linha-do-cabecalho {
+        align-items: center;
+        justify-content: flex-start;
+        flex-direction: row !important;
+        flex-wrap: nowrap;
+    }
+   
+    .linha-do-cabecalho nav, .contentor-da-logo,
+    .contentor-do-menu-hamburguer {
+        display: none !important;
+    }
+    
+    .linha-do-cabecalho h2 {
+        color: #fff;
+        font-size: 18px;
+    }
+    
+    .contentor-da-seta-de-volta {
+        border-radius: 50%;
+        width: 40px;
+        margin-right: 10px;
+        margin-left: -2%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    
+    .contentor-da-seta-de-volta:active,
+    .contentor-da-seta-de-volta:hover {
+        background-color: #faa032;
+    }
+    contentor-da-seta-de-volta.sem-historico:active,
+    .contentor-da-seta-de-volta.sem-historico:hover {
+        background-color: #D27832;
+    }
+
+    .contentor-da-seta-de-volta > div div {
+        width: 30px;
+        height: 3px;
+        margin: 5px;
+        background-color: #fff;
+    }
+
+    .contentor-da-seta-de-volta.sem-historico > div div {
+        background-color: #faa032; 
+    }
+
+    .contentor-da-seta-de-volta div.traco1 {
+        transform: rotate(-50deg) translateX(-7px);
+        width: 10px;
+    }
+    
+    .contentor-da-seta-de-volta div.traco2 {width: 15px;}
+    
+    .contentor-da-seta-de-volta div.traco3 {
+        transform: rotate(50deg) translateX(-7px);;
+        width: 10px;
+    }
+
+    /** Menu reticencas **/
+    .contentor-do-menu-reticencias {
+        flex: 1;
+        display: flex;
+        justify-content: flex-end;
+        margin-right: -10px;
+    }
+
+    .menu-reticencias {
+        width: 34px;
+        border-radius: 50%;
+        padding: 5px;
+        display: flex; 
+        align-items: center;
+        flex-direction: column;
+    }
+
+    .menu-reticencias:active {
+        background-color: #faa032;
+    }
+
+    .menu-reticencias .ponto {
+        width: 4px;
+        height: 4px;
+        background-color: #fff;
+        border-radius: 3px;
+        margin: 1px;
+    }
+
+    /** conteudo do menu-reticenias **/
+    div.contentor-do-botao-de-abertura {
+        position: absolute;   
+        top: 0;
+        right: 0; 
+        border-radius: 2px;
+        
+        width: 0;
+        height: 0;
+        transition: all 80ms linear;
+        transition-delay: 50ms;
+        overflow: hidden;
+        max-height: 50px;
+    }
+
+    div.contentor-do-botao-de-abertura button {
+        border: none;
+        background-color: #fff;
+        color: #333;
+        font-size: 1rem;
+        line-height: 2;
+        width: 100%;
+        height: 100%;
+        text-align: left;
+        padding: 9px 10px;
+        overflow: hidden;
+    }
+
+    .contentor-do-menu-reticencias.aberto div.contentor-do-botao-de-abertura {
+        width: 50vw;
+        height: auto;
+    }
+
+    @media screen and (max-width: 320px){
+        .contentor-do-menu-reticencias.aberto div.contentor-do-botao-de-abertura {
+            width: 75vw;
+        }
+    }
+
+    /* Linha do corpo */
+    .linha-do-corpo {
+        padding: 30px 4%;
+    }
+}
+
+
+@media screen and (min-width: 700px) {
+    .linha-do-cabecalho .contentor-da-seta-de-volta,
+    .linha-do-cabecalho .contentor-do-titulo,
+    .contentor-do-menu-reticencias, figure.hide-on-pc {
+        display: none;
+    }
+  
+    .main, .contentor-da-secao-ef {
+        position: relative;
+    }
+
+    .main picture.first-child,
+    .main picture.second-child {
+        padding: 10px;
+        position: absolute;
+        top: 63px;
+        right: 0;
+    }
+
+    .main picture.doseador.first-child {
+        top: 165px;
+    }
+
+    .main picture.second-child {
+        top: 218px;
+    }
+
+    .main .short {
+        max-width: 380px;
+        margin-right: 20px;
+    }
+
+    .main p.short {
+        display: inline-block;
+    }
+
+    .main ol.sem-margem-superior,
+    .main ol.sem-margem-superior li:first-child {
+        margin-top: 0;
+    }
+
+    .main li.short {
+        max-width: 310px;
+    }
+
+    .main img {
+        border-radius: 8px;
+        margin: initial;
+    }
+
+    /*** Abertura do Acordeon da lista de doses por kg ***/
+    .main p#ancestral-de-checkbox {
+        color: #888 !important;
+        text-align: right;
+        margin: 10px 0;
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+        font-size: 12px;
+        cursor: pointer;
+    }
+
+    .main p#ancestral-de-checkbox input {
+        border: thin solid #ddd !important;
+    }
+
+    .main p#ancestral-de-checkbox input {
+        border: thin solid #ddd !important;
+    }
+
+}
+
+
+/** CSS DE TABELA */
+.contentor-da-tabela {
+    max-width: 500px;
+    margin: auto;
+}
+
+.contentor-da-tabela  h1 {
+    margin-bottom: 20px;
+}
+
+
+.contentor-da-tabela table th{
+    text-align: left;
+    color: #000;
+}
+
+.contentor-da-tabela table td{
+    color: #555;
+}
+
+
+.contentor-da-tabela table .classe {
+    background-color: #fafafa;
+    vertical-align: middle;
+}
+
+p.ou {
+    text-align: center;
+}
