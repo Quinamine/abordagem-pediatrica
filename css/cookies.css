@@ -1,0 +1,535 @@
+/** MODO ESCURO  **/
+body.escuro div.involucro,
+body.escuro .linha-do-corpo,
+body.escuro .contentor-da-propaganda,
+body.escuro .propaganda {
+    background-color: #222 !important;
+}
+
+body.escuro header,
+body.escuro .linha-do-cabecalho,
+body.escuro li.dropdown-container.on ul.dropdown-menu,
+body.escuro footer {
+    background-color: rgb(46, 43, 43);
+}
+
+/* Cores e fundos */
+body.escuro, 
+body.escuro .linha-do-cabecalho.com-menu-aberto nav ul li a, 
+body.escuro .destaque, body.escuro .bold,
+body.escuro .contentor-da-calculadora form p,
+body.escuro .contentor-da-calculadora form p *,
+body.escuro ul.dominio-de-linguagens li a,
+body.escuro ul.dominio-de-linguagens li a:visited,
+body.escuro .slogan-do-misau,
+body.escuro footer p, body.escuro footer .website,
+body.escuro form#preferencias legend,
+body.escuro .contentor-do-botao-de-abertura button,
+body.escuro .caixa-de-dialogo nav a, 
+body.escuro .caixa-de-dialogo nav a:visited,
+body.escuro .conteudo-do-menu-reticencias a,
+body.escuro .conteudo-do-menu-reticencias a:visited,
+body.escuro table th, body.escuro .contentor-dos-contactos p:first-child a {
+    color: #D4D8DA;
+}
+
+body.escuro .contentor-das-fatias-do-menu-hamburguer .fatia,
+body.escuro div.contentor-dos-tres-pontos > div {
+    background-color: #D4D8DA;
+}
+
+
+/* Titulos e outros */
+body.escuro .main h1, 
+body.escuro .main h2, 
+body.escuro .main h3, 
+body.escuro .main h4, 
+body.escuro .main h5, 
+body.escuro .main h6,
+body.escuro mark, 
+body.escuro .mark,
+body.escuro .full-black,
+body.escuro .propaganda .descricao p:last-child a,
+body.escuro .propaganda .descricao p:last-child a:visited,
+body.escuro .contentor-do-titulo h2,
+body.escuro .corpo > nav ul li a.aba-actual {
+    color: #DDD !important;
+}
+
+
+/** Links e outros **/
+body.escuro .main a, 
+body.escuro .main a:visited {color: rgb(23, 112, 128);}
+
+body.escuro .contentor-dos-links-de-partilha a,
+body.escuro .contentor-dos-links-de-partilha a:visited,
+body.escuro .propaganda .descricao,
+body.escuro form#preferencias select,
+body.escuro a.voltar-ao-topo, 
+body.escuro a.voltar-ao-topo:visited,
+body.escuro figcaption {
+    color: #aaa !important;
+}
+
+/* Destaques */
+body.escuro .destaque, body.escuro mark, body.escuro .mark {
+    background-color: rgb(46, 43, 43) !important;
+    border: none;
+}
+
+/** Bordas **/
+body.escuro .linha-do-cabecalho.com-menu-aberto nav ul,
+body.escuro .linha-do-cabecalho.com-menu-aberto nav ul li,
+body.escuro .contentor-do-menu-hamburguer,
+body.escuro form#preferencias select {
+    border-color: #333;
+}
+
+body.escuro .linha-do-corpo,
+body.escuro .caixa-de-dialogo h4,
+body.escuro .caixa-de-dialogo button,
+body.escuro .contentor-da-propaganda,
+body.escuro .contentor-da-propaganda.cdp,
+body.escuro .contentor-da-capsula,
+body.escuro form#preferencias fieldset,
+body.escuro .galeria,
+body.escuro .contentor-dos-contactos,
+body.escuro .darv p#dose-e-posologia table th, 
+body.escuro .darv p#dose-e-posologia table td,
+body.escuro li.dropdown-container.on ul.dropdown-menu,
+body.escuro li.dropdown-container.on ul.dropdown-menu li {
+    border-color: #444;
+}
+
+body.escuro ul.dropdown-menu {
+    box-shadow: none !important;
+}
+
+body.escuro hr, body.escuro figure figcaption {
+    border: 2px solid #666;
+    border-top: none;
+}
+
+body.escuro form#preferencias legend {
+    font-weight: initial;
+}
+
+/** Caixa de dialogo **/
+body.escuro .caixa-de-dialogo,
+body.escuro .conteudo-do-menu-reticencias,
+body.escuro .contentor-do-botao-de-abertura button {
+    background-color: #111;
+}
+
+body.escuro.com-caixa-de-dialogo-aberta,
+body.escuro.com-caixa-de-dialogo-aberta .linha-do-corpo {
+    background-color: rgba(0, 0, 0, .8) !important;
+    color: #555 !important;
+}
+
+body.escuro.com-caixa-de-dialogo-aberta h3,
+body.escuro.com-caixa-de-dialogo-aberta .chave-de-dialogo,
+body.escuro.com-caixa-de-dialogo-aberta .bold {
+    color: #555 !important;
+}
+
+body.escuro.com-caixa-de-dialogo-aberta .destaque,
+body.escuro.com-caixa-de-dialogo-aberta mark {
+    background-color: inherit !important;
+    color: #555 !important;
+}
+
+
+/** Tabelas **/
+body.escuro table th, 
+body.escuro table td {
+    border: 1px solid #444;
+}
+
+body.escuro .main table thead tr:nth-child(2) th, 
+tfoot td {background-color: inherit;}
+
+body.escuro table td {color: #aaa !important;}
+
+body.escuro .main table thead tr:first-child th {
+    background-color: rgb(46, 43, 43);
+}
+
+body.escuro .contentor-da-tabela table .classe {
+    background-color: inherit !important;
+}
+
+/** PAGINA INICIAL **/
+
+/* Nav de singlepage*/
+body.escuro .corpo > nav ul li a {
+    border-color: #444;
+    border-top: none;
+    background-color: rgb(46, 43, 43);
+    color: #777;
+}
+
+body.escuro .corpo > nav ul li a.aba-actual {
+    background-color: inherit;
+    border: none;
+}
+
+/* Propaganda */
+body.escuro .propaganda {border-color: rgb(46, 43, 43);}
+
+body.escuro .contentor-da-propaganda.cdp {background-color: #333 !important;}
+
+body.escuro .propaganda .descricao,
+body.escuro form#preferencias select {background-color: rgb(46, 43, 43);}
+
+body.escuro .propaganda .descricao p:last-child a:first-child {background-color: rgb(210, 120, 50);}
+
+body.escuro .propaganda .descricao p:last-child a:first-child:hover {background-color: #FAA032;}
+
+body.escuro .propaganda .descricao p:last-child a:last-child{background-color: #555;}
+
+body.escuro .propaganda .descricao p:last-child a:hover {background-color: #888;}
+
+
+/** Calculadoras ***/
+.contentor-da-calculadora {
+    border-bottom-color: #333 !important;
+}
+
+body.escuro .contentor-da-calculadora h1,
+body.escuro .contentor-da-calculadora form p,
+body.escuro .contentor-da-calculadora form p *,
+body.escuro .galeria.aberta .titulo-da-galeria {
+    background-color: rgb(46, 43, 43);
+}
+
+body.escuro .contentor-da-calculadora,
+body.escuro .menu-reticencias,
+body.escuro .contentor-da-calculadora fieldset,
+body.escuro .contentor-da-calculadora form p {
+    border-color: #444;
+}
+
+body.escuro .contentor-da-calculadora form p:hover {border: 1px solid #faa032;}
+
+/* Menu reticencias */
+body.escuro div.contentor-dos-tres-pontos:active 
+{background-color: rgb(148, 148, 148) !important;}
+
+/** Links de partilha **/
+body.escuro .contentor-da-calculadora .contentor-dos-links-de-partilha {
+    background-color: #21222C;
+    border: none !important;
+}
+
+/*** SESSAO JS ***/ 
+body.escuro .observacao {color: #faa032 !important;}
+
+body.escuro output.alerta.obs,
+body.escuro span.destacar {
+   color: #D4D8DA !important;
+}
+
+body.escuro .darv p#dose-e-posologia output {
+    background-color: #222 !important;
+}
+
+body.escuro .darv p#dose-e-posologia table th, 
+body.escuro .darv p#dose-e-posologia table td,
+body.escuro output.alerta,
+body.escuro .darv p#dose-e-posologia 
+output.alerta.subalerta {
+    border-color: #444 !important;
+}
+
+body.escuro output.alerta {color: #aaa !important;}
+
+body.escuro .darv p#dose-e-posologia table td {background-color: #222 !important;}
+
+body.escuro .darv p#dose-e-posologia output.alerta,
+body.escuro .darv p#dose-e-posologia output.observacao,
+body.escuro .darv p#dose-e-posologia .bg-cinza,
+body.escuro .interpretacao-do-exemplo {
+    background-color: rgb(46, 43, 43) !important;
+}
+
+/* Instrucoes */
+body.escuro a.sem-destaque {
+    color: inherit !important;
+}
+
+body.escuro .ilustracao-da-impressao-da-dose {
+    border: none !important;
+}
+
+body.escuro .interpretacao-do-exemplo p {
+    color: #aaa;
+}
+
+/** Suporte **/
+body.escuro .contentor-da-seta-de-volta:active,
+body.escuro .contentor-da-seta-de-volta:hover {
+    background-color: #555;
+}
+
+body.escuro .contentor-da-seta-de-volta.sem-historico:active,
+body.escuro .contentor-da-seta-de-volta.sem-historico:hover,
+body.escuro .contentor-do-titulo-do-acordeon {
+    background-color: rgb(46, 43, 43);
+}
+
+body.escuro .contentor-da-seta-de-volta.sem-historico > div div {background-color: #555;}
+
+/** Acordeon **/
+body.escuro .contentor-do-titulo-do-acordeon,
+body.escuro .acordeon p,
+body.escuro .acordeon table,
+body.escuro .acordeon th,
+body.escuro .acordeon td { 
+    border-color: #444 !important;
+    color: #aaa !important;
+}
+
+body.escuro .acordeon th {
+    background-color: inherit !important;
+    color: #d2d4d6 !important;
+}
+
+body.escuro .contentor-do-titulo-do-acordeon h2 {color: #aaa !important;}
+
+body.escuro .acordeon.aberto .contentor-do-titulo-do-acordeon {
+    background-color: rgb(46, 43, 43);
+    box-shadow: 0 0 8px #ddd;
+}
+
+body.escuro .acordeon.aberto .contentor-do-titulo-do-acordeon h2 {
+    color: #ddd !important;
+}
+
+body.escuro .acordeon.aberto .icone div {
+    background-color: #faa032 !important;
+}
+
+body.escuro .acordeon.aberto span {
+    color: #faa032 !important;
+}
+
+body.escuro .linha-do-cabecalho .menu-reticencias:active {
+    background-color: #888;
+}
+
+/** Sobre **/
+body.escuro .galeria .titulo-da-galeria:hover {
+    background-color: inherit;
+}
+
+body.escuro .galeria.aberta .titulo-da-galeria figcaption {
+    color: #D4D8DA !important;
+}
+
+
+/* RESPONSIVIDADE */
+@media screen and (min-width: 600px) {
+    body.escuro div.involucro {background-color: #888 !important;}
+
+    body.escuro .linha-do-corpo,
+    body.escuro .contentor-da-propaganda,
+    body.escuro .propaganda {
+        background-color: #333 !important;
+    }
+
+    body.escuro .destaque, body.escuro mark, body.escuro .mark,
+    body.escuro .corpo > nav ul li a,
+    body.escuro form#preferencias select {
+        background-color: #3d3d3d !important;
+    }
+
+    /** Tabelas **/
+    body.escuro .main table thead tr:first-child th {
+        background-color: #3d3d3d;
+    }
+
+    body.escuro .darv p#dose-e-posologia output {
+        background-color: #333 !important;
+    }
+
+    body.escuro .darv p#dose-e-posologia table td {
+        background-color: #333 !important;
+        color: #aaa;
+    }
+
+    body.escuro .darv p#dose-e-posologia output.alerta,
+    body.escuro .darv p#dose-e-posologia output.observacao,
+    body.escuro .darv p#dose-e-posologia .bg-cinza {
+        background-color: #3d3d3d !important;
+    }
+
+
+    /** INDEX **/
+    body.escuro .corpo > nav ul li a.aba-actual {background-color: inherit !important;}
+
+    body.escuro .propaganda .descricao {
+        padding: 0 10px;
+        border-radius: 8px;
+        background-color: inherit !important;
+    }
+    
+    body.escuro .propaganda .descricao h3 {margin-top: 8px;}
+    
+    body.escuro .parte-laranja h2 {color: #5E330B !important;}
+
+    /* Calculadoras */
+    body.escuro .contentor-da-calculadora,
+    body.escuro .contentor-da-calculadora fieldset {
+        border: 1px solid #444 !important;;
+        box-shadow: none !important;
+    }
+
+    body.escuro .contentor-da-calculadora form p,
+    body.escuro .contentor-da-calculadora form p * {
+        background-color: #3d3d3d;
+    }
+
+    body.escuro .contentor-da-calculadora h1,
+    body.escuro .contentor-da-calculadora 
+    .contentor-dos-links-de-partilha {
+        background-color: inherit;
+    }
+
+    /* Sessao JS **/
+    body.escuro .darv p#dose-e-posologia table td {
+        background-color: #333 !important;
+    }
+
+    /* Instrucoes */
+    body.escuro .main .instrucoes {
+        border-color:#3d3d3d;
+        box-shadow: none;
+    }
+
+    body.escuro .link-sobremim .contentor-da-descricao p,
+    body.escuro .link-sobremim:visited, 
+    body.escuro .sublista-ordenada {
+        color: #d2d4d6 !important;
+    }
+
+    body.escuro .main .instrucoes {
+        font-weight: initial !important;
+    }
+
+    h3.nota {
+        background-color: #3d3d3d;
+        border-bottom: 1px solid #555;
+    }
+
+    /** Sobre **/
+    body.escuro .galeria .titulo-da-galeria:hover {
+        background-color: #3d3d3d !important;
+    }
+
+    /** Suporte ***/
+    body.escuro .acordeon.aberto .contentor-do-titulo-do-acordeon {
+        box-shadow: none;
+    }
+
+    body.escuro .contentor-do-titulo-do-acordeon:hover {
+        background-color: #3d3d3d;
+    }
+
+}
+
+
+@media screen and (min-width: 700px) {
+    body.escuro .linha-do-cabecalho nav ul li a {
+        color: #aaa;
+    }
+
+    body.escuro .linha-do-cabecalho nav ul li a.activo {
+        color: #ddd !important;
+    }
+
+    body.escuro .ilustracao-da-impressao-da-dose {
+        border-right: 1px solid #444 !important;
+    }
+
+    body.escuro .ilustracao-da-impressao-da-dose
+    .interpretacao-do-exemplo {
+        background-color: #3d3d3d !important;
+    }
+}
+
+@media screen and (min-width: 1024px ) {
+    body.escuro .linha-do-cabecalho nav a:hover {
+		color: #fff;
+    }
+    
+    body.escuro li.dropdown-container.on ul.dropdown-menu li a:hover {
+		background: radial-gradient(circle, #faa032, #000) !important;
+    }
+    
+    body.escuro ::-webkit-scrollbar {
+        background-color: #3d3d3d;
+    }
+
+
+    body.escuro ::-webkit-scrollbar-thumb {
+        background-color: #888;
+        width: 4px !important;
+    }
+}
+
+
+/* FAMILIA DA FONTE */
+body.serifado,
+body.serifado form input,
+body.serifado form select {
+    font-family: "Times New Roman", 'PT Serif', serif !important;
+}
+
+body.cursivo,
+body.cursivo form input,
+body.cursivo form select {
+    font-family: "Lobster", cursive !important;
+}
+
+
+/** Alinhamento */
+
+body.justificado,
+.contentor-do-conteudo-sobremim p {
+    text-align: justify !important;
+}
+
+
+/*** TAMANHO DA FONTE ***/
+
+html.small {
+    font-size: 90%;
+}
+
+html.big {
+    font-size: 110%;
+}
+
+html.big .contentor-da-calculadora form p select.input-extension {
+    min-width: 80px;
+}
+
+@media screen and (min-width: 911px) {
+    html.big .instrucoes {
+        max-height: 474px !important;
+    }
+}
+
+@media screen and (min-width: 768px) {
+    html.big .instrucoes.darv {
+        max-height: 415px !important;
+    }
+}
+
+
+
+
+
+
+
