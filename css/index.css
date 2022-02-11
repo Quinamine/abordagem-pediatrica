@@ -1,325 +1,333 @@
 
-.main-content {
-    flex-direction: column;
-    background-color: #fff;
-    background-color: #FFE;
+.linha-do-corpo {
+    margin: 0 auto;
+    border-top: none;
+    padding: 0;
+    border-radius: 0;
 }
 
 /* Banner Rotativo */
 
-.banner-rotativo {
-    width: 100%;
-    height: 300px;
+.banner-rotativo {  
     display: flex;
-    flex-direction: row;
-    overflow-x: hidden;
-    background-color: orange;
+    overflow: hidden;
+    background-color: #FAA032;
+    max-height: 300px;
     position: relative;
 }
-
 
 @keyframes slide {
     0% {right: 0;}
 
-    100% {right: 1024px;}
+    100% {right: 1024px}
 }
 
-
-.banner-rotativo img{
+.banner-rotativo picture {
+    min-width: 100%;
     position: relative;
     right: -700px;
-    opacity: 0;
-    transition: all 250ms; 
+    transition: all 250ms;
 }
 
-.banner-rotativo img.current-img {
-    order:-1;
+.banner-rotativo picture img {
+    width: 100%;
+    height: 100%;
+}
+
+.banner-rotativo picture.pic-actual {
+    order: -1;
     right: 0px;
-    opacity: 1;
     animation-name: slide;
-    animation-delay: 3400ms;
+    animation-delay: 4400ms;
     animation-duration: 250ms;
 }
 
+/* BARRA DE PROGRESSAO */
 
-/* PROGRESSAO DO BANNER */
+@media screen and (min-width: 601px) {
+    .banner-rotativo section {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        z-index: 8;
+        position: absolute;
+        bottom: 10px;
+    }
+    
+    .banner-rotativo section div {
+        margin: 5px;
+        padding: 4px;
+        border: 1px solid #fff;
+        justify-content: center;
+        position: relative;
+        border-radius: 50%;
+        cursor: pointer;
+    }
+    
+    .banner-rotativo section div.cheia {
+        background-color: #fff;
+    }
+}
 
-section.progress {
+
+/*** PROPAGANDA ***/
+
+main .contentor-da-propaganda, 
+.artigo, .contentor-da-capsula {
+    padding: 30px 4%;
     width: 100%;
-    display: flex;
-    justify-content: center;
-    z-index: 10001;
-    position: absolute;
-    bottom: 10px;
 }
 
-section.progress div {
-    margin: 5px;
-    padding: 4px;
-    border: 1px solid #fff;
-    justify-content: center;
-    position: relative;
-    border-radius: 50%;
+
+
+main .contentor-da-propaganda.cdp {
+    background-color: #eee;
 }
 
-section.progress div.full {
+.propaganda {
+    max-width: 375px;
+    margin: 0 auto;
+    box-shadow: 0 2px 15px #888;
+    border: 5px solid #ddd;
     background-color: #fff;
 }
 
 
-/* CAPSULA  */
-.capsula-container {
+.propaganda img {
     width: 100%;
-    display: flex;
-    justify-content: center;
-    order: 1000;
+    border: 2px solid #ddd;
 }
 
 
-.capsula {
-    width:96%;
-    max-width: 750px;
-    height: 250px;
-    border-radius: 110px;
-    border: none;
-    display: flex;
-    margin-top: 40px;
-    margin-bottom: 40px;
-    box-shadow: 0 0px 50px #aaa;
-    overflow:hidden;
-   
+.propaganda .descricao {
+    padding: 10px 16px;
+    background-color: rgb(255, 246, 246);
+    border-top: 1px solid #ddd;
 }
 
 
-.capsula .parte-laranja,
-.capsula .parte-castanha {
-    display: flex;
-    align-items: center;
-    justify-content: center;
+.propaganda .descricao h3 {
+    font-size: 1rem;
 }
 
-.capsula .parte-laranja {
-    width: 50%;
-    height: 100%;
-    background-color: rgb(250, 160, 50);
-    border-radius: 80px 0 0 80px;
-
-}
-
-.parte-laranja h2{
-    color: #fff;
-    color:#5E330B;
-    text-align: center;
-    font-size: 1.75rem;
-    line-height: 1.2;
-
-    font-weight: initial;
-}
-
-.parte-castanha{
-    width: 50%;
-    height: 100%;
-    background-color: #5E330B;
-    border-radius: 0  80px 80px 0px;
-    overflow: hidden;
+.propaganda .descricao p {
     font-size: 0.875rem;
-    padding: 20px;
-    color: rgb(250, 160, 50);
 }
 
 
-/* NAVEGAÇÃO */
-
-.main-content nav {
-    /*background-color: rgb(151, 155, 177);*/
-    width: 100%;
-    border-left: 1px solid #fff;
-    border-right: 1px solid #fff;
+.propaganda .descricao h3 {
+    margin: 0 0 8px 0;
 }
 
-.main-content nav ul {
-    margin: 0;
-    display: flex ;
+.propaganda .descricao p {
+    margin: 8px 0;
 }
 
-.main-content nav ul li{
-    flex: 1;
+.propaganda .descricao p:last-child{
     display: flex;
-    text-align: center;
 }
 
-.main-content nav ul li a {
-    text-decoration: none;
+.propaganda .descricao p:last-child a {
     flex: 1;
-    padding: 10px;
-    border: 1px solid #DDD;
-    background-color: #f8f8f8;
-    color: #888;
-}
-
-
-.main-content nav ul li a.current-tab{
-    border: none;
-    background: #ffe;
-    font-weight: bold;
-    color: #333;
-}
-
-
-
-/*** CARDS ****/
-
-.card {
-    display: flex;
-    justify-content: center;
-    padding: 20px;
-    border-bottom: 1px solid #EEE;
-}
-
-.card-do-darv {background-color: #EEF;}
-
-
-.card picture, 
-.card div.description{
-    width: calc(100% - 40px);
-    margin: 0 40px;
-}
-
-
-.card div.description{
-    max-width: 380px;
-    height: 100%;
-}
-
-
-.card div.description p {
-    display: flex;
-    margin-bottom: 0;
-    position: relative;
-    bottom: 0;
-}
-
-.card div.description p a{
-    flex: 1;
-    text-align: center;
-    padding: 8px 0;
-    border-radius: 5px;
-    text-decoration: none;
-}
-
-
-.card div.description p a:nth-child(1){
-    background-color: rgb(250, 160, 50);
-    color: #fff;
-    margin-right: 5px;
-}
-
-.card div.description p a:nth-child(1):hover{
-    background-color: rgba(250, 160, 50, .8);
-}
-
-.card div.description p a:nth-child(2){
-    border: 1px solid #ddd;
+    padding: 8px 4px;
     color: inherit;
+    text-align: center;
+    border-radius: 5px;
+}
+
+.propaganda .descricao p:last-child a:first-child {
+    background-color: #FAA032;
+    margin-right: 5px;
+    color: #fff;
+}
+
+.propaganda .descricao p:last-child a:first-child:visited {color: #fff;}
+
+.propaganda .descricao p:last-child a:first-child:hover{
+    background-color: #fa9110;
+}
+
+.propaganda .descricao p:last-child a:last-child{
     background-color: #ddd;
 }
 
-.card div.description p a:nth-child(2):hover{
-    background-color: rgba(221, 221, 221, .8);
+.propaganda .descricao p:last-child a:last-child:visited{
+    color: #333;
+}
+
+.propaganda .descricao p:last-child a:last-child:hover{
+    background-color: #ccc;
 }
 
 
-/*** conteudo sobre ***/
-.conteudo-sobre {
-    padding: 20px;
-    max-width: 697px;
-    border-bottom: 1px solid #ddd;
-    border-radius: 15px;
-    background-color: #FFE;
-    border-radius: 0;
-}
 
-.conteudo-sobre #moldura-de-receita-de-fenox img {
-    display: block;
-    margin: 0 auto;
-}
-
-.conteudo-sobre ol,
-.conteudo-sobre ul {
-    padding-left: 6%;
-    list-style: disc inside;
-}
-
-.conteudo-sobre .destaque.conversao-da-dose,
-.conteudo-sobre .destaque.prescricao-correcta {
-    max-width: 350px;
-    border-radius: 5px;
+/** CONTEUDO SOBRE **/
+.artigo img {
+    border: 1px solid #ddd;
+    margin: initial;
 }
 
 
-.dialog-box-container {
+.prescricao-correcta span.involucro {
+    width: 100%;
+    max-width: 300px;
+    display: flex;
+}
+
+.prescricao-correcta span.involucro span {
+    flex-grow: 1;
+    flex-shrink: 0;
+}
+
+.conversao-da-dose,
+.prescricao-correcta {
+    max-width: 355px;
+}
+
+
+/*** CAIXA DE DIALOGO **/
+body.com-caixa-de-dialogo-aberta .destaque,
+body.com-caixa-de-dialogo-aberta .propaganda {
+	background-color: rgba(219, 146, 57, .4);
+}
+
+/** CAPSULA **/
+.contentor-da-capsula {
     display: none;
 }
 
-.dialog-box-container.on {
-    display: block;
-    position: relative;
+/** Responsividade */
+@media screen and (min-width: 700px) {
+    .main {
+        max-width: 100%;
+        padding: 0;
+    }
+
+    .artigo {
+        max-width: 700px;
+        margin: 0 auto;
+        padding: 0 15px;
+    }
+
+    .contentor-da-propaganda {
+        padding-left: 15px !important;
+        padding-right: 15px !important;
+        
+    }
+
+    .propaganda {
+        justify-content: center !important;
+    }
+
+    .propaganda .descricao {
+        margin-left: 40px !important;
+    }
+
+    .propaganda .descricao h3, 
+    .descricao p {
+        font-size: 1rem !important;
+    }
+
+    .propaganda .descricao p:last-child {
+        flex-direction: column;
+    }
+
+    .descricao p:last-child a:first-child {
+        margin-right: 0 !important;
+        margin-bottom: 8px;
+    }
+
+    .main .contentor-da-propaganda.cdp {
+        background-color: inherit;
+        border-top: 1px solid #eee;
+    }
+
+
 }
 
-.dialog-box-container.on .dialog-box {
-    width: 250px;
-    background-color: #fff;
-    font-size: 14px;
-    border-radius: 5px;
-    box-shadow: 0 0 8px #888;
-    position: absolute;
-    bottom: 20px;
-    left: 30%;
-}
 
-.dialog-box h4 {
-    margin: 0;
-    padding: 10px;
-    text-align: center;
-    font-weight: normal;
-    border-bottom: 1px solid #eee;
-}
+@media screen and (min-width: 600px) {
 
-.dialog-box nav {
-    border: none;
+    .propaganda {
+        margin: initial;
+        border: none;
+        box-shadow: none;
+        max-width: 100%;
+        margin: 0 auto;
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .propaganda picture {
+        flex: 1 0 50%;
+        max-width: 350px;
+    }
+
+    .propaganda img {
+        border-radius: 8px;
+    }
+
+    .propaganda .descricao {
+        background-color: inherit;
+        border: none;
+        max-width: 350px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        margin-left: 10px;
+        padding: 5px;
+    }
+
+    .main .contentor-da-propaganda.cdp {
+        background-color: inherit;
+        border-top: 1px solid #eee;
+    }
+
     
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: flex-start;
+    /* Capsula */
+
+    .contentor-da-capsula {
+        display: flex;
+        border-top: 1px solid #eee;
+    }
+
+
+    .capsula {
+        width: 650px;
+        min-height: 230px;
+        margin: auto;
+        display: flex;
+
+    }
+
+    .capsula > div {
+        flex: 1;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 10px;
+        font-size: 0.875rem;
+    }
+
+    .capsula .parte-laranja {
+        background-color: #FAA032;
+        color: #5E330B;
+        border-top-left-radius: 50%;
+        border-bottom-left-radius: 50%;
+    }
+
+    .capsula .parte-laranja h2 {
+        font-weight: initial;
+    }
+
+    .capsula .parte-castanha {
+        background-color: #5E330B;;
+        color: #FAA032;
+        border-top-right-radius: 50%;
+        border-bottom-right-radius: 50%;
+    }
 }
 
-.dialog-box nav a{
-    width: 100%;
-    padding: 20px 10px;
-    flex: 1;
-    color: inherit;
-    text-align: center;
-}
-
-.dialog-box button {
-    border: none;
-    width: 100%;
-    background-color: inherit;
-    font-size: 18px;
-    padding: 10px;
-    border-top: 1px solid #eee;
-    color: red;
-}
-
-.dialog-box button:hover {
-    cursor: pointer;
-}
-
-
-/*** Css reutilizavel ***/
-.display-none {display: none;}
 
 
 

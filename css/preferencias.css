@@ -1,110 +1,63 @@
-/*****    Titulos   *****/
 
-.body-row .main-content h1 {
-    width: 94%;
-    max-width: 490px;
-    
-    display: block;
-    margin: 10px auto;
+.contentor-de-preferencias {
+    margin-left: 4% !important;
+    margin-right: 4% !important;
 }
 
-form#preferences {
-    width: 100%;
-    max-width: 500px;
-    margin: 25px auto 0 auto;
-
+.contentor-de-preferencias h1 {
+    margin: 10px 0;
 }
 
-
-form#preferences fieldset {
-    border: 1px solid #ccc;
-    border-radius: 6px;
-    margin: 10px;
-
-}
-
-form#preferences fieldset legend, p {
-    padding: 10px;
-    margin: 10px;
-}
-
-form#preferences fieldset p {
-    text-indent: 30px;
-    margin-bottom: 0px;
-}
-
-
-form#preferences fieldset legend, label {
-    font-weight: bold;
-}
-
-
-form#preferences fieldset label {
-    color: #555;
-    display: block;
-}
-
-form#preferences fieldset select {
-    width: 100%;
-    max-width: 220px;
-	font-size: 0.875rem; /*14 px;*/
-    
-    color: #555;
-
-    margin-left: 30px;
-
-	padding: 8px;
-
-    border-radius: 3px;
-    border: 1px solid #ccc;
-	background-color: #fff;
-}
-
-form#preferences fieldset select:hover {
-    border:1px solid rgb(250, 160, 50);
-}
-
-
-footer {
-    padding: initial;
-}
-/*** media queries ******/
-
-@media screen and (max-width: 521px){
+form#preferencias {
+    max-width: 425px;
+    margin: 0 auto;
    
-    form#preferences fieldset {
-        border: 1px solid #ddd;
-    }
-
-    form#preferences fieldset p {
-        margin-top: 0px;
-        text-indent: 0px;
-    }
-
-    form#preferences fieldset legend {
-        color: #555;
-    }
-
-    
-    form#preferences fieldset label {
-    	font-weight: initial !important;
-    }
-
-    form#preferences fieldset  p select {
-        margin-left: 0px;
-        background-color: rgba(240, 240, 240, .7);
-    }
-
-
-    /** PREFERENCES **/
-    body.dark legend,
-    body.dark label,
-    body.dark select {
-        color: #aaa !important;
-    }
-
-    body.dark select:hover {
-        border-color: rgb(250, 160, 50) !important;
-    }
-
 }
+
+form#preferencias fieldset {
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    margin: 10px 0;
+}
+
+form#preferencias legend {
+    font-weight: bold;
+    color: #555;
+    margin: 10px;
+    padding: 4px;
+}
+
+form#preferencias p {
+    padding: 8px 14px;
+    margin: 0;
+}
+
+form#preferencias label {
+    display: block;
+}
+
+
+form#preferencias select  {
+    outline: none;
+    padding: 8px;
+    border: 1px solid #ddd;
+    border-radius: 3px;
+    width: 100%;
+    max-width: 200px;
+    background-color: #f8f8f8;
+    font-size: 0.9375rem;
+    color: #555;
+}
+
+form#preferencias select:hover  {
+    border: 1px solid #faa032;
+}
+
+@media screen and (max-width: 699px) {
+    .linha-do-corpo {
+        margin-bottom: 30px;
+    }
+}
+
+
+
