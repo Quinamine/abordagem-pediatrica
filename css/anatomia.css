@@ -84,9 +84,9 @@ header {
 	font-family: "Lobster", cursive, Arial, Helvetica, sans-serif;
 }
 
-@media screen and (max-width:375px) {
+@media screen and (max-width:768px) {
 	.linha-do-cabecalho .contentor-da-logo a {
-		font-size: 20px;
+		font-size: 22px;
 	}
 }
 
@@ -125,7 +125,7 @@ div.contentor-das-fatias-do-menu-hamburguer {
 
 /* MENU ABERTO */
 .linha-do-cabecalho.com-menu-aberto .contentor-da-logo{
-	margin-top: 12px;
+	margin-top: 11px;
 }
 
 
