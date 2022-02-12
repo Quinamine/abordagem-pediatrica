@@ -22,7 +22,7 @@ const menu = {
             menuSection.classList.add("activo");
         })
     
-        menuClosers = document.querySelectorAll("header, main");
+        menuClosers = document.querySelectorAll("header, main, .conteudo-do-menu-reticencias a");
         
         for (const closer of menuClosers) {
             closer.addEventListener("click", ()=> {

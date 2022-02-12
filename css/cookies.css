@@ -61,6 +61,11 @@ body.escuro .corpo > nav ul li a.aba-actual {
 body.escuro .main a, 
 body.escuro .main a:visited {color: rgb(23, 112, 128);}
 
+body.escuro .linha-do-corpo a:active,
+body.escuro div.contentor-do-botao-de-abertura button:active {
+	background-color: #444 !important;
+}
+
 body.escuro .contentor-dos-links-de-partilha a,
 body.escuro .contentor-dos-links-de-partilha a:visited,
 body.escuro .propaganda .descricao,
@@ -214,7 +219,7 @@ body.escuro .contentor-da-calculadora form p:hover {border: 1px solid #faa032;}
 
 /* Menu reticencias */
 body.escuro div.contentor-dos-tres-pontos:active 
-{background-color: rgb(148, 148, 148) !important;}
+{background-color: #444 !important;}
 
 /** Links de partilha **/
 body.escuro .contentor-da-calculadora .contentor-dos-links-de-partilha {
@@ -269,7 +274,7 @@ body.escuro .interpretacao-do-exemplo p {
 /** Suporte **/
 body.escuro .contentor-da-seta-de-volta:active,
 body.escuro .contentor-da-seta-de-volta:hover {
-    background-color: #555;
+    background-color: #444;
 }
 
 body.escuro .contentor-da-seta-de-volta.sem-historico:active,
@@ -312,10 +317,6 @@ body.escuro .acordeon.aberto .icone div {
 
 body.escuro .acordeon.aberto span {
     color: #faa032 !important;
-}
-
-body.escuro .linha-do-cabecalho .menu-reticencias:active {
-    background-color: #888;
 }
 
 /** Sobre **/

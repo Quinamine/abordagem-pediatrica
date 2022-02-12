@@ -160,6 +160,10 @@ header h2 {
         overflow: hidden;
     }
 
+    div.contentor-do-botao-de-abertura button:active {
+        background-color: #eee;
+    }
+
     .contentor-do-menu-reticencias.aberto div.contentor-do-botao-de-abertura {
         width: 50vw;
         height: auto;
