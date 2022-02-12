@@ -223,7 +223,7 @@ class Darv {
         /** ISONIAZIDA */
         else if(this.arv=="isoniazida-300"){
             if(this.peso<25){
-                doseEposologia.innerHTML += `<output class="alerta ">Ver "<span class="destacar">${this.arvs[26].textContent}</span>".</output>`; 
+                doseEposologia.innerHTML += `<output class="alerta ">Ver "<span class="destacar">${this.arvs[27].textContent}</span>".</output>`; 
             }
             else {
                 doseEposologia.innerHTML += `<output class="alerta"><a href='profilaxias/tratamento-profilatico-com-isoniazida.html'>Clique aqui para ver os critérios de tratamento profilático com isoniazida.</a></output>`;
