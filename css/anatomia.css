@@ -407,7 +407,6 @@ table {
 	line-height: 1.5;
 	padding: 5px;
 	border: 1px solid #ddd;
-	vertical-align: middle;
 }
 
 .main table thead tr:first-child th{
