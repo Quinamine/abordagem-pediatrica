@@ -109,6 +109,10 @@ p#dose-e-posologia output a {
     padding-left: 5px;
 }
 
+p.ancestral-de-farmacos select optgroup {
+    font-size: 15px !important;
+} 
+
 
 /* Links de Partilha */
 .contentor-dos-links-de-partilha {
@@ -290,6 +294,10 @@ p#dose-e-posologia output a {
         padding-top: 0;
         margin-top: 0;
         border-top: 0;
+    }
+
+    p.ancestral-de-farmacos select optgroup option {
+        font-size: 12px !important;
     }
 }
 
