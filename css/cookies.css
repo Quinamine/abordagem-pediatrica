@@ -35,7 +35,7 @@ body.escuro table th, body.escuro .contentor-dos-contactos p:first-child a {
 
 body.escuro .contentor-das-fatias-do-menu-hamburguer .fatia,
 body.escuro div.contentor-dos-tres-pontos > div {
-    background-color: #D4D8DA;
+    background-color: #aaa;
 }
 
 
@@ -86,13 +86,14 @@ body.escuro .destaque, body.escuro mark, body.escuro .mark {
 body.escuro .linha-do-cabecalho.com-menu-aberto nav ul,
 body.escuro .linha-do-cabecalho.com-menu-aberto nav ul li,
 body.escuro .contentor-do-menu-hamburguer,
-body.escuro form#preferencias select {
+body.escuro form#preferencias select,
+body.escuro .caixa-de-dialogo h4,
+body.escuro .caixa-de-dialogo button {
     border-color: #333;
+
 }
 
 body.escuro .linha-do-corpo,
-body.escuro .caixa-de-dialogo h4,
-body.escuro .caixa-de-dialogo button,
 body.escuro .contentor-da-propaganda,
 body.escuro .contentor-da-propaganda.cdp,
 body.escuro .contentor-da-capsula,
@@ -106,7 +107,9 @@ body.escuro li.dropdown-container.on ul.dropdown-menu li {
     border-color: #444;
 }
 
-body.escuro ul.dropdown-menu {
+body.escuro ul.dropdown-menu,
+body.escuro .propaganda,
+body.escuro .linha-do-corpo  {
     box-shadow: none !important;
 }
 
@@ -123,7 +126,8 @@ body.escuro form#preferencias legend {
 body.escuro .caixa-de-dialogo,
 body.escuro .conteudo-do-menu-reticencias,
 body.escuro .contentor-do-botao-de-abertura button {
-    background-color: #111;
+    background-color: rgb(46, 43, 43);
+    box-shadow: none;
 }
 
 body.escuro.com-caixa-de-dialogo-aberta,
@@ -168,7 +172,7 @@ body.escuro .contentor-da-tabela table .classe {
 
 /* Nav de singlepage*/
 body.escuro .corpo > nav ul li a {
-    border-color: #444;
+    border-color: #333;
     border-top: none;
     background-color: rgb(46, 43, 43);
     color: #777;
@@ -197,9 +201,6 @@ body.escuro .propaganda .descricao p:last-child a:hover {background-color: #888;
 
 
 /** Calculadoras ***/
-.contentor-da-calculadora {
-    border-bottom-color: #333 !important;
-}
 
 body.escuro .contentor-da-calculadora h1,
 body.escuro .contentor-da-calculadora form p,
@@ -212,7 +213,7 @@ body.escuro .contentor-da-calculadora,
 body.escuro .menu-reticencias,
 body.escuro .contentor-da-calculadora fieldset,
 body.escuro .contentor-da-calculadora form p {
-    border-color: #444;
+    border-color: #333;
 }
 
 body.escuro .contentor-da-calculadora form p:hover {border: 1px solid #faa032;}
@@ -331,7 +332,6 @@ body.escuro .galeria.aberta .titulo-da-galeria figcaption {
 
 /* RESPONSIVIDADE */
 @media screen and (min-width: 600px) {
-    body.escuro div.involucro {background-color: #888 !important;}
 
     body.escuro .linha-do-corpo,
     body.escuro .contentor-da-propaganda,
