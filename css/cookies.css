@@ -422,7 +422,7 @@ body.escuro .galeria.aberta .titulo-da-galeria figcaption {
         font-weight: initial !important;
     }
 
-    h3.nota {
+    body.escuro h3.nota {
         background-color: #3d3d3d;
         border-bottom: 1px solid #555;
     }
