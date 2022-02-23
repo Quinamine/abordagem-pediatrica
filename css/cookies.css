@@ -113,6 +113,10 @@ body.escuro .linha-do-corpo  {
     box-shadow: none !important;
 }
 
+body.escuro .linha-do-corpo {
+    border: none;
+}
+
 body.escuro hr, body.escuro figure figcaption {
     border: 2px solid #666;
     border-top: none;
