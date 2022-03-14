@@ -10,14 +10,10 @@ body {
 	background-color: #FAA032;
 }
 
-a {
-	text-decoration: none;
-}
+/* Links */
+a {text-decoration: none;}
 
-
-a:visited {
-	color:#FAA032;
-}
+a:visited {color:#FAA032;}
 
 
 nav a:visited,
@@ -26,16 +22,28 @@ a.sem-destaque {
 	text-decoration: none;
 }
 
-.linha-do-corpo a:active {
-	background-color: #eee !important;
+.caixa-de-dialogo a:hover,
+.caixa-de-dialogo button:hover,
+.contentor-dos-tres-pontos:active,
+div.conteudo-do-menu-reticencias nav ul li a:active {
+	background-color: #eee;
 }
 
-meter {
-	width: 100%;
-	position: fixed;
-	top: -10px;
-	left: 0;
+
+.caixa-de-dialogo a:active,
+.caixa-de-dialogo button:active {
+	background-color: #ddd;
 }
+
+body.escuro .contentor-dos-tres-pontos:active,
+body.escuro div.conteudo-do-menu-reticencias nav ul li a:active,
+body.escuro div.contentor-do-botao-de-abertura button:active,
+body.escuro div.contentor-dos-tres-pontos:active  {
+	background-color: #333 !important;
+}
+
+
+/* Imagens */
 
 img {
 	max-width: 100%;
@@ -225,9 +233,6 @@ div.contentor-dos-tres-pontos {
 	display: flex; 
 }
 
-div.contentor-dos-tres-pontos:active {
-    background-color: #eee !important;
-}
 
 div.contentor-dos-tres-pontos > div {
     width: 4px;
@@ -572,6 +577,7 @@ body.com-caixa-de-dialogo-aberta a.chave-de-dialogo {
 
 
 @media screen and (min-width: 700px) {
+
 	/** Omissão de elementos Mobilie */
 
 	.contentor-do-menu-hamburguer,
@@ -597,6 +603,11 @@ body.com-caixa-de-dialogo-aberta a.chave-de-dialogo {
 	.linha {
 		max-width: 1024px;
 		margin: 0 auto;
+	}
+
+	/* Links */
+	a:active {
+		color:#FAA032 !important;
 	}
 	
 	/* Cabecalho */
@@ -696,19 +707,6 @@ body.com-caixa-de-dialogo-aberta a.chave-de-dialogo {
 		color: #fff;
 	}
 
-	.linha-do-cabecalho nav a:active,
-	.caixa-de-dialogo a:active,
-	.caixa-de-dialogo button:active,
-	.propaganda a:active {
-		color: #fff !important;
-		background: radial-gradient(circle, #faa032, #555);
-	}
-
-	.main a:active {
-		color: red;
-	}
-
-
 	.linha-do-corpo {
 		box-shadow: 0 0 8px #ddd;
 		margin: 40px auto;
@@ -768,11 +766,16 @@ body.com-caixa-de-dialogo-aberta a.chave-de-dialogo {
 
 	li.dropdown-container.on ul.dropdown-menu li a:hover {
 		color: #fff;
-		background: radial-gradient(circle, #faa032, #555);
 	}
 	
 	li.dropdown-container.on ul.dropdown-menu li a:hover {
 		border-bottom:none;
+	}
+
+	/** Links no modo escuro**/
+	body.escuro .caixa-de-dialogo a:hover,
+	body.escuro .caixa-de-dialogo button:hover {
+		background-color: #333;
 	}
 }
 

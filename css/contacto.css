@@ -19,9 +19,19 @@
 }
 
 
-.contentor-dos-contactos p:first-child a {
-    display: block;
+.contentor-dos-contactos p a {
     width: 45px;
+    border-radius: 50%;
+    box-shadow: 0 0 8px #aaa;
+}
+
+body.escuro .contentor-dos-contactos p a {
+    box-shadow: 0 0 8px #111;
+}
+
+
+.contentor-dos-contactos p:first-child a {
+    
     height: 45px;
 
     display: flex;
@@ -31,16 +41,21 @@
 
     font-size: 55px;
     font-weight: bold;
-    box-shadow: 0 0 8px #aaa;
-    border-radius: 50%;
     overflow: hidden;
 }
 
 
 .contentor-dos-contactos p:last-child a {
     display: block;
-    box-shadow: 0 0 8px #aaa;
 }
+
+.contentor-dos-contactos p:last-child a img {
+    display: block;
+    border-radius: 50%;
+    padding-top: 2px;
+}
+
+
 
 
 

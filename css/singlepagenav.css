@@ -18,6 +18,14 @@
     background-color: #eee;
 } 
 
+.corpo > nav ul li a:active {
+    background-color: #ddd;
+} 
+
+body.escuro .corpo > nav ul li a:active {
+    background-color: #333 !important;
+} 
+
 .corpo > nav ul li:first-child a {
     border-left: none;
 } 
@@ -50,4 +58,29 @@ body.com-caixa-de-dialogo-aberta .corpo > nav ul li a{
 body.com-caixa-de-dialogo-aberta .corpo > nav ul li a.aba-actual {
     background-color: #e8b980;
     color: #333;
+}
+
+
+
+@media screen and (min-width: 769px) {
+    
+    .corpo > nav ul li a:active {
+        background-color: #eee;
+    } 
+
+    .corpo > nav ul li a:hover{
+        color: #333;
+        font-weight: bold;
+        background-color: #ddd;
+    } 
+
+    body.escuro .corpo > nav ul li a:hover{
+        background-color: #444 !important;
+        color: #d4d8da;
+    } 
+
+    body.escuro .corpo > nav ul li a:active {
+        background-color: #555 !important;
+    } 
+    
 }

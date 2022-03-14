@@ -847,7 +847,9 @@ class Doseparenteral extends Dosepadrao{
 			}
 			let doseml = dose * 10 / 1000;
 
-			doseEposologia.innerHTML += `<output class='alerta'>Para administração endovenosa, diluir 1 g de ceftriaxona em pó em 10 ml de água esterilizada para injecções e neste caso administrar: <span class="destacar">${doseml} ml durante 2 à 4 minutos</span>. Para administração endovenosa, nunca usar o diluente que acompanha as ampolas para uso intramuscular.</output>`;
+			doseEposologia.innerHTML += `<output class='alerta'>Para administração endovenosa, diluir 1 g de ceftriaxona em pó em 10 ml de água esterilizada para injecções e neste caso administrar: <span class="destacar">${doseml} ml durante 2 à 4 minutos</span>.</output>`
+
+			doseEposologia.innerHTML += `<output class='observacao'>Para administração endovenosa, nunca usar o diluente que acompanha as ampolas para uso intramuscular.</output>`;
 		}
 		
 		else if(this.farmaco=="vitamina-b12"){

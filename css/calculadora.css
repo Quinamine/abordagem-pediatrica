@@ -303,17 +303,25 @@ p.ancestral-de-farmacos select optgroup {
 
 /*** SESSAO JS ***/
 
+.observacao, 
+output.alerta {
+    border-top: thin solid #ddd !important;
+}
+
 .observacao {
     color: brown !important;
 }
 
 output.alerta {
     color: #555 !important;
-    border-top: thin solid #ddd !important;
+}
+
+span.destacar {
+    color: #333 !important;
 }
 
 output.alerta.obs,
-span.destacar {
+body.escuro span.destacar {
    color: inherit !important;
 }
 
