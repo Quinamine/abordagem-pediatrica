@@ -237,6 +237,7 @@ body.escuro .darv p#dose-e-posologia output {
 body.escuro .darv p#dose-e-posologia table th, 
 body.escuro .darv p#dose-e-posologia table td,
 body.escuro output.alerta,
+body.escuro .observacao,
 body.escuro .darv p#dose-e-posologia 
 output.alerta.subalerta {
     border-color: #333 !important;
@@ -447,14 +448,20 @@ body.escuro .galeria.aberta .titulo-da-galeria figcaption {
         background-color: #3d3d3d;
     }
 
-    /*Acordeon */
+    /*Acordeon e calculadoras*/
     body.escuro .galeria,
     body.escuro .contentor-do-titulo-do-acordeon,
     body.escuro .acordeon p,
     body.escuro .acordeon table,
     body.escuro .acordeon th,
     body.escuro .acordeon td,
-    body.escuro .contentor-dos-contactos {
+    body.escuro .contentor-dos-contactos,
+    body.escuro .darv p#dose-e-posologia table th, 
+    body.escuro .darv p#dose-e-posologia table td,
+    body.escuro output.alerta,
+    body.escuro .observacao,
+    body.escuro .darv p#dose-e-posologia 
+    output.alerta.subalerta {
         border-color: #444 !important;
     }
 

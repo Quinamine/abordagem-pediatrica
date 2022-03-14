@@ -42,7 +42,6 @@ body.escuro .corpo > nav ul li a:active {
     background-color: #fff;
 } 
 
-
 /** JS e CSS reutilizavel **/
 
 .hide {
@@ -82,5 +81,8 @@ body.com-caixa-de-dialogo-aberta .corpo > nav ul li a.aba-actual {
     body.escuro .corpo > nav ul li a:active {
         background-color: #555 !important;
     } 
-    
+
+    .corpo > nav ul li a.aba-actual:hover {
+        background-color: inherit !important;
+    }
 }
