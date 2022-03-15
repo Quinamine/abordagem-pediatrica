@@ -23,10 +23,13 @@
 }
 
 ul.dominio-de-linguagens li a, 
-ul.dominio-de-linguagens li a:visited,
+ul.dominio-de-linguagens li a:visited {
+    color: #333; 
+}
+
 a.voltar-ao-topo,
 a.voltar-ao-topo:visited {
-    color: #333; 
+    color: #888;
 }
 
 

@@ -28,7 +28,7 @@ class Dosecomp {
 		if(this.farmaco=="diclofenac"){
 			doseEposologia.innerHTML += `<output class='alerta'>É recomendável tomar com alimentos para diminuir os efeitos irritantes gastrointestinais.</output>`;
 
-			doseEposologia.innerHTML += `<output class='alerta obs'>Não está estabelecida a segurança em crianças menores de 2 anos.</output>`;
+			doseEposologia.innerHTML += `<output class='alerta destacar'>Não está estabelecida a segurança em crianças menores de 2 anos.</output>`;
 		}
 	}
 
@@ -235,14 +235,12 @@ class Dosepadrao {
 
 	mostrarAlerta(){
 		if(this.farmaco.startsWith("albendazol")){
-			doseEposologia.innerHTML += `<output class='alerta'>Dose única geralmente é suficiente para o tratamento da maior parte das parasitoses (ascaridíase,  enterobíase, ancilostomíase, dermatite serpiginosa por larva migrans).</output>`;
-
 			if(this.tipoidade=="m"){
 				if(this.idade<6){
-					doseEposologia.innerHTML = `<output class='observação obs'>Nas crianças &lt; 1 ano de idade a sua segurança não está estabelecida.</output>`;
+					doseEposologia.innerHTML = `<output class='observacao'>Nas crianças &lt; 1 ano de idade a sua segurança não está estabelecida.</output>`;
 				}
 				else if(this.idade<12){
-					doseEposologia.innerHTML += `<output class='alerta obs'>Observação: nas crianças &lt; 1 ano de idade a sua segurança não está estabelecida.</output>`;
+					doseEposologia.innerHTML += `<output class='alerta destacar'>Observação: nas crianças &lt; 1 ano de idade a sua segurança não está estabelecida.</output>`;
 				}
 			}
 		} // Inclui Albendazol de 200 e 400;
@@ -253,8 +251,8 @@ class Dosepadrao {
 			Dia 1: no dia seguinte ao do diagnóstico;</br>
 			Dia 14: duas semanas mais tarde.</output>`
 			
-			doseEposologia.innerHTML += `<output class='alerta obs'> Observação: a dose acima é para o tratamento da hipovitaminose A (todos graus de xeroftalmia, casos de sarampo e pós-sarampo, kwashiorkor grave,  diarreia de repetição, infecções respiratórias de repetição e de evolução prolongada). <br/>
-			 <a href='profilaxias/prevencao-da-hipovitaminose-a.html'> Para ver doses profiláticas, clique aqui.</a></output>`;
+			doseEposologia.innerHTML += `<output class='alerta'> A dose acima é para o tratamento da hipovitaminose A (todos graus de xeroftalmia, casos de sarampo e pós-sarampo, kwashiorkor grave,  diarreia de repetição, infecções respiratórias de repetição e de evolução prolongada).
+			 <a href='profilaxias/prevencao-da-hipovitaminose-a.html'> <span class='destacar'>Para ver doses profiláticas, clique aqui.</a></span></output>`;
 		}
 		
 		else if((this.farmaco=="vitamina-c")){
@@ -856,7 +854,7 @@ class Doseparenteral extends Dosepadrao{
 			doseEposologia.innerHTML += `<output class='alerta'>Antes de decidir administrar a vitamina B12, procurar sempre esclarecer a causa da anemia megaloblástica e corrigí-la se possivel. Se a causa não for corrigível, administrar uma dose de manutenção de 1 mg a cada 3 meses.</output>`;
 		}
 		else if(this.farmaco=="aminofilina-inj"){
-			doseEposologia.innerHTML += `<output class='alerta obs'>Observação: a administração rápida pode provocar convulsões, arritmias cardíacas, hipotensão arterial e hemorragia digestiva.</output>`;
+			doseEposologia.innerHTML += `<output class='observacao'>A administração rápida pode provocar convulsões, arritmias cardíacas, hipotensão arterial e hemorragia digestiva.</output>`;
 		}
 		else if(this.farmaco=="var"){
 			doseEposologia.innerHTML += `<output class='alerta'>
@@ -874,7 +872,7 @@ class Doseparenteral extends Dosepadrao{
 			if(doserectal>2){
 				doserectal = "2.0";
 			}
-			doseEposologia.innerHTML += `<output class='alerta'>Se não tiver acesso venoso, administrar 
+			doseEposologia.innerHTML += `<output class='alerta'>Se não tiver acesso venoso, <span class='destacar'>administrar 
 				${doserectal} ml por via rectal.</span> De referir que esta dose é de diazepam como anti-convulsivante.</output>`;
 		}
 	}

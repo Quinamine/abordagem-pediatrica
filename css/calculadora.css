@@ -316,11 +316,12 @@ output.alerta {
     color: #555 !important;
 }
 
-span.destacar {
+span.destacar,
+output.destacar {
     color: #333 !important;
 }
 
-output.alerta.obs,
+body.escuro output.destacar,
 body.escuro span.destacar {
    color: inherit !important;
 }
